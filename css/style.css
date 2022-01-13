@@ -34,3 +34,8 @@ thead{
 #author {
     color: rgb(0, 162, 255);
 }
+
+.photodescr {
+    font-size: 0.7em;
+    font-style: italic;
+}
