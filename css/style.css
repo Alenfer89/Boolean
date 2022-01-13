@@ -39,3 +39,7 @@ thead{
     font-size: 0.7em;
     font-style: italic;
 }
+
+.highlight {
+    background-color: rgba(255, 241, 44, 0.993);
+}
