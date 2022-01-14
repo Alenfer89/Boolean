@@ -40,7 +40,7 @@ section{
 .section-buttonlike{
     display: inline-block;
     border: 1px solid gray;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 10px;
     font-size: 0.9em;
 }
@@ -57,11 +57,19 @@ h4{
 }
 
 .typeinfo{
-    border-radius: 4px;
-    color: white;
+    border-radius: 12px;
     font-size: 0.6em;
     margin-left: 20px;
+    padding: 5px;
 }
-.bluewhite-color{
+.bluback{
     background-color: rgb(0, 119, 255);
+
+}
+.whitetext{
+    color: white;
+}
+.whitegrey-color{
+    background-color: white;
+    color: grey;
 }
