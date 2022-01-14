@@ -9,10 +9,8 @@ body{
     background-color: bisque;
 }
 
-/* global styles */
-.white-background{
-    background-color: white;
-}
+
+
 /* header styling */
 .main-title {
     font-size: 2em;
@@ -40,15 +38,16 @@ section{
     display: inline-block;
     border: 1px solid gray;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px 10px;
     font-size: 0.7em;
 }
 
 /* lists styling */
 .container{
     margin-bottom: 50px;
+
 }
-.mainlist{
+.item-mainlist{
     margin-top: 30px;
 }
 .first-level-list{
@@ -56,20 +55,25 @@ section{
 }
 h4{
     display: inline-block;
+    font-weight: 800;
 }
 .second-level-list{
     margin-left: 10px;
+    font-size: 0.9em;
 }
 li{
     margin: 10px auto;
 }
 .typeinfo{
     border-radius: 12px;
-    font-size: 0.6em;
-    margin-left: 20px;
-    padding: 5px;
+    font-size: 0.5em;
+    margin-left: 2px;
+    padding: 7px;
 }
 /* background colors */
+.whiteback{
+    background-color: white;
+}
 .bluback{
     background-color: rgb(0, 119, 255);
 }
