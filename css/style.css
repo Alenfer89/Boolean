@@ -46,7 +46,7 @@ section{
 }
 
 /* lists styling */
-ul{
+.first-level-list{
     list-style-position: inside;
 }
 h4{
@@ -54,4 +54,14 @@ h4{
 }
 .second-level-list{
     margin-left: 10px;
+}
+
+.typeinfo{
+    border-radius: 4px;
+    color: white;
+    font-size: 0.6em;
+    margin-left: 20px;
+}
+.bluewhite-color{
+    background-color: rgb(0, 119, 255);
 }
