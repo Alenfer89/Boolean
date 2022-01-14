@@ -8,14 +8,17 @@ body{
     background-color: bisque;
 }
 
+/* global styles */
+.white-background{
+    background-color: white;
+}
 /* header styling */
 .main-title {
     font-size: 2em;
     font-weight: 600;
 }
 header{
-    padding: 15px;
-    background-color: white;
+    padding: 15px 30px;
     height: 80px;
 }
 .upper-logo{
