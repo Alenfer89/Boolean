@@ -28,24 +28,29 @@ header{
 
 /* main style */
 main{
-    
     width: 70%;
-    margin: 2.5em auto 1em;
+    margin: 2.5em auto 10em;
 }
 
 section{
     padding: 15px 0 10px 50px;
     border: 2px solid bisque;
 }
-.section-buttonlike{
+.buttonlike{
     display: inline-block;
     border: 1px solid gray;
     border-radius: 5px;
     padding: 10px;
-    font-size: 0.9em;
+    font-size: 0.7em;
 }
 
 /* lists styling */
+.container{
+    margin-bottom: 50px;
+}
+.mainlist{
+    margin-top: 30px;
+}
 .first-level-list{
     list-style-position: inside;
 }
@@ -64,17 +69,31 @@ li{
     margin-left: 20px;
     padding: 5px;
 }
+/* background colors */
 .bluback{
     background-color: rgb(0, 119, 255);
-
 }
+.purpleback {
+    background-color: rgb(139, 101, 187);
+}
+.greenback{
+    background-color: rgb(50, 139, 50);
+}
+.orangeback{
+    background-color: rgb(217, 141, 0);
+}
+.pinkback{
+    background-color: rgb(212, 69, 117);
+}
+.verdeschifoback{
+    background-color: rgb(133, 195, 39);
+}
+/* texts color */
 .whitetext{
     color: white;
 }
-.whitegrey-color{
-    background-color: white;
+.greytext{
     color: grey;
 }
-.mainlist{
-    margin-top: 30px;
-}
+
+
