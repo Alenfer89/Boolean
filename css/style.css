@@ -24,3 +24,9 @@ header{
 .upper-logo{
     vertical-align: top;
 }
+
+/* main style */
+main{
+    width: 70%;
+    margin: 2.5em auto;
+}
