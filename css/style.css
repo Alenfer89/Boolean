@@ -30,3 +30,15 @@ main{
     width: 70%;
     margin: 2.5em auto;
 }
+
+section{
+    padding: 15px 0 10px 50px;
+    border: 2px solid bisque;
+}
+.section-buttonlike{
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 0.9em;
+}
