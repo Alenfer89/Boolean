@@ -55,7 +55,9 @@ h4{
 .second-level-list{
     margin-left: 10px;
 }
-
+li{
+    margin: 5px auto;
+}
 .typeinfo{
     border-radius: 12px;
     font-size: 0.6em;
