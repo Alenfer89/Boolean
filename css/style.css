@@ -46,7 +46,6 @@ section{
 /* lists styling */
 .container{
     margin-bottom: 50px;
-    list-style-position: inside;
 }
 ul{
     list-style: none;
