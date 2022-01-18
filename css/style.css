@@ -18,6 +18,7 @@ body{
 main{
     width: 80%;
     margin: 15px auto;
+    text-align: center;
 }
 /* card styling */
 .card{
@@ -31,6 +32,7 @@ main{
 .visual{
     position: relative;
     height: 700px;
+    margin-bottom: 10px;
 }
 .absolute{
     position: absolute;
