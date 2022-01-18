@@ -36,7 +36,6 @@ main{
 }
 .visual:hover .buy-img{
     display: inline-block;
-    z-index: 1;
 }
 .visual{
     position: relative;
@@ -48,14 +47,18 @@ main{
     right: 0px;
     padding: 10px 20px;
     font-size: 2em;
-    z-index: 2;
 }
 .lower-popups{
     bottom: 20px;
     left: 0;
+}
+.z1{
+    z-index: 1;
+}
+.z2{
     z-index: 2;
 }
-.overimage{
+.bottommarks{
     padding: 5px 5px;
 }
 
