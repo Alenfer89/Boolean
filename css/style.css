@@ -3,22 +3,10 @@
     padding: 0;
     margin: 0;
 }
-
-main{
-    width: 80%;
-    margin: 15px auto;
+/* temporary */
+body{
+    background-color: khaki;
 }
-
-.visual .product-img{
-    height: 700px;
-}
-.card{
-    position: relative;
-    display: inline-block;   
-}
-
-
-
 .test{
     width: 200px;
     height: 200px;
@@ -26,3 +14,20 @@ main{
     position: relative;
     display: inline-block;
 }
+
+main{
+    width: 80%;
+    margin: 15px auto;
+}
+/* card styling */
+.card{
+    position: relative;
+    display: inline-block;   
+}
+/* images styling */
+.visual .product-img{
+    height: 700px;
+}
+
+
+
