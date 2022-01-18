@@ -9,14 +9,15 @@ main{
     margin: 15px auto;
 }
 
+.visual .product-img{
+    height: 700px;
+}
 .card{
     position: relative;
     display: inline-block;   
 }
 
-.row{
-    display: inline-block;
-}
+
 
 .test{
     width: 200px;
