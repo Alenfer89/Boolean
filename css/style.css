@@ -3,3 +3,25 @@
     padding: 0;
     margin: 0;
 }
+
+main{
+    width: 80%;
+    margin: 15px auto;
+}
+
+.card{
+    position: relative;
+    display: inline-block;   
+}
+
+.row{
+    display: inline-block;
+}
+
+.test{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    position: relative;
+    display: inline-block;
+}
