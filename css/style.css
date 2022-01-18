@@ -36,6 +36,7 @@ main{
 }
 .visual:hover .buy-img{
     display: inline-block;
+    cursor: pointer;
 }
 .visual{
     position: relative;
@@ -47,10 +48,20 @@ main{
     right: 0px;
     padding: 10px 20px;
     font-size: 2em;
+    border: none;
+}
+.favs:hover{
+    cursor: pointer;
+}
+.favs:focus{
+    color:red;
 }
 .lower-popups{
     bottom: 20px;
     left: 0;
+}
+.lower-popups:hover{
+    cursor: default;
 }
 .z1{
     z-index: 1;
