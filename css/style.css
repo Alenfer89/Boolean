@@ -48,8 +48,6 @@ main{
     left: 5px;
 }
 .overimage{
-    font-size: 0.8em;
-    font-weight: bold;
     padding: 5px 5px;
 }
 /* prd-infos styling */
@@ -59,10 +57,7 @@ main{
 .brand{
     font-size: 0.7em;
 }
-.price{
-    font-weight: bold;
-    font-size: 0.8em;
-}
+
 .previous-price{
     font-weight: normal;
     text-decoration-line: line-through;
@@ -86,5 +81,11 @@ main{
 }
 .bggreen{
     background-color: seagreen;
+}
+
+/* text styles */
+.bold{
+    font-weight: bold;
+    font-size: 0.8em;
 }
 
