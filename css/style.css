@@ -25,8 +25,18 @@ main{
 }
 
 /* images styling */
-.visual .product-img{
+.visual img{
     height: 100%;
+}
+.buy-img{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.visual:hover .buy-img{
+    display: inline-block;
+    z-index: 1;
 }
 .visual{
     position: relative;
@@ -38,10 +48,12 @@ main{
     right: 0px;
     padding: 10px 20px;
     font-size: 2em;
+    z-index: 2;
 }
 .lower-popups{
     bottom: 20px;
     left: 0;
+    z-index: 2;
 }
 .overimage{
     padding: 5px 5px;
