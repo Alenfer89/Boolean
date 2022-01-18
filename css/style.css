@@ -52,4 +52,12 @@ main{
 .brand{
     font-size: 0.7em;
 }
+.price{
+    font-weight: bold;
+    font-size: 0.8em;
+}
+.previous-price{
+    font-weight: normal;
+    text-decoration-line: line-through;
+}
 
