@@ -26,7 +26,26 @@ main{
 }
 /* images styling */
 .visual .product-img{
+    height: 100%;
+}
+.visual{
+    position: relative;
     height: 700px;
+}
+.absolute{
+    position: absolute;
+}
+.favs{
+    top: 20px;
+    right: 20px;
+}
+.discount-amount{
+    bottom: 20px;
+    left: 0;
+}
+.ecofriendly{
+    bottom: 20px;
+    left: 50px;
 }
 
 
