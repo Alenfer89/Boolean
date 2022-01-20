@@ -9,3 +9,18 @@
     display: table;
     clear: both;
 }
+
+.midpaging{
+    width: 80%;
+    margin: 0 auto;
+}
+.marginbt40{
+    margin-bottom: 40px;
+}
+
+/* header style */
+#upper-logo{
+    padding-right: 40px;
+    border-right: solid black 2px;
+    width: 15%;
+}
