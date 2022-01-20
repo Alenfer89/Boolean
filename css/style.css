@@ -18,7 +18,9 @@
 .marginbt40{
     margin-bottom: 40px;
 }
-
+main img{
+    border-radius: 20px;
+}
 /* header style */
 #upper-logo{
     padding-right: 40px;
@@ -30,4 +32,12 @@ header li{
     display: inline;
     margin-right: 10px;
     text-transform: uppercase;
+}
+
+/* main style */
+/* main article */
+.latest-article img{
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
 }
