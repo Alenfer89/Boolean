@@ -33,7 +33,7 @@ main img{
 /* header style */
 #upper-logo{
     padding-right: 40px;
-    border-right: solid black 2px;
+    border-right: solid lightgrey 2px;
     width: 15%;
 }
 header li{
@@ -47,7 +47,7 @@ header li{
 /* main article */
 .latest-article img{
     width: 100%;
-    height: 720px;
+    height: 650px;
     object-fit: cover;
 }
 .latest-article-title{
@@ -79,10 +79,24 @@ header li{
     margin: 15px 0;
     font-weight: 500;
 }
+/* footer */
+footer{
+    text-align: center;
+}
+.signature{
+    font-size: 1.5rem;
+}
+/* colors */
+.txtgrey{
+    color: lightgrey;
+}
+.txtred{
+    color: red;
+}
 /* temporary */
-.bggreen{
+/* .bggreen{
     background-color: yellowgreen;
 }
 body{
     background-color: khaki;
-}
+} */
