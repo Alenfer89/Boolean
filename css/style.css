@@ -45,10 +45,17 @@ header li{
 
 /* main style */
 /* top article */
-.latest-article img{
+.opatest{
     width: 100%;
+    background-color: black;
+    border-radius: 20px;
+
+}
+.latest-article img{
+    width: 100%;   
     height: 650px;
     object-fit: cover;
+    opacity: 0.8;
 }
 .latest-article-title{
     left: 50px;
