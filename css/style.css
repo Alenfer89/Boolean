@@ -46,7 +46,7 @@ header nav ul li a:active{
     cursor: progress;
 }
 header nav ul li a:visited{
-    color: cyan;
+    color: black;
 }
 /* main products style */
 .product{
