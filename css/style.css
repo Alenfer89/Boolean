@@ -35,6 +35,19 @@ header nav ul li a{
     display: block;
     border-radius: 50%;
 }
+header nav ul li a:hover{
+    box-shadow: 10px 10px 20px black;
+    background-color: blanchedalmond;
+    /* border: 1px solid aqua; */
+}
+header nav ul li a:active{
+    background-color: blueviolet;
+    color: pink;
+    cursor: progress;
+}
+header nav ul li a:visited{
+    color: cyan;
+}
 /* main products style */
 .product{
     width: 100vw;
