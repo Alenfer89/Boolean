@@ -3,4 +3,29 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* header style */
+header{
+    width: 100vw;
+    text-align: right;
+    padding: 2rem 0;
+    background-color: tomato;
+}
+
+header li{
+    list-style-type: none;
+    display: inline-block;
+    font-weight: 900;
+    background-color: white;
+    border-radius: 50%;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    margin: 0 1.5rem;
+}
+header nav ul li a{
+    text-decoration: none;
 }
