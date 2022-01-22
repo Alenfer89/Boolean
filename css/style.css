@@ -27,7 +27,7 @@
 .fltlft{
     float: left;
 }
-main img{
+.gentle-radius{
     border-radius: 20px;
 }
 /* header style */
@@ -68,22 +68,39 @@ header li{
     font-weight: 300;
 }
 /* other articles section */
+.articles{
+    width: 100%;
+}
 .other-articles > h1{
     font-size: 2rem;
 }
+.wrappertest{
+    width: 100%;
+    height: 320px;
+}
 .more-articles-imgs{
     width: 100%;
-    height: 350px;
+    height: 100%;
     object-fit: cover;
 }
-.more-articles aside{
+.overlay{
+    /* width: 100%;
+    height: 100%; */
+    background-color: rgba(0,0,0,.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+section.articles aside{
     width: 25%;
 }
-.more-articles article{
+section.articles article{
     width: calc(50% - 40px);
     margin: 0 20px;
 }
-.more-articles h4{
+h4{
     margin: 15px 0;
     font-weight: 500;
 }
