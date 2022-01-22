@@ -12,6 +12,9 @@ header{
     text-align: right;
     padding: 2rem 0;
     background-color: tomato;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header li{
@@ -28,4 +31,20 @@ header li{
 }
 header nav ul li a{
     text-decoration: none;
+}
+/* main products style */
+.product{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* colors */
+.bgred{
+    background-color: red;
+}
+.bggreen{
+    background-color: green;
+}
+.bgyellow{
+    background-color: yellow;
 }
