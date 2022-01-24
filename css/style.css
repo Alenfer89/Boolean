@@ -13,7 +13,7 @@
     width: 90%;
     max-width: 1300px;
     margin: 0 auto;
-    background-color: salmon;
+    /* background-color: salmon; */
 }
 .float-left{
     float: left;
@@ -25,15 +25,17 @@
 /* header styling */
 header{
     width: 100%;
-    background-color: rgb(49, 97, 224);
+    /* background-color: rgb(49, 97, 224); */
     text-align: center;
+    background-image:url(../img/jumbo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
-
 .top-container{
     height: 80px;
     line-height: 80px;
 }
-img{
+div.logo img{
     vertical-align: middle;
 }
 .top-nav{
@@ -41,4 +43,14 @@ img{
 }
 header .top-nav li{
     display: inline-block;
+    margin-right: 30px;
+}
+header .top-nav li a{
+    text-decoration: none;
+}
+/* temporary tests */
+.generic-button{
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: none;
 }
