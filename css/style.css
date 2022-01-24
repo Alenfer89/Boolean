@@ -104,6 +104,9 @@ div.top-buttons button{
 .properties-img{
     width: 60%;
 }
+div.properties-img img{
+    width: 100%;
+}
 .properties-text{
     width: 30%;
 }
@@ -120,4 +123,7 @@ div.properties-text h2{
 }
 .txtwhite{
     color: white;
+}
+main section:nth-child(even){
+    background-color: cornsilk;
 }
