@@ -95,6 +95,9 @@ header div.header-title p{
 div.top-buttons button{
     margin: 0 20px;
 }
+/* .macos::before{
+    content: "\f309";
+} */
 /* !colors */
 .bgdark{
     background-color: rgb(32, 32, 32);
