@@ -38,6 +38,9 @@
 .distancing{
     padding: 150px 0px;
 }
+p{
+    line-height: 150%;
+}
 
 /*! header styling */
 header{
@@ -94,6 +97,19 @@ header div.header-title p{
 }
 div.top-buttons button{
     margin: 0 20px;
+}
+
+/* !main style */
+/* similarsections */
+.properties-img{
+    width: 60%;
+}
+.properties-text{
+    width: 30%;
+}
+div.properties-text h2{
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
 }
 /* .macos::before{
     content: "\f309";
