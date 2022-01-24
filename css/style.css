@@ -1,7 +1,12 @@
 /* reset */
-*{box-sizing: border-box;
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Whitney', sans-serif;
+    font-family: 'Whitney Semibold', sans-serif;
+    font-family: 'Whitney Book', sans-serif;
+    font-family: 'Whitney Light', sans-serif;
 }
 /* global attributes */
 .clearfix::after{
@@ -21,6 +26,11 @@
 .float-right{
     float: right;
 }
+.generic-button{
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: none;
+}
 
 /* header styling */
 header{
@@ -30,6 +40,7 @@ header{
     background-image:url(../img/jumbo.png);
     background-size: 100%;
     background-repeat: no-repeat;
+    color: white;
 }
 .top-container{
     height: 80px;
@@ -49,8 +60,17 @@ header .top-nav li a{
     text-decoration: none;
 }
 /* temporary tests */
-.generic-button{
-    padding: 12px 15px;
-    border-radius: 20px;
-    border: none;
+div.header-title{
+    width: 40%;
+    margin: 0 auto;
+}
+header div.header-title h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+header div.header-title p{
+    margin-bottom: 1rem;
+}
+.distancing{
+    padding: 150px 0px;
 }
