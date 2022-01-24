@@ -16,7 +16,7 @@
         background-color: rgb(49, 97, 224);
     }
     
-    .container{
+    .centered{
         width: 90%;
         height: 100%;
         max-width: 1180px;
@@ -32,6 +32,6 @@
         vertical-align: middle;
     }
     
-    header .main-nav li{
+    header .top-nav li{
         display: inline-block;
     }
