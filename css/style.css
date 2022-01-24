@@ -1,4 +1,4 @@
-/* reset */
+/*! reset */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +8,7 @@
     font-family: 'Whitney Book', sans-serif;
     font-family: 'Whitney Light', sans-serif;
 }
-/* global attributes */
+/*! global attributes */
 .clearfix::after{
     content: "";
     display: table;
@@ -18,7 +18,7 @@
     width: 90%;
     max-width: 1300px;
     margin: 0 auto;
-    /* background-color: salmon; */
+    /** background-color: salmon; */
 }
 .float-left{
     float: left;
@@ -31,17 +31,21 @@
     border-radius: 20px;
     border: none;
 }
+.distancing{
+    padding: 150px 0px;
+}
 
-/* header styling */
+/*! header styling */
 header{
     width: 100%;
-    /* background-color: rgb(49, 97, 224); */
+    /** background-color: rgb(49, 97, 224); */
     text-align: center;
     background-image:url(../img/jumbo.png);
     background-size: 100%;
     background-repeat: no-repeat;
     color: white;
 }
+/* header-nav style */
 .top-container{
     height: 80px;
     line-height: 80px;
@@ -59,7 +63,7 @@ header .top-nav li{
 header .top-nav li a{
     text-decoration: none;
 }
-/* temporary tests */
+/* header-jumbotron style*/
 div.header-title{
     width: 40%;
     margin: 0 auto;
@@ -71,6 +75,4 @@ header div.header-title h1{
 header div.header-title p{
     margin-bottom: 1rem;
 }
-.distancing{
-    padding: 150px 0px;
-}
+
