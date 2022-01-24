@@ -27,9 +27,13 @@
     float: right;
 }
 .generic-button{
-    padding: 12px 15px;
-    border-radius: 20px;
+    padding: 12px 18px;
+    border-radius: 25px;
     border: none;
+}
+.generic-button:hover{
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
 }
 .distancing{
     padding: 150px 0px;
@@ -49,6 +53,7 @@ header{
 .top-container{
     height: 80px;
     line-height: 80px;
+    font-size: .8rem;
 }
 div.logo img{
     vertical-align: middle;
@@ -63,6 +68,18 @@ header .top-nav li{
 header .top-nav li a{
     text-decoration: none;
 }
+header .top-nav li a:hover{
+    text-decoration: underline;
+}
+header .top-nav li a:active{
+    color: violet;
+}
+header .top-nav li a:visited{
+    color:white;
+}
+header div.top-container div.login button{
+    font-size: 0.8rem;
+}
 /* header-jumbotron style*/
 div.header-title{
     width: 40%;
@@ -74,5 +91,8 @@ header div.header-title h1{
 }
 header div.header-title p{
     margin-bottom: 1rem;
+}
+div.top-buttons button{
+    margin: 0 20px;
 }
 
