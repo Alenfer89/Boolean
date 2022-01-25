@@ -18,11 +18,20 @@
 .float-right{
     float: right;
 }
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
 .btn,
 .top-nav li a[class*=btn]{
     background-color: #0061ff;
     padding: 10px 20px;
     color: white;
+}
+.smallfont{
+    font-size: 0.9rem;
 }
 /*! header style */
 /* top navs style */
@@ -62,4 +71,29 @@ div.top-nav{
 }
 .jumbotron h1{
     font-size: 4rem;
+    margin-bottom: 40px;
+}
+.jumbotron-text{
+    width: 30%;
+}
+.jumbotron-text p{
+    line-height: 120%;
+    margin-bottom: 40px;
+}
+.jumbotron-text span{
+    display: block;
+}
+.jumbotron-text span.smallfont{
+    margin: 20px 0 40px 0;
+}
+.jumbotron-text .fas{
+    font-size: 2rem;
+}
+.jumbotron-img{
+    width: 60%;
+    top: 0;
+    right: 0;
+}
+.jumbotron-img img{
+    width: 100%;
 }
