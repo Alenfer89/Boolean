@@ -1,11 +1,24 @@
+/*! reset */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+/*! global attributes */
 .clearfix::after{
     content: "";
     display: table;
     clear: both;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+/*! header style */
+/* top navs style */
+.top-nav li{
+    display: inline-block;
 }
