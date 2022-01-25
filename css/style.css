@@ -24,17 +24,28 @@
 .absolute{
     position: absolute;
 }
+.smallfont{
+    font-size: 0.9rem;
+}
+/* global buttons style */
 .btn,
 .top-nav li a[class*=btn]{
     background-color: #0061ff;
     padding: 10px 20px;
     color: white;
+    text-decoration: none;
 }
-.smallfont{
-    font-size: 0.9rem;
-}
+.btn-small-padding{}
+.btn-medium-padding{}
+.btn-large-padding{}
+.bgbluet{}
+.txtwhite{}
+.txtblack{}
+.bordered-btn{}
+
 /*! header style */
 /* top navs style */
+
 div.top-nav{
     width: 100%;
     line-height: 100px;
@@ -67,13 +78,13 @@ div.top-nav{
 .jumbotron{
     width: 100%;
     padding: 150px 200px;
-    background-color: #b4d0e7;    
+    background-color: #b4d0e7;
 }
 .jumbotron h1{
     font-size: 4rem;
     margin-bottom: 40px;
 }
-.jumbotron-text{
+div.jumbotron-text{
     width: 30%;
 }
 .jumbotron-text p{
@@ -89,7 +100,7 @@ div.top-nav{
 .jumbotron-text .fas{
     font-size: 2rem;
 }
-.jumbotron-img{
+div.jumbotron-img{
     width: 60%;
     top: 0;
     right: 0;
