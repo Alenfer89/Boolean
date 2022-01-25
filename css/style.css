@@ -18,7 +18,7 @@
 .float-right{
     float: right;
 }
-a.btn{
+.top-nav li a[class*=btn]{
     background-color: #0061ff;
     padding: 10px 20px;
     color: white;
@@ -42,7 +42,7 @@ div.top-nav{
     text-decoration: underline;
 }
 .top-nav li a:visited{
-    color: blueviolet;
+    /* color: blueviolet; */
 }
 .top-nav img{
     vertical-align: text-bottom;
