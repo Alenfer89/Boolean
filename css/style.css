@@ -18,7 +18,11 @@
 .float-right{
     float: right;
 }
-
+a.btn{
+    background-color: #0061ff;
+    padding: 10px 20px;
+    color: white;
+}
 /*! header style */
 /* top navs style */
 div.top-nav{
@@ -38,7 +42,7 @@ div.top-nav{
     text-decoration: underline;
 }
 .top-nav li a:visited{
-    color: blueviolet;
+    /* color: blueviolet; */
 }
 .top-nav img{
     vertical-align: text-bottom;
