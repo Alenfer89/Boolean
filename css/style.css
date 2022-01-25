@@ -18,7 +18,8 @@
 .float-right{
     float: right;
 }
-.btn{
+.btn,
+.top-nav li a[class*=btn]{
     background-color: #0061ff;
     padding: 10px 20px;
     color: white;
@@ -38,11 +39,11 @@ div.top-nav{
     text-decoration: none;
     color: black;
 }
-.top-nav li a[class*=btn]{
+/* .top-nav li a[class*=btn]{
     background-color: #0061ff;
     padding: 10px 20px;
     color: white;
-}
+} */
 .top-nav li a:hover{
     text-decoration: underline;
 }
