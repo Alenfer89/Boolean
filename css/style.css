@@ -49,7 +49,21 @@ section h2{
 .txtwhite{}
 .txtblack{}
 .bordered-btn{}
-
+/* global cards style */
+.card-container{
+    width: 100%;
+}
+.row{
+    text-align: center;
+}
+.card{
+    height: 50px;
+    background-color: chartreuse;
+}
+.vert-card{
+    width: calc((100% / 3) - 15px);
+    display: inline-block;
+}
 /*! header style */
 /* top navs style */
 div.top-nav{
