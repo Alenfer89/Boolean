@@ -77,11 +77,18 @@ h4{
     padding: 50px 40px;
 }
 .card-txt div{
-    margin-bottom: 40px;
+    margin-bottom: 55px;
 }
-div.card span:not(.test){
+.card-txt h4{
+    padding: 20px 0 15px 0;
+}
+div.card span:not(.subs-time){
     display: block;
-    margin: 20px 0;
+    padding: 15px 0;
+}
+.card-txt li{
+    padding: 15px 0;
+    list-style-type: none;
 }
 /*! header style */
 /* top navs style */
