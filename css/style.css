@@ -51,13 +51,6 @@ h4{
     color: white;
     text-decoration: none;
 }
-.btn-small-padding{}
-.btn-medium-padding{}
-.btn-large-padding{}
-.bgbluet{}
-.txtwhite{}
-.txtblack{}
-.bordered-btn{}
 /* global cards style */
 .card-container{
     width: 100%;
@@ -80,6 +73,7 @@ h4{
     border-top: 1px solid lightgray;
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
+    text-align: center;
     
 }
 .card-txt{
@@ -200,8 +194,9 @@ section#fares form{
     margin-top: 50px;
     margin-bottom: 30px;
 }
-/* temporary */
-.card{
-    /* height: 50px; */
-    /* background-color: chartreuse; */
+section#fares footer div.partner-img{
+    width: 55%;
+}
+section#fares footer div img{
+    width: 100%;
 }
