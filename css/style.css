@@ -31,6 +31,9 @@
 .smallfont{
     font-size: 0.9rem;
 }
+section h2{
+    font-size: 2.4rem;
+}
 /* global buttons style */
 .btn,
 .top-nav li a[class*=btn]{
@@ -117,3 +120,10 @@ div.jumbotron-img{
     width: 100%;
     min-width: 800px;
 }
+/* !main style */
+/* fares section style */
+section#fares form{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+/* temporary */
