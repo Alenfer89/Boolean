@@ -71,17 +71,23 @@ h4{
 }
 .card-title{
     padding: 15px 0;
-    border: 1px solid black;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    
 }
 .card-txt{
     padding: 50px 40px;
-    border: 1px solid black;
+    border: 1px solid lightgray;
 }
 .card-txt div{
     margin-bottom: 55px;
 }
 .card-txt h4{
     padding: 20px 0 15px 0;
+}
+.card-txt span.subs-time{
+    color: grey;
 }
 div.card span:not(.subs-time){
     display: block;
@@ -92,12 +98,15 @@ div.card span:not(.subs-time){
     width: 100%;
     text-align: center;
 }
+.card-txt ul{
+    list-style-type: none;
+    min-height: 450px;
+}
 .card-txt li{
     padding: 15px 0;
-    list-style-type: none;
-    margin-left: 10px;
+    margin-left: 15px;
 }
-.card-txt li::before{
+.card-txt li::marker{
     content: "\2713";
     color: cornflowerblue;
 }
@@ -180,5 +189,5 @@ section#fares form{
 /* temporary */
 .card{
     /* height: 50px; */
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
 }
