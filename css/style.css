@@ -51,6 +51,7 @@
 /* top navs style */
 div.top-nav{
     width: 100%;
+    min-width: 1450px;
     line-height: 100px;
 }
 .top-nav li{
@@ -80,15 +81,19 @@ div.top-nav{
 /* jumbotron style */
 .jumbotron{
     width: 100%;
-    padding: 150px 200px;
+    min-width: 1360px;
+    padding: 100px 200px;
     background-color: #b4d0e7;
+    margin-bottom: 200px;
 }
 .jumbotron h1{
     font-size: 4rem;
+    min-width: 1150px;
     margin-bottom: 40px;
 }
 aside.jumbotron-text{
     width: 30%;
+    min-width: 400px;
 }
 .jumbotron-text p{
     line-height: 120%;
@@ -110,4 +115,5 @@ div.jumbotron-img{
 }
 .jumbotron-img img{
     width: 100%;
+    min-width: 800px;
 }
