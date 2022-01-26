@@ -69,11 +69,19 @@ h4{
     width: calc((100% / 3) - 40px);
     display: inline-block;
 }
-.padded-card{
+.card-title{
+    padding: 15px 0;
+    border: 1px solid black;
+}
+.card-txt{
     padding: 50px 40px;
+}
+.card-txt div{
+    margin-bottom: 40px;
 }
 div.card span{
     display: block;
+    margin: 20px 0;
 }
 /*! header style */
 /* top navs style */
