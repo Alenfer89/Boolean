@@ -29,7 +29,7 @@
     position: absolute;
 }
 .smallfont{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 .left-txt{
     text-align: left;
@@ -62,6 +62,12 @@ h4{
 .card-container{
     width: 100%;
 }
+.two-column{
+    width: 65%;
+}
+.one-column{
+    width: 35%;
+}
 .row{
     text-align: center;
 }
@@ -80,7 +86,7 @@ h4{
     padding: 50px 40px;
     border: 1px solid lightgray;
 }
-.card-txt div{
+.vert-card .card-txt div{
     margin-bottom: 55px;
 }
 .card-txt h4{
@@ -109,6 +115,14 @@ div.card span:not(.subs-time){
 .card-txt li::marker{
     content: "\2713";
     color: cornflowerblue;
+}
+/* horizontal card specifics */
+div.hori-card{
+    width: 100%;
+    margin: 60px 0 250px;
+}
+.hori-card .card-txt div{
+    display: inline-block;
 }
 /*! header style */
 /* top navs style */
