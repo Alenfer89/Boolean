@@ -75,6 +75,7 @@ h4{
 }
 .card-txt{
     padding: 50px 40px;
+    border: 1px solid black;
 }
 .card-txt div{
     margin-bottom: 55px;
@@ -86,9 +87,19 @@ div.card span:not(.subs-time){
     display: block;
     padding: 15px 0;
 }
+.card-txt div span a.btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
 .card-txt li{
     padding: 15px 0;
     list-style-type: none;
+    margin-left: 10px;
+}
+.card-txt li::before{
+    content: "\2713";
+    color: cornflowerblue;
 }
 /*! header style */
 /* top navs style */
