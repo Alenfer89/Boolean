@@ -16,6 +16,12 @@
     width: 70%;
     margin: 0 auto;
 }
+.two-column{
+    width: 70%;
+}
+.one-column{
+    width: 30%;
+}
 .float-left{
     float: left;
 }
@@ -66,12 +72,6 @@ h4{
 .card-container{
     width: 100%;
 }
-.two-column{
-    width: 70%;
-}
-.one-column{
-    width: 30%;
-}
 .row{
     text-align: center;
 }
@@ -79,6 +79,7 @@ h4{
     width: calc((100% / 3) - 40px);
     display: inline-block;
 }
+/* vertical fares-section set of cards */
 .card-title{
     padding: 15px 0;
     border-top: 1px solid lightgray;
@@ -116,13 +117,23 @@ div.card span:not(.subs-time){
     content: "\2713";
     color: cornflowerblue;
 }
-/* horizontal card specifics */
+/* horizontal fares-section card specifics */
 div.hori-card{
     width: 100%;
     margin: 60px 0 200px;
 }
 .hori-card .card-txt div{
     display: inline-block;
+}
+/* client features section cards */
+section#features .row{
+    padding-bottom: 150px;
+}
+section#features .card img{
+    width: 100%;
+}
+section#features .card h3{
+    padding: 20px 0 30px;
 }
 /*! header style */
 /* top navs style */
@@ -212,4 +223,9 @@ section#fares footer div.partner-txt{
 }
 div.partner-txt p{
     padding: 20px 0 40px;
+}
+
+/* features section style */
+section#features h2{
+    padding: 150px 0 100px;
 }
