@@ -79,7 +79,7 @@ h4{
 .card-txt div{
     margin-bottom: 40px;
 }
-div.card span{
+div.card span:not(.test){
     display: block;
     margin: 20px 0;
 }
