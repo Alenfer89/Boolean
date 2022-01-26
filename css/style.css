@@ -56,12 +56,8 @@ section h2{
 .row{
     text-align: center;
 }
-.card{
-    height: 50px;
-    background-color: chartreuse;
-}
 .vert-card{
-    width: calc((100% / 3) - 15px);
+    width: calc((100% / 3) - 40px);
     display: inline-block;
 }
 /*! header style */
@@ -137,7 +133,11 @@ div.jumbotron-img{
 /* !main style */
 /* fares section style */
 section#fares form{
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 /* temporary */
+.card{
+    height: 50px;
+    background-color: chartreuse;
+}
