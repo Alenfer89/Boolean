@@ -19,6 +19,9 @@ h4{
 p{
     line-height: 150%;
 }
+ul{
+    list-style-type: none;
+}
 .clearfix::after{
     content: "";
     display: table;
@@ -103,9 +106,6 @@ p{
 }
 .card h4{
     padding: 20px 0 10px;
-}
-.card ul{
-    list-style-type: none;
 }
 .card ul li{
     padding: 20px 0;
@@ -324,4 +324,18 @@ div.clients-info{
 }
 #partnership h2{
     color: #61082b;
+}
+/* FAQ section style */
+#faq{
+    padding: 200px 0;
+}
+#faq h3{
+    padding-bottom: 70px;
+}
+#faq h3, #faq li{
+    
+    border-bottom: 1px solid lightgray;
+}
+#faq li{
+    padding: 40px 0;
 }
