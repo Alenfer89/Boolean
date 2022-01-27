@@ -86,34 +86,44 @@ h4{
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
     text-align: center;
-
 }
 .card-txt{
-    padding: 50px 40px;
+    padding: 0 40px 40px;
     border: 1px solid lightgray;
 }
-.vert-card .card-txt div{
-    margin-bottom: 55px;
+.card h4{
+    padding: 20px 0 10px;
 }
-.card-txt h4{
-    padding: 20px 0 15px 0;
+.card ul{
+    list-style-type: none;
+}
+.card ul li{
+    padding: 20px 0;
+}
+.card ul li:last-child{
+    padding-bottom: 40px;
+}
+.card ul li span.bot-bordered{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 40px;
 }
 .card-txt span.subs-time{
     color: grey;
-}
-div.card span:not(.subs-time){
     display: block;
-    padding: 15px 0;
+    padding-bottom: 20px;
 }
-.card-txt ul{
-    list-style-type: none;
-    min-height: 450px;
+.card-txt div{
+    padding-top: 40px;
 }
-.card-txt li{
-    padding: 15px 0;
-    margin-left: 15px;
+.card-txt ul li a.btn{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
 }
-.card-txt li::marker{
+.card-bottom-list ul{
+    min-height: 600px;
+}
+.card-bottom-list li::marker{
     content: "\2713";
     color: cornflowerblue;
 }
@@ -230,55 +240,4 @@ section#features h2{
     padding: 150px 0 100px;
 }
 
-/* card test */
-.vert-test{
-    width: calc((100% / 3) - 40px);
-    display: inline-block;
-}
-.test-title{
-    padding: 15px 0;
-    border-top: 1px solid lightgray;
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-    text-align: center;
-}
-.test-txt{
-    padding: 0 40px;
-    border: 1px solid lightgray;
-}
-.test h4{
-    padding: 20px 0 10px;
-}
-.test ul{
-    list-style-type: none;
-}
-.test ul li{
-    padding: 20px 0;
-}
-.test ul li:last-child{
-    padding-bottom: 40px;
-}
-.test ul li span.bot-bordered{
-    border-bottom: 1px solid lightgray;
-    padding-bottom: 40px;
-}
-.test-txt span.subs-time{
-    color: grey;
-    display: block;
-    padding-bottom: 20px;
-}
-.test-txt div{
-    padding-top: 40px;
-}
-.test-txt ul li a.btn{
-    display: block;
-    text-align: center;
-    margin-top: 40px;
-}
-.card-bottom-list ul{
-    min-height: 600px;
-}
-.card-bottom-list li::marker{
-    content: "\2713";
-    color: cornflowerblue;
-}
+/* card card */
