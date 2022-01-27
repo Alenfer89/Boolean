@@ -259,7 +259,6 @@ div.clients-info{
 .clients-group{
     width: 30vw;
     height: 30vw;
-    background-color: lime;
 }
 .clients-overview{
     width: calc(100% - 60vw);
@@ -269,8 +268,6 @@ div.clients-info{
 .client-logo{
     width: 50%;
     height: 50%;
-    background-color: red;
-    fill: white;
 }
 .client-logo img{
     width: 50%;
