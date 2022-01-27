@@ -249,8 +249,11 @@ section#features h2{
 }
 
 /* clients section style */
+section#clients h2{
+    padding-top: 50px;
+}
 section#clients div.centered a{
-    padding: 40px 0;
+    padding: 50px 0;
     display: inline-block;
 }
 div.clients-info{
@@ -275,5 +278,29 @@ div.clients-info{
     left: 50%;
     filter: invert(100%);
     transform: translate(-50%, -50%);
+}
+.bgpeas{
+    background-color: #a2d39b;
+}
+.bgamaranth{
+    background-color: #61082b;
+}
+.bgsky{
+    background-color: #0093ce;
+}
+.bgorange{
+    background-color: #ff1c1c;
+}
+.bferrari{
+    background-color: #d5001f;
+}
+.bgcloudy{
+    background-color: #b4d0e7;
+}
+.bgblue{
+    background-color: #0d2481;
+}
+.bgmustard{
+    background-color: #ffd830;
 }
 
