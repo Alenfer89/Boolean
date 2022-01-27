@@ -49,6 +49,9 @@ h3{
 h4{
     font-size: 1rem;
 }
+p{
+    line-height: 150%;
+}
 /* global buttons style */
 .btn{
     padding: 10px 20px;
@@ -123,6 +126,9 @@ h4{
 .card-bottom-list ul{
     min-height: 600px;
 }
+.card-bottom-list li{
+    margin-left: 15px;
+}
 .card-bottom-list li::marker{
     content: "\2713";
     color: cornflowerblue;
@@ -180,7 +186,7 @@ div.top-nav{
 .jumbotron{
     width: 100%;
     min-width: 1360px;
-    padding: 100px 200px;
+    padding: 100px 200px 50px;
     background-color: #b4d0e7;
     margin-bottom: 200px;
 }
@@ -194,7 +200,6 @@ aside.jumbotron-text{
     min-width: 400px;
 }
 .jumbotron-text p{
-    line-height: 120%;
     margin-bottom: 40px;
 }
 .jumbotron-text span{
@@ -240,4 +245,4 @@ section#features h2{
     padding: 150px 0 100px;
 }
 
-/* card card */
+
