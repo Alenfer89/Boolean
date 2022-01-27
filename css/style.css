@@ -241,9 +241,44 @@ section#features h2{
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
     text-align: center;
-
 }
 .test-txt{
-    padding: 50px 40px;
+    padding: 0 40px;
     border: 1px solid lightgray;
+}
+.test h4{
+    padding: 20px 0 10px;
+}
+.test ul{
+    list-style-type: none;
+}
+.test ul li{
+    padding: 20px 0;
+}
+.test ul li:last-child{
+    padding-bottom: 40px;
+}
+.test ul li span.bot-bordered{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 40px;
+}
+.test-txt span.subs-time{
+    color: grey;
+    display: block;
+    padding-bottom: 20px;
+}
+.test-txt div{
+    padding-top: 40px;
+}
+.test-txt ul li a.btn{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+}
+.card-bottom-list ul{
+    min-height: 600px;
+}
+.card-bottom-list li::marker{
+    content: "\2713";
+    color: cornflowerblue;
 }
