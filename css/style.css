@@ -317,4 +317,11 @@ div.clients-info{
 .bgmustard{
     background-color: #ffd830;
 }
-
+/* partnership section style */
+#partnership{
+    padding: 200px 0;
+    text-align: center;
+}
+#partnership h2{
+    color: #61082b;
+}
