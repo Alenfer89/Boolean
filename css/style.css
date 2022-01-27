@@ -279,8 +279,11 @@ div.clients-info{
     filter: invert(100%);
     transform: translate(-50%, -50%);
 }
+.client-logo:hover{
+    box-shadow: inset 0 0 0 20px rgba(255,255,255, 0.3);
+}
 .clients-overview{
-    padding: 0 50px;
+    padding: 0 60px;
 }
 .clients-overview img{
     width: calc((30vw / 2) / 2);
