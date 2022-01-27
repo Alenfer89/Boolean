@@ -7,6 +7,18 @@
 }
 
 /*! global attributes */
+section h2{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1rem;
+}
+p{
+    line-height: 150%;
+}
 .clearfix::after{
     content: "";
     display: table;
@@ -21,6 +33,12 @@
 }
 .one-column{
     width: 30%;
+}
+.width55{
+    width: 55%;
+}
+.width45{
+    width: 45%;
 }
 .float-left{
     float: left;
@@ -40,18 +58,7 @@
 .left-txt{
     text-align: left;
 }
-section h2{
-    font-size: 2.4rem;
-}
-h3{
-    font-size: 1.5rem;
-}
-h4{
-    font-size: 1rem;
-}
-p{
-    line-height: 150%;
-}
+
 /* global buttons style */
 .btn{
     padding: 10px 20px;
@@ -226,14 +233,10 @@ section#fares form{
     margin-top: 50px;
     margin-bottom: 30px;
 }
-section#fares footer div.partner-img{
-    width: 55%;
-}
 section#fares footer div img{
     width: 100%;
 }
 section#fares footer div.partner-txt{
-    width: 45%;
     padding: 50px 0 0px 70px;
 }
 div.partner-txt p{
@@ -243,6 +246,25 @@ div.partner-txt p{
 /* features section style */
 section#features h2{
     padding: 150px 0 100px;
+}
+
+/* clients section style */
+section#clients div.centered a{
+    padding: 40px 0;
+    display: inline-block;
+}
+div.clients-info{
+    width: 100%;
+}
+.clients-group{
+    width: 30vw;
+    height: 30vw;
+    background-color: lime;
+}
+.clients-overview{
+    width: calc(100% - 60vw);
+    height: 30vw;
+    background-color: #f5f5f5;
 }
 
 
