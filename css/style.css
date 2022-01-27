@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', "Font Awesome 5 Free", sans-serif;
 }
 
 /*! global attributes */
@@ -228,4 +228,22 @@ div.partner-txt p{
 /* features section style */
 section#features h2{
     padding: 150px 0 100px;
+}
+
+/* card test */
+.vert-test{
+    width: calc((100% / 3) - 40px);
+    display: inline-block;
+}
+.test-title{
+    padding: 15px 0;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    text-align: center;
+
+}
+.test-txt{
+    padding: 50px 40px;
+    border: 1px solid lightgray;
 }
