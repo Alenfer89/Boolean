@@ -371,6 +371,7 @@ div.clients-info{
 /* FAQ section style */
 #faq{
     padding: 200px 0;
+    max-height: 945px;
 }
 #faq h3{
     padding-bottom: 70px;
@@ -452,7 +453,7 @@ section.top-footer{
     /* position: absolute; */
     display: block;
     overflow: hidden;
-    background-color: seashell;
+    /* background-color: seashell; */
     transition-duration: 0.5s;
 }
 #faq ul li:hover .faq-dropdown{
@@ -473,4 +474,14 @@ section.top-footer{
 }
 #faq ul li:hover i.fa-chevron-left{
     display: inline-block;
+}
+/* extra button style */
+.btn.blu-white:hover{
+    background-color: #00296b;
+    transition: 0.6s;
+}
+.btn.black-white:hover{
+    background-color: rgb(142, 151, 161);
+    border-color: transparent;
+    transition: 0.6s;
 }
