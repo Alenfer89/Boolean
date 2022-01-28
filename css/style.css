@@ -209,17 +209,17 @@ div.top-nav{
 }
 
 /* jumbotron style */
-.jumbotron{
+#jumbotron{
     width: 100%;
     min-width: 1360px;
-    padding: 100px 200px 50px;
+    padding: 0 200px 50px;
     background-color: #b4d0e7;
-    margin: 100px 0 200px 0;
+    padding-top: 100px;
 }
-.jumbotron h1{
+#jumbotron h1{
     font-size: 4rem;
     min-width: 1150px;
-    margin-bottom: 40px;
+    padding: 100px 0 40px;
 }
 aside.jumbotron-text{
     width: 30%;
@@ -248,6 +248,9 @@ div.jumbotron-img{
 }
 /* !main style */
 /* fares section style */
+#fares{
+    padding-top: 200px;
+}
 section#fares form{
     margin-top: 50px;
     margin-bottom: 30px;
@@ -268,6 +271,9 @@ section#features h2{
 }
 
 /* clients section style */
+#clients{
+    padding-top: 100px;
+}
 section#clients h2{
     padding-top: 50px;
 }
