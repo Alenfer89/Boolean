@@ -379,6 +379,9 @@ div.clients-info{
 #faq li{
     padding: 40px 0;
 }
+#faq li a{
+    margin-right: 40px;
+}
 /* footer style */
 #botpage{
     padding: 150px 0 0 150px;
