@@ -41,6 +41,7 @@ li a:not(.btn){
 }
 .centered{
     width: 70%;
+    min-width: 1190px;
     margin: 0 auto;
 }
 .two-column{
@@ -102,6 +103,7 @@ li a:not(.btn){
 }
 .vert-card{
     width: calc((100% / 3) - 40px);
+    min-width: 390px;
     display: inline-block;
 }
 /* vertical fares-section set of cards */
@@ -297,6 +299,7 @@ div.clients-info{
 .clients-overview{
     width: calc(100% - 60vw);
     height: 30vw;
+    overflow: auto;
     background-color: #f5f5f5;
 }
 .client-logo{
@@ -388,6 +391,9 @@ div.clients-info{
 }
 #botpage li a{
     color: white;
+}
+section.top-footer{
+    min-width: 1580px;
 }
 .top-footer div{
     padding-right: 120px;
