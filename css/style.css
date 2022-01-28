@@ -255,6 +255,12 @@ section#fares form{
     margin-top: 50px;
     margin-bottom: 30px;
 }
+section#fares form input{
+    width: 25px;
+    height: 25px;
+    vertical-align: bottom;
+    margin: 0 5px 0;
+}
 section#fares footer div img{
     width: 100%;
 }
