@@ -447,12 +447,30 @@ section.top-footer{
 }
 /* faq dropdown menu */
 .faq-dropdown{
-    display: none;
-    float: left;
-    padding: 10px;
-    background-color: rgb(255, 254, 254);
-}
-.test:hover .faq-dropdown{
+    height: 0;
+    width: 75%;
+    /* position: absolute; */
     display: block;
-    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    background-color: seashell;
+    transition-duration: 0.5s;
+}
+#faq ul li:hover .faq-dropdown{
+    height: 100px;
+    /* display: block; */
+}
+.test{
+    /* position: relative; */
+}
+#faq ul li:hover{
+    background-color: seashell;
+}
+#faq ul li:hover i.fa-chevron-down{
+    display: none;
+}
+.fa-chevron-left{
+    display: none;
+}
+#faq ul li:hover i.fa-chevron-left{
+    display: inline-block;
 }
