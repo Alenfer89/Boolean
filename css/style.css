@@ -14,6 +14,9 @@ h3{
     font-size: 1.5rem;
 }
 h4{
+    font-size: 1.2rem;
+}
+h5{
     font-size: 1rem;
 }
 p{
@@ -22,6 +25,15 @@ p{
 ul{
     list-style-type: none;
 }
+li a:not(.btn){
+    text-decoration: none;
+}
+li a:hover{
+    text-decoration: underline;
+}
+/* li a:visited{
+    color: blueviolet;
+} */
 .clearfix::after{
     content: "";
     display: table;
@@ -104,7 +116,7 @@ ul{
     padding: 0 40px 40px;
     border: 1px solid lightgray;
 }
-.card h4{
+.card h5{
     padding: 20px 0 10px;
 }
 .card ul li{
@@ -171,19 +183,12 @@ div.top-nav{
     font-size: 0.9rem;
 }
 .top-nav li a:not(.btn){
-    text-decoration: none;
     color: black;
 }
 /* .top-nav li a[class*=btn]{
     background-color: #0061ff;
     padding: 10px 20px;
     color: white;
-} */
-.top-nav li a:hover{
-    text-decoration: underline;
-}
-/* .top-nav li a:visited{
-    color: blueviolet;
 } */
 .top-nav img{
     vertical-align: text-bottom;
@@ -317,6 +322,12 @@ div.clients-info{
 .bgmustard{
     background-color: #ffd830;
 }
+.bgblack{
+    background-color: black;
+}
+.txtwhite{
+    color: white;
+}
 /* partnership section style */
 #partnership{
     padding: 200px 0;
@@ -338,4 +349,29 @@ div.clients-info{
 }
 #faq li{
     padding: 40px 0;
+}
+/* footer style */
+#botpage{
+    padding: 150px 0 0 150px;
+}
+#botpage h4{
+    padding-bottom: 30px;
+}
+#botpage li{
+    padding: 10px 0;
+}
+#botpage li a{
+    color: white;
+}
+.top-footer div{
+    padding-right: 120px;
+    min-height: 400px;
+}
+.bot-footer a{
+    border-top: 1px solid lightgray;
+    display: inline-block;
+    width: 10%;
+    padding: 50px 0;
+    color: white;
+    text-decoration: none;
 }
