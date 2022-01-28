@@ -413,7 +413,7 @@ section.top-footer{
     color: white;
     text-decoration: none;
 }
-/* dropdown menu test */
+/* nav dropdown menu test */
 #contact-details{
     position: relative;
 }
@@ -444,4 +444,15 @@ section.top-footer{
 }
 .nav-dropdown ul li a:hover{
     background-color: rgb(235, 235, 235);
+}
+/* faq dropdown menu */
+.faq-dropdown{
+    display: none;
+    float: left;
+    padding: 10px;
+    background-color: rgb(255, 254, 254);
+}
+.test:hover .faq-dropdown{
+    display: block;
+    transition: 0.5s ease-in-out;
 }
