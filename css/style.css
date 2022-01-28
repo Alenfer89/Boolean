@@ -5,6 +5,9 @@
     padding: 0;
     font-family: 'Open Sans', "Font Awesome 5 Free", sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 /*! global attributes */
 section h2{
@@ -409,4 +412,16 @@ section.top-footer{
     padding: 50px 0;
     color: white;
     text-decoration: none;
+}
+/* dropdown menu test */
+#contact-details{
+    position: relative;
+}
+.nav-dropdown{
+    display: none;
+    position: absolute;
+    left: 0;
+}
+.nav-dropdown li{
+    display: inline-block;
 }
