@@ -110,13 +110,34 @@ div.properties-img img{
 .properties-text{
     width: 30%;
 }
-div.properties-text h2{
+main h2{
     font-size: 2.5rem;
     margin: 1.5rem 0;
 }
 /* .macos::before{
     content: "\f309";
 } */
+/* last different section */
+section#ready-to-go{
+    text-align: center;
+}
+.ready-img{
+    width: 100%;
+}
+.ready-img img{
+    width: 100%;
+}
+#ready-to-go h3{
+    width: 50%;
+    font-size: 1.8rem;
+    padding: 2rem;
+    margin: 0 auto;
+    background-image: url(../img/stars.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* !footer */
+
 /* !colors */
 .bgdark{
     background-color: rgb(32, 32, 32);
@@ -127,3 +148,4 @@ div.properties-text h2{
 main section:nth-child(even){
     background-color: cornsilk;
 }
+
