@@ -139,3 +139,27 @@
     filter: sepia(0.8);
     border-radius: 30px;
 }
+/* esercizio 10 */
+.ex-10-icon{
+    animation-duration: 2s;
+    animation-name: spinneroo;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes spinneroo {
+    0%{
+        transform: rotate(360deg);
+    }
+    25%{
+        transform: rotate(270deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
