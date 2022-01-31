@@ -177,6 +177,10 @@ footer .minor-nav ul li a{
 footer .minor-nav ul li a:hover{
     text-decoration: underline;
 }
+footer .bot-footer{
+    border-top: 1px solid #8ea1e1;
+    padding: 3rem 0;
+}
 /* !colors */
 .bgdark{
     background-color: rgb(32, 32, 32);
