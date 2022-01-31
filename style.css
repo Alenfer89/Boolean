@@ -28,10 +28,7 @@
     width: 500px;
 }
 
-.ex-9-img {
-    margin: 50px 100px;
-    width: 400px;
-}
+
 .ex-10-icon {
     font-size: 60px;
 }
@@ -128,4 +125,17 @@
 .ex-8-img:hover{
     filter: sepia(0.7);
     border-radius: 20px;
+}
+/* esercizio 9 */
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+
+    transition: width 2s, margin 2s, filter 1.5s, border-radius 1.5s;
+}
+.ex-9-img:hover {
+    margin: 0;
+    width: 600px;
+    filter: sepia(0.8);
+    border-radius: 30px;
 }
