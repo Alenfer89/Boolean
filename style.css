@@ -98,7 +98,7 @@
 }
 /* esercizio 5 */
 .ex-5-square{
-    transition: width 2s, height 2s, margin 2s;
+    transition: width 1s, height 1s, margin 1s;
 }
 .ex-5-square:hover{
     margin: 0;
@@ -109,4 +109,8 @@
     width: 30px;
     height: 30px;
     margin: 35px;
+}
+/* esercizio 6 */
+.ex-6-img:hover{
+    filter: grayscale(1);
 }
