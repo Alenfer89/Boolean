@@ -121,3 +121,11 @@
 .ex-7-img:hover{
     filter: sepia(0.7);
 }
+/* esercizio 8 */
+.ex-8-img{
+    transition: filter 2s, border-radius 2s;
+}
+.ex-8-img:hover{
+    filter: sepia(0.7);
+    border-radius: 20px;
+}
