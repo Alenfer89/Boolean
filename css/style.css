@@ -90,3 +90,11 @@ i.fa-angle-up{
 .menu-block{
     margin: 10px;
 }
+.fa-share-square{
+    color: #4bc800;
+}
+#close-call{
+    color: red;
+    padding: 20px;
+    background-color: #4a4a4a;
+}
