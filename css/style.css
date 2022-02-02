@@ -71,6 +71,7 @@ footer{
     width: 100%;
     height: 12vh;
     background-color: #222222;
+    font-size: 0.8rem;
 
     text-align: center;
     justify-content: space-between;
@@ -78,6 +79,12 @@ footer{
 }
 .bot-menu{
     align-items: center;
+}
+.bot-menu i{
+    font-size: 1.5rem;
+}
+i.fa-angle-up{
+    font-size: 0.8rem;
 }
 .menu-block{
     margin: 10px;
