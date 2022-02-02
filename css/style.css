@@ -55,6 +55,7 @@ main{
 .participant{
     flex-basis: calc((100% - 30px) / 6);
     min-width: 287px;
+    max-width: 290px;
 }
 .participant img{
     width: 100%;
