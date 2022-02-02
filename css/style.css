@@ -46,16 +46,18 @@ main{
     background-color: black;
 }
 .centered-container{
-    width: 90%;
-    margin: 0 auto;
+    /* width: 90%;
+    margin: 0 auto; */
     
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
 }
 .participant{
     flex-basis: calc((100% - 30px) / 6);
     min-width: 287px;
-    max-width: 290px;
+    max-width: 288px;
+    margin: 4px;
 }
 .participant img{
     width: 100%;
