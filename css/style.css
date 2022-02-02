@@ -97,4 +97,6 @@ i.fa-angle-up{
     color: red;
     padding: 20px;
     background-color: #4a4a4a;
+    align-items: center;
+    align-self: stretch;
 }
