@@ -103,4 +103,11 @@ img {
     display: block;
     width: auto;
   }
+
+  /* BLOCCO PERCHE' */
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+  margin-top: 20px;
+}
 }
