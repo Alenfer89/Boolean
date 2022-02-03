@@ -74,10 +74,16 @@ img {
 
 
 @media screen and (max-width: 420px){
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
   .row{
     width: 420px;
-    margin-top: 20px;
+    margin: 0;
   }
+  /* BLOCCO LEZIONI */
   #lezioni .row>.left,
   #lezioni .row>.right {
     width: 100%;
@@ -85,7 +91,16 @@ img {
     display: block;
     float: none;
   }
-  #lezioni .row img{
-    height: 50px;
+  img{
+    height: 100px;
+  }
+
+  /* BLOCCO STEPS */
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right{
+    float: none;
+    display: block;
+    width: auto;
   }
 }
