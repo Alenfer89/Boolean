@@ -71,3 +71,21 @@ img {
 .clear {
   clear: both;
 }
+
+
+@media screen and (max-width: 420px){
+  .row{
+    width: 420px;
+    margin-top: 20px;
+  }
+  #lezioni .row>.left,
+  #lezioni .row>.right {
+    width: 100%;
+    /* min-width: 420px; */
+    display: block;
+    float: none;
+  }
+  #lezioni .row img{
+    height: 50px;
+  }
+}
