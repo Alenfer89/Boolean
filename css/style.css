@@ -14,13 +14,18 @@
 /* ! main styling */
 .container{
     height: calc(100vh - 100px);
-    /* width: 100%; */
 }
+
+/* left-nav-bar */
 section.left-nav-bar{
     width: 200px;
-    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     background-color: red;
 }
+
+/* main content styling */
 section.main-content{
     width: calc(100% - 200px);
     background-color: aqua;
@@ -40,6 +45,8 @@ section.main-content{
     border-radius: 20px;
     text-transform: uppercase;
 }
+
+/* !footer styling */
 footer{
     width: 100%;
     height: 100px;
