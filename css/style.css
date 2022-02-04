@@ -23,10 +23,15 @@ section.left-nav-bar{
 section.main-content{
     width: calc(100% - 200px);
     background-color: aqua;
+    position: relative;
 }
 .main-content .subscribe-bar{
     width: 100%;
     height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.2);
     justify-content: flex-end;
     align-items: center;
