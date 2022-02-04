@@ -4,19 +4,19 @@
     margin: 0;
     padding: 0;
 }
-
-/* temporary */
-main> div{
+.flex{
     display: flex;
+}
+
+.container{
     height: calc(100vh - 100px);
     width: 100%;
 }
-.test2{
+section.main-content{
     width: 80%;
-    
     background-color: aqua;
 }
-.test1{
+section.left-nav-bar{
     width: 20%;
     
     background-color: red;
