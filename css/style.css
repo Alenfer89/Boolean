@@ -186,6 +186,22 @@ div.tiny-active-right{
     bottom: -2px;
     right: 0;
 }
+/* card content styling */
+section.main-content div.content div.offers{
+    display: flex;
+    flex-direction: column;
+}
+div.offers div.card-container{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+div.card-container div.card{
+    width: 45%;
+}
+div.card div.playlist-img img{
+    width: 100%;
+}
 /* !footer styling */
 footer{
     width: 100%;
