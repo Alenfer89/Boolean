@@ -23,6 +23,13 @@ section.left-nav-bar{
     justify-content: space-between;
     background-color: red;
 }
+div#logo-img{
+    height: 80px;
+}
+div#logo-img img{
+    width: 80%;
+    padding: 10px 0 0 10px;
+}
 
 /* main content styling */
 section.main-content{
