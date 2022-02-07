@@ -15,13 +15,14 @@
     display: flex;
 }
 
-/* left-nav-bar */
+/* left-nav-bar global */
 section.left-nav-bar{
     width: 200px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    background-color: red;
+    background-color: black;
+    color: #a3a3a3;
 }
 section.left-nav-bar ul{
     list-style-type: none;
@@ -34,6 +35,7 @@ div#logo-img img{
     width: 80%;
     padding: 10px 0 0 10px;
 }
+/* left-bar top list styling */
 div.top-list li, 
 div.bot-list,
 div.bot-left-bar {
@@ -48,7 +50,23 @@ div.top-list ul li img{
     margin-right: 5px;
     padding: 2px 0;
 }
-
+/* top-left-bar bottom-list styling */
+section.left-nav-bar h5{
+    text-transform: uppercase;
+    color: white;
+    padding: 20px 0 5px 0;
+}
+div.bot-list div.create-playlist{
+    display: flex;
+    align-items: center;
+}
+div.bot-list div.create-playlist i.fa-plus-square{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+div.bot-list li{
+    padding: 5px 0;
+}
 /* main content styling */
 section.main-content{
     width: calc(100% - 200px);
