@@ -51,9 +51,7 @@ div.bot-left-bar {
     padding-left: 10px;
     padding-right: 10px;
 }
-div.top-list li:hover{
-    box-shadow: inset 2px 0px greenyellow;
-}
+
 div.top-list ul li img{
     height: 1.5rem;
     vertical-align: bottom;
@@ -66,6 +64,7 @@ div.bot-list{
     flex-direction: column;
     min-height: 150px;
 }
+
 div.bot-list h5{
     text-transform: uppercase;
     color: white;
@@ -100,6 +99,7 @@ div.bot-left-bar div#user-name{
     color: white;
     border-top: 1px solid white;
 }
+
 div.bot-left-bar div#user-name div.image-container{
     width: 15%;
     ;
@@ -107,6 +107,21 @@ div.bot-left-bar div#user-name div.image-container{
 div.bot-left-bar div#user-name div.image-container img{
     border-radius: 50%;
     background-color: darkgray
+}
+/* hover effects on left nav bar */
+div.top-list li:hover{
+    box-shadow: inset 2px 0px greenyellow;
+    color: white;
+    cursor: pointer;
+}
+div.bot-list .create-playlist:hover,
+div.bot-list ul li:hover,
+div.bot-left-bar div#install:hover{
+    color: white;
+    cursor: pointer;
+}
+div.bot-left-bar div#user-name:hover{
+    cursor: text;
 }
 /* main content styling */
 section.main-content{
