@@ -23,12 +23,28 @@ section.left-nav-bar{
     justify-content: space-between;
     background-color: red;
 }
+section.left-nav-bar ul{
+    list-style-type: none;
+    font-size: 0.9rem;
+}
 div#logo-img{
     height: 80px;
 }
 div#logo-img img{
     width: 80%;
     padding: 10px 0 0 10px;
+}
+div.top-list li {
+    /* border-left: 2px solid greenyellow; */
+    padding-left: 10px;
+}
+div.top-list li:hover{
+    box-shadow: inset 2px 0px greenyellow;
+}
+div.top-list ul li img{
+    height: 1.5rem;
+    vertical-align: bottom;
+    padding-right: 5px;
 }
 
 /* main content styling */
