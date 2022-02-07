@@ -40,6 +40,7 @@ div.top-list li,
 div.bot-list,
 div.bot-left-bar {
     padding-left: 10px;
+    padding-right: 10px;
 }
 div.top-list li:hover{
     box-shadow: inset 2px 0px greenyellow;
@@ -72,9 +73,23 @@ div.bot-left-bar div{
     display: flex;
     align-items: center;
 }
+div.bot-left-bar div.image-container{
+    width: 10%;
+    padding: 10px 0;
+    margin-right: 10px;
+}
+
 div.bot-left-bar div#user-name{
     color: white;
     border-top: 1px solid white;
+}
+div.bot-left-bar div#user-name div.image-container{
+    width: 15%;
+    ;
+}
+div.bot-left-bar div#user-name div.image-container img{
+    border-radius: 50%;
+    background-color: darkgray
 }
 /* main content styling */
 section.main-content{
