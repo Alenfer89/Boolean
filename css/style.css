@@ -199,8 +199,9 @@ div.offers div.card-container{
     justify-content: space-between;
 }
 div.card-container div.card-couplet{
-    width: 30%;
-    min-width: 250px;
+    width: 430px;
+    /* width: 30%; */
+    /* min-width: 250px; */
     display: flex;
     justify-content: space-between;
 }
