@@ -35,7 +35,7 @@ div#logo-img img{
     width: 80%;
     padding: 10px 0 0 10px;
 }
-/* left-bar top list styling */
+/* top-left-bar top-list styling */
 div.top-list li, 
 div.bot-list,
 div.bot-left-bar {
@@ -66,6 +66,15 @@ div.bot-list div.create-playlist i.fa-plus-square{
 }
 div.bot-list li{
     padding: 5px 0;
+}
+/* bot-left-bar styling */
+div.bot-left-bar div{
+    display: flex;
+    align-items: center;
+}
+div.bot-left-bar div#user-name{
+    color: white;
+    border-top: 1px solid white;
 }
 /* main content styling */
 section.main-content{
