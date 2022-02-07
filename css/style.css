@@ -18,11 +18,14 @@
 /* left-nav-bar global */
 section.left-nav-bar{
     width: 200px;
+    
+    flex-shrink: 1;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     background-color: black;
     color: #a3a3a3;
+    font-size: 0.8rem;
 }
 section.left-nav-bar ul{
     list-style-type: none;
@@ -36,6 +39,12 @@ div#logo-img img{
     padding: 10px 0 0 10px;
 }
 /* top-left-bar top-list styling */
+div.top-left-bar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 290px;
+}
 div.top-list li, 
 div.bot-list,
 div.bot-left-bar {
@@ -52,7 +61,12 @@ div.top-list ul li img{
     padding: 2px 0;
 }
 /* top-left-bar bottom-list styling */
-section.left-nav-bar h5{
+div.bot-list{
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+}
+div.bot-list h5{
     text-transform: uppercase;
     color: white;
     padding: 20px 0 5px 0;
@@ -64,6 +78,9 @@ div.bot-list div.create-playlist{
 div.bot-list div.create-playlist i.fa-plus-square{
     font-size: 2rem;
     margin-right: 10px;
+}
+div.bot-list ul{
+    overflow: auto;
 }
 div.bot-list li{
     padding: 5px 0;
@@ -118,4 +135,6 @@ footer{
     width: 100%;
     height: 100px;
     background-color: green;
+    position: relative;
+    z-index: 1;
 }
