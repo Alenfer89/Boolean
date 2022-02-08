@@ -16,12 +16,12 @@
 </head>
 <body>
     <main>
-        <div class="container">
+        <div class="container flex">
             <!--! nav bar on left side of main -->
             <!--* extodo check font size / overlap / overflow -->
-            <section class="left-nav-bar">
+            <section class="left-nav-bar flex">
                 <!-- top part of left navbar -->
-                <div class="top-left-bar">
+                <div class="top-left-bar flex">
                     <div id="logo-img">
                         <img src="img/logo.svg" alt="Spotify Logo">
                     </div>
@@ -32,11 +32,11 @@
                             <li><img src="img/libreria.svg" alt="">La tua libreria</li>
                         </ul>
                     </div>
-                    <div class="bot-list">
+                    <div class="bot-list flex">
                         <!--* extodo font size -->
                         <h5>playlist</h5>
                         <!--* EXtodo fontsize -->
-                        <div class="create-playlist"><i class="fas fa-plus-square"></i>Crea Playlist</div>
+                        <div class="create-playlist flex"><i class="fas fa-plus-square"></i>Crea Playlist</div>
                         <!--* EXtodo overflow e min-width -->
                         <ul>
                             <li>Nome Playlist</li>
@@ -53,7 +53,7 @@
                 <!--* extodo font-size adjust -->
                 <!--* extodo overlap col footer -->
                 <div class="bot-left-bar">
-                    <div id="install">
+                    <div id="install" class="flex">
                         <div class="image-container">
                             <img src="img/download.svg" alt="">
                         </div>
@@ -61,7 +61,7 @@
                             installa l'app
                         </div> 
                     </div>
-                    <div id="user-name">
+                    <div id="user-name" class="flex">
                         <div class="image-container">
                             <img src="img/profile.svg" alt="">
                         </div>
@@ -76,7 +76,7 @@
             <section class="main-content">
                 <!-- top overlapping bar -->
                 <!-- todo position fixed sticky o altro? -->
-                <div class="subscribe-bar">
+                <div class="subscribe-bar flex">
                     <a href="#" class="btn">effettua l'upgrade</a>
                 </div>
                 <div class="content">
@@ -94,65 +94,53 @@
                             <li>scopri</li>
                         </ul>
                     </nav>
-                    
-                    <!-- <div class="offers">
-                        <h2>
-                            Recently Played
-                        </h2>
-                        <div class="card-container">
-                            <div class="card-couplet">
-                                <div class="card">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                    <h4>Heavy Metal</h4>
-                                    <p>subtitle</p>
-                                </div>
-                                <div class="card">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-                            </div>
-                            
-                            <div class="card-couplet">
-                                <div class="card">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-                                <div class="card">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-                            </div>
-                            
-                            <div class="card-couplet">
-                                <div class="card">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-                                <div class="card">
-                                    <img src="img/metal_lifting.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="offers">
                         <h2>
                             Recently Played
                         </h2>
-                        <div class="card-container">
-                            <div class="second-card">
+                        <div class="card-container flex">
+                            <div class="card">
                                 <img src="img/metal_lifting.jpg" alt="">
                                 <h5>Heavy Metal</h5>
                                 <p>Subtitle</p>
                             </div>
-                            <div class="second-card">
+                            <div class="card">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <h5>Heavy Metal</h5>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="card">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <h5>Heavy Metal</h5>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="card">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <h5>Heavy Metal</h5>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="card">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <h5>Heavy Metal</h5>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="card">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <h5>Heavy Metal</h5>
+                                <p>Subtitle</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offers">
+                        <h2>
+                            Recently Played
+                        </h2>
+                        <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                        <div class="card-container flex column">
+                            <div class="card">
                                 <img src="img/metal_lifting.jpg" alt="">
                             </div>
-                            <div class="second-card">
-                                <img src="img/metal_lifting.jpg" alt="">
-                            </div>
-                            <div class="second-card">
-                                <img src="img/metal_lifting.jpg" alt="">
-                            </div>
-                            <div class="second-card">
-                                <img src="img/metal_lifting.jpg" alt="">
-                            </div>
-                            <div class="second-card">
+                            <div class="card">
                                 <img src="img/metal_lifting.jpg" alt="">
                             </div>
                         </div>
@@ -161,14 +149,14 @@
                         <h2>
                             Recently Played
                         </h2>
-                        <div class="card-container column-test">
-                            <div class="second-card">
+                        <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                        <div class="card-container flex column">
+                            <div class="card">
                                 <img src="img/metal_lifting.jpg" alt="">
                             </div>
-                            <div class="second-card">
+                            <div class="card">
                                 <img src="img/metal_lifting.jpg" alt="">
                             </div>
-                            
                         </div>
                     </div>
                 </div>
