@@ -254,3 +254,29 @@ footer#player .player-song i{
     padding: 2px;
     color: darkgray;
 }
+footer#player .player-per-se{
+    width: 40%;
+    min-width: 480px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+footer#player .player-per-se i{
+    padding: 0 5px;
+}
+footer#player .player-per-se i.fa-play-circle{
+    font-size: 1.5rem;
+}
+footer#player .player-per-se .song-bar-wrapper{
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.6rem;
+    color: darkgray;
+}
+footer#player .player-per-se .song-bar-wrapper .total-song-time{
+    width: 70%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0.2);
+}
