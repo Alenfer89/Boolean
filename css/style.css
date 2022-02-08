@@ -273,15 +273,44 @@ footer#player .player-per-se .song-bar-wrapper{
     align-items: center;
     font-size: 0.6rem;
 }
-footer#player .filling-bar{
+footer#player .empty-bar{
     width: 60%;
     height: 5px;
     border-radius: 5px;
     background-color: rgba(255,255,255, 0.2);
+    
+    
+}
+footer#player .empty-bar .filling-bar{
+    height: 100%;
+    width: 25%;
+    border-radius: 5px;
+    background-color: white;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer#player .filling-bar .actual-value{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: white;
+    display: none;
+    
 }
 footer#player .player-options{
     width: 250px;
     font-size: 0.5rem;
     justify-content: space-evenly;
     align-items: center;
+}
+/* footer hover effects */
+footer#player .song-bar-wrapper:hover{
+    cursor: pointer;
+}
+
+footer#player .song-bar-wrapper:hover .filling-bar{
+    background-color: greenyellow;
+}
+footer#player .song-bar-wrapper:hover .actual-value{
+    display: inline-block;
 }
