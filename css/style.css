@@ -23,6 +23,7 @@ section.left-nav-bar{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    overflow: hidden;
     background-color: black;
     color: #a3a3a3;
     font-size: 0.8rem;
