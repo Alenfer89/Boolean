@@ -214,13 +214,14 @@ div.tiny-active-right{
 }
 /* todo test con solo card */
 .column-test{
-    width: 33%;
+    max-width: 33%;
 }
 .second-card{
-    width: calc((100% / 100px) / 6);
+    width: calc(100% / 6);
     max-width: 200px;
     flex-grow: 1;
-    margin-right: 20px;
+    margin-right: auto;
+    padding-right: 10px;
     text-align: center;
 }
 .second-card img{
