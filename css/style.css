@@ -225,10 +225,27 @@ div.tiny-active-right{
     font-size: 0.6rem;
 }
 /* !footer styling */
-footer{
+footer#player{
     width: 100%;
     height: 80px;
-    background-color: green;
+    background-color: #282828;
     position: relative;
     z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+footer#player .player-song{
+    width: 200px;
+}
+footer#player .player-song img{
+    width: 20%;
+}
+footer#player .player-song .song-title{
+    flex-direction: column;
+    justify-content: center;
+}
+footer#player .player-song .song-title p{
+    font-size: 0.6rem;
+    color: darkgray;
 }
