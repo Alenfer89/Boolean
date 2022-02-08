@@ -254,6 +254,12 @@ footer#player .player-song i{
     padding: 2px;
     color: darkgray;
 }
+/* favs icons hover effect */
+footer#player .player-song i:hover{
+    color: white;
+    transform: scale(1.2);
+    cursor: pointer;
+}
 footer#player .player-per-se{
     width: 40%;
     min-width: 480px;
@@ -267,6 +273,12 @@ footer#player .player-per-se i{
 }
 footer#player .player-per-se i.fa-play-circle{
     font-size: 1.5rem;
+    transition: 0.1s;
+}
+/* play btn hover effect */
+footer#player .player-per-se i.fa-play-circle:hover{
+    transform: scale(1.5);
+    cursor: pointer;
 }
 footer#player .player-per-se .song-bar-wrapper{
     justify-content: space-around;
@@ -303,14 +315,20 @@ footer#player .player-options{
     justify-content: space-evenly;
     align-items: center;
 }
-/* footer hover effects */
-footer#player .song-bar-wrapper:hover{
+footer#player .player-options i:hover{
+    transform: scale(1.2);
+}
+/* bar footer hover effects */
+footer#player .song-bar-wrapper:hover,
+footer#player .player-options:hover{
     cursor: pointer;
 }
 
-footer#player .song-bar-wrapper:hover .filling-bar{
+footer#player .song-bar-wrapper:hover .filling-bar,
+footer#player .player-options:hover .filling-bar{
     background-color: greenyellow;
 }
-footer#player .song-bar-wrapper:hover .actual-value{
+footer#player .song-bar-wrapper:hover .actual-value,
+footer#player .player-options:hover .actual-value{
     display: inline-block;
 }
