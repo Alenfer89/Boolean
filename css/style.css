@@ -187,40 +187,7 @@ div.tiny-active-right{
     bottom: -2px;
     right: 0;
 }
-/* card containers styling */
-section.main-content div.content div.offers{
-    padding: 0 20px;
-}
-div.offers div.offer-title{
-    padding-bottom: 20px;
-}
-div.offers div.card-container{
-    /* width: 90%; */
-    display: flex;
-    justify-content: space-between;
-}
-div.card-container div.card-couplet{
-    width: 430px;
-    /* width: 30%; */
-    /* min-width: 250px; */
-    display: flex;
-    justify-content: space-between;
-}
-/* card-proper style */
-div.card-container div.card-couplet div.card{
-    width: 48%;
-    text-align: center;
-}
-div.card div.playlist-img img{
-    width: 100%;
-}
-div.card div.playlist-specifics h5{
-    color: white;
-    padding: 10px 0;
-}
-div.card div.playlist-specifics p{
-    font-size: 0.7rem;
-}
+
 /* !footer styling */
 footer{
     width: 100%;
