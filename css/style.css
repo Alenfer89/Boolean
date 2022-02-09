@@ -259,6 +259,7 @@ footer#player{
 }
 footer#player .player-song{
     width: 200px;
+    flex-shrink: 0;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -283,8 +284,8 @@ footer#player .player-song i:hover{
     cursor: pointer;
 }
 footer#player .player-per-se{
-    width: 35%;
-    min-width: 480px;
+    width: 50%;
+    /* min-width: 250px; */
     height: 100%;
     flex-direction: column;
     justify-content: space-evenly;
@@ -303,7 +304,7 @@ footer#player .player-per-se i.fa-play-circle:hover{
     cursor: pointer;
 }
 footer#player .player-per-se .song-bar-wrapper{
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     font-size: 0.6rem;
 }
@@ -332,7 +333,8 @@ footer#player .filling-bar .actual-value{
     
 }
 footer#player .player-options{
-    width: 250px;
+    width: 25%;
+    max-width: 250px;
     font-size: 0.5rem;
     justify-content: space-evenly;
     align-items: center;
@@ -380,5 +382,5 @@ footer#player .player-options:hover .actual-value{
         font-size: 0.5rem;
     }
     /* footer-breakpoints */
-    
+
 }
