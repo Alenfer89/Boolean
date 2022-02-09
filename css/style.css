@@ -467,3 +467,14 @@ footer#player .player-options:hover .actual-value{
         justify-content: space-between;
     }
 }
+
+/* temporary */
+.left-nav-smart-menu{
+    display: none;
+    width: 10%;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: black;
+    color: #a3a3a3;
+}
