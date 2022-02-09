@@ -424,6 +424,9 @@ footer#player .player-options:hover .actual-value{
         color: #a3a3a3;
         font-size: 0.8rem;
     }
+    section.left-nav-bar>*{
+        display: none;
+    }
     /* xs main */
     section.main-content{
         width: 90%;
