@@ -205,16 +205,36 @@ div.tiny-active-right{
 /* card-proper styling */
 .card{
     width: calc(100% / 6);
-    max-width: 200px;
+    max-width: 210px;
     flex-grow: 1;
     margin-right: auto;
     padding-right: 10px;
     text-align: center;
 }
-.card img{
+.card .card-img-container{
+    position: relative;
+}
+.card .card-img-container img{
     width: 100%;
     /*? height: 100%; */
     /*? object-fit: cover; */
+}
+.card .card-img-container .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+}
+.card .card-img-container:hover .overlay{
+    display: flex;
+    cursor: pointer;
 }
 .offers h2,
 .card h5{
@@ -223,6 +243,7 @@ div.tiny-active-right{
 }
 .offers p{
     font-size: 0.6rem;
+    padding-bottom: 0.5rem;
 }
 /* !footer styling */
 footer#player{
@@ -261,7 +282,7 @@ footer#player .player-song i:hover{
     cursor: pointer;
 }
 footer#player .player-per-se{
-    width: 40%;
+    width: 35%;
     min-width: 480px;
     height: 100%;
     flex-direction: column;
@@ -275,7 +296,7 @@ footer#player .player-per-se i.fa-play-circle{
     font-size: 1.5rem;
     transition: 0.1s;
 }
-/* play btn hover effect */
+/** play btn hover effect */
 footer#player .player-per-se i.fa-play-circle:hover{
     transform: scale(1.5);
     cursor: pointer;
