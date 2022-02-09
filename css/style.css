@@ -144,8 +144,8 @@ section.main-content{
 .main-content .subscribe-bar .btn{
     color: white;
     text-decoration: none;
-    padding: 10px 50px;
-    margin-right: 50px;
+    padding: 10px 40px;
+    margin-right: 35px;
     border: 2px solid white;
     border-radius: 20px;
     text-transform: uppercase;
@@ -358,8 +358,8 @@ footer#player .player-options:hover .actual-value{
 }
 
 /* !breakpoints */
-/* md screem */
-@media screen and (min-width: 768px) and (max-width: 991px) {
+/* md screen */
+@media screen and (max-width: 991px) {
     /* main-content-breakpoints */
     .card{
         width: calc(100% / 4);
@@ -381,6 +381,15 @@ footer#player .player-options:hover .actual-value{
     .card p{
         font-size: 0.5rem;
     }
-    /* footer-breakpoints */
+}
+/* sm screen */
+@media screen and (max-width: 767px) {
+    .card{
+        width: calc(100% / 2);
+        max-width: none;
+    }
+}
+/* xs screen */
+@media screen and (max-width: 575px) {
 
 }
