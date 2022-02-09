@@ -262,6 +262,7 @@ footer#player .player-song{
     flex-shrink: 0;
     justify-content: space-evenly;
     align-items: center;
+    transition: 0.5s;
 }
 footer#player .player-song img{
     width: 20%;
@@ -393,9 +394,24 @@ footer#player .player-options:hover .actual-value{
 }
 /* sm screen */
 @media screen and (min-width:576px) and (max-width: 767px) {
+    /* main changes */
     .card{
         width: calc(100% / 2);
         max-width: none;
+    }
+    /* footer changes */
+    footer#player .player-song{
+        width: 150px;
+        flex-shrink: 0;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    footer#player .player-song .favs{
+        display: flex;
+        flex-direction: column;
+    }
+    footer#player .player-per-se{
+        width: 45%;
     }
 }
 /* xs screen */
