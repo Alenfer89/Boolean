@@ -97,9 +97,8 @@ div.bot-left-bar div#user-name{
 
 div.bot-left-bar div#user-name div.image-container{
     width: 15%;
-    ;
 }
-.image-container img{
+.user-icon img{
     border-radius: 50%;
     background-color: darkgray
 }
