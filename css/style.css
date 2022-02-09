@@ -156,7 +156,7 @@ section.main-content{
     transform: scale(1.2);
 }
 /* main nav bar */
-div.content nav{
+div.content nav.main-nav{
     text-align: center;
     padding: 0.5rem;
     font-size: 0.7rem;
@@ -361,6 +361,15 @@ footer#player .player-options:hover .actual-value{
 /* md screen */
 @media screen and (max-width: 991px) {
     /* main-content-breakpoints */
+    div.content nav.main-nav{
+        font-size: 0.6rem;
+    }
+    div.content nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 0px;
+    }
     .card{
         width: calc(100% / 4);
         max-width: 210px;
@@ -383,7 +392,7 @@ footer#player .player-options:hover .actual-value{
     }
 }
 /* sm screen */
-@media screen and (max-width: 767px) {
+@media screen and (min-width:576px) and (max-width: 767px) {
     .card{
         width: calc(100% / 2);
         max-width: none;
