@@ -1,0 +1,29 @@
+/* reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* !the big one wrapper */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* row setting, col reset and outstanding-col */
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+[class*="col-"]{
+    flex: 0 0 auto;
+}
+.col{
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+/* XS media */
+.col-xs-1{}
