@@ -7,7 +7,8 @@
 
 /* !the big one wrapper */
 .container{
-    max-width: 1200px;
+    width: 90%;
+    max-width: 90%;
     margin: 0 auto;
 }
 /* row setting, col reset and outstanding-col */
