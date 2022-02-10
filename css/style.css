@@ -12,13 +12,13 @@
     background-color: #006cfa;
 }
 .nested{
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     text-align: center;
     border: 2px solid #006cfa;
     background-color: #01e165;
 }
 .spacing{
-    width: 100%;
+    /* width: 100%; */
     height: 25px;
 }
