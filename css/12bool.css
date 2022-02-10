@@ -163,7 +163,7 @@
         flex-basis: calc((100% / 12) * 12);
         min-width: calc((100% / 12) * 12);
     }
-    /* * XS offset */
+    /* * SM offset */
     .col-sm-offset-1{
         margin-left: calc((100% / 12) * 1);
     }
@@ -252,7 +252,7 @@
         flex-basis: calc((100% / 12) * 12);
         min-width: calc((100% / 12) * 12);
     }
-    /* * XS offset */
+    /* * MD offset */
     .col-md-offset-1{
         margin-left: calc((100% / 12) * 1);
     }
@@ -341,7 +341,7 @@
         flex-basis: calc((100% / 12) * 12);
         min-width: calc((100% / 12) * 12);
     }
-    /* * XS offset */
+    /* * LG offset */
     .col-lg-offset-1{
         margin-left: calc((100% / 12) * 1);
     }
