@@ -1,15 +1,15 @@
-.test{
+.ax-test{
     height: 50px;
 }
-.bg-green{
+.ax-bg-green{
     background-color: yellowgreen;
     padding: 5px;
 }
-.bg-red{
+.ax-bg-red{
     background-color: red;
     padding: 5px;
 }
-.bg-blue{
+.ax-bg-blue{
     background-color: blue;
     padding: 5px;
 }
