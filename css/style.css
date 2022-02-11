@@ -242,6 +242,9 @@ div.tiny-active-right{
     width: 100%;
     background-color: black;
 }
+div#popular .card .card-img-container img{
+    border-radius: 50%;
+}
 .card .card-img-container:hover img{
     opacity: 0.4;
 }
@@ -309,7 +312,6 @@ footer#player .player-song i:hover{
 }
 footer#player .player-per-se{
     width: 50%;
-    /* min-width: 250px; */
     height: 100%;
     flex-direction: column;
     justify-content: space-evenly;
@@ -381,7 +383,7 @@ footer#player .player-options:hover .actual-value{
     display: inline-block;
 }
 
-/* !breakpoints */
+/*!!! !breakpoints */
 /* md screen */
 @media screen and (max-width: 991px) {
     /* main-content-breakpoints */
