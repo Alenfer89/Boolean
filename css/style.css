@@ -318,15 +318,19 @@ footer#player .player-per-se{
     text-align: center;
 }
 footer#player .player-per-se i{
-    padding: 0 5px;
+    padding: 0 10px;
+    transition: 0.1s;
 }
 footer#player .player-per-se i.fa-play-circle{
     font-size: 1.5rem;
-    transition: 0.1s;
 }
 /** play btn hover effect */
+footer#player .player-per-se i:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
 footer#player .player-per-se i.fa-play-circle:hover{
-    transform: scale(1.5);
+    transform: scale(1.6);
     cursor: pointer;
 }
 footer#player .player-per-se .song-bar-wrapper{
