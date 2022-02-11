@@ -242,9 +242,8 @@ div.tiny-active-right{
     width: 100%;
     background-color: black;
 }
-.card .card-img-container img{
-    width: 100%;
-    background-color: black;
+.card .card-img-container:hover img{
+    opacity: 0.4;
 }
 .card .card-img-container .overlay{
     width: 100%;
