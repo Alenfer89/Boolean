@@ -4,6 +4,10 @@
 .my-img-container{
     width: 200px;
 }
+.my-line{
+    height: 3px;
+    width: 100px;
+}
 
 /* !temporary */
 .ax-test{
