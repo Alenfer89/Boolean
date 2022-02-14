@@ -1,7 +1,9 @@
 .my-bg-green{
     background-color: rgb(26, 188, 156);
 }
-
+.my-img-container{
+    width: 200px;
+}
 
 /* !temporary */
 .ax-test{
