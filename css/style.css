@@ -1,6 +1,9 @@
 .my-bg-green{
     background-color: rgb(26, 188, 156);
 }
+.my-txt-green{
+    color: rgb(26, 188, 156);
+}
 .my-img-container{
     width: 200px;
 }
@@ -10,6 +13,16 @@
 }
 textarea#comment{
     height: 8rem;
+}
+footer div.top-footer{
+    background-color: rgb(58, 84, 109);
+}
+footer div.top-footer i{
+    width: 2rem;
+    line-height: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 0 .2rem;
 }
 /* !temporary */
 .ax-test{
