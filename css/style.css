@@ -8,7 +8,9 @@
     height: 3px;
     width: 100px;
 }
-
+textarea#comment{
+    height: 8rem;
+}
 /* !temporary */
 .ax-test{
     height: 40px;
