@@ -1,3 +1,6 @@
+header{
+    background-color: rgb(44, 62, 80);
+}
 .my-bg-green{
     background-color: rgb(26, 188, 156);
 }
@@ -23,6 +26,9 @@ footer div.top-footer i{
     border: 1px solid white;
     border-radius: 50%;
     margin: 0 .2rem;
+}
+footer div.bot-footer{
+    background-color: rgb(44, 62, 80);
 }
 /* !temporary */
 .ax-test{

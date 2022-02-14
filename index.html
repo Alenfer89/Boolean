@@ -17,16 +17,44 @@
 </head>
 <body>
 <!--! header starts here -->
-    <header class="bg-black">   
-        <div class="container-md">
+    <header>   
+        <!-- *my heading test -->
+        <!-- <div class="container-md text-white">
             <div class="row justify-content-between ax-bg-red">
                 <div class="col-lg-3 col-md-4 col-5">
-                    <div class="ax-test ax-bg-green"></div>
+                    <a class="navbar-brand text-uppercase" href="#">start bootstrap</a>
                 </div>
                 <div class="col-lg-3 col-md-4  col-2">
                     <div class="ax-test ax-bg-blue"></div>
                 </div>
             </div>
+        </div> -->
+        <!-- *bootstrap navbar text -->
+        <div class="container-md text-uppercase">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid  justify-content-between">
+                    
+                    <a class="navbar-brand " href="#">start bootstrap</a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">about</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">contact</a>
+                            </li>                    
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
 <!-- !start of main content -->
@@ -67,7 +95,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row gy-3">
                     <div class="col-12 col-md-6 col-lg-4">
                         <img class="img-fluid" src="img/cabin.png" alt="">
                     </div>
@@ -123,7 +151,7 @@
         </section>
 <!-- start of contact section -->
         <section class="bg-white" id="contact">
-            <div class="container-md py-5">
+            <div class="container-md my-5">
                 <div class="row text-uppercase text-black text-center">
                     <div class="col-12">
                         <h1>contact me</h1>
@@ -154,7 +182,9 @@
                             <textarea class="form-control" placeholder="Leave a message here" id="comment"></textarea>
                             <label for="comment">Message</label>
                         </div>
-                        <button class="btn my-bg-green text-white" type="submit">Send</button>
+                        <div class="pb-5">
+                            <button class="btn my-bg-green text-white" type="submit">Send</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,11 +216,15 @@
                 </div>
             </div>
         </div>
-<!-- bottom footer -->
-        <div class="bot-footer ax-bg-magenta">
-            <div class="row">
-                <div class="col-12">
-                    <div class="ax-test ax-bg-red"></div>
+        <!-- bottom footer -->
+        <div class="bot-footer text-white">
+            <div class="container-md">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="text-capitalize py-4">
+                            copyright <i class="far fa-copyright"></i> your website 2019
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
