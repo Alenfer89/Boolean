@@ -3,6 +3,10 @@
     padding-right: 2rem;
     padding-left: 2rem;
 } */
+/* ! header style */
+header div.top-header .my-sony-logo{
+    width: 6rem;
+}
 section#new-releases{
     background-color: rgb(31, 31, 31);
 }
