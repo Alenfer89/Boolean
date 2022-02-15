@@ -1,1 +1,29 @@
+/*! global attributes */
+.my-container{
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+
+
 /*! temporary */
+.my-block-test{
+    height: 50px;
+    background-color: rgb(64, 72, 185);
+    border: 2px solid red;
+}
+.my-block-test-md{
+    height: 100px;
+    background-color: rgb(64, 72, 185);
+    border: 2px solid red;
+}
+.my-block-test-lg{
+    height: 200px;
+    background-color: rgb(64, 72, 185);
+    border: 2px solid red;
+}
+.my-block-test-xl{
+    height: 400px;
+    background-color: rgb(64, 72, 185);
+    border: 2px solid red;
+}
