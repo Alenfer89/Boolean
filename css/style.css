@@ -7,6 +7,12 @@
 header div.top-header .my-sony-logo{
     width: 6rem;
 }
+header nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link{
+    color: black;
+}
+.dropdown-toggle::after{
+    color: darkgray;
+}
 section#new-releases{
     background-color: rgb(31, 31, 31);
 }
