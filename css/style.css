@@ -13,6 +13,13 @@ header nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link{
 .dropdown-toggle::after{
     color: darkgray;
 }
+/* ! main style */
+/* jumbotron section */
+section#jumbotron{
+    background-image: url(../img/jumbo-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 section#new-releases{
     background-color: rgb(31, 31, 31);
 }
