@@ -21,7 +21,7 @@ section#jumbotron{
     background-size: cover;
     background-position: center;
 }
-section#jumbotron div.my-carousel img{
+section#jumbotron div.my-img-radious img{
     border-radius: 1rem;
 }
 
