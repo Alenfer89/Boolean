@@ -24,8 +24,14 @@ section#jumbotron .my-bg-test{
 section#jumbotron div.my-img-radious img{
     border-radius: 1rem;
 }
-
-
+/* co-op section style */
+section#coop{
+    /* todo height: 100vh; */
+    background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 /* new releases section */
 section#new-releases{
     background-color: rgb(31, 31, 31);
