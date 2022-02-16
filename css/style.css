@@ -40,6 +40,10 @@ section#new-releases .my-card img{
     border-radius: 2rem;
     padding-bottom: 1rem;
 }
+/* section playstation 4 */
+section#play-4 .my-trade-reg{
+    vertical-align: super;
+}
 
 
 
