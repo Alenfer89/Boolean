@@ -15,7 +15,7 @@ header nav.navbar div.navbar-collapse ul.navbar-nav li.nav-item a.nav-link{
 }
 /* ! main style */
 /* jumbotron section */
-section#jumbotron{
+section#jumbotron .my-bg-test{
     background-image: url(../img/jumbo-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
