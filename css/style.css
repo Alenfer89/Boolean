@@ -58,7 +58,13 @@ section#play-now{
 
 /* section social style */
 section#social a{
-    width: 47%;
+    width: 22%;
+}
+@media screen and (max-width:575px) {
+    section#social a{
+        width: 47%;
+        padding-bottom: 2rem;
+    }
 }
 
 
