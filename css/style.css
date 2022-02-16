@@ -19,6 +19,7 @@ section#jumbotron{
     background-image: url(../img/jumbo-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 section#new-releases{
     background-color: rgb(31, 31, 31);
