@@ -21,6 +21,11 @@ section#jumbotron{
     background-size: cover;
     background-position: center;
 }
+section#jumbotron div.my-carousel img{
+    border-radius: 1rem;
+}
+
+/* new releases section */
 section#new-releases{
     background-color: rgb(31, 31, 31);
 }
