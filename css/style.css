@@ -44,6 +44,10 @@ section#new-releases .my-card img{
 section#play-4 .my-trade-reg{
     vertical-align: super;
 }
+/* section play plus */
+section#play-plus{
+    background-color: rgb(190, 188, 187);
+}
 
 
 
