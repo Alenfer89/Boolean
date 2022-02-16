@@ -56,6 +56,12 @@ section#play-now{
     background-color: rgb(22, 28, 59);
 }
 
+/* section social style */
+section#social a{
+    width: 47%;
+}
+
+
 
 
 /*! temporary */
