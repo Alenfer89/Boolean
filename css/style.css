@@ -30,11 +30,21 @@ section#play-plus a.btn:hover{
     outline: 3px solid white;
 }
 /* ! header style */
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
 header div.top-header{
     height: 2rem;
 }
 header div.top-header .my-sony-logo{
     width: 6rem;
+}
+header nav.navbar{
+    height: 4.4rem;
 }
 header .my-search-lens{
     height: 1.5rem;
@@ -48,6 +58,9 @@ header .my-search-lens{
 }
 /* ! main style */
 /* jumbotron section */
+section#jumbotron{
+    margin-top: 6.4rem;
+}
 section#jumbotron .my-top-jumbo{
     background-image: url(../img/jumbo-bg.png);
     background-repeat: no-repeat;
