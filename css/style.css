@@ -1,8 +1,11 @@
 /*! global attributes */
-/* .my-wrapper{
-    padding-right: 2rem;
-    padding-left: 2rem;
-} */
+.btn{
+    transition: 0.5s;
+}
+.btn:hover{
+    transform: scale(1.1);
+    box-shadow: inset;
+}
 /* ! header style */
 header div.top-header{
     height: 2rem;
