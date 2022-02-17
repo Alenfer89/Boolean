@@ -3,11 +3,31 @@ body{
     font-size: 0.9rem;
 }
 .btn{
-    transition: 0.5s;
+    transition: transform 0.5s;
 }
 .btn:hover{
-    transform: scale(1.1);
-    box-shadow: inset;
+    transform: scale(1.05);
+}
+.btn.bg-danger:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgb(220, 53, 69);
+    /* box-shadow: 0 0 0 2px red !important; */
+}
+.btn.btn-primary:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgb(11, 94, 215);
+}
+.btn.bg-dark:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgb(33, 37, 41);
+}
+section#play-plus a.btn:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+.btn.bg-white:hover{
+    outline-offset: 3px;
+    outline: 3px solid white;
 }
 /* ! header style */
 header div.top-header{
@@ -103,6 +123,7 @@ section#play-now{
 section#social a{
     width: 22%;
 }
+/* !!!!!!media custom */
 @media screen and (max-width:575px) {
     section#social a{
         width: 47%;
