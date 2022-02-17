@@ -93,7 +93,6 @@
     <main>
         <!-- jumbotron section -->
         <!-- todo colore button -->
-        <!-- todo dopo aver creato due sotto-sezioni del jumbo valutare height in VH (alla prima parte col BG-IMG) e align-itms-end -->
         <section id="jumbotron">
             <div class="my-top-jumbo px-sm-4 py-5">
                 <div class="container-fluid">
@@ -109,7 +108,7 @@
             </div>
             <div class="my-bot-jumbo  px-sm-4 py-5 bg-white">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row gy-4">
                         <div class="col-6 col-sm-4 col-lg-2">
                             <a class="" href="#">
                                 <img class="img-fluid img-thumbnail border-2 border-primary position-relative" src="img/returnal-listing-thumb-01-ps5.jpg" alt="Returnal Game Cover">
@@ -194,8 +193,10 @@
 
         <!-- start of new section: co-op -->
         <!-- todo ?forse? da implementare su jumbotron cobn VH o height fissa -->
-        <section class="px-sm-4 py-5" id="coop">
-            <div class="container-fluid">
+        <section class="px-sm-4 py-5 position-relative" id="coop">
+            <!-- this is a div-overlay in position absolute to help reading on light imgs -->
+            <div class="my-read-helper d-lg-none"></div>
+            <div class="container-fluid position-relative">
                 <div class="row align-items-end text-white">
                     <div class="col-12 col-lg-4">
                         <img class="w-75 py-3" src="img/it-takes-two-logo.png" alt="It Takes Two co-op Game Banner">
