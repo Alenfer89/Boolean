@@ -30,10 +30,13 @@ section#jumbotron .my-top-jumbo{
 }
 section#jumbotron div.my-bot-jumbo img{
     border-radius: 1rem;
-    transition: 0.4s;
+    bottom: 0;
+    transition: 0.5s;
 }
 section#jumbotron div.my-bot-jumbo img:hover{
     border-color: #0d6efd !important;
+    bottom: 20px;
+    transform: scale(1.1);
 }
 /* play 5 section */
 section#play-5 div.border-bottom:hover{
