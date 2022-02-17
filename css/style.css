@@ -1,4 +1,7 @@
 /*! global attributes */
+body{
+    font-size: 0.9rem;
+}
 .btn{
     transition: 0.5s;
 }
@@ -12,6 +15,9 @@ header div.top-header{
 }
 header div.top-header .my-sony-logo{
     width: 6rem;
+}
+header .my-search-lens{
+    height: 1.5rem;
 }
 .dropdown-toggle::after{
     color: darkgray;
@@ -35,7 +41,13 @@ section#jumbotron div.my-bot-jumbo img{
 }
 section#jumbotron div.my-bot-jumbo img:hover{
     border-color: #0d6efd !important;
-    bottom: 25px;
+    bottom: 20px;
+}
+/* !!!!!!custom media */
+@media screen and (min-width:768px) and (max-width:810px) {
+    br.d-none{
+        display: block !important;
+    }
 }
 /* play 5 section */
 section#play-5 div.border-bottom:hover{
