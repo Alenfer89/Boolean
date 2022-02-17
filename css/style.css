@@ -84,28 +84,14 @@ footer{
 .my-sony-footer-logo{
     width: 9rem;
 }
-
-
-
-
-/*! temporary */
-.my-block-test{
-    height: 50px;
-    background-color: rgb(64, 72, 185);
-    border: 2px solid red;
+footer ul li{
+    padding-bottom: 1rem;
 }
-.my-block-test-md{
-    height: 100px;
-    background-color: rgb(64, 72, 185);
-    border: 2px solid red;
+footer ul li a{
+    color: white;
+    text-decoration: none;
 }
-.my-block-test-lg{
-    height: 200px;
-    background-color: rgb(64, 72, 185);
-    border: 2px solid red;
-}
-.my-block-test-xl{
-    height: 400px;
-    background-color: rgb(64, 72, 185);
-    border: 2px solid red;
+footer ul li a:hover{
+    color: rgba(255, 255, 255, 0.609);
+    text-decoration: none;
 }
