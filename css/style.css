@@ -74,6 +74,17 @@ section#social a{
 footer{
     background-color: rgb(0, 67, 156);
 }
+.my-ps-footer-logo{
+    width: 6.5rem;
+}
+.my-globe{
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+.my-sony-footer-logo{
+    width: 9rem;
+}
+
 
 
 
