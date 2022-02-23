@@ -19,6 +19,8 @@ document.querySelector("#generator").addEventListener('click', function(){
     console.log(ticketName);
 
     document.querySelector("#ticket-name").append(ticketName);
+})
 
-
+document.querySelector("#get-back").addEventListener('click', function(){
+    document.getElementById("pap-name").value="";
 })
