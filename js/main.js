@@ -1,5 +1,8 @@
 
-let papDistance;
+    
+
+let papDistance = parseInt(document.querySelector("#pap-distance").value);
+console.log(papDistance);
 
 
 // if (isNaN(papDistance)){
@@ -14,17 +17,14 @@ const price = basicCost * papDistance;
 
 document.querySelector("#generator").addEventListener('click', function(){
     let ticketName = document.createElement("p");
-    let papName = document.querySelector("#pap-name").value;
+    const papName = document.querySelector("#pap-name").value;
     console.log(papName);
-
     ticketName.innerHTML = papName;
     console.log(ticketName);
 
     document.querySelector("#ticket-name").append(ticketName);
 
     let ticketDistance = document.createElement("li");
-    papDistance = parseInt(document.querySelector("#pap-distance").value);
-    console.log(papDistance);
     ticketDistance.innerHTML = papDistance;
     console.log(ticketDistance);
     document.querySelector("#customer").append(ticketDistance);
