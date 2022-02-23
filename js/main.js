@@ -13,7 +13,7 @@ console.log(papDistance);
 // console.log(papAge);
 
 const basicCost = 0.27;
-const price = basicCost * papDistance;
+const price = basicCost * parseInt(papDistance);
 
 document.querySelector("#generator").addEventListener('click', function(){
     let ticketName = document.createElement("p");
@@ -21,12 +21,16 @@ document.querySelector("#generator").addEventListener('click', function(){
     console.log(papName);
     ticketName.innerHTML = papName;
     console.log(ticketName);
-
     document.querySelector("#ticket-name").append(ticketName);
 
     let ticketDistance = document.createElement("li");
     ticketDistance.innerHTML = papDistance;
     console.log(ticketDistance);
+    document.querySelector("#customer").append(ticketDistance);
+
+    let ticketPrice = document.createElement("li");
+    ticketPrice.innerHTML = price;
+    console.log(ticketPrice);
     document.querySelector("#customer").append(ticketDistance);
 })
 
