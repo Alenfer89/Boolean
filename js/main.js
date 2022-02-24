@@ -51,4 +51,6 @@ document.getElementById('reset').addEventListener('click', function(){
     papKm.value='';
     papAge.value='default';
     priceTag.classList.add('d-none');
+    newElement = document.getElementById('ax-selector');
+    newElement.remove();
 })
