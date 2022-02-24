@@ -7,39 +7,30 @@
 // va applicato uno sconto del 33% per gli over 65.
 // L'output del prezzo finale va visualizzato con massimo due decimali, per indicare centesimi sul prezzo.
 
-let papName = document.querySelector("#pap-name");
-let papKm = document.querySelector("#pap-distance");
-let papAge = document.querySelector("#pap-age");
+let papName = document.getElementById('pap-name');
+// console.log('log di controllo 1 ' + papName);
+
+let papKm = document.getElementById('pap-distance');
+// console.log('log di controllo 2 ' + papKm);
+
+let papAge = document.getElementById('pap-age');
+// console.log('log di controllo 3 ' + papAge);
+
+
 const basicCost = 0.27;
 
-document.querySelector("#generator").addEventListener('click', function(){
-    let ticketName = document.createElement("p");
-    const papName = document.querySelector("#pap-name").value;
-    console.log(papName);
-    ticketName.innerHTML = papName;
-    console.log(ticketName);
-    document.querySelector("#ticket-name").append(ticketName);
-
-    let ticketDistance = document.createElement("li");
-    const papDistance = parseInt(document.querySelector("#pap-distance").value);
-    console.log(papDistance);
-    ticketDistance.innerHTML = papDistance;
-    console.log(ticketDistance);
-    document.querySelector("#customer").append(ticketDistance);
-
-    
-    const price = basicCost * parseInt(papDistance) ;
-
-    let ticketPrice = document.createElement("li");
-    ticketPrice.innerHTML = price;
-    console.log(ticketPrice);
-    document.querySelector("#customer").append(ticketDistance);
-
-})
+// document.querySelector('#generator').addEventListener('click', function(){
 
 
-document.querySelector("#get-back").addEventListener('click', function(){
-    document.getElementById("pap-name").value="";
-    document.getElementById("pap-distance").value="";
-    document.querySelector("select").value="default";
-})
+//     console.log('log di controllo 4 ' + papName.value);
+//     console.log('log di controllo 5 ' + papKm.value);
+//     console.log('log di controllo 6 ' + papAge.value);
+
+// })
+
+
+// document.querySelector('#reset').addEventListener('click', function(){
+//     papName.value=';
+//     papKm.value=';
+//     papAge.value='default';
+// })
