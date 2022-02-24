@@ -7,30 +7,10 @@
 // va applicato uno sconto del 33% per gli over 65.
 // L'output del prezzo finale va visualizzato con massimo due decimali, per indicare centesimi sul prezzo.
 
-let papName = document.getElementById('pap-name');
-// console.log('log di controllo 1 ' + papName);
-
-let papKm = document.getElementById('pap-distance');
-// console.log('log di controllo 2 ' + papKm);
-
-let papAge = document.getElementById('pap-age');
-// console.log('log di controllo 3 ' + papAge);
 
 
+
+let papName = document.getElementById('pax-name');
+let papKm = document.getElementById('pax-name');
+let papAge = document.getElementById('pax-name');
 const basicCost = 0.27;
-
-// document.querySelector('#generator').addEventListener('click', function(){
-
-
-//     console.log('log di controllo 4 ' + papName.value);
-//     console.log('log di controllo 5 ' + papKm.value);
-//     console.log('log di controllo 6 ' + papAge.value);
-
-// })
-
-
-// document.querySelector('#reset').addEventListener('click', function(){
-//     papName.value=';
-//     papKm.value=';
-//     papAge.value='default';
-// })
