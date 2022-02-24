@@ -17,8 +17,12 @@ const basicCost = 0.27;
 const priceTag = document.getElementById('customer');
 
 document.getElementById('generator').addEventListener('click', function(){
+    const price = parseFloat(papKm.value) * basicCost;
+    console.log(priceTag)
+    console.log(price)
     priceTag.classList.remove('d-none');
-    priceTag.innerHTML=`Il biglietto di ${papName.value}, con validità di ${papKm.value} costa $.`
+    priceTag.innerHTML=`Il biglietto di ${papName.value}, con validità di ${papKm.value} Km, costa ${price}$.`
+    
 })
 
 
