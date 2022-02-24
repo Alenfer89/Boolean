@@ -11,6 +11,14 @@
 
 
 let papName = document.getElementById('pax-name');
-let papKm = document.getElementById('pax-name');
-let papAge = document.getElementById('pax-name');
+let papKm = document.getElementById('pax-distance');
+let papAge = document.getElementById('pax-age');
 const basicCost = 0.27;
+
+
+
+document.getElementById('reset').addEventListener('click', function(){
+    papName.value='';
+    papKm.value='';
+    papAge.value='default';
+})
