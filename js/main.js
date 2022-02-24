@@ -21,7 +21,7 @@ document.getElementById('generator').addEventListener('click', function(){
     console.log(priceTag)
     console.log(price)
     priceTag.classList.remove('d-none');
-    priceTag.innerHTML=`Il biglietto di ${papName.value}, con validità di ${papKm.value} Km, costa ${price}$.`
+    priceTag.innerHTML=`Il biglietto di ${papName.value}, con validità di ${papKm.value} Km, costa ${price.toFixed(2)}$.`
     
 })
 
