@@ -8,15 +8,24 @@
 // Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 // Se ci serve, disegnamo un piccolo schemino!
 
+const myTest = document.querySelector('div.col');
+
 for(let i = 0; i <= 100; i = i + 1){
-    
+    let myAdd = document.createElement('div');
+    myAdd.classList.add('ax-box')
+    myTest.append(myAdd)
+
     if ( (i % 3 == 0) && (i % 5 ==0) && (i !== 0)){
         console.log('FizzBuzz');
+        myAdd.innerHTML='FizzBuzz';
     } else if((i % 3 == 0) && (i !== 0)){
         console.log('Fizz');
+        myAdd.innerHTML='Fizz';
     } else if((i % 5 ==0) && (i !== 0)){
         console.log('Buzz');
+        myAdd.innerHTML='Buzz';
     } else{
         console.log(i)
+        myAdd.innerHTML='signora i limoni signoraaaa';
     }
 }
