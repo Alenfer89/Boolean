@@ -31,9 +31,13 @@ document.getElementById('generator').addEventListener('click', function(){
     }
     console.log('controllo 2 ' + price);
 
-    priceTag.classList.remove('d-none');
-    priceTag.innerHTML=`Il biglietto di ${papName.value}, con validità di ${papKm.value} Km, costa ${price.toFixed(2)}$.`
-    
+    if( isNaN(parseFloat(papKm.value)) || papAge.value=='default'){
+        console.log('l\'utente ha sbagliato')
+        alert('per favore inserire i valori come indicato')
+    } else {
+        priceTag.classList.remove('d-none');
+        priceTag.innerHTML=`Il biglietto di ${papName.value}, con validità ${papKm.value} Km, costa ${price.toFixed(2)}$.`
+    }
 })
 
 
