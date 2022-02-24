@@ -17,9 +17,20 @@ const basicCost = 0.27;
 const priceTag = document.getElementById('customer');
 
 document.getElementById('generator').addEventListener('click', function(){
-    const price = parseFloat(papKm.value) * basicCost;
-    console.log(priceTag)
-    console.log(price)
+    let price = parseFloat(papKm.value) * basicCost;
+    console.log('controllo 1 ' + price);
+
+    if (papAge.value == 'minor'){
+        price -= price * 17 / 100
+        console.log('prezzo minori')
+    } else if (papAge.value == 'elderly'){
+        price -= price * 33 / 100
+        console.log('prezzo reduci')
+    } else {
+        console.log('prezzo pieno')
+    }
+    console.log('controllo 2 ' + price);
+
     priceTag.classList.remove('d-none');
     priceTag.innerHTML=`Il biglietto di ${papName.value}, con validità di ${papKm.value} Km, costa ${price.toFixed(2)}$.`
     
