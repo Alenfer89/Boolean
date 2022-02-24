@@ -14,11 +14,17 @@ let papName = document.getElementById('pax-name');
 let papKm = document.getElementById('pax-distance');
 let papAge = document.getElementById('pax-age');
 const basicCost = 0.27;
+const priceTag = document.getElementById('customer');
 
+document.getElementById('generator').addEventListener('click', function(){
+    priceTag.classList.remove('d-none');
+    priceTag.innerHTML=`Il biglietto di ${papName.value}, con validità di ${papKm.value} costa $.`
+})
 
 
 document.getElementById('reset').addEventListener('click', function(){
     papName.value='';
     papKm.value='';
     papAge.value='default';
+    priceTag.classList.add('d-none');
 })
