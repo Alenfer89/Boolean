@@ -19,6 +19,8 @@ const priceTag = document.getElementById('customer');
 document.getElementById('generator').addEventListener('click', function(){
     let price = parseFloat(papKm.value) * basicCost;
     console.log('controllo 1 ' + price);
+    // let newElement = document.createElement('p');
+    // document.querySelector('ax-selector').append(newElement);
 
     if (papAge.value == 'minor'){
         price -= price * 17 / 100
@@ -37,6 +39,9 @@ document.getElementById('generator').addEventListener('click', function(){
     } else {
         priceTag.classList.remove('d-none');
         priceTag.innerHTML=`Il biglietto di ${papName.value}, con validità ${papKm.value} Km, costa ${price.toFixed(2)}$.`
+        let newElement = document.createElement('p');
+        newElement.classList.add('ax-test');
+        document.getElementById('ax-selector').append(newElement);
     }
 })
 

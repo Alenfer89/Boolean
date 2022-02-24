@@ -9,3 +9,9 @@ body{
 main ul li{
     width: 25%;
 }
+
+.ax-test{
+    width: 100%;
+    height: 5px;
+    background-color: greenyellow;
+}
