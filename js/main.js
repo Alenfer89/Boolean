@@ -56,10 +56,22 @@ document.getElementById('generator').addEventListener('click', function(){
 
 //dadi
 //*setto i dati
+document.getElementById('alea').addEventListener('click', function(){
+    let userDoom = Math.floor(Math.random() * 6 + 1);
+    console.log(userDoom)
+    document.getElementById('user-nr').innerHTML=userDoom;
+    let pcDoom = Math.floor(Math.random() * 6 + 1);
+    console.log(pcDoom)
+    document.getElementById('matrix-nr').innerHTML=pcDoom;
+    let result = document.getElementById('result');
+    if(userDoom > pcDoom){
+        result.innerHTML='HAI VINTO!';
+    } else if(userDoom < pcDoom){
+        result.innerHTML='HAI PERSO!';
+    } else {
+        result.innerHTML='SIGNORA I LIMONI SIGNORAAAAA';
+    }
+})
 
-let userDoom = Math.floor(Math.random() * 6 + 1);
-console.log(userDoom)
-let pcDoom = Math.floor(Math.random() * 6 + 1);
-console.log(pcDoom)
 
 
