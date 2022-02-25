@@ -26,23 +26,28 @@ console.log(registeredEmailList);
 //*creo un listener
 //? ciclo for con un if dentro per controllo e risposta?
 document.getElementById('generator').addEventListener('click', function(){
+    //ù qua non funziona perche' la variabile non ha un valore assegnato e sotto in fondo non prende l'identità
     //let check;
     let check=false;
     for ( i = 0 ; i < registeredEmailList.length; i++){
-        //console.log(registeredEmailList[i]);
+        //ù qua il la variabile check non funzionava perchè si creava solo se
         if(registeredEmailList[i] === userEmail.value){
+            //ù creare qua la variabile check non funzionava perchè si creava e si verificava sempre e solo col true(vedi sotto)
             check = true;
             if (check = true){
                 alert('benvenuto')
             }
+            //ù qua non funziona perche' non sarà mai possibile verificarlo
             //else if (!check){
             //    alert('registrati')
            // }
         } 
+        //ù qua non funziona ma non ho ancora capito perche'
        // else{
        //     check = false
        // }
     }
+    //ù qua senza l'uguaglianza forte o l'identità non funziona
     if (check==false){
         alert('registrati gratis')
     }
@@ -52,6 +57,7 @@ document.getElementById('generator').addEventListener('click', function(){
 //dadi
 //*setto i dati
 let userDoom
+let pcDoom
 
 
 
