@@ -26,7 +26,11 @@ console.log(registeredEmailList);
 document.getElementById('generator').addEventListener('click', function(){
     for ( i = 0 ; i < registeredEmailList.length; i++){
         console.log(registeredEmailList[i]);
-    
+        if(registeredEmailList[i] == userEmail.value){
+            prompt('benvenuto');
+        } else{
+            console.warn('registrati gratis');
+        }
     }
 })
 //? ciclo for con un if dentro per controllo e risposta?
