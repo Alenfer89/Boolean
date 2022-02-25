@@ -56,8 +56,10 @@ document.getElementById('generator').addEventListener('click', function(){
 
 //dadi
 //*setto i dati
-let userDoom
-let pcDoom
 
+let userDoom = Math.floor(Math.random() * 6 + 1);
+console.log(userDoom)
+let pcDoom = Math.floor(Math.random() * 6 + 1);
+console.log(pcDoom)
 
 
