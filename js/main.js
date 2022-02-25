@@ -26,6 +26,7 @@ console.log(registeredEmailList);
 //*creo un listener
 //? ciclo for con un if dentro per controllo e risposta?
 document.getElementById('generator').addEventListener('click', function(){
+    //let check;
     let check=false;
     for ( i = 0 ; i < registeredEmailList.length; i++){
         //console.log(registeredEmailList[i]);
@@ -34,7 +35,13 @@ document.getElementById('generator').addEventListener('click', function(){
             if (check = true){
                 alert('benvenuto')
             }
+            //else if (!check){
+            //    alert('registrati')
+           // }
         } 
+       // else{
+       //     check = false
+       // }
     }
     if (check==false){
         alert('registrati gratis')
@@ -44,6 +51,7 @@ document.getElementById('generator').addEventListener('click', function(){
 
 //dadi
 //*setto i dati
+let userDoom
 
 
 
