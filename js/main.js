@@ -30,7 +30,7 @@ document.getElementById('generator').addEventListener('click', function(){
     //let check;
     let check=false;
     for ( i = 0 ; i < registeredEmailList.length; i++){
-        //ù qua il la variabile check non funzionava perchè si creava solo se
+        //ù qua il la variabile check non funzionava perchè si creava per ogni ciclo di for?
         if(registeredEmailList[i] === userEmail.value){
             //ù creare qua la variabile check non funzionava perchè si creava e si verificava sempre e solo col true(vedi sotto)
             check = true;
@@ -42,7 +42,7 @@ document.getElementById('generator').addEventListener('click', function(){
             //    alert('registrati')
            // }
         } 
-        //ù qua non funziona ma non ho ancora capito perche'
+        //ù qua non funziona ma non ho ancora capito perche' (o forse qua ne fa uno per ogni ciclo di for?)
        // else{
        //     check = false
        // }
