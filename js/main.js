@@ -17,21 +17,31 @@
 // proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 // usiamo i diagrammini e i discorsi filosofici di oggi come base per costruire un nostro sistema di implementazione autonomo
 
-//setto i dati
+//mail
+//*setto i dati
 const userEmail = document.getElementById('user-email');
 const registeredEmailList = ['pera', 'mela', 'banana','orange', 'melanzana', 'pomodoros', 'ciliegie', 'ananas'] ;
 console.log(userEmail);
 console.log(registeredEmailList);
-//creo un listener
+//*creo un listener
+//? ciclo for con un if dentro per controllo e risposta?
 document.getElementById('generator').addEventListener('click', function(){
     for ( i = 0 ; i < registeredEmailList.length; i++){
-        console.log(registeredEmailList[i]);
-        if(registeredEmailList[i] == userEmail.value){
-            prompt('benvenuto');
-        } else{
-            console.warn('registrati gratis');
+        //console.log(registeredEmailList[i]);
+        if(registeredEmailList[i] === userEmail.value){
+            let check = true;
+            if (check){
+                alert('benvenuto')
+            } else if (!check){
+                alert('registrati')
+            }
         }
     }
 })
-//? ciclo for con un if dentro per controllo e risposta?
+
+
+//dadi
+//*setto i dati
+
+
 
