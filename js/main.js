@@ -42,7 +42,7 @@ document.getElementById('generator').addEventListener('click', function(){
             //    alert('registrati')
            // }
         } 
-        //ù qua non funziona ma non ho ancora capito perche' (o forse qua ne fa uno per ogni ciclo di for?)
+        //ù qua non funziona ma non ho ancora capito perche' (o forse qua ne fa uno per ogni ciclo di for? ma dovrebbe comunque funzionare, ma forse non c'era l'identità fuori dal for)
        // else{
        //     check = false
        // }
