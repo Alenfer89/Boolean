@@ -36,7 +36,7 @@ document.getElementById('generator').addEventListener('click', function(){
             }
         } 
     }
-    if (check===false){
+    if (check==false){
         alert('registrati gratis')
     }
 })
