@@ -39,8 +39,8 @@ leButton.addEventListener('click', function(){
   console.log(firstWord.value.length)
   console.log(secondWord.value.length)
   //con il isnan al contrario volevo rimuovere i numeri dalla selezione, ma basta una lettera affinchè diventino stringhe e quindi diventa inutile il primo if
-  if((/^[0-9]/.test(firstWord.value)) || (/^[0-9]/.test(secondWord.value))){
-    alert('non inserire solo numeri, puoi però una combinazione di numeri e lettere')
+  if((!/^[a-zA-Z]*$/g.test(firstWord.value)) || (!/^[a-zA-Z]*$/g.test(secondWord.value))){
+    alert('possono essere inserite solo lettere')
   } else{
     //con questo if paragono le lunghezze delle due variabili e le stampo di conseguenza
     if(firstWord.value.length > secondWord.value.length){
