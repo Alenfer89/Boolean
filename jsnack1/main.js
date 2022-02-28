@@ -3,8 +3,15 @@
     Il software stampa il maggiore.
  */
 
-const firstNumber = prompt("inserisci un numero")
-const secondNumber = prompt("inserisci un numero")
+
+
+
+
+//chiedo i due numeri con due prompt.
+const firstNumber = prompt("inserisci un numero");
+const secondNumber = prompt("inserisci un numero");
+
+//con due if innestati dapprima scremo i "non numeri", quindi se ho solo numeri procedo con lo stampare il maggiore dei due
 if (isNaN(firstNumber) || isNaN(secondNumber)){
     console.error('numeri please')
     alert('errore')
