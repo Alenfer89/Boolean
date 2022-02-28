@@ -10,7 +10,7 @@ const userNumber = prompt('indicami un numero di 7 cifre!');
 console.log(userNumber)
 console.log(userNumber.length)
 
-if ((userNumber.length !== 7) || (isNaN(parseInt(userNumber))) ){
+if ((userNumber.length !== 7) || (!/^[0-9]*$/g.test(userNumber)) ){
   alert('inserisci 7 caratteri numerici')
 } else{
   userNumber
