@@ -1,9 +1,13 @@
 /**
  * 
-   L'utente inserisce due parole in successione, con due prompt.
-   Il software stampa prima la parola più corta, poi la parola più lunga.
+  L'utente inserisce due parole in successione, con due prompt.
+  Il software stampa prima la parola più corta, poi la parola più lunga.
  */
 
+
+//*parte funzionante:
+//*1 - tramite due prompt chiedo due parole
+//*2 - con un if paragono le lunghezze (.length) e stampo di conseguenza
 
 //  const firstWord = prompt("inserisci una parola")
 //  const secondWord = prompt("inserisci una parola")
@@ -18,8 +22,10 @@
 //      console.log('signora i limoni')
 //  }
 
-const firstWord = document.getElementById('first-word');
 
+//*parte NON funzionante su cui sto ancora lavorando, il .length non funziona e cercherò alternative
+
+const firstWord = document.getElementById('first-word');
 const secondWord = document.getElementById('second-word');
 const leButton = document.getElementById('le-button');
 let result = document.getElementById('result');
