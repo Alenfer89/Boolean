@@ -45,8 +45,10 @@ nextButton.addEventListener('click', function() {
   carouselWindow[activeElement].classList.add('d-none');
   activeElement++;
   carouselWindow[activeElement].classList.remove('d-none');
-  if(activeElement > (items.length -1) ){
-    nextButton.classList.add('d-none');
+  console.log('valore elemento attivo' + activeElement)
+  console.log('valore totale' + items.length)
+  if(activeElement > items.length){
+    nextButton.classList.add(' d-none');
   }
 })
 
@@ -56,6 +58,7 @@ preButton.addEventListener('click', function() {
   carouselWindow[activeElement].classList.remove('d-none');
 })
 
+console.log(items.length)
 
 
 
