@@ -39,17 +39,19 @@ carouselWindow[0].classList.remove('d-none');
 
 const nextButton = document.querySelector('span.my-next');
 const preButton = document.querySelector('span.my-previous');
-
+console.log(nextButton.classList)
 let activeElement = 0;
 nextButton.addEventListener('click', function() {
   carouselWindow[activeElement].classList.add('d-none');
   activeElement++;
   carouselWindow[activeElement].classList.remove('d-none');
-  console.log('valore elemento attivo' + activeElement)
-  console.log('valore totale' + items.length)
+  console.log('prima' + activeElement)
+  console.log('prima' + items.length)
   if(activeElement > items.length){
-    nextButton.classList.add(' d-none');
+  nextButton.classList.add(' d-none');
   }
+  console.log('dopo' +activeElement)
+  console.log('dopo' +items.length)
 })
 
 preButton.addEventListener('click', function() {
