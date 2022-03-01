@@ -40,17 +40,23 @@ carouselWindow[0].classList.remove('d-none');
 const nextButton = document.querySelector('span.my-next');
 const preButton = document.querySelector('span.my-previous');
 console.log(nextButton.classList)
+//stabilisco la variabile contatore dei click
 let activeElement = 0;
+//event listener click
 nextButton.addEventListener('click', function() {
+  //al primo click la variabile col valore del contatore [0] non ha "d-none" e lo "ottiene"
   carouselWindow[activeElement].classList.add('d-none');
   console.log(activeElement)
+  //aumento il contatore da [0] a [1]
   activeElement++;
-  carouselWindow[activeElement].classList.remove('d-none');
-  console.log(activeElement)
-  console.log(items.length - 1)
-  if(activeElement >= (items.length - 1)){
-    carouselWindow[activeElement].classList.add('d-none');
+  //con un if controllo il valore del contatore  
+  if(activeElement >= items.length){
+    //con valore pari o uguale alla lunghezza della lista, il contatore si resetta
     activeElement = 0;
+    //il valore dell'array a questo punto viene resettato anche della classe e si riparte
+    carouselWindow[activeElement].classList.remove('d-none');
+  } else if(activeElement < items.length){
+    //se il contatore è ancora incluso nella lunghezza della lista/array, il valore al punto in cui sono perde la classe e viene mostrato, poi si riparte al prox click 
     carouselWindow[activeElement].classList.remove('d-none');
   }
 })
