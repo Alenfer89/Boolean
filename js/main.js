@@ -49,7 +49,7 @@ nextButton.addEventListener('click', function() {
   console.log(activeElement)
   console.log(items.length - 1)
   if(activeElement >= (items.length - 1)){
-  nextButton.classList.add('d-none');
+    activeElement = 0;
   }
 })
 
