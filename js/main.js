@@ -49,7 +49,9 @@ nextButton.addEventListener('click', function() {
   console.log(activeElement)
   console.log(items.length - 1)
   if(activeElement >= (items.length - 1)){
+    carouselWindow[activeElement].classList.add('d-none');
     activeElement = 0;
+    carouselWindow[activeElement].classList.remove('d-none');
   }
 })
 
