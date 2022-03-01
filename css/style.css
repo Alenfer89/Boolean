@@ -1,3 +1,29 @@
 body{
     font-family: "Montserrat", sans-serif;
 }
+
+main{
+    width: 80%;
+    margin: 0 auto;
+    background-color: bisque;
+    padding: 3rem 0;
+}
+.my-skip{
+    position: absolute;
+    top: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    background-color: gray;
+    opacity: 0.5;
+    border-radius: 50%;
+    
+}
+.my-previous{
+    left: 1rem;
+    transform: translate(50%, -50%);
+}
+.my-next{
+    right: 1rem;
+    transform: translate(-50%, -50%);
+}
