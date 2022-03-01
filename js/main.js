@@ -43,15 +43,14 @@ console.log(nextButton.classList)
 let activeElement = 0;
 nextButton.addEventListener('click', function() {
   carouselWindow[activeElement].classList.add('d-none');
+  console.log(activeElement)
   activeElement++;
   carouselWindow[activeElement].classList.remove('d-none');
-  console.log('prima' + activeElement)
-  console.log('prima' + items.length)
-  if(activeElement > items.length){
-  nextButton.classList.add(' d-none');
+  console.log(activeElement)
+  console.log(items.length - 1)
+  if(activeElement >= (items.length - 1)){
+  nextButton.classList.add('d-none');
   }
-  console.log('dopo' +activeElement)
-  console.log('dopo' +items.length)
 })
 
 preButton.addEventListener('click', function() {
