@@ -27,6 +27,9 @@ main{
     right: 1rem;
     transform: translate(-50%, -50%);
 }
+.active{
+    display: inline-block;
+}
 
 /* .my-carousel-items{
     display: none;

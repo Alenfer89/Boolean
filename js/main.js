@@ -23,15 +23,22 @@ const text = [
 ];
 
 
-let carouselWindow='';
+let carouselWrapper='';
 for (let i = 0 ; i < items.length ; i++){
-  carouselWindow = `
+  carouselWrapper += `
   <div class="my-carousel-window w-100 d-none">
-    <img src="${items[i]}" alt="random image" class="w-100 my-carousel-items ">
+    <img src="${items[i]}" alt="random image" class="w-100 my-carousel-items">
   </div>`
 }
-const carouselWrapper = document.querySelector('div.my-carousel');
-carouselWrapper.innerHTML += carouselWindow; 
+const carousel = document.querySelector('div.my-carousel');
+carousel.innerHTML += carouselWrapper;
+
+let carouselWindow = document.getElementsByClassName('my-carousel-window');
+carouselWindow[0].classList.remove('d-none');
+
+const nextButton = document.querySelector('div.my-next');
+
+
 
 
 
