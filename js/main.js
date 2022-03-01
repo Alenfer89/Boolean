@@ -25,6 +25,7 @@ const text = [
 
 let carouselWrapper='';
 for (let i = 0 ; i < items.length ; i++){
+  //! += fondamentale o il ciclofor continua a rimpiazzare il mio div
   carouselWrapper += `
   <div class="my-carousel-window w-100 d-none">
     <img src="${items[i]}" alt="random image" class="w-100 my-carousel-items">
@@ -36,9 +37,14 @@ carousel.innerHTML += carouselWrapper;
 let carouselWindow = document.getElementsByClassName('my-carousel-window');
 carouselWindow[0].classList.remove('d-none');
 
-const nextButton = document.querySelector('div.my-next');
+const nextButton = document.querySelector('span.my-next');
 
-
+let activeElement = 0;
+nextButton.addEventListener('click', function() {
+  carouselWindow[activeElement].classList.add('d-none');
+  activeElement++;
+  carouselWindow[activeElement].classList.remove('d-none');
+})
 
 
 
