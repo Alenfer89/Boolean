@@ -38,13 +38,24 @@ let carouselWindow = document.getElementsByClassName('my-carousel-window');
 carouselWindow[0].classList.remove('d-none');
 
 const nextButton = document.querySelector('span.my-next');
+const preButton = document.querySelector('span.my-previous');
 
 let activeElement = 0;
 nextButton.addEventListener('click', function() {
   carouselWindow[activeElement].classList.add('d-none');
   activeElement++;
   carouselWindow[activeElement].classList.remove('d-none');
+  if(activeElement > (items.length -1) ){
+    nextButton.classList.add('d-none');
+  }
 })
+
+preButton.addEventListener('click', function() {
+  carouselWindow[activeElement].classList.add('d-none');
+  activeElement--;
+  carouselWindow[activeElement].classList.remove('d-none');
+})
+
 
 
 
