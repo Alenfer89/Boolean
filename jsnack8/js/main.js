@@ -15,9 +15,7 @@ const cognomi = ["people","history","way","art","world","information","map","fam
 //creo l'array lista invitati e la variabile per generare il nome fittizio
 const listaInvitati=[];
 let nomeFittizio;
-//creo due variabili per generare numeri casuali con cui pescare il rispettivo valore negli array "nome" e "cognome"
-let nameCounter = Math.floor(Math.random() * nomi.length)
-let surnameCounter = Math.floor(Math.random() * cognomi.length)
+
 
 for(let i = 0; i < 10; i++){
   //creo due variabili per generare numeri casuali con cui pescare il rispettivo valore negli array "nome" e "cognome"
