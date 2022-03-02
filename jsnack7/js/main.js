@@ -5,13 +5,21 @@
  */
 
 
+//creo il mio array contenitore dei numeri randomici
+const randomNumbers =[];
+//creo la variabile somma che avrà un senso dopo il ciclo for
+let sum=0;
 
-let randomNumber= Math.floor(Math.random()*100);
-console.log(randomNumber);
-const myNumberList = [Math.floor(Math.random()*100), Math.floor(Math.random()*100), Math.floor(Math.random()*100), Math.floor(Math.random()*100), Math.floor(Math.random()*100), Math.floor(Math.random()*100), Math.floor(Math.random()*100), Math.floor(Math.random()*100), Math.floor(Math.random()*100), Math.floor(Math.random()*100)];
-console.log(myNumberList);
-for (let i = 0; i < 10; i++) {
-  let sum, 
+for(let i = 0 ; i < 10; i++){
+  //creo la variabile "numero casuale"
+  let number = Math.floor(Math.random()* 100 );
+  randomNumbers.push(number)
+  sum += number;
+  console.log('somma parziale ' + sum)
 }
-let sum;
-let meadianValue;
+//creo la variabile per il vaolore medio
+let medianValue = sum / randomNumbers.length;
+//controllo i valori
+console.log(randomNumbers);
+console.log(sum);
+console.log(medianValue);
