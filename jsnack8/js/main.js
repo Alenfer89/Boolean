@@ -21,8 +21,10 @@ for(let i = 0; i < 10; i++){
   //creo due variabili per generare numeri casuali con cui pescare il rispettivo valore negli array "nome" e "cognome"
   let nameCounter = Math.floor(Math.random() * nomi.length)
   let surnameCounter = Math.floor(Math.random() * cognomi.length)
+  //creo due variabili per facilitare l'assegnazione del primo carattere in maiuscolo
+  let capitalizedName = nomi[nameCounter].charAt(0).toUpperCase() + nomi[nameCounter].substring(1); 
   //unisco i valori casuali, che pescano dagli array, per formare il nome, poi lo pusho all'interno del mio array
-  nomeFittizio= nomi[nameCounter] + " " + cognomi[surnameCounter];
+  nomeFittizio= capitalizedName + " " + cognomi[surnameCounter];
   listaInvitati.push(nomeFittizio);
 }
 //controllo
