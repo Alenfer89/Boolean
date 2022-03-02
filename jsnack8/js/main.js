@@ -21,6 +21,7 @@ for(let i = 0; i < 10; i++){
   //creo due variabili per generare numeri casuali con cui pescare il rispettivo valore negli array "nome" e "cognome"
   let nameCounter = Math.floor(Math.random() * nomi.length)
   let surnameCounter = Math.floor(Math.random() * cognomi.length)
+  //unisco i valori casuali, che pescano dagli array, per formare il nome, poi lo pusho all'interno del mio array
   nomeFittizio= nomi[nameCounter] + " " + cognomi[surnameCounter];
   listaInvitati.push(nomeFittizio);
 }
