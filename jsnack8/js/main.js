@@ -11,11 +11,20 @@ const nomi = ["reckless","rectangular","ready","real","realistic","reasonable","
 
 const cognomi = ["people","history","way","art","world","information","map","family","government","health","system","computer","meat","year","thanks","music","person","reading","method","data","food","understanding","theory","law","bird","literature","problem","software","control","knowledge","power","ability","economics","love","internet","television","science","library","nature","fact","product","idea","temperature","investment","area","society","activity","story","magazine","newspaper","relationship","teaching","cell","dealer","debate","finding","lake","member","message","phone","scene","appearance","association","concept","customer","death","discussion","housing","inflation","insurance","mood","woman","advice","blood","effort","expression","importance","opinion","payment","reality","responsibility","situation","skill","statement","wealth","application","city","county","depth"];
 
+
+//creo l'array lista invitati e la variabile per generare il nome fittizio
 const listaInvitati=[];
 let nomeFittizio;
+//creo due variabili per generare numeri casuali con cui pescare il rispettivo valore negli array "nome" e "cognome"
+let nameCounter = Math.floor(Math.random() * nomi.length)
+let surnameCounter = Math.floor(Math.random() * cognomi.length)
 
 for(let i = 0; i < 10; i++){
-  nomeFittizio= nomi[0] + " " + cognomi[0];
+  //creo due variabili per generare numeri casuali con cui pescare il rispettivo valore negli array "nome" e "cognome"
+  let nameCounter = Math.floor(Math.random() * nomi.length)
+  let surnameCounter = Math.floor(Math.random() * cognomi.length)
+  nomeFittizio= nomi[nameCounter] + " " + cognomi[surnameCounter];
   listaInvitati.push(nomeFittizio);
 }
+//controllo
 console.log(listaInvitati)
