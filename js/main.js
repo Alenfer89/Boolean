@@ -47,7 +47,7 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
   //.controllo che ivalori inseriti siano validi al click: prima "pari" o "dispari"
   if( (userChoice.value.toLowerCase() == 'pari') || (userChoice.value.toLowerCase() == 'dispari')){
     check = true;
-    console.log('ok')
+    //console.log('ok')
   } else{
     alert('inserisci valori corretti')
   }
@@ -59,7 +59,7 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
     alert('inserisci un numero tra 1 e 5')
   } else{
     doubleCheck = true;
-    console.log('okok')
+    //console.log('okok')
   }
 
   //.il gioco:
@@ -69,8 +69,6 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
     console.log('se c\'è stato un alert : ERRORE TI SERVONO DUE FLAG')
     let aiNumber;
     let sum = (parseInt(userNumber.value)) + randomNumberGenerator(aiNumber);
-    console.log(randomNumberGenerator(aiNumber))
-    console.log(parseInt(userNumber.value))
     console.log('questa è la somma ' + sum)
     if((isEven(sum)  && (userChoice.value.toLowerCase() == 'pari')) || (!isEven(sum) && (userChoice.value.toLowerCase() == 'dispari')) ){
       console.log(randomNumberGenerator(aiNumber));
