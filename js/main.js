@@ -68,14 +68,15 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
   } else {
     console.log('se c\'è stato un alert : ERRORE TI SERVONO DUE FLAG')
     let aiNumber;
-    let sum = (parseInt(userNumber.value)) + randomNumberGenerator(aiNumber);
+    aiNumber = randomNumberGenerator(aiNumber);
+    let sum = (parseInt(userNumber.value)) + aiNumber;
     if((isEven(sum)  && (userChoice.value.toLowerCase() == 'pari')) || (!isEven(sum) && (userChoice.value.toLowerCase() == 'dispari')) ){
-      //console.log(randomNumberGenerator(aiNumber));
+      console.log(aiNumber);
       console.log('questa è la somma ' + sum)
       console.log(isEven(sum));
       console.log('hai vinto');
     } else{
-      //console.log(randomNumberGenerator(aiNumber));
+      console.log(aiNumber);
       console.log('questa è la somma ' + sum)
       console.log(isEven(sum));
       console.log('hai perso')
