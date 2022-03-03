@@ -25,11 +25,16 @@
 let userChoice = document.getElementById('odd-or-even');
 let userNumber = document.getElementById('number');
 
-//.creo la funzione generatrice di numeri random
-function randomNumberGenerator (Number){
-  return Number = Math.floor(Math.random()* 5 + 1);
+//.creo la funzione generatrice di numeri random e quella del pariodispari
+function randomNumberGenerator (number){
+  return number = Math.floor(Math.random()* 5 + 1);
 }
-
+function isEven (numberOne, numberTwo){
+  if ((numberOne + numberTwo) % 2 == 0){
+    return true;
+  }
+  return false;
+}
 //.event listener su un bottone
 document.querySelector('button.btn.btn-primary').addEventListener('click', function(){
 
@@ -59,7 +64,18 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
     console.log('si riavvia il tutto')
   } else {
     console.log('se c\'è stato un alert : ERRORE TI SERVONO DUE FLAG')
-
+    let aiNumber;
+    if(isEven(userChoice, randomNumberGenerator(aiNumber)) && (userChoice.value.toLowerCase() == 'pari') ){
+      console.log(randomNumberGenerator(aiNumber));
+      console.log('hai vinto');
+    } else if (!isEven(userChoice, randomNumberGenerator(aiNumber)) && (userChoice.value.toLowerCase() == 'dispari') ) {
+      console.log(randomNumberGenerator(aiNumber));
+      console.log('hai vinto');
+    } else{
+      console.log(randomNumberGenerator(aiNumber));
+      console.log('hai perso')
+    }
+    
   }
 })
 
