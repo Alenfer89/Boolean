@@ -9,16 +9,26 @@
 //      Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 //      Dichiariamo chi ha vinto.
 
-//const requiredWord = prompt('inserisci una parola');
+const requiredWord = prompt('inserisci una parola');
+
+function reversedWord (theWord){
+  return theWord.split("").reverse().join("");
+}
+
+if (requiredWord == reversedWord(requiredWord)){
+  console.warn('palindrome')
+} else {
+  console.warn('diverse')
+}
 
 
-const userChoice = document.getElementById('odd-or-even').value.toLowerCase();
+// const userChoice = document.getElementById('odd-or-even').value.toLowerCase();
 
 
-let userNumber = parseInt(document.getElementById('number').value);
+// let userNumber = parseInt(document.getElementById('number').value);
 
 
-document.querySelector('button.btn.btn-danger').addEventListener('click', function(){
-  console.log(userChoice);
-  console.log(userNumber);
-})
+// document.querySelector('button.btn.btn-danger').addEventListener('click', function(){
+//   console.log(userChoice);
+//   console.log(userNumber);
+// })
