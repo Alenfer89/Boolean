@@ -22,13 +22,18 @@ if (requiredWord == reversedWord(requiredWord)){
 }
 
 
-// const userChoice = document.getElementById('odd-or-even').value.toLowerCase();
+let userChoice = document.getElementById('odd-or-even');
 
 
-// let userNumber = parseInt(document.getElementById('number').value);
+let userNumber = document.getElementById('number');
 
 
-// document.querySelector('button.btn.btn-danger').addEventListener('click', function(){
-//   console.log(userChoice);
-//   console.log(userNumber);
-// })
+document.querySelector('button.btn.btn-primary').addEventListener('click', function(){
+  console.log(userChoice.value.toLowerCase());
+  console.log(parseInt(userNumber.value));
+})
+
+document.querySelector('button.btn.btn-danger').addEventListener('click', function(){
+  userChoice.value ='';
+  userNumber.value ='';
+})
