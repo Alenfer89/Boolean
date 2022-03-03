@@ -24,6 +24,7 @@
 //.creo le variabili per gli inpout dati dell'utente
 let userChoice = document.getElementById('odd-or-even');
 let userNumber = document.getElementById('number');
+let outputResult = document.getElementById('output');
 
 //.creo la funzione generatrice di numeri random e quella del pariodispari
 function randomNumberGenerator (number){
@@ -71,11 +72,13 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
     aiNumber = randomNumberGenerator(aiNumber);
     let sum = (parseInt(userNumber.value)) + aiNumber;
     if((isEven(sum)  && (userChoice.value.toLowerCase() == 'pari')) || (!isEven(sum) && (userChoice.value.toLowerCase() == 'dispari')) ){
+      outputResult.innerHTML = `Il tuo numero è ${userNumber.value}, hai scelto ${userChoice.value}, il numero dell'AI è ${aiNumber}, la loro somma è ${sum} che è ${userChoice.value}, quindi: hai vinto!`
       console.log(aiNumber);
       console.log('questa è la somma ' + sum)
       console.log(isEven(sum));
       console.log('hai vinto');
     } else{
+      outputResult.innerHTML = `Il tuo numero è ${userNumber.value}, hai scelto ${userChoice.value}, il numero dell'AI è ${aiNumber}, la loro somma è ${sum} che non è ${userChoice.value}, quindi: hai perso!`
       console.log(aiNumber);
       console.log('questa è la somma ' + sum)
       console.log(isEven(sum));
