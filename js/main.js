@@ -29,12 +29,14 @@ let userNumber = document.getElementById('number');
 function randomNumberGenerator (number){
   return number = Math.floor(Math.random()* 5 + 1);
 }
-function isEven (numberOne, numberTwo){
-  if ((numberOne + numberTwo) % 2 == 0){
+function isEven (number){
+  if (number % 2 == 0){
     return true;
+  } else{
+    return false
   }
-  return false;
 }
+
 //.event listener su un bottone
 document.querySelector('button.btn.btn-primary').addEventListener('click', function(){
 
@@ -57,6 +59,7 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
     alert('inserisci un numero tra 1 e 5')
   } else{
     doubleCheck = true;
+    console.log('okok')
   }
 
   //.il gioco:
@@ -65,14 +68,17 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
   } else {
     console.log('se c\'è stato un alert : ERRORE TI SERVONO DUE FLAG')
     let aiNumber;
-    if(isEven(userChoice, randomNumberGenerator(aiNumber)) && (userChoice.value.toLowerCase() == 'pari') ){
+    let sum = (parseInt(userNumber.value)) + randomNumberGenerator(aiNumber);
+    console.log(randomNumberGenerator(aiNumber))
+    console.log(parseInt(userNumber.value))
+    console.log('questa è la somma ' + sum)
+    if((isEven(sum)  && (userChoice.value.toLowerCase() == 'pari')) || (!isEven(sum) && (userChoice.value.toLowerCase() == 'dispari')) ){
       console.log(randomNumberGenerator(aiNumber));
-      console.log('hai vinto');
-    } else if (!isEven(userChoice, randomNumberGenerator(aiNumber)) && (userChoice.value.toLowerCase() == 'dispari') ) {
-      console.log(randomNumberGenerator(aiNumber));
+      console.log(isEven(sum));
       console.log('hai vinto');
     } else{
       console.log(randomNumberGenerator(aiNumber));
+      console.log(isEven(sum));
       console.log('hai perso')
     }
     
