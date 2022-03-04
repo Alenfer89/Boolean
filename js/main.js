@@ -13,18 +13,31 @@
 
 const gameStart = document.getElementById('play-button');
 const gameTable = document.getElementById('game-table');
+const gameGrid = document.querySelector('div.table-grid');
 
-
+/**
+ * //this function creates a DOM element with a class you want attached to it
+ * @param {*} elementType // string of the type of DOM element you want to create
+ * @param {*} elementClass // string of the class you want to add to your DOM element
+ * @returns // egs < elementType class="elementClass"> </ elementType>
+ */
 function elementCreator (elementType, elementClass){
   let element;
   element = document.createElement(`${elementType}`);
   element.classList.add(`${elementClass}`);
   return element;
 }
+//gameTable.appendChild(elementCreator("div", "ax-square"));
+// console.log(elementCreator("div", "ax-square"));
 
 
-gameTable.appendChild(elementCreator("div", "ax-square"));
-console.log(elementCreator("div", "ax-square"));
 gameStart.addEventListener('click', function(){
-
+  for (i = 1 ; i < 101; i++){
+    const tempGrid = elementCreator("div", "ax-square");
+    tempGrid.innerHTML=`${i}`;
+    tempGrid.addEventListener('click', function(){
+      this.classList.add('clicked')
+    })
+    gameGrid.appendChild(tempGrid);
+  }
 })
