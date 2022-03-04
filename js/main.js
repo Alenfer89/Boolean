@@ -9,17 +9,17 @@
 //      Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 //      Dichiariamo chi ha vinto.
 
-//const requiredWord = prompt('inserisci una parola');
+const requiredWord = prompt('inserisci una parola');
 
-// function reversedWord (theWord){
-//   return theWord.split("").reverse().join("");
-// }
+function reversedWord (theWord){
+  return theWord.split("").reverse().join("");
+}
 
-// if (requiredWord == reversedWord(requiredWord)){
-//   console.warn('palindrome')
-// } else {
-//   console.warn('diverse')
-// }
+if (requiredWord == reversedWord(requiredWord)){
+  console.warn('palindrome')
+} else {
+  console.warn('diverse')
+}
 
 //.creo le variabili per gli inpout dati dell'utente
 let userChoice = document.getElementById('odd-or-even');
@@ -67,7 +67,7 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
   if((check == false) || (doubleCheck == false)){
     console.log('si riavvia il tutto')
   } else {
-    console.log('se c\'è stato un alert : ERRORE TI SERVONO DUE FLAG')
+    //console.log('se c\'è stato un alert : ERRORE TI SERVONO DUE FLAG')
     let aiNumber;
     aiNumber = randomNumberGenerator(aiNumber);
     let sum = (parseInt(userNumber.value)) + aiNumber;
@@ -89,6 +89,7 @@ document.querySelector('button.btn.btn-primary').addEventListener('click', funct
 })
 
 document.querySelector('button.btn.btn-danger').addEventListener('click', function(){
+  outputResult.innerHTML = " ";
   userChoice.value ='';
   userNumber.value ='';
 })
