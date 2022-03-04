@@ -10,9 +10,9 @@
 // Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 // Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
-
+console.log('yes, you lost untill you forget again about THE GAME')
 const gameStart = document.getElementById('play-button');
-const gameTable = document.getElementById('game-table');
+//const gameTable = document.getElementById('game-table');
 const gameGrid = document.querySelector('div.table-grid');
 const gameDifficulty = document.getElementById('set-difficulty');
 /**
@@ -36,7 +36,7 @@ gameStart.addEventListener('click', function(){
   if (gameDifficulty.value == "easy"){
     for (i = 1 ; i < 101; i++){
       const tempGrid = elementCreator("div", "ax-square");
-      tempGrid.innerHTML=`${i}`;
+      tempGrid.innerHTML=i;
       tempGrid.addEventListener('click', function(){
         this.classList.toggle('clicked')
       })
@@ -45,7 +45,7 @@ gameStart.addEventListener('click', function(){
   } else if (gameDifficulty.value == "medium"){
     for (i = 1 ; i < 82; i++){
       const tempGrid = elementCreator("div", "ax-square");
-      tempGrid.innerHTML=`${i}`;
+      tempGrid.innerHTML=i;
       tempGrid.addEventListener('click', function(){
         this.classList.toggle('clicked')
       })
@@ -54,7 +54,7 @@ gameStart.addEventListener('click', function(){
   } else if (gameDifficulty.value == "hard"){
     for (i = 1 ; i < 50; i++){
       const tempGrid = elementCreator("div", "ax-square");
-      tempGrid.innerHTML=`${i}`;
+      tempGrid.innerHTML=i;
       tempGrid.addEventListener('click', function(){
         this.classList.toggle('clicked')
       })
