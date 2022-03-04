@@ -14,11 +14,11 @@
 const gameStart = document.getElementById('play-button');
 const gameTable = document.getElementById('game-table');
 const gameGrid = document.querySelector('div.table-grid');
-
+const gameDifficulty = document.getElementById('set-difficulty');
 /**
  * //this function creates a DOM element with a class you want attached to it
- * @param {*} elementType // string of the type of DOM element you want to create
- * @param {*} elementClass // string of the class you want to add to your DOM element
+ * @param {*} elementType // string (!) of the type of DOM element you want to create
+ * @param {*} elementClass // string (!) of the class you want to add to your DOM element
  * @returns // egs < elementType class="elementClass"> </ elementType>
  */
 function elementCreator (elementType, elementClass){
@@ -32,12 +32,34 @@ function elementCreator (elementType, elementClass){
 
 
 gameStart.addEventListener('click', function(){
-  for (i = 1 ; i < 101; i++){
-    const tempGrid = elementCreator("div", "ax-square");
-    tempGrid.innerHTML=`${i}`;
-    tempGrid.addEventListener('click', function(){
-      this.classList.add('clicked')
-    })
-    gameGrid.appendChild(tempGrid);
+  gameGrid.innerHTML=' ';
+  if (gameDifficulty.value == "easy"){
+    for (i = 1 ; i < 101; i++){
+      const tempGrid = elementCreator("div", "ax-square");
+      tempGrid.innerHTML=`${i}`;
+      tempGrid.addEventListener('click', function(){
+        this.classList.toggle('clicked')
+      })
+      gameGrid.appendChild(tempGrid);
+    }
+  } else if (gameDifficulty.value == "medium"){
+    for (i = 1 ; i < 82; i++){
+      const tempGrid = elementCreator("div", "ax-square");
+      tempGrid.innerHTML=`${i}`;
+      tempGrid.addEventListener('click', function(){
+        this.classList.toggle('clicked')
+      })
+      gameGrid.appendChild(tempGrid);
+    }
+  } else if (gameDifficulty.value == "hard"){
+    for (i = 1 ; i < 50; i++){
+      const tempGrid = elementCreator("div", "ax-square");
+      tempGrid.innerHTML=`${i}`;
+      tempGrid.addEventListener('click', function(){
+        this.classList.toggle('clicked')
+      })
+      gameGrid.appendChild(tempGrid);
+    }
   }
+  
 })
