@@ -12,16 +12,19 @@
 
 
 const gameStart = document.getElementById('play-button');
+const gameTable = document.getElementById('game-table');
+
+
 function elementCreator (elementType, elementClass){
   let element;
   element = document.createElement(`${elementType}`);
   element.classList.add(`${elementClass}`);
   return element;
 }
-let div;
-elementCreator("div", "ax-square");
-document.getElementById('game-table').appendChild(elementCreator(div, "ax-square"));
-console.log(elementCreator(div, "ax-square"));
+
+
+gameTable.appendChild(elementCreator("div", "ax-square"));
+console.log(elementCreator("div", "ax-square"));
 gameStart.addEventListener('click', function(){
 
 })
