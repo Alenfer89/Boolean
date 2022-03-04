@@ -9,3 +9,19 @@
 // Ad esempio:  di cosa ho bisogno per generare i numeri?
 // Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 // Le validazioni e i controlli possiamo farli anche in un secondo momento.
+
+
+const gameStart = document.getElementById('play-button');
+function elementCreator (elementType, elementClass){
+  let element;
+  element = document.createElement(`${elementType}`);
+  element.classList.add(`${elementClass}`);
+  return element;
+}
+let div;
+elementCreator("div", "ax-square");
+document.getElementById('game-table').appendChild(elementCreator(div, "ax-square"));
+console.log(elementCreator(div, "ax-square"));
+gameStart.addEventListener('click', function(){
+
+})
