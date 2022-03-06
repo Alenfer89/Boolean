@@ -9,13 +9,24 @@
  *
  */
 
+//!not working
+// // let div = document.createElement('div');
+// // div.id = 'hello1';
+// // console.log(div)
+// // let main = document.querySelector('main');
+// // main.appendChild(div);
 
-function creationOfDivsWithIds (div , id){
-  div = document.createElement('div')
-  div.setAttribute('id', id)
-}
-creationOfDivsWithIds(div, giallo)
-creationOfDivsWithIds(div, blu)
+// // function creationOfDivsWithIds (){
+// //   theDiv = document.createElement('div');
+// //   theDiv.id = 'hello2';
+// // }
+// // let redDiv;
+// // creationOfDivsWithIds (redDiv)
+// // console.log(redDiv)
+// ////document.getElementById('themain').appendChild(redDiv)
+// ////document.getElementById('themain').appendChild(greenDiv)
+
+
 const randomNumbers =[];
 
 // for ( i=0; i < 10; i++){
@@ -39,3 +50,4 @@ for ( i = 0; i < randomNumbers.length; i++){
     document.getElementById('green').innerHTML += " " + randomNumbers[i];
   }
 }
+
