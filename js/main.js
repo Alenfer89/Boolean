@@ -36,6 +36,8 @@ carousel.innerHTML += carouselWrapper;
 
 let carouselWindow = document.getElementsByClassName('my-carousel-window');
 carouselWindow[0].classList.remove('d-none');
+let carouselThumbnail = document.getElementsByClassName('thumbnail');
+carouselThumbnail[0].classList.add('active');
 
 const nextButton = document.querySelector('span.my-next');
 const preButton = document.querySelector('span.my-previous');
@@ -46,6 +48,7 @@ let activeElement = 0;
 nextButton.addEventListener('click', function() {
   //al primo click la variabile col valore del contatore [0] non ha "d-none" e lo "ottiene"
   carouselWindow[activeElement].classList.add('d-none');
+  carouselThumbnail[activeElement].classList.remove('active');
   console.log(activeElement)
   //aumento il contatore da [0] a [1]
   activeElement++;
@@ -55,16 +58,25 @@ nextButton.addEventListener('click', function() {
     activeElement = 0;
     //il valore dell'array a questo punto viene resettato anche della classe e si riparte
     carouselWindow[activeElement].classList.remove('d-none');
+    carouselThumbnail[activeElement].classList.add('active');
   } else if(activeElement < items.length){
     //se il contatore è ancora incluso nella lunghezza della lista/array, il valore al punto in cui sono perde la classe e viene mostrato, poi si riparte al prox click 
     carouselWindow[activeElement].classList.remove('d-none');
+    carouselThumbnail[activeElement].classList.add('active');
   }
 })
-
+//! stessa roba di sopra ma resa in maniera più eleganete come in classe
 preButton.addEventListener('click', function() {
   carouselWindow[activeElement].classList.add('d-none');
-  activeElement--;
+  carouselThumbnail[activeElement].classList.remove('active');
+  //!soprattutto questa parte qua
+  if (activeElement == 0){
+    activeElement = carouselWindow.length -1;
+  } else{
+    activeElement--;
+  }
   carouselWindow[activeElement].classList.remove('d-none');
+  carouselThumbnail[activeElement].classList.add('active');
 })
 
 console.log(items.length)
