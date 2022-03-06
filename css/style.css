@@ -8,6 +8,25 @@ main{
     background-color: bisque;
     padding: 3rem 0;
 }
+div.my-carousel,
+div.my-carousel-thumbnails{
+    height: 60vh;
+}
+div.my-carousel .my-carousel-window{
+    height: 100%;
+}
+div.my-carousel .my-carousel-window img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.my-carousel-thumbnails img{
+    height: 100%;
+    object-fit: cover;
+}
+div.thumbnail{
+    height: calc(100% / 5);
+}
 .my-skip{
     position: absolute;
     top: 50%;
