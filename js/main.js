@@ -29,10 +29,10 @@ gameStart.addEventListener('click', function(){
  * @param {*} elementClass // string (!) of the class you want to add to your DOM element
  * @returns // egs < elementType class="elementClass"> </ elementType>
  */
-function elementCreator (elementType, elementClass){
+function elementCreator (){
   let element;
-  element = document.createElement(`${elementType}`);
-  element.classList.add(`${elementClass}`);
+  element = document.createElement('div');
+  element.classList.add('ax-square');
   return element;
 }
 
@@ -58,8 +58,8 @@ function gameCreation (){
 
   for(let i = 1; i <= squareNumber; i++){
     
-    let square = elementCreator('div', 'ax-square');
-    square.innerHTML= i;
+    let square = elementCreator();
+    square.innerHTML=`${i}`;
     gameGrid.appendChild(square);
   }
   
