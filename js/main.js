@@ -59,36 +59,27 @@ function gameCreation (){
         square.classList.add('hard-square');
         break;
     }
-    let check;
+
     square.addEventListener('click', function clicky(event){
       if(!bombsList.includes(i)){
         this.classList.add('clicked');
       } else {
         this.classList.add('lostgame');
-        check = false;
+        this.removeEventListener('click', clicky)
       }
     })
-    if(check = false){
-      square.removeEventListener('click', clicky())
-    }
+    
     gameGrid.appendChild(square);
   }
   
 }
 
-/**
- * //this function creates a DOM element with a class you want attached to it
- * @param {*} elementType // string (!) of the type of DOM element you want to create
- * @param {*} elementClass // string (!) of the class you want to add to your DOM element
- * @returns // egs < elementType class="elementClass"> </ elementType>
- */
 function elementCreator (){
   let element;
   element = document.createElement('div');
   element.classList.add('ax-square');
   return element;
 }
-
 
 /**
  * Function that generates a random number between two included values, which is not already present in the given blacklist.
