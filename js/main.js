@@ -14,33 +14,18 @@ console.log('yes, you lost untill you forget again about THE GAME')
 const gameStart = document.getElementById('play-button');
 //const gameTable = document.getElementById('game-table');
 const gameGrid = document.querySelector('div.table-grid');
-const gameDifficulty = document.getElementById('set-difficulty').value;
-console.log(gameDifficulty);
+
 
 gameStart.addEventListener('click', function(){
   gameGrid.innerHTML='';
   gameCreation();
 })
 
-
-/**
- * //this function creates a DOM element with a class you want attached to it
- * @param {*} elementType // string (!) of the type of DOM element you want to create
- * @param {*} elementClass // string (!) of the class you want to add to your DOM element
- * @returns // egs < elementType class="elementClass"> </ elementType>
- */
-function elementCreator (){
-  let element;
-  element = document.createElement('div');
-  element.classList.add('ax-square');
-  return element;
-}
-
-
 function gameCreation (){
-  
+  const gameDifficulty = document.getElementById('set-difficulty').value;
   let squareNumber;
-  let squarePerRow;
+  let square;
+  //let squarePerRow;
 
   switch (gameDifficulty){
     case 'easy':
@@ -54,14 +39,40 @@ function gameCreation (){
       break;
   }
 
-  squarePerRow = Math.sqrt(squareNumber);
+  //squarePerRow = Math.sqrt(squareNumber);
 
   for(let i = 1; i <= squareNumber; i++){
     
-    let square = elementCreator();
+    square = elementCreator();
     square.innerHTML=`${i}`;
+    switch (gameDifficulty){
+      case 'easy':
+        square.classList.add('easy-square');
+        break;
+      case 'medium':
+        square.classList.add('medium-square');
+        break;
+      case 'hard':
+        square.classList.add('hard-square');
+        break;
+    }
+    square.addEventListener('click', function(){
+      this.classList.add('clicked');
+    })
     gameGrid.appendChild(square);
   }
   
 }
 
+/**
+ * //this function creates a DOM element with a class you want attached to it
+ * @param {*} elementType // string (!) of the type of DOM element you want to create
+ * @param {*} elementClass // string (!) of the class you want to add to your DOM element
+ * @returns // egs < elementType class="elementClass"> </ elementType>
+ */
+function elementCreator (){
+  let element;
+  element = document.createElement('div');
+  element.classList.add('ax-square');
+  return element;
+}

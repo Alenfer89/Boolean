@@ -5,12 +5,21 @@ main {
     background-color: aquamarine;
 }
 .ax-square{
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
     border: 2px solid black;
     text-align: center;
     cursor: pointer;
+}
+.easy-square{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+.medium-square{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+.hard-square{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 .ax-square.clicked{
     background-color: aqua;
