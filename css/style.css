@@ -24,7 +24,9 @@ main {
 .ax-square.clicked{
     background-color: aqua;
 }
-
+.ax-square.lostgame{
+    background-color: brown;
+}
 div.table-grid{
     width: 50vw;
     height: 50vw;

@@ -25,7 +25,7 @@ function gameCreation (){
   const gameDifficulty = document.getElementById('set-difficulty').value;
   let squareNumber;
   let square;
-  //let squarePerRow;
+  let bombs = 16;
 
   switch (gameDifficulty){
     case 'easy':
@@ -39,10 +39,13 @@ function gameCreation (){
       break;
   }
 
-  //squarePerRow = Math.sqrt(squareNumber);
+  const bombsList =[];
+  for (let i = 0; i < bombs; i++){
+    bombsList.push(generateUniqueRandomNumber(bombsList,1,squareNumber))
+  }
+  console.log(bombsList)
 
   for(let i = 1; i <= squareNumber; i++){
-    
     square = elementCreator();
     square.innerHTML=`${i}`;
     switch (gameDifficulty){
@@ -57,7 +60,11 @@ function gameCreation (){
         break;
     }
     square.addEventListener('click', function(){
-      this.classList.add('clicked');
+      if(!bombsList.includes(i)){
+        this.classList.add('clicked');
+      } else {
+        this.classList.add('lostgame');
+      }
     })
     gameGrid.appendChild(square);
   }
@@ -75,4 +82,25 @@ function elementCreator (){
   element = document.createElement('div');
   element.classList.add('ax-square');
   return element;
+}
+
+
+/**
+ * Function that generates a random number between two included values, which is not already present in the given blacklist.
+ *
+ * @param {*} numsBlacklist The blacklist to check.
+ * @param {*} min The minimum value of the random generated integer.
+ * @param {*} max The maximum value of the random generated integer.
+ * @returns A random generated integer which is not present in the blacklist.
+ */
+function generateUniqueRandomNumber( numsBlacklist, min, max){
+  let check = false;
+  let randomInt;
+  while ( !check ){
+      randomInt  = Math.floor(Math.random() * ((max + 1) - min) + min);
+      if ( !numsBlacklist.includes(randomInt)  ){
+          check = true;
+      }
+  }
+  return randomInt;
 }
