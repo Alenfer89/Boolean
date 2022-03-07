@@ -59,11 +59,12 @@ function gameCreation (){
         square.classList.add('hard-square');
         break;
     }
-    square.addEventListener('click', function(){
+    square.addEventListener('click', function clicky(event){
       if(!bombsList.includes(i)){
         this.classList.add('clicked');
       } else {
         this.classList.add('lostgame');
+        this.removeEventListener('click', clicky)
       }
     })
     gameGrid.appendChild(square);
