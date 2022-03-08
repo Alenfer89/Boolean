@@ -9,7 +9,11 @@
 // Dividete in piccoli problemi la consegna.
 // Individuate gli elementi di cui avete bisogno per realizzare il programma.
 
-
+//* genero i numeri col randomint
+//*           -pusho i numeri in un array A per il controllo dopo
+//*setto un timer che fa sparire il div coi numeri random e che al contempo fa partire i prompt
+//*           -ad ogni prompt se il numero è come quello generato lo pusho in un array B
+//*           -se array A e array B sono lunghi uguali esce un messaggio di vottoria
 
 
 
