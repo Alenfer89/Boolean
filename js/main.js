@@ -15,7 +15,6 @@
 //*           -ad ogni prompt se il numero è come quello generato lo pusho in un array B
 //*           -se array A e array B sono lunghi uguali esce un messaggio di vottoria
 
-//let request = prompt('inserisci uno dei numeri visti per vincere fantastici.... niente')
 
 let activeGameNumbers=[];
 for (i = 0; i < 5; i++){
@@ -28,6 +27,15 @@ console.log(activeGameNumbers)
 
 function theGame(){
   document.getElementById('game-numbers').innerHTML='';
+  let userGuessNumbers=[];
+  for (i = 0; i < 5; i++){
+    let userGuess = parseInt(prompt('inserisci uno dei numeri appena visti'));
+    if(activeGameNumbers.includes(userGuess)){
+      console.log('ok')
+    } else{
+      console.log('not ok')
+    }
+  }
 }
 setTimeout(theGame, 5000);
 
