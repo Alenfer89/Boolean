@@ -92,7 +92,13 @@ function generateUniqueRandomNumber(numsBlacklist, min, max){
   }
   return randomInt;
 }
-
+/**
+ * This function creates a div element which contains a number, with a preset pill background
+ * 
+ * @param {*} number the number which is going inside the div element
+ * @param {*} container the container where to put the div element
+ * @returns the div element, styled, with a number inside and in a given parent element
+ */
 function elementCreator (number, container){
   let element;
   element = document.createElement('div');
