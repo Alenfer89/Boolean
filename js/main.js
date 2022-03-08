@@ -15,16 +15,7 @@
 //*           -ad ogni prompt se il numero è come quello generato lo pusho in un array B
 //*           -se array A e array B sono lunghi uguali esce un messaggio di vottoria
 
-
-
-function elementCreator (number, container){
-  let element;
-  element = document.createElement('div');
-  element.classList.add('ax-numbers')
-  element.innerHTML= number;
-  document.getElementById(container).appendChild(element);
-  return element;
-}
+//let request = prompt('inserisci uno dei numeri visti per vincere fantastici.... niente')
 
 let activeGameNumbers=[];
 for (i = 0; i < 5; i++){
@@ -32,6 +23,13 @@ for (i = 0; i < 5; i++){
   elementCreator (activeGameNumbers[i], 'game-numbers')
 }
 console.log(activeGameNumbers)
+
+
+
+function theGame(){
+  document.getElementById('game-numbers').innerHTML='';
+}
+setTimeout(theGame, 5000);
 
 /**
  * Function that generates a random number between two included values, which is not already present in the given blacklist.
@@ -51,4 +49,13 @@ function generateUniqueRandomNumber(numsBlacklist, min, max){
       }
   }
   return randomInt;
+}
+
+function elementCreator (number, container){
+  let element;
+  element = document.createElement('div');
+  element.classList.add('ax-numbers')
+  element.innerHTML= number;
+  document.getElementById(container).appendChild(element);
+  return element;
 }
