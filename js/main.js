@@ -26,15 +26,25 @@ console.log(activeGameNumbers)
 
 
 function theGame(){
-  document.getElementById('game-numbers').innerHTML='';
+  document.getElementById('game-numbers').innerHTML='TENTA LA FORTUNA';
   let userGuessNumbers=[];
+  let userWrongNumbers=[];
   for (i = 0; i < 5; i++){
     let userGuess = parseInt(prompt('inserisci uno dei numeri appena visti'));
+    elementCreator(userGuess, "user-numbers");
     if(activeGameNumbers.includes(userGuess)){
-      console.log('ok')
+      userGuessNumbers.push(userGuess);
+      console.log(userGuessNumbers);
     } else{
+      userWrongNumbers.push(userGuess);
       console.log('not ok')
     }
+  }
+  let result = document.getElementById('result');
+  if (userGuessNumbers.length == activeGameNumbers.length){
+    result.innerHTML =`HAI VINTO! Hai indovinato ${userGuessNumbers.length} numeri, ovvero: ${userGuessNumbers.slice(0, userGuessNumbers.length)}`;
+  } else{
+    result.innerHTML =`HAI PERSO! Hai indovinato ${userGuessNumbers.length} numeri, ovvero: ${userGuessNumbers.slice(0, userGuessNumbers.length)}, e hai sbagliato ${userWrongNumbers}`;
   }
 }
 setTimeout(theGame, 5000);
