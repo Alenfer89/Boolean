@@ -17,34 +17,58 @@
 
 
 let activeGameNumbers=[];
+let betterWrittenActiveGameNumbers=[];
 for (i = 0; i < 5; i++){
-  activeGameNumbers.push(generateUniqueRandomNumber(activeGameNumbers, 1, 100));
+  let randomInt = generateUniqueRandomNumber(activeGameNumbers, 1, 100);
+  activeGameNumbers.push(randomInt);
+  let betterWrittenRandomInt = " " + randomInt;
+  betterWrittenActiveGameNumbers.push(betterWrittenRandomInt);
   elementCreator (activeGameNumbers[i], 'game-numbers')
 }
 console.log(activeGameNumbers)
+console.log(betterWrittenActiveGameNumbers)
 
 
 
 function theGame(){
   document.getElementById('game-numbers').innerHTML='TENTA LA FORTUNA';
   let userGuessNumbers=[];
+  let betterWrittenUserGuessNumbers=[];
   let userWrongNumbers=[];
+  let betterWrittenUserWrongNumbers=[];
   for (i = 0; i < 5; i++){
     let userGuess = parseInt(prompt('inserisci uno dei numeri appena visti'));
     elementCreator(userGuess, "user-numbers");
+    let betterWrittenUserGuess;
     if(activeGameNumbers.includes(userGuess)){
       userGuessNumbers.push(userGuess);
+      betterWrittenUserGuess = ' ' + userGuess;
+      betterWrittenUserGuessNumbers.push(betterWrittenUserGuess);
+      // if(userGuess == userGuessNumbers[0] ){
+      //   console.log('tutto ok')
+      // } else if (userGuessNumbers.includes(userGuess)){
+      //   alert('NUMERO GIA\' INSERITO')
+      //   userGuess = parseInt(prompt('inserisci uno dei numeri appena visti'));
+      // }
       console.log(userGuessNumbers);
     } else{
       userWrongNumbers.push(userGuess);
+      betterWrittenUserGuess = ' ' + userGuess;
+      betterWrittenUserWrongNumbers.push(betterWrittenUserGuess);
       console.log('not ok')
     }
   }
   let result = document.getElementById('result');
-  if (userGuessNumbers.length == activeGameNumbers.length){
-    result.innerHTML =`HAI VINTO! Hai indovinato ${userGuessNumbers.length} numeri, ovvero: ${userGuessNumbers.slice(0, userGuessNumbers.length)}`;
+  let plural;
+  if(userGuessNumbers.length == 1){
+    plural = 'o';
   } else{
-    result.innerHTML =`HAI PERSO! Hai indovinato ${userGuessNumbers.length} numeri, ovvero: ${userGuessNumbers.slice(0, userGuessNumbers.length)}, e hai sbagliato ${userWrongNumbers}`;
+    plural = 'i';
+  }
+  if (userGuessNumbers.length == activeGameNumbers.length){
+    result.innerHTML =`HAI VINTO! Hai indovinato ${userGuessNumbers.length} numer${plural}, ovvero: ${betterWrittenUserGuessNumbers}`;
+  } else{
+    result.innerHTML =`HAI PERSO! Hai indovinato ${userGuessNumbers.length} numer${plural}, ovvero: ${betterWrittenUserGuessNumbers}, e hai sbagliato ${betterWrittenUserWrongNumbers}. I numeri da indovinare erano:${betterWrittenActiveGameNumbers}`;
   }
 }
 setTimeout(theGame, 5000);
