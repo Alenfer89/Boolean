@@ -11,11 +11,27 @@
 
 //* genero i numeri col randomint
 //*           -pusho i numeri in un array A per il controllo dopo
-//*setto un timer che fa sparire il div coi numeri random e che al contempo fa partire i prompt
+//*setto un timer (o due) che fa sparire il div coi numeri random e che al contempo fa partire i prompt
 //*           -ad ogni prompt se il numero è come quello generato lo pusho in un array B
 //*           -se array A e array B sono lunghi uguali esce un messaggio di vottoria
 
 
+
+function elementCreator (number, container){
+  let element;
+  element = document.createElement('div');
+  element.classList.add('ax-numbers')
+  element.innerHTML= number;
+  document.getElementById(container).appendChild(element);
+  return element;
+}
+
+let activeGameNumbers=[];
+for (i = 0; i < 5; i++){
+  activeGameNumbers.push(generateUniqueRandomNumber(activeGameNumbers, 1, 100));
+  elementCreator (activeGameNumbers[i], 'game-numbers')
+}
+console.log(activeGameNumbers)
 
 /**
  * Function that generates a random number between two included values, which is not already present in the given blacklist.
@@ -25,7 +41,7 @@
  * @param {*} max The maximum value of the random generated integer.
  * @returns A random generated integer which is not present in the blacklist.
  */
-function generateUniqueRandomNumber( numsBlacklist, min, max){
+function generateUniqueRandomNumber(numsBlacklist, min, max){
   let check = false;
   let randomInt;
   while ( !check ){
