@@ -68,7 +68,7 @@ for (let i = 0; i < team.length; i++){
 
 //BONUS TRIES
 for (let i = 0; i < team.length; i++){
-  createAndPopulateCards(i , team, 'cardlist', team[i].image, team[i].name, team[i].role );
+  createAndPopulateCards(i , team, 'cardlist');
 }
 
 
