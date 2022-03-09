@@ -54,3 +54,31 @@ for (let i = 0; i < team.length; i++){
   console.log(team[i].role);
   console.log(team[i].image);
 }
+//milestone 2
+for (let i = 0; i < team.length; i++){
+  document.querySelector('div.ax-img').innerHTML += team[i].image + ", ";
+  document.querySelector('div.ax-name').innerHTML += team[i].name + ", ";
+  document.querySelector('div.ax-role').innerHTML += team[i].role + ", ";
+}
+
+
+
+//milestone 2
+let teamName = team[0].name + " okok";
+let teamRole;
+let teamImg;
+console.log(teamName);
+
+// function createAndPopulateCards (){
+//   let card;
+//   element = document.createElement('div');
+// }
+
+// function elementCreator (number, container){
+//   let element;
+//   element = document.createElement('div');
+//   element.classList.add('ax-numbers')
+//   element.innerHTML= number;
+//   document.getElementById(container).appendChild(element);
+//   return element;
+// }
