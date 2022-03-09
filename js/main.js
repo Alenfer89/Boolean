@@ -54,14 +54,14 @@ for (let i = 0; i < team.length; i++){
   console.log(team[i].role);
   console.log(team[i].image);
 }
-//milestone 2
+//MILESTONE 2 (check footer)
 for (let i = 0; i < team.length; i++){
   document.querySelector('div#ax-img').innerHTML += team[i].image + ", ";
   document.querySelector('div#ax-name').innerHTML += team[i].name + ", ";
   document.querySelector('div#ax-role').innerHTML += team[i].role + ", ";
 }
 
-
+//BONUS TRIES
 for (let i = 0; i < team.length; i++){
   createAndPopulateCards(i , team, 'cardlist');
 }
@@ -72,13 +72,13 @@ function createAndPopulateCards (indexArgument, arrayArgument, container){
   let card= document.createElement('div');
   card.classList.add('ax-card');
   let cardImg = document.createElement('div');
-  cardImg.classList.add('ax-img', 'w-100');
-  cardImg.innerHTML = `<img src="img/${arrayArgument[indexArgument].image}" alt="Our valuable member ${arrayArgument[indexArgument].name}">`
+  cardImg.classList.add('ax-img');
+  cardImg.innerHTML = `<img class="img-fluid" src="img/${arrayArgument[indexArgument].image}" alt="Our valuable member ${arrayArgument[indexArgument].name}">`
   let cardName = document.createElement('div');
-  cardName.classList.add('ax-name');
+  cardName.classList.add('ax-name', 'fs-3');
   cardName.innerHTML = arrayArgument[indexArgument].name;
   let cardRole = document.createElement('div');
-  cardRole.classList.add('ax-role');
+  cardRole.classList.add('ax-role', 'fs-4');
   cardRole.innerHTML = arrayArgument[indexArgument].role;
   card.appendChild(cardImg);
   card.appendChild(cardName);
