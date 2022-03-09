@@ -97,23 +97,3 @@ function createAndPopulateCards (indexArgument, arrayArgument, container){
   document.getElementById(container).appendChild(card);
   return card;
 }
-
-
-// function createAndPopulateCards (indexArgument, arrayArgument, container){
-//   let card= document.createElement('div');
-//   card.classList.add('ax-card');
-//   let cardImg = document.createElement('div');
-//   cardImg.classList.add('ax-img');
-//   cardImg.innerHTML = `<img class="img-fluid" src="img/${arrayArgument[indexArgument].image}" alt="Our valuable member ${arrayArgument[indexArgument].name}">`
-//   let cardName = document.createElement('div');
-//   cardName.classList.add('ax-name', 'fs-3');
-//   cardName.innerHTML = arrayArgument[indexArgument].name;
-//   let cardRole = document.createElement('div');
-//   cardRole.classList.add('ax-role', 'fs-4');
-//   cardRole.innerHTML = arrayArgument[indexArgument].role;
-//   card.appendChild(cardImg);
-//   card.appendChild(cardName);
-//   card.appendChild(cardRole);
-//   document.getElementById(container).appendChild(card);
-//   return card;
-// }
