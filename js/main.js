@@ -63,7 +63,7 @@ for (let i = 0; i < team.length; i++){
 
 //BONUS TRIES
 for (let i = 0; i < team.length; i++){
-  createAndPopulateCards(i , team, 'cardlist');
+  createAndPopulateCards(i , team, 'cardlist', team[i].image, team[i].name, team[i].role );
 }
 
 
@@ -74,18 +74,21 @@ for (let i = 0; i < team.length; i++){
  * @param {*} container // the container where the cards are going into
  * @returns a single card
  */
-function createAndPopulateCards (indexArgument, arrayArgument, container){
+function createAndPopulateCards (indexArgument, arrayArgument, container, imageContent, titleContent, subtitleContent){
+  imageContent = arrayArgument[indexArgument].Key;
+  titleContent = arrayArgument[indexArgument].Key;
+  subtitleContent = arrayArgument[indexArgument].Key;
   let card= document.createElement('div');
   card.classList.add('ax-card');
   let cardImg = document.createElement('div');
   cardImg.classList.add('ax-img');
-  cardImg.innerHTML = `<img class="img-fluid" src="img/${arrayArgument[indexArgument].image}" alt="Our valuable member ${arrayArgument[indexArgument].name}">`
+  cardImg.innerHTML = `<img class="img-fluid" src="img/${imageContent}" alt="Our valuable member ${titleContent}">`
   let cardName = document.createElement('div');
   cardName.classList.add('ax-name', 'fs-3');
-  cardName.innerHTML = arrayArgument[indexArgument].name;
+  cardName.innerHTML = titleContent;
   let cardRole = document.createElement('div');
   cardRole.classList.add('ax-role', 'fs-4');
-  cardRole.innerHTML = arrayArgument[indexArgument].role;
+  cardRole.innerHTML = subtitleContent;
   card.appendChild(cardImg);
   card.appendChild(cardName);
   card.appendChild(cardRole);
@@ -94,3 +97,21 @@ function createAndPopulateCards (indexArgument, arrayArgument, container){
 }
 
 
+// function createAndPopulateCards (indexArgument, arrayArgument, container){
+//   let card= document.createElement('div');
+//   card.classList.add('ax-card');
+//   let cardImg = document.createElement('div');
+//   cardImg.classList.add('ax-img');
+//   cardImg.innerHTML = `<img class="img-fluid" src="img/${arrayArgument[indexArgument].image}" alt="Our valuable member ${arrayArgument[indexArgument].name}">`
+//   let cardName = document.createElement('div');
+//   cardName.classList.add('ax-name', 'fs-3');
+//   cardName.innerHTML = arrayArgument[indexArgument].name;
+//   let cardRole = document.createElement('div');
+//   cardRole.classList.add('ax-role', 'fs-4');
+//   cardRole.innerHTML = arrayArgument[indexArgument].role;
+//   card.appendChild(cardImg);
+//   card.appendChild(cardName);
+//   card.appendChild(cardRole);
+//   document.getElementById(container).appendChild(card);
+//   return card;
+// }
