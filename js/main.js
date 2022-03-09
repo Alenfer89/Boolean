@@ -56,9 +56,14 @@ for (let i = 0; i < team.length; i++){
 }
 //MILESTONE 2 (check footer)
 for (let i = 0; i < team.length; i++){
-  document.querySelector('div#ax-img').innerHTML += team[i].image + ", ";
-  document.querySelector('div#ax-name').innerHTML += team[i].name + ", ";
-  document.querySelector('div#ax-role').innerHTML += team[i].role + ", ";
+  document.querySelector('div#ax-img').innerHTML += team[i].image + " ||| ";
+  document.querySelector('div#ax-name').innerHTML += team[i].name + ", " + " ";
+  document.querySelector('div#ax-role').innerHTML += team[i].role + ", " + " ";
+  if (i == team.length -1){
+    document.querySelector('div#ax-img').innerHTML += team[i].image + " |||";
+    document.querySelector('div#ax-name').innerHTML += team[i].name + ".";
+    document.querySelector('div#ax-role').innerHTML += team[i].role + ".";
+  }
 }
 
 //BONUS TRIES
