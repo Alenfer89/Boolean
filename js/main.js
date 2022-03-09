@@ -62,23 +62,29 @@ for (let i = 0; i < team.length; i++){
 }
 
 
+for (let i = 0; i < team.length; i++){
+  createAndPopulateCards(i , team, 'cardlist');
+}
 
-//milestone 2
-let teamName = team[0].name + " okok";
-let teamRole;
-let teamImg;
-console.log(teamName);
 
-// function createAndPopulateCards (){
-//   let card;
-//   element = document.createElement('div');
-// }
 
-// function elementCreator (number, container){
-//   let element;
-//   element = document.createElement('div');
-//   element.classList.add('ax-numbers')
-//   element.innerHTML= number;
-//   document.getElementById(container).appendChild(element);
-//   return element;
-// }
+function createAndPopulateCards (indexArgument, arrayArgument, container){
+  let card= document.createElement('div');
+  card.classList.add('ax-card');
+  let cardImg = document.createElement('div');
+  cardImg.classList.add('ax-img', 'w-100');
+  cardImg.innerHTML = `<img src="img/${arrayArgument[indexArgument].image}" alt="Our valuable member ${arrayArgument[indexArgument].name}">`
+  let cardName = document.createElement('div');
+  cardName.classList.add('ax-name');
+  cardName.innerHTML = arrayArgument[indexArgument].name;
+  let cardRole = document.createElement('div');
+  cardRole.classList.add('ax-role');
+  cardRole.innerHTML = arrayArgument[indexArgument].role;
+  card.appendChild(cardImg);
+  card.appendChild(cardName);
+  card.appendChild(cardRole);
+  document.getElementById(container).appendChild(card);
+  return card;
+}
+
+
