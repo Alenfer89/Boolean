@@ -56,9 +56,9 @@ for (let i = 0; i < team.length; i++){
 }
 //milestone 2
 for (let i = 0; i < team.length; i++){
-  document.querySelector('div.ax-img').innerHTML += team[i].image + ", ";
-  document.querySelector('div.ax-name').innerHTML += team[i].name + ", ";
-  document.querySelector('div.ax-role').innerHTML += team[i].role + ", ";
+  document.querySelector('div#ax-img').innerHTML += team[i].image + ", ";
+  document.querySelector('div#ax-name').innerHTML += team[i].name + ", ";
+  document.querySelector('div#ax-role').innerHTML += team[i].role + ", ";
 }
 
 
