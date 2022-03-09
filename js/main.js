@@ -67,7 +67,13 @@ for (let i = 0; i < team.length; i++){
 }
 
 
-
+/**
+ * this function, given an array of objects with the same keys, creates cards with populated img, title and subtitle. Then puts the cards created into a container
+ * @param {*} indexArgument // the number of the argument of the array you are going to select
+ * @param {*} arrayArgument // the array you are going to extrapolate datas from
+ * @param {*} container // the container where the cards are going into
+ * @returns a single card
+ */
 function createAndPopulateCards (indexArgument, arrayArgument, container){
   let card= document.createElement('div');
   card.classList.add('ax-card');
