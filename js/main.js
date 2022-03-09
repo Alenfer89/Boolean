@@ -74,21 +74,28 @@ for (let i = 0; i < team.length; i++){
  * @param {*} container // the container where the cards are going into
  * @returns a single card
  */
-function createAndPopulateCards (indexArgument, arrayArgument, container, imageContent, titleContent, subtitleContent){
-  imageContent = arrayArgument[indexArgument].Key;
-  titleContent = arrayArgument[indexArgument].Key;
-  subtitleContent = arrayArgument[indexArgument].Key;
+function createAndPopulateCards (indexArgument, arrayArgument, container, firstKeySelection, secondKeySelection , thirdKeySelection){
+  arrayArgument = [
+    {
+      firstKey : "",
+      secondKey: "",
+      thirdKey: "",
+    }
+  ]
+  firstKeySelection = arrayArgument[indexArgument].firstKey;
+  secondKeySelection = arrayArgument[indexArgument].secondKey;
+  thirdKeySelection = arrayArgument[indexArgument].thirdKey;
   let card= document.createElement('div');
   card.classList.add('ax-card');
   let cardImg = document.createElement('div');
   cardImg.classList.add('ax-img');
-  cardImg.innerHTML = `<img class="img-fluid" src="img/${imageContent}" alt="Our valuable member ${titleContent}">`
+  cardImg.innerHTML = `<img class="img-fluid" src="img/${firstKeySelection}" alt="Our valuable member ${secondKeySelection}">`
   let cardName = document.createElement('div');
   cardName.classList.add('ax-name', 'fs-3');
-  cardName.innerHTML = titleContent;
+  cardName.innerHTML = secondKeySelection;
   let cardRole = document.createElement('div');
   cardRole.classList.add('ax-role', 'fs-4');
-  cardRole.innerHTML = subtitleContent;
+  cardRole.innerHTML = thirdKeySelection;
   card.appendChild(cardImg);
   card.appendChild(cardName);
   card.appendChild(cardRole);
