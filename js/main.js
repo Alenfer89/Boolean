@@ -74,7 +74,7 @@ activeCarouselThumb[activeElement].classList.add('active');
 document.querySelector('div.my-next').addEventListener('click', function(){
     activeCarouselImage[activeElement].classList.remove('active');
     activeCarouselThumb[activeElement].classList.remove('active');
-    if (activeElement === arrayOfCarouselObjects.length - 1){
+    if (activeElement == arrayOfCarouselObjects.length - 1){
         activeElement = 0;
     } else {
         activeElement++;
@@ -119,3 +119,7 @@ function createCarouselThumbnail (parentByClass, imageKey){
     document.querySelector(parentByClass).appendChild(thumbnailContainer);
     return thumbnailContainer;
 }
+
+
+
+
