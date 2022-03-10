@@ -41,7 +41,7 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
 
-const arrayOfCarouselObject =[];
+const arrayOfCarouselObjects =[];
 
 for (let i = 0; i < title.length; i++){
     const carouselObject = {
@@ -52,7 +52,11 @@ for (let i = 0; i < title.length; i++){
     carouselObject.img = items[i];
     carouselObject.title = title[i];
     carouselObject.text = text[i];
-    arrayOfCarouselObject.push(carouselObject);
+    arrayOfCarouselObjects.push(carouselObject);
 }
-console.log(arrayOfCarouselObject);
-console.log(typeof arrayOfCarouselObject[0]);
+console.log(arrayOfCarouselObjects);
+console.log(typeof(arrayOfCarouselObjects));
+let result = Array.isArray(arrayOfCarouselObjects);
+console.log(result);
+result = Array.isArray(arrayOfCarouselObjects[0]);
+console.log(result);
