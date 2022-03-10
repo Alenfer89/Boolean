@@ -65,9 +65,36 @@ for (let i = 0; i < arrayOfCarouselObjects.length; i++ ){
     createCarouselImages("div.my-carousel-images", arrayOfCarouselObjects[i]['img'], arrayOfCarouselObjects[i]['title'], arrayOfCarouselObjects[i]['text']);
     createCarouselThumbnail("div.my-thumbnails" , arrayOfCarouselObjects[i]['img'])
 }
-
+let activeElement = 1;
 let activeCarouselImage = document.getElementsByClassName('my-image-wrapper');
-activeCarouselImage[1].classList.add('active');
+activeCarouselImage[activeElement].classList.add('active');
+let activeCarouselThumb = document.getElementsByClassName('my-thumbnail-container');
+activeCarouselThumb[activeElement].classList.add('active');
+
+document.querySelector('div.my-next').addEventListener('click', function(){
+    activeCarouselImage[activeElement].classList.remove('active');
+    activeCarouselThumb[activeElement].classList.remove('active');
+    if (activeElement >= arrayOfCarouselObjects.length){
+        activeElement == 0;
+    } else {
+        activeElement++;
+        console.log(activeElement)
+        console.log(arrayOfCarouselObjects.length)
+    }
+    activeCarouselImage[activeElement].classList.add('active');
+    activeCarouselThumb[activeElement].classList.add('active');
+})
+document.querySelector('div.my-previous').addEventListener('click', function(){
+    activeCarouselImage[activeElement].classList.remove('active');
+    activeCarouselThumb[activeElement].classList.remove('active');
+    if (activeElement == 0){
+        activeElement = arrayOfCarouselObjects.length - 1;
+    } else {
+        activeElement--;
+    }
+    activeCarouselImage[activeElement].classList.add('active');
+    activeCarouselThumb[activeElement].classList.add('active');
+})
 
 function createCarouselImages(parentByClass, imageKey, titleKey, textKey){
     let imageContainer = document.createElement('div');
