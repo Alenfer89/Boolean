@@ -9,13 +9,13 @@ div.my-carousel-container{
 }
 
 div.my-carousel-images{
-    background-color: cadetblue;
-    min-height: 540px;
+    position: relative;
 }
 
 div.my-thumbnails{
-    background-color: violet;
-    min-height: 160px;
+    /* background-color: violet;
+    min-height: 160px; */
+    display: flex;
 }
 
 div.my-previous,
@@ -51,4 +51,34 @@ div.my-next > span::after{
     font-weight: 900;
     content: "\f520";
     line-height: 30px;
+}
+div.my-image-wrapper{
+    position: relative;
+    display: none;
+}
+div.my-image-wrapper.active{
+    display: block;
+}
+div.my-image-wrapper img{
+    object-fit: cover;
+}
+div.carousel-text{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    color: white;
+    text-align: end;
+}
+
+div.my-thumbnail-container{
+    width: calc(100% / 5);
+    height: 160px;
+    filter: brightness(0.3);
+}
+div.my-thumbnail-container.active{
+    filter: brightness(1);
+}
+div.my-thumbnail-container img{
+    object-fit: cover;
+    height: 100%;
 }

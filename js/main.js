@@ -45,9 +45,9 @@ const arrayOfCarouselObjects =[];
 
 for (let i = 0; i < title.length; i++){
     const carouselObject = {
-        img:'',
-        title:'',
-        text:'',
+        //img:'',
+        //title:'',
+        //text:'',
     }
     carouselObject.img = items[i];
     carouselObject.title = title[i];
@@ -55,8 +55,40 @@ for (let i = 0; i < title.length; i++){
     arrayOfCarouselObjects.push(carouselObject);
 }
 console.log(arrayOfCarouselObjects);
-console.log(typeof(arrayOfCarouselObjects));
 let result = Array.isArray(arrayOfCarouselObjects);
 console.log(result);
 result = Array.isArray(arrayOfCarouselObjects[0]);
 console.log(result);
+
+
+for (let i = 0; i < arrayOfCarouselObjects.length; i++ ){
+    createCarouselImages("div.my-carousel-images", arrayOfCarouselObjects[i]['img'], arrayOfCarouselObjects[i]['title'], arrayOfCarouselObjects[i]['text']);
+    createCarouselThumbnail("div.my-thumbnails" , arrayOfCarouselObjects[i]['img'])
+}
+
+let activeCarouselImage = document.getElementsByClassName('my-image-wrapper');
+activeCarouselImage[1].classList.add('active');
+
+function createCarouselImages(parentByClass, imageKey, titleKey, textKey){
+    let imageContainer = document.createElement('div');
+    imageContainer.classList.add('position-relative', 'my-image-wrapper');
+    imageContainer.innerHTML = `<img src="${imageKey}" alt="random image" class="w-100"></img>`;
+    let carouselTextContainer = document.createElement('div');
+    carouselTextContainer.classList.add('carousel-text');
+    let carouselTitle = document.createElement('h2');
+    carouselTitle.innerHTML = titleKey;
+    let carouselText = document.createElement('p');
+    carouselText.innerHTML = textKey;
+    carouselTextContainer.appendChild(carouselTitle);
+    carouselTextContainer.appendChild(carouselText);
+    imageContainer.appendChild(carouselTextContainer);
+    document.querySelector(parentByClass).appendChild(imageContainer);
+    return imageContainer;
+}
+function createCarouselThumbnail (parentByClass, imageKey){
+    let thumbnailContainer = document.createElement('div');
+    thumbnailContainer.classList.add('my-thumbnail-container');
+    thumbnailContainer.innerHTML = `<img src="${imageKey}" alt="random image" class="w-100"></img>`;
+    document.querySelector(parentByClass).appendChild(thumbnailContainer);
+    return thumbnailContainer;
+}
