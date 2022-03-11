@@ -12,11 +12,29 @@ for (let i = 0; i < randomIntFromInterval(10, 20); i++){
    peopleList.push(generatePerson ())
 }
 console.table(peopleList)
-
+const driversList = peopleList.filter((element) =>{
+   if(element.age >= 18 && element.age <=75 ){
+      return element.id =`${element.name} ${element.lastName} può guidare tranquillamente`;
+   }
+})
+const minorsList = peopleList.filter((element) =>{
+   if(element.age < 18){
+      return element.id =`${element.name} ${element.lastName} è minorenne`;
+   }
+})
+const elderlyList = peopleList.filter((element) =>{
+   if(element.age > 75){
+      return element.id =`${element.name} ${element.lastName} è meglio se si fa accompagnare`;
+   }
+})
+console.table(driversList)
+console.table(minorsList)
+console.table(elderlyList)
 function generatePerson (){
    const person = {};
    person.name = makeId(1).toUpperCase()+makeId(randomIntFromInterval(2, 7)).toLowerCase();
    person.lastName = makeId(1).toUpperCase()+makeId(randomIntFromInterval(2, 7)).toLowerCase();
+   //person.id = person.name + ' ' + person.lastName;
    person.age = Math.floor(Math.random() * 100 + 1);
    return person
 }
