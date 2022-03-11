@@ -27,7 +27,7 @@ team.push(mvp)
 // console.log(playerInfos.name)
 // console.log(playerInfos.lastName)
 // console.log(playerInfos.code)
-for (let i = 0; i < 10; i++){
+for (let i = 0; i < 25; i++){
     team.push(generatePlayerName())
 }
 console.table(team)
