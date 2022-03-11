@@ -21,23 +21,46 @@ const playerInfos ={
     percentage: ''
 };
 
-function generateUniqueRandomNumber( numsBlacklist, min, max){
-    let check = false;
-    let randomInt;
-    while ( !check ){
-        randomInt  = Math.floor(Math.random() * ((max + 1) - min) + min);
-        if ( !numsBlacklist.includes(randomInt)  ){
-            check = true;
-        }
-    }
-    return randomInt;
-}
+playerInfos.name = generatePlayerName();
+playerInfos.lastName = generatePlayerName();
+playerInfos.code = makeCode(3, playerInfos.name).toUpperCase() + makeNumber(3);
 console.log(playerInfos.name)
-const playerCodeTest = generateUniqueRandomNumber(playerInfos.name, 0, playerInfos.name.length);
-console.log(playerCodeTest)
+console.log(playerInfos.lastName)
+console.log(playerInfos.code)
 
-
-let playerCode;
-for (let i = 0; i < 3; i++){
-
+function generatePlayerName(){
+    return makeId(Math.floor(Math.random() * (1) + 1)).charAt(0).toUpperCase()+makeId(Math.floor(Math.random() * (10 - 3 + 1) + 3)).toLowerCase();
 }
+function makeId(length) {
+    let result           = '';
+    let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+function makeNumber(length) {
+    let result           = '';
+    let characters       = '0123456789';
+    let charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+function makeCode(length, letterList) {
+    let result           = '';
+    let characters       = letterList;
+    let charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+
+//Math.floor(Math.random() * (max - min + 1) + min);
+
+
+
