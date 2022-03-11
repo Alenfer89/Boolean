@@ -16,7 +16,7 @@ const modello =['citycar', 'sport','lusso', 'station-wagon', 'suv', 'trattore'];
 const alimentazione = [ 'benzina', 'diesel', 'gpl', 'elettrico', 'metano'];
 
 const autoPark =[];
-function randomIntFromInterval(min, max) { // min and max included 
+function randomIntFromInterval(min, max) {
    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 for (let i = 0; i < 12; i++){
@@ -28,8 +28,17 @@ for (let i = 0; i < 12; i++){
 }
 console.table(autoPark)
 
-const benzina =[];
-const diesel =[];
-const altre = [];
+const benzina = autoPark.filter(element =>{
+   if(element.alimentazione == 'benzina') return true
+})
+const diesel = autoPark.filter(element =>{
+   if(element.alimentazione == 'diesel') return true
+})
+const altre = autoPark.filter(element =>{
+   if(element.alimentazione !== 'benzina' && element.alimentazione !== 'diesel') return true
+})
 
-benzina = autoPark.filter()
+
+console.table(benzina)
+console.table(diesel)
+console.table(altre)
