@@ -72,29 +72,40 @@ let activeCarouselThumb = document.getElementsByClassName('my-thumbnail-containe
 activeCarouselThumb[activeElement].classList.add('active');
 
 document.querySelector('div.my-next').addEventListener('click', function(){
-    activeCarouselImage[activeElement].classList.remove('active');
-    activeCarouselThumb[activeElement].classList.remove('active');
+    let oldElement = activeElement;
     if (activeElement == arrayOfCarouselObjects.length - 1){
         activeElement = 0;
     } else {
         activeElement++;
-        console.log(activeElement)
-        console.log(arrayOfCarouselObjects.length)
     }
-    activeCarouselImage[activeElement].classList.add('active');
-    activeCarouselThumb[activeElement].classList.add('active');
+    hideAndShow(activeCarouselImage, activeCarouselThumb, activeElement, oldElement)
 })
 document.querySelector('div.my-previous').addEventListener('click', function(){
-    activeCarouselImage[activeElement].classList.remove('active');
-    activeCarouselThumb[activeElement].classList.remove('active');
+    let oldElement = activeElement;
     if (activeElement == 0){
         activeElement = arrayOfCarouselObjects.length - 1;
     } else {
         activeElement--;
     }
-    activeCarouselImage[activeElement].classList.add('active');
-    activeCarouselThumb[activeElement].classList.add('active');
+    hideAndShow(activeCarouselImage, activeCarouselThumb, activeElement, oldElement)
 })
+setInterval (function(){
+    let oldElement = activeElement;
+    if (activeElement == arrayOfCarouselObjects.length - 1){
+        activeElement = 0;
+    } else {
+        activeElement++;
+    }
+    hideAndShow(activeCarouselImage, activeCarouselThumb, activeElement, oldElement)
+}, 3000)
+
+function hideAndShow(imageItem, thumbnailItem, activeElement, inactiveElement){
+    imageItem[inactiveElement].classList.remove('active');
+    thumbnailItem[inactiveElement].classList.remove('active');
+
+    imageItem[activeElement].classList.add('active');
+    thumbnailItem[activeElement].classList.add('active');
+}
 
 function createCarouselImages(parentByClass, imageKey, titleKey, textKey){
     let imageContainer = document.createElement('div');
