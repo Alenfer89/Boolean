@@ -11,26 +11,37 @@
     C - la percentuale di successo per da 3 punti deve essere compresa tra 0 e 100
  */
 
-
-const playerInfos ={
-    code:"",
+const team=[];
+const mvp ={
+    code:"GSP911",
     name: 'Gino',
     lastName: 'Spadaccino',
-    age: '23',
-    points: '',
-    percentage: ''
+    age: 23,
+    points: 99,
+    percentage: '100%'
 };
-
-playerInfos.name = generatePlayerName();
-playerInfos.lastName = generatePlayerName();
-playerInfos.code = makeCode(3, playerInfos.name).toUpperCase() + makeNumber(3);
-console.log(playerInfos.name)
-console.log(playerInfos.lastName)
-console.log(playerInfos.code)
-
-function generatePlayerName(){
-    return makeId(Math.floor(Math.random() * (1) + 1)).charAt(0).toUpperCase()+makeId(Math.floor(Math.random() * (10 - 3 + 1) + 3)).toLowerCase();
+team.push(mvp)
+// playerInfos.name = generatePlayerName();
+// playerInfos.lastName = generatePlayerName();
+// playerInfos.code = makeCode(3, playerInfos.name).toUpperCase() + makeNumber(3);
+// console.log(playerInfos.name)
+// console.log(playerInfos.lastName)
+// console.log(playerInfos.code)
+for (let i = 0; i < 10; i++){
+    team.push(generatePlayerName())
 }
+console.table(team)
+function generatePlayerName(){
+    const playerInfos={};
+    playerInfos.name = makeId(Math.floor(Math.random() * (1) + 1)).charAt(0).toUpperCase()+makeId(Math.floor(Math.random() * (10 - 3 + 1) + 3)).toLowerCase();
+    playerInfos.lastName = makeId(Math.floor(Math.random() * (1) + 1)).charAt(0).toUpperCase()+makeId(Math.floor(Math.random() * (10 - 3 + 1) + 3)).toLowerCase();
+    playerInfos.code = makeCode(3, playerInfos.name).toUpperCase() + makeNumber(3);
+    playerInfos.age = Math.floor(Math.random() * (38 - 18 + 1) + 18);
+    playerInfos.points = Math.floor(Math.random() * (50 - 0 + 1) + 0);
+    playerInfos.percentage = Math.floor(Math.random() * (100 - 0 + 1) + 0)+'%';
+    return playerInfos
+}
+
 function makeId(length) {
     let result           = '';
     let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
