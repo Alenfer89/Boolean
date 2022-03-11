@@ -71,6 +71,7 @@ activeCarouselImage[activeElement].classList.add('active');
 let activeCarouselThumb = document.getElementsByClassName('my-thumbnail-container');
 activeCarouselThumb[activeElement].classList.add('active');
 
+
 document.querySelector('div.my-next').addEventListener('click', function(){
     let oldElement = activeElement;
     if (activeElement == arrayOfCarouselObjects.length - 1){
@@ -90,15 +91,18 @@ document.querySelector('div.my-previous').addEventListener('click', function(){
     hideAndShow(activeCarouselImage, activeCarouselThumb, activeElement, oldElement)
 })
 setInterval (function(){
-    let oldElement = activeElement;
-    if (activeElement == arrayOfCarouselObjects.length - 1){
-        activeElement = 0;
+    if(scrollRight){
+        document.querySelector('div.my-next').click();
     } else {
-        activeElement++;
+        document.querySelector('div.my-previous').click();
     }
-    hideAndShow(activeCarouselImage, activeCarouselThumb, activeElement, oldElement)
 }, 3000)
 
+document.getElementById('my-after-carousel').innerHTML = `<button class="btn btn-primary" id="inversion-button">Inverti</button>`
+let scrollRight = true;
+document.getElementById('inversion-button').addEventListener('click', function(){
+    scrollRight = !scrollRight;
+})
 function hideAndShow(imageItem, thumbnailItem, activeElement, inactiveElement){
     imageItem[inactiveElement].classList.remove('active');
     thumbnailItem[inactiveElement].classList.remove('active');
