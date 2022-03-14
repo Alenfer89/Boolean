@@ -109,7 +109,11 @@ console.log(document.querySelectorAll('div.likes__cta'));
 
 document.querySelectorAll('div.likes__cta').forEach((element, index) => {
     element.addEventListener('click', function(){
-        document.querySelectorAll('a.like-button')[index].classList.toggle('like-button--liked')
+        document.querySelectorAll('a.like-button')[index].classList.add('like-button--liked');
+        let sum = 0;
+        sum = posts[index]['likes'] + 1;
+        console.log(sum)
+        document.getElementById('like-counter-1').innerHTML = sum;
     })
 });
 // document.getElementsByClassName('likes__cta').addEventListener('click', function(){
