@@ -80,11 +80,15 @@ const posts = [
 ];
 
 
-// console.log(('Tizio Caio').split(' '));
-// console.log((('Tizio Caio').split(' ')).charAt[0]);
-// function firstLetters (string){
-//     (string.split(' ')).charAt[0]
-// }
+console.log(('Tizio Caio').split(' '));
+console.log(('Tizio Caio').split(' ')[0].charAt(0));
+function firstLetters (string){
+    let name = string.split(' ')[0].charAt(0);
+    let surname = string.split(' ')[1].charAt(0);
+    let placeholder = name + surname;
+    return placeholder
+}
+console.log(firstLetters ('Tizio Caio'))
 
 
 
@@ -116,9 +120,7 @@ document.querySelectorAll('div.likes__cta').forEach((element, index) => {
         document.getElementById('like-counter-1').innerHTML = sum;
     })
 });
-// document.getElementsByClassName('likes__cta').addEventListener('click', function(){
-//     document.querySelector('a.like-button').classList.add('like-button--liked')
-// })
+
 function populatePosts (containerById, postText, postImage, postAuthor, authorProPic, likes){
     if (authorProPic == null){
         let placeholder = 'AX';
