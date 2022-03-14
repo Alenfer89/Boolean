@@ -99,7 +99,7 @@ for (let i = 7; i < 20; i++){
     post["media"] = `https://unsplash.it/600/400?image=${randomIntFromInterval(1, 500)}`;
     post["author"] = {}
     post["author"]["name"] = 'Tizio Cai* Sempronia';
-    post["author"]["image"] = `https://unsplash.it/300/300?image=${randomIntFromInterval(1, 99)}`;
+    post["author"]["image"] = randomProPic (randomIntFromInterval(1, 500));
     post["likes"] = randomIntFromInterval(1, 500);
     post["created"] = "2021-03-05";
     posts.push(post);
@@ -191,7 +191,17 @@ function populatePosts (containerById, postText, postImage, postAuthor, authorPr
         `
     }
 }
+function randomProPic (number){
+    if (number % 5 == 0){
+        console.log('happening')
+        return null
+    }
+    return `https://unsplash.it/300/300?image=${randomIntFromInterval(1, 99)}`
+    
+}
 
+console.log(randomProPic (5))
+console.log(posts[3]['author']['image'])
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
