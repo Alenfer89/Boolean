@@ -82,6 +82,11 @@ const posts = [
 
 console.log(('Tizio Caio').split(' '));
 console.log(('Tizio Caio').split(' ')[0].charAt(0));
+/**
+ * This function extrapolates the first letter of the first two words of a string to mimic a generic placeholder for missing names
+ * @param {*} string //only the first two words of a string will be considered
+ * @returns //a string of two carachters
+ */
 function firstLetters (string){
     let name = string.split(' ')[0].charAt(0);
     let surname = string.split(' ')[1].charAt(0);
@@ -120,7 +125,16 @@ document.querySelectorAll('div.likes__cta').forEach((element, index) => {
         document.getElementById('like-counter-1').innerHTML = sum;
     })
 });
-
+/**
+ * This function creates a post, given a container and key (or key-like) elements
+ * @param {*} containerById //the ID of the container
+ * @param {*} postText //the text of the post
+ * @param {*} postImage //the image of the post
+ * @param {*} postAuthor //the author of the post
+ * @param {*} authorProPic //the profile pic of the author of the post
+ * @param {*} likes //the number of likes to the post
+ * Will return a posts-filled container
+ */
 function populatePosts (containerById, postText, postImage, postAuthor, authorProPic, likes){
     if (authorProPic == null){
         let placeholder = firstLetters (postAuthor);
@@ -191,6 +205,11 @@ function populatePosts (containerById, postText, postImage, postAuthor, authorPr
         `
     }
 }
+/**
+ * Given a number, if it's a multiple of five, the result in null. Else you get a random image
+ * @param {*} number insert a number 
+ * @returns a "null" value or a random pic
+ */
 function randomProPic (number){
     if (number % 5 == 0){
         console.log('happening')
