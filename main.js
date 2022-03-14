@@ -65,10 +65,77 @@ const posts = [
         },
         "likes": 95,
         "created": "2021-03-05"
+    },
+    {
+        "id": 6,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=176",
+        "author": {
+            "name": "Gino Spadaccino",
+            "image": "https://unsplash.it/300/300?image=28"
+        },
+        "likes": 47,
+        "created": "2021-03-05"
+    },
+    {
+        "id": 7,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=533",
+        "author": {
+            "name": "Ugo Frullo",
+            "image": "https://unsplash.it/300/300?image=78"
+        },
+        "likes": 89,
+        "created": "2021-03-05"
+    },
+    {
+        "id": 8,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=588",
+        "author": {
+            "name": "Martina Martò",
+            "image": "https://unsplash.it/300/300?image=88"
+        },
+        "likes": 94,
+        "created": "2021-03-05"
+    },
+    {
+        "id": 9,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": "https://unsplash.it/600/400?image=555",
+        "author": {
+            "name": "Pina Silvestre",
+            "image": "https://unsplash.it/300/300?image=55"
+        },
+        "likes": 7,
+        "created": "2021-03-05"
+    },
+    {
+        "id": 10,
+        "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
+        "media": `https://unsplash.it/600/400?image=${randomIntFromInterval(1, 500)}`,
+        "author": {
+            "name": "Batta Lei",
+            "image": `https://unsplash.it/300/300?image=${randomIntFromInterval(1, 99)}`
+        },
+        "likes": 12,
+        "created": "2021-03-05"
     }
 ];
 
-console.log(posts[1]["author"]['name'])
+for (let i = 11; i < 20; i++){
+    const post = {};
+    post["id"]=i;
+    post["content"] = "Placeat libero ipsa nobis ipsum quibusdam quas harum ut.";
+    post["media"] = `https://unsplash.it/600/400?image=${randomIntFromInterval(1, 500)}`;
+    post["author"] = {}
+    post["author"]["name"] = 'Tizio Caio Test';
+    post["author"]["image"] = `https://unsplash.it/300/300?image=${randomIntFromInterval(1, 99)}`;
+    post["likes"] = randomIntFromInterval(1, 500);
+    post["created"] = "2021-03-05";
+    posts.push(post);
+}
+
 for (let i = 0; i < posts.length; i++){
     populatePosts('container', posts[i]["content"], posts[i]["media"], posts[i]["author"]["name"], posts[i]["author"]["image"], posts[i]["likes"]);
 }
@@ -142,4 +209,8 @@ function populatePosts (containerById, postText, postImage, postAuthor, authorPr
         </div>
         `
     }
+}
+
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
