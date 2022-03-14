@@ -123,7 +123,7 @@ document.querySelectorAll('div.likes__cta').forEach((element, index) => {
 
 function populatePosts (containerById, postText, postImage, postAuthor, authorProPic, likes){
     if (authorProPic == null){
-        let placeholder = 'AX';
+        let placeholder = firstLetters (postAuthor);
         document.getElementById(containerById).innerHTML += `
         <div class="post">
             <div class="post__header">
