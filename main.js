@@ -110,7 +110,7 @@ console.log(document.querySelectorAll('div.likes__cta'));
 document.querySelectorAll('div.likes__cta').forEach(element => {
     element.addEventListener('click', function(){
         document.querySelectorAll('a.like-button').forEach(element => {
-            element.classList.add('like-button--liked')
+            element.classList.toggle('like-button--liked')
         });
     })
 });
