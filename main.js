@@ -107,11 +107,9 @@ for (let i = 0; i < posts.length; i++){
 console.log(document.getElementsByClassName('likes__cta'));
 console.log(document.querySelectorAll('div.likes__cta'));
 
-document.querySelectorAll('div.likes__cta').forEach(element => {
+document.querySelectorAll('div.likes__cta').forEach((element, index) => {
     element.addEventListener('click', function(){
-        document.querySelectorAll('a.like-button').forEach(element => {
-            element.classList.toggle('like-button--liked')
-        });
+        document.querySelectorAll('a.like-button')[index].classList.toggle('like-button--liked')
     })
 });
 // document.getElementsByClassName('likes__cta').addEventListener('click', function(){
