@@ -80,8 +80,8 @@ const posts = [
 ];
 
 
-console.log(('Tizio Caio').split(' '));
-console.log(('Tizio Caio').split(' ')[0].charAt(0));
+//*console.log(('Tizio Caio').split(' '));
+//*console.log(('Tizio Caio').split(' ')[0].charAt(0));
 /**
  * This function extrapolates the first letter of the first two words of a string to mimic a generic placeholder for missing names
  * @param {*} string //only the first two words of a string will be considered
@@ -93,7 +93,7 @@ function firstLetters (string){
     let placeholder = name + surname;
     return placeholder
 }
-console.log(firstLetters ('Tizio Caio'))
+//*console.log(firstLetters ('Tizio Caio'))
 
 
 
@@ -110,13 +110,15 @@ for (let i = 7; i < 20; i++){
     posts.push(post);
 }
 
-for (let i = 0; i < posts.length; i++){
-    populatePosts('container', posts[i]["content"], posts[i]["media"], posts[i]["author"]["name"], posts[i]["author"]["image"], posts[i]["likes"]);
-}
-console.log(document.getElementsByClassName('likes__cta'));
-console.log(document.querySelectorAll('div.likes__cta'));
+posts.forEach((element) =>{
+    document.getElementById('container').innerHTML += populatePosts(element)
+})
+//*console.log(document.getElementsByClassName('likes__cta'));
+//*console.log(document.querySelectorAll('div.likes__cta'));
 
 document.querySelectorAll('div.likes__cta').forEach((element, index) => {
+    console.log(element)
+    console.log(index)
     element.addEventListener('click', function(){
         document.querySelectorAll('a.like-button')[index].classList.add('like-button--liked');
         let sum = 0;
@@ -135,10 +137,11 @@ document.querySelectorAll('div.likes__cta').forEach((element, index) => {
  * @param {*} likes //the number of likes to the post
  * Will return a posts-filled container
  */
-function populatePosts (containerById, postText, postImage, postAuthor, authorProPic, likes){
-    if (authorProPic == null){
-        let placeholder = firstLetters (postAuthor);
-        document.getElementById(containerById).innerHTML += `
+function populatePosts (postElement){
+    const { id, content, media, author, likes, created} = postElement;
+    if (author.image == null){
+        let placeholder = firstLetters (author.name);
+        return  `
         <div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
@@ -146,58 +149,58 @@ function populatePosts (containerById, postText, postImage, postAuthor, authorPr
                         ${placeholder}                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">${postAuthor}</div>
-                        <div class="post-meta__time">4 mesi fa</div>
+                        <div class="post-meta__author">${author.name}</div>
+                        <div class="post-meta__time">${created}</div>
                     </div>                    
                 </div>
             </div>
-            <div class="post__text">${postText}</div>
+            <div class="post__text">${content}</div>
             <div class="post__image">
-                <img src="${postImage}" alt="">
+                <img src="${media}" alt="">
             </div>
             <div class="post__footer">
                 <div class="likes js-likes">
                     <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                        <a class="like-button  js-like-button" href="#" data-postid="${id}">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">${likes}</b> persone
+                        Piace a <b id="like-counter-${id}" class="js-likes-counter">${likes}</b> persone
                     </div>
                 </div> 
             </div>            
         </div>
         `
     } else {
-        document.getElementById(containerById).innerHTML += `
+        return `
         <div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src="${authorProPic}" alt="${postAuthor}">                    
+                        <img class="profile-pic" src="${author.image}" alt="${author.name}">                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">${postAuthor}</div>
-                        <div class="post-meta__time">4 mesi fa</div>
+                        <div class="post-meta__author">${author.name}</div>
+                        <div class="post-meta__time">${created}</div>
                     </div>                    
                 </div>
             </div>
-            <div class="post__text">${postText}</div>
+            <div class="post__text">${content}</div>
             <div class="post__image">
-                <img src="${postImage}" alt="">
+                <img src="${media}" alt="">
             </div>
             <div class="post__footer">
                 <div class="likes js-likes">
                     <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                        <a class="like-button  js-like-button" href="#" data-postid="${id}">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">${likes}</b> persone
+                        Piace a <b id="like-counter-${id}" class="js-likes-counter">${likes}</b> persone
                     </div>
                 </div> 
             </div>            
@@ -212,7 +215,7 @@ function populatePosts (containerById, postText, postImage, postAuthor, authorPr
  */
 function randomProPic (number){
     if (number % 5 == 0){
-        console.log('happening')
+        //*console.log('happening')
         return null
     }
     return `https://unsplash.it/300/300?image=${randomIntFromInterval(1, 99)}`
