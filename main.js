@@ -96,6 +96,7 @@ posts.forEach((element) =>{
     document.getElementById('container').innerHTML += populatePosts(element)
 })
 //#aggiungo l'eventlistener 'click' con un foreach ad ogni pseudoelemento. Creo una lista di elementi 'buttons', da cui seleziono solo quello che corrisponde all'indice prestabilito ('cliccato') per aggiungere o togliere la classe 'attiva' e il counter dei likes
+const likedPosts = [];
 document.querySelectorAll('div.likes__cta').forEach((element, index) => {
     element.addEventListener('click', function(event){
         event.preventDefault()
@@ -104,9 +105,13 @@ document.querySelectorAll('div.likes__cta').forEach((element, index) => {
         if(buttons[index].classList.contains('like-button--liked')){
             buttons[index].classList.remove('like-button--liked');
             sum = posts[index]['likes'];
+            likedPosts.splice(likedPosts.indexOf(posts[index].id))
+            console.log(likedPosts)
         } else {
             buttons[index].classList.add('like-button--liked');
             sum = posts[index]['likes'] + 1;
+            likedPosts.push(posts[index].id)
+            console.log(likedPosts)
         }
         document.querySelectorAll('.js-likes-counter')[index].innerHTML = sum;
     })
