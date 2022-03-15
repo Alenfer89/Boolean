@@ -26,8 +26,7 @@ console.table(fusionOfArrays(letters, numbers, letters.length));
 function objectsFromArrays (firstArray, secondArray, length){
    const object = {};
    for (let i = 0; i < length; i++){
-      object.key += firstArray[i];
-      object.value += secondArray[i];
+      object[firstArray[i]] = secondArray[i];
    }
    return object
 }
