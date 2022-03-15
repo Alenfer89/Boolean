@@ -27,19 +27,24 @@ zucchine.forEach(element => {
 });
 console.log(peso)
 
-
+let pesoSimpatiche = 0;
+let pesoPro = 0;
 const zucchineSimpatiche = zucchine.filter ((element) => {
    if (element.lunghezza <= 15){
+      pesoSimpatiche +=parseFloat(element.peso);
       return element
    }
 })
 const zucchinePro = zucchine.filter ((element) => {
    if (element.lunghezza > 15){
+      pesoPro +=parseFloat(element.peso);
       return element
    }
 })
 console.table(zucchineSimpatiche)
+console.log(pesoSimpatiche)
 console.table(zucchinePro)
+console.log(pesoPro)
 
 function randomIntFromInterval(min, max) {
    return Math.floor(Math.random() * (max - min + 1) + min)
