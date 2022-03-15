@@ -10,31 +10,24 @@ for (let i = 0; i < 10; i++){
    strList.push(randomIntFromInterval(1, 100));
    strList.push(makeId(10));
 }
-console.log(strList);
-
-function stringInversion (string){
-
+console.table(strList);
+const reversedStrList = strList.map((element) => (isNaN(parseInt(element))) ? reverseString(element) : getAdditiveInverse(element) );
+console.table(reversedStrList);
+function reverseString(string){
+   return string.split('').reverse().join('');
 }
-
-function numberOpposite (...number){
-   if(!isNaN(number)){
-      let oppositeNumber = '-'+number;
-      return oppositeNumber
-   }
+function getAdditiveInverse(number){
+   return -number;
 }
-numberOpposite (strList);
-console.table(numberOpposite (strList))
-//console.log(numberOpposite (5))
-
-
-
-
-
-
+// function numberOpposite (...number){
+//    if(!isNaN(number)){
+//       let oppositeNumber = '-'+number;
+//       return oppositeNumber
+//    }
+// }
 function randomIntFromInterval(min, max) {
    return Math.floor(Math.random() * (max - min + 1) + min)
 }
-
 function makeId(length) {
    let result           = '';
    let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
