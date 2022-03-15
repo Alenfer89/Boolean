@@ -78,25 +78,7 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
-
-
-//*console.log(('Tizio Caio').split(' '));
-//*console.log(('Tizio Caio').split(' ')[0].charAt(0));
-/**
- * This function extrapolates the first letter of the first two words of a string to mimic a generic placeholder for missing names
- * @param {*} string //only the first two words of a string will be considered
- * @returns //a string of two carachters
- */
-function firstLetters (string){
-    let name = string.split(' ')[0].charAt(0);
-    let surname = string.split(' ')[1].charAt(0);
-    let placeholder = name + surname;
-    return placeholder
-}
-//*console.log(firstLetters ('Tizio Caio'))
-
-
-
+//#popolo l'array in modo randomico
 for (let i = 7; i < 20; i++){
     const post = {};
     post["id"]=i;
@@ -109,22 +91,23 @@ for (let i = 7; i < 20; i++){
     post["created"] = "2021-03-05";
     posts.push(post);
 }
-
+//#popolo l'HTML con l'array randomico di cui sopra
 posts.forEach((element) =>{
     document.getElementById('container').innerHTML += populatePosts(element)
 })
-//*console.log(document.getElementsByClassName('likes__cta'));
-//*console.log(document.querySelectorAll('div.likes__cta'));
+
 
 document.querySelectorAll('div.likes__cta').forEach((element, index) => {
     console.log(element)
     console.log(index)
-    element.addEventListener('click', function(){
+    element.addEventListener('click', function(event){
+        event.preventDefault()
         document.querySelectorAll('a.like-button')[index].classList.add('like-button--liked');
         let sum = 0;
         sum = posts[index]['likes'] + 1;
+        console.log(posts[index]['likes'])
         console.log(sum)
-        document.getElementById('like-counter-1').innerHTML = sum;
+        document.querySelectorAll('.js-likes-counter')[index].innerHTML = sum;
     })
 });
 /**
@@ -208,6 +191,20 @@ function populatePosts (postElement){
         `
     }
 }
+//*console.log(('Tizio Caio').split(' '));
+//*console.log(('Tizio Caio').split(' ')[0].charAt(0));
+/**
+ * This function extrapolates the first letter of the first two words of a string to mimic a generic placeholder for missing names
+ * @param {*} string //only the first two words of a string will be considered
+ * @returns //a string of two carachters
+ */
+function firstLetters (string){
+    let name = string.split(' ')[0].charAt(0);
+    let surname = string.split(' ')[1].charAt(0);
+    let placeholder = name + surname;
+    return placeholder
+}
+//*console.log(firstLetters ('Tizio Caio'))
 /**
  * Given a number, if it's a multiple of five, the result in null. Else you get a random image
  * @param {*} number insert a number 
