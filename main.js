@@ -93,6 +93,9 @@ for (let i = 7; i < 20; i++){
 }
 //#popolo l'HTML con l'array randomico di cui sopra
 posts.forEach((element) =>{
+    //console.log(element.created)
+    //reverseString(element.created);
+    //console.log(reverseString(element.created))
     document.getElementById('container').innerHTML += populatePosts(element)
 })
 //#aggiungo l'eventlistener 'click' con un foreach ad ogni pseudoelemento. Creo una lista di elementi 'buttons', da cui seleziono solo quello che corrisponde all'indice prestabilito ('cliccato') per aggiungere o togliere la classe 'attiva' e il counter dei likes
@@ -105,8 +108,7 @@ document.querySelectorAll('div.likes__cta').forEach((element, index) => {
         if(buttons[index].classList.contains('like-button--liked')){
             buttons[index].classList.remove('like-button--liked');
             sum = posts[index]['likes'];
-            likedPosts.splice(likedPosts.indexOf(posts[index].id))
-            console.log(likedPosts)
+            likedPosts.splice(likedPosts.indexOf(posts[index].id));
         } else {
             buttons[index].classList.add('like-button--liked');
             sum = posts[index]['likes'] + 1;
@@ -134,7 +136,7 @@ function populatePosts (postElement){
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${author.name}</div>
-                        <div class="post-meta__time">${created}</div>
+                        <div class="post-meta__time">${reverseString(created)}</div>
                     </div>                    
                 </div>
             </div>
@@ -167,7 +169,7 @@ function populatePosts (postElement){
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${author.name}</div>
-                        <div class="post-meta__time">${created}</div>
+                        <div class="post-meta__time">${reverseString(created)}</div>
                     </div>                    
                 </div>
             </div>
@@ -221,4 +223,8 @@ function randomProPic (number){
 }
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function reverseString(string){
+    return string.split('-').reverse().join('-');
 }
