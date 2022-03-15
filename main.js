@@ -95,30 +95,26 @@ for (let i = 7; i < 20; i++){
 posts.forEach((element) =>{
     document.getElementById('container').innerHTML += populatePosts(element)
 })
-
-
+//#aggiungo l'eventlistener 'click' con un foreach ad ogni pseudoelemento. Creo una lista di elementi 'buttons', da cui seleziono solo quello che corrisponde all'indice prestabilito ('cliccato') per aggiungere o togliere la classe 'attiva' e il counter dei likes
 document.querySelectorAll('div.likes__cta').forEach((element, index) => {
-    console.log(element)
-    console.log(index)
     element.addEventListener('click', function(event){
         event.preventDefault()
-        document.querySelectorAll('a.like-button')[index].classList.add('like-button--liked');
+        const buttons = document.querySelectorAll('a.like-button');
         let sum = 0;
-        sum = posts[index]['likes'] + 1;
-        console.log(posts[index]['likes'])
-        console.log(sum)
+        if(buttons[index].classList.contains('like-button--liked')){
+            buttons[index].classList.remove('like-button--liked');
+            sum = posts[index]['likes'];
+        } else {
+            buttons[index].classList.add('like-button--liked');
+            sum = posts[index]['likes'] + 1;
+        }
         document.querySelectorAll('.js-likes-counter')[index].innerHTML = sum;
     })
 });
 /**
- * This function creates a post, given a container and key (or key-like) elements
- * @param {*} containerById //the ID of the container
- * @param {*} postText //the text of the post
- * @param {*} postImage //the image of the post
- * @param {*} postAuthor //the author of the post
- * @param {*} authorProPic //the profile pic of the author of the post
- * @param {*} likes //the number of likes to the post
- * Will return a posts-filled container
+ * This function creates a post from a given object element elements
+ * @param {*} postElement //the element from which taking all the necessary infos
+ * @returns //a fully populated post
  */
 function populatePosts (postElement){
     const { id, content, media, author, likes, created} = postElement;
@@ -218,9 +214,6 @@ function randomProPic (number){
     return `https://unsplash.it/300/300?image=${randomIntFromInterval(1, 99)}`
     
 }
-
-console.log(randomProPic (5))
-console.log(posts[3]['author']['image'])
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
