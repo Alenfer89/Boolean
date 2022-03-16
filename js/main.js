@@ -13,6 +13,7 @@ const app = new Vue (
       el: '#app',
       data : {
          message : 'Ciao io sono un titolozzo',
+         subtitle : '',
       }
    }
 )
@@ -20,5 +21,5 @@ const app = new Vue (
 let scrivoaltro = 'apperò' ;
 console.log(scrivoaltro)
 console.log(app.message)
-app.message = scrivoaltro;
+app.subtitle = scrivoaltro;
 //'Ciao io sono un titolozzo'
