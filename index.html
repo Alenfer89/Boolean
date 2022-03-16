@@ -28,26 +28,24 @@
                     <h1 class="">{{title}}</h1>
                     <h2>{{subtitle}}</h2>
                 </div>
-                <div class="col-6 p-5">
+                <div class="col-6 p-2">
                     <label for="">Dimmi a cosa pensi</label>
                     <input v-model="message" type="text" placeholder="Scrivi qui in libertà">
                 </div>
-                <div class="col-6 p-5">
+                <div class="col-6 p-2">
                     <p class="text-capitalize text-center bg-info">{{message}}</p>
                 </div>
                 <div class="col-6 p-5">
                     <label for="img-submit">Metti qui il link per vedere la tua immagine</label>
                     <input id="img-submit" v-model="image" type="text" placeholder="URl dell'immagine">
-                </div>
-                <div class="col-6 p-5">
+                    <br>
                     <img :src="image" alt="La tua immagine" class="img-fluid">
                 </div>
                 <div class="col-6 p-5">
                     <span>Clicca sul bottone per ottenere un'immagine casuale</span>
                     <button @click="randomPic" class="btn btn-warning">Cliccami</button>
-                </div>
-                <div class="col-6 p-5">
-                    <img :src="randomImg" :alt="messageViewer()">
+                    <br>
+                    <img :src="randomImg" :alt="messageViewer()" class="img-fluid">
                 </div>
             </div>
         </div>
