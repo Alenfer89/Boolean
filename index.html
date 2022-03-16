@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,12 +21,33 @@
 </head>
 <body>
 
-    <main id="app">
+    <main id="app" class="p-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="">{{message}}</h1>
+                    <h1 class="">{{title}}</h1>
                     <h2>{{subtitle}}</h2>
+                </div>
+                <div class="col-6 p-5">
+                    <label for="">Dimmi a cosa pensi</label>
+                    <input v-model="message" type="text" placeholder="Scrivi qui in libertà">
+                </div>
+                <div class="col-6 p-5">
+                    <p class="text-capitalize text-center bg-info">{{message}}</p>
+                </div>
+                <div class="col-6 p-5">
+                    <label for="img-submit">Metti qui il link per vedere l'immagine</label>
+                    <input id="img-submit" v-model="image" type="text" placeholder="URl dell'immagine">
+                </div>
+                <div class="col-6 p-5">
+                    <img :src="image" alt="La tua immagine" class="img-fluid">
+                </div>
+                <div class="col-6 p-5">
+                    <span>Clicca sul bottone per ottenere un immagine casuale</span>
+                    <button @click="randomPic" class="btn btn-warning">Cliccami</button>
+                </div>
+                <div class="col-6 p-5">
+                    <img :src="randomImg" :alt="messageViewer()">
                 </div>
             </div>
         </div>
