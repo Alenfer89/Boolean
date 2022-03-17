@@ -31,6 +31,10 @@ div.my-next{
     transform: translateY(-50%);
     cursor: pointer;
 }
+div.my-previous.my-lighter,
+div.my-next.my-lighter{
+    background-color: rgba(255, 255, 255, 0.945);
+}
 
 div.my-previous{
     left: 1rem;

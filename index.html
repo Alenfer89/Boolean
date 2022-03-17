@@ -35,7 +35,7 @@
                             <!-- immagini -->
                             <div class="position-relative my-image-wrapper" v-for="(element, index) in carousel" :class="(index == activeElement) ? 'active' : ''">
                                 <img class="w-100" src="img/01.jpg" :src="element.image" :alt="element.title">
-                                <div class="carousel-text" :class=" (index==0)? 'text-white':'text-danger'">
+                                <div class="carousel-text" :class="(index==0)? 'text-white':'text-danger'">
                                     <h2>{{element.title}}</h2>
                                     <p>{{element.text}}</p>
                                 </div>
@@ -43,11 +43,11 @@
                         </div>
                         <div class="my-thumbnails position-relative" @mouseover="stopScrolling" @mouseleave="selfScrolling">
                             <!-- prev -->
-                            <div class="my-previous position-absolute" @click="previousElement">
+                            <div class="my-previous position-absolute" @click="previousElement" :class="(activeElement==0)? 'my-lighter':''">
                                 <span class="my-prev-hook"></span>
                             </div>
                             <!-- next -->
-                            <div class="my-next position-absolute" @click="nextElement">
+                            <div class="my-next position-absolute" @click="nextElement" :class="(activeElement==carousel.length -1)? 'my-lighter':''">
                                 <span class="my-next-hook"></span>
                             </div>
                             <!-- immagini interne -->
