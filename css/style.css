@@ -78,10 +78,12 @@ div.my-thumbnail-container{
     width: calc(100% / 5);
     height: 160px;
     filter: brightness(0.3);
+    cursor: pointer;
 }
 div.my-thumbnail-container.active{
     filter: brightness(1);
     border: 2px solid rgb(211, 211, 211);
+    cursor: auto;
 }
 div.my-thumbnail-container img{
     object-fit: cover;

@@ -56,7 +56,7 @@ const app = new Vue(
                     } else {
                         this.previousElement();
                     }
-                }, 1000)
+                }, 3000)
             },
             stopScrolling: function(){
                 clearInterval(this.scrollElement);
