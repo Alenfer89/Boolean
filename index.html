@@ -33,9 +33,9 @@
                     <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel">
                         <div class="my-carousel-images" @mouseover="stopScrolling" @mouseleave="selfScrolling">
                             <!-- immagini -->
-                            <div class="position-relative my-image-wrapper" v-for="(element, index) in carousel" :class="(index == activeElement) ? 'active' : ' '">
+                            <div class="position-relative my-image-wrapper" v-for="(element, index) in carousel" :class="(index == activeElement) ? 'active' : ''">
                                 <img class="w-100" src="img/01.jpg" :src="element.image" :alt="element.title">
-                                <div class="carousel-text">
+                                <div class="carousel-text" :class=" (index==0)? 'text-white':'text-danger'">
                                     <h2>{{element.title}}</h2>
                                     <p>{{element.text}}</p>
                                 </div>

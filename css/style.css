@@ -65,6 +65,7 @@ div.my-image-wrapper.active{
 div.my-image-wrapper img{
     object-fit: cover;
     height: 100%;
+    filter: brightness(0.9);
 }
 div.carousel-text{
     position: absolute;
