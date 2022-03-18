@@ -6,9 +6,12 @@ const app = new Vue(
             singleSeries: '',
         },
         methods:{
-            addSeriesToList: function(series){
-                if(this.singleSeries !== '' && this.singleSeries !== ' '){
-                    this.seriesList.push(series.trim())
+            addSeriesToList: function(title){
+                if(this.singleSeries !== '' && event.charCode != 32){
+                    const series ={};
+                    series.title= title.trim();
+                    series.done = null,
+                    this.seriesList.push(series)
                     this.singleSeries = '';
                 } else{
                     console.log('controllo spazi')

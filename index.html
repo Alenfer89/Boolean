@@ -36,17 +36,22 @@
                     <div class="w-50  rounded-3 input-group">
                         <input type="text" class="form-control me-3 rounded-3 shadow" placeholder="Aggiungi una serie TV"
                         v-model="singleSeries">
-                        <button class="btn btn-danger rounded-3 shadow" @click="addSeriesToList(singleSeries)"> <i class="fa-solid fa-plus"></i> </button>
+                        <button class="btn btn-danger rounded-3 shadow" @click="addSeriesToList(singleSeries)">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 d-flex flex-wrap justify-content-center py-2">
                     <div class="w-50  rounded-3">
-                        <ul class="list-unstyled fs-5" v-for="(element , index) in seriesList">
-                            <li class="py-2 ps-1 d-flex justify-content-between">{{element}} <i class="fa-regular fa-circle-xmark" @click="removeSeriesToList(index)"></i></li>
+                        <p v-if="seriesList.length == 0" >Inserisci il titolo di una serie tv</p>
+                        <ul class="list-unstyled fs-5" v-for="(element , index) in seriesList" v-else>
+                            <li class="py-2 ps-1 d-flex justify-content-between">
+                                {{element.title}}
+                                <i class="fa-regular fa-circle-xmark" @click="removeSeriesToList(index)"></i>
+                            </li>
                         </ul>
-                        <p>inserisci il titolo di una serie tv</p>
                     </div>
                 </div>
             </div>
