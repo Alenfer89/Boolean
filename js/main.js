@@ -7,7 +7,13 @@ const app = new Vue(
         },
         methods:{
             addSeriesToList: function(series){
-                this.seriesList.push(series)
+                if(this.singleSeries !== '' && this.singleSeries !== ' '){
+                    this.seriesList.push(series.trim())
+                    this.singleSeries = '';
+                } else{
+                    console.log('controllo spazi')
+                }
+                
             },
             removeSeriesToList: function(seriesIndex){
                 this.seriesList.splice(seriesIndex, 1)
