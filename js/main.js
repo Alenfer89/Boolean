@@ -3,7 +3,26 @@ const app = new Vue(
         el: '#app',
         data:{
             seriesList:[
-                
+                {
+                    title: 'The Walking Dead',
+                    done: false,
+                },
+                {
+                    title: 'Scrubs',
+                    done: true,
+                },
+                {
+                    title: 'Lost',
+                    done: true,
+                },
+                {
+                    title: 'The 100',
+                    done: true,
+                },
+                {
+                    title: 'Desperate Housewives',
+                    done: false,
+                }
             ],
             singleSeries: '',
         },
@@ -26,19 +45,11 @@ const app = new Vue(
                 console.log(object.done)
                 if(object.done == null){
                     object.done = true;
-                    console.log('check true');
-                    console.log(object.done);
                 } else if(object.done == true){
                     object.done = false;
-                    console.log('check false');
-                    console.log(object.done);
                 } else if(object.done == false){
                     object.done = null;
-                    console.log('check null');
-                    console.log(object.done);
                 }
-                console.log('check');
-                console.log(object.done);
             }
         }
     }

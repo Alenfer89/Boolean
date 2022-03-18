@@ -2,11 +2,17 @@ body{
     font-family: "Montserrat", sans-serif;
     background-color: rgb(31, 31, 31);
 }
+#app ul {
+    background-color: rgb(54, 54, 54);
+}
 #app ul li {
     border-left: 5px solid transparent;
 }
 #app ul li:hover {
-    border-left: 5px solid greenyellow;
+    border-left: 5px solid rgb(161, 161, 161);
+    color: rgba(255,255,255,.8)
 }
-
+#app ul li div i.fa-circle-xmark:hover{
+    color: rgba(255,255,255,1)
+}
 

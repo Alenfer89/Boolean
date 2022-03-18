@@ -47,7 +47,7 @@
                     <div class="w-50  rounded-3">
                         <!--               -->
                         <p v-if="seriesList.length == 0" >Inserisci il titolo di una serie tv</p>
-                        <ul class="list-unstyled fs-5" v-else>
+                        <ul class="list-unstyled fs-5 rounded-3" v-else>
                             <li class="py-2 ps-1 d-flex justify-content-between" v-for="(element , index) in seriesList">
                                 <span class="d-flex justify-content-around align-items-center">
                                     <button @click="watchListModifier(element)" class="btn ax-button">
@@ -57,7 +57,7 @@
                                     </button>
                                     <span :class="(element.done == true) ? 'text-decoration-line-through' : 'text-white'">{{element.title}}</span>
                                 </span>
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center me-2">
                                     <i class="fa-regular fa-circle-xmark" @click="removeSeriesToList(index)"></i>
                                 </div>
                             </li>
