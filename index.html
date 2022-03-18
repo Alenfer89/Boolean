@@ -51,9 +51,9 @@
                             <li class="py-2 ps-1 d-flex justify-content-between" v-for="(element , index) in seriesList">
                                 <span class="d-flex justify-content-around align-items-center">
                                     <button @click="watchListModifier(element)" class="btn ax-button">
-                                        
-                                        <i class="fa-solid fa-check" v-if="element.done"></i>
-                                        <i class="fa-solid fa-circle-exclamation" v-else="!element.done"></i>
+                                        <i class="fa-regular fa-circle" v-show="element.done == null"></i>
+                                        <i class="fa-solid fa-check" v-show="element.done == true"></i>
+                                        <i class="fa-solid fa-circle-exclamation" v-show="element.done == false"></i>
                                     </button>
                                     <span :class="(element.done == true) ? 'd-inline-block' : 'd-none'">{{element.title}}</span>
                                 </span>

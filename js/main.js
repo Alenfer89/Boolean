@@ -12,7 +12,7 @@ const app = new Vue(
                 if(string !== ''){
                     const series ={};
                     series.title= string.trim();
-                    series.done = true,
+                    series.done = null,
                     this.seriesList.push(series)
                     this.singleSeries = '';
                 } else{
@@ -24,7 +24,21 @@ const app = new Vue(
             },
             watchListModifier: function (object){
                 console.log(object.done)
-                object.done = !object.done;
+                if(object.done == null){
+                    object.done = true;
+                    console.log('check true')
+                    console.log(object.done)
+                } else if(object.done == true){
+                    object.done = false
+                    console.log('check false')
+                    console.log(object.done)
+                } else if(object.done == false){
+                    object.done = null
+                    console.log('check null')
+                    console.log(object.done)
+                }
+                
+                
                 console.log('check')
                 console.log(object.done)
                     
