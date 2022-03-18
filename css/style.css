@@ -2,5 +2,11 @@ body{
     font-family: "Montserrat", sans-serif;
     /* background-color: rgb(31, 31, 31); */
 }
+#app ul li {
+    border-left: 5px solid transparent;
+}
+#app ul li:hover {
+    border-left: 5px solid greenyellow;
+}
 
 
