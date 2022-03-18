@@ -2,7 +2,8 @@ const app = new Vue(
     {
         el: '#app',
         data:{
-            seriesList:[]
+            seriesList:[],
+            singleSeries: '',
         },
         methods:{
             addSeriesToList: function(series){
