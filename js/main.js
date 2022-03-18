@@ -7,7 +7,7 @@ const app = new Vue(
         },
         methods:{
             addSeriesToList: function(title){
-                if(this.singleSeries !== '' && event.charCode != 32){
+                if(this.singleSeries !== ''){
                     const series ={};
                     series.title= title.trim();
                     series.done = null,
