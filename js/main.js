@@ -9,10 +9,10 @@ const app = new Vue(
         },
         methods:{
             addSeriesToList: function(string){
-                if(this.singleSeries !== ''){
+                if(string !== ''){
                     const series ={};
                     series.title= string.trim();
-                    series.done = null,
+                    series.done = true,
                     this.seriesList.push(series)
                     this.singleSeries = '';
                 } else{
@@ -23,13 +23,12 @@ const app = new Vue(
                 this.seriesList.splice(seriesIndex, 1)
             },
             watchListModifier: function (object){
-                if(object.done = null){
-                    object.done = true;
-                    console.log(true)
-                } else if (object.done = true){
-                    object.done = false;
-                    console.log(false)
-                }
+                console.log(object.done)
+                object.done = !object.done;
+                console.log('check')
+                console.log(object.done)
+                    
+                
             }
         }
     }
