@@ -52,10 +52,10 @@
                                 <span class="d-flex justify-content-around align-items-center">
                                     <button @click="watchListModifier(element)" class="btn ax-button">
                                         <i class="fa-regular fa-circle" v-show="element.done == null"></i>
-                                        <i class="fa-solid fa-check" v-show="element.done == true"></i>
-                                        <i class="fa-solid fa-circle-exclamation" v-show="element.done == false"></i>
+                                        <i class="fa-solid fa-circle-check text-success" v-show="element.done == true"></i>
+                                        <i class="fa-solid fa-circle-exclamation text-danger" v-show="element.done == false"></i>
                                     </button>
-                                    <span :class="(element.done == true) ? 'd-inline-block' : 'd-none'">{{element.title}}</span>
+                                    <span :class="(element.done == true) ? 'text-decoration-line-through' : ''">{{element.title}}</span>
                                 </span>
                                 <i class="fa-regular fa-circle-xmark" @click="removeSeriesToList(index)"></i>
                             </li>
