@@ -20,9 +20,8 @@ div.my-bot-bg{
 main{
     background-color: wheat;
     min-width: 1100px;
-    height: 90vh;
-    top: 5vh;
-    bottom: 5vh;
+    top: 3vh;
+    bottom: 3vh;
     left: 10%;
     right: 10%;
 }
@@ -39,6 +38,7 @@ img.ax-pro-pic{
 section#contacts{
     background-color: aqua;
     border-right: 3px solid gray;
+    height: 94vh;
 }
 section#contacts div#notifier{
     background-color: rgb(142, 218, 252);
@@ -60,7 +60,6 @@ section#contacts div.input-group input{
     border: 1px solid rgb(234, 234, 234);
 }
 section#contacts div.ax-contacts-container{
-    max-height: calc(90vh - 185px);
     overflow-y: scroll;
 }
 section#contacts div.ax-contacts-container div.ax-single-contact{
@@ -75,5 +74,9 @@ section#messages{
     
     background-color: firebrick;
 }
+section#messages footer{
+    background-color: rgb(243, 238, 234);
+}
+
 
 
