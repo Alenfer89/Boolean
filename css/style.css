@@ -38,17 +38,10 @@ section#contacts{
     background-color: aqua;
     border-right: 3px solid gray;
 }
-section#contacts div.input-group{
-    background-color: rgb(250, 250, 250);
-}
-section#contacts div.input-group span,
-section#contacts div.input-group input{
-    border: 1px solid rgb(234, 234, 234);
-}
-div#notifier{
+section#contacts div#notifier{
     background-color: rgb(142, 218, 252);
 }
-div#notifier div.rounded-circle{
+section#contacts div#notifier div.rounded-circle{
     width: 50px;
     height: 50px;
     min-width: 50px;
@@ -56,6 +49,19 @@ div#notifier div.rounded-circle{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+section#contacts div.input-group{
+    background-color: rgb(250, 250, 250);
+}
+section#contacts div.input-group span,
+section#contacts div.input-group input{
+    border: 1px solid rgb(234, 234, 234);
+}
+section#contacts div.ax-contacts-container div.ax-single-contact{
+    border-top: 1px solid rgb(234, 234, 234);
+}
+section#contacts div.ax-contacts-container div.ax-single-contact img.ax-contact-pic{
+    width: 70px;
 }
 section#messages{
     
