@@ -19,7 +19,7 @@
     <title>Boolzapp</title>
 
 </head>
-<body>
+<body class="ax-font">
     <!-- anchor for the main el -->
     <div class="ax-bg-container position-relative p-0">
         <!-- cosmetic background divs -->
@@ -35,20 +35,23 @@
                                 <img src="img/avatar_1.jpg" alt="profile pic" class="rounded-circle ax-pro-pic">
                                 <span>Pierpaola</span>
                             </div>
-                            <div>
-                                <i class="fa-solid fa-circle-notch px-1"></i>
-                                <i class="fa-solid fa-message px-1"></i>
-                                <i class="fa-solid fa-ellipsis-vertical px-1"></i>
+                            <div class="fs-5">
+                                <i class="fa-solid fa-circle-notch px-2"></i>
+                                <i class="fa-solid fa-message px-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical px-2"></i>
                             </div>
                         </header>
-                        <div id="notifier" class="p-3 bg-primary d-flex">
-                            <div class="rounded-circle bg-white text-primary"><i class="fa-solid fa-bell-slash"></i></div>
+                        <div id="notifier" class="p-3 d-flex">
+                            <div class="rounded-circle bg-white me-2 fs-5"><i class="fa-solid fa-bell-slash"></i></div>
                             <div>
                                 <div>Ricevi notifiche di buovi messaggi</div>
                                 <div><a href="" class="text-secondary">Attiva notifiche desktop</a></div>
                             </div>
                         </div>
-                        <div></div>
+                        <div class="input-group p-2">
+                            <span class="input-group-text px-4 bg-white fs-5"><i class="fa-solid fa-magnifying-glass text-secondary"></i></span>
+                            <input type="text" class="form-control ax-font" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
                         <div class="ax-contacts-container"></div>
                     </section>
                     <section id="messages" class="col p-0"></section>
