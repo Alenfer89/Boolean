@@ -81,7 +81,7 @@ section#messages div.ax-messages-container{
     overflow-y: scroll;
 }
 section#messages div.ax-messages-container div.ax-message div{
-    width: 40%;
+    width: 45%;
 }
 section#messages div.ax-messages-container div.ax-message div div{
     font-size: .5rem;
