@@ -35,5 +35,14 @@ section#messages{
     height: 100%;
     background-color: firebrick;
 }
+img.ax-pro-pic{
+    width: 50px;
+}
+section header{
+    background-color: rgb(234, 234, 234);
+}
+section header i{
+    color: grey;
+}
 
 
