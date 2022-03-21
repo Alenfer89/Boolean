@@ -3,7 +3,7 @@ body{
     background-color: rgb(31, 31, 31);
 }
 .ax-font{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 div.ax-bg-container{
     width: 100%;
@@ -20,8 +20,9 @@ div.my-bot-bg{
 main{
     background-color: wheat;
     min-width: 1100px;
-    top: 3vh;
-    bottom: 3vh;
+    height: 90vh;
+    top: 5vh;
+    bottom: 5vh;
     left: 10%;
     right: 10%;
 }
@@ -32,7 +33,8 @@ section header i{
     color: grey;
 }
 img.ax-pro-pic{
-    width: 50px;
+    width: 40px;
+    height: 40px;
 }
 section#contacts{
     background-color: aqua;
@@ -42,9 +44,9 @@ section#contacts div#notifier{
     background-color: rgb(142, 218, 252);
 }
 section#contacts div#notifier div.rounded-circle{
-    width: 50px;
-    height: 50px;
-    min-width: 50px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
     color: rgb(142, 218, 252);
     display: flex;
     justify-content: center;
@@ -57,11 +59,15 @@ section#contacts div.input-group span,
 section#contacts div.input-group input{
     border: 1px solid rgb(234, 234, 234);
 }
+section#contacts div.ax-contacts-container{
+    max-height: calc(90vh - 185px);
+    overflow-y: scroll;
+}
 section#contacts div.ax-contacts-container div.ax-single-contact{
     border-top: 1px solid rgb(234, 234, 234);
 }
 section#contacts div.ax-contacts-container div.ax-single-contact img.ax-contact-pic{
-    width: 70px;
+    width: 50px;
 }
 section#messages{
     
