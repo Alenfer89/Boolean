@@ -44,5 +44,12 @@ section header{
 section header i{
     color: grey;
 }
+div#notifier div.rounded-circle{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 

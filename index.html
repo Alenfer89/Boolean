@@ -16,13 +16,16 @@
     <!-- Vue Js 2.6-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
-    <title>VueJs ToDoList</title>
+    <title>Boolzapp</title>
 
 </head>
 <body>
+    <!-- anchor for the main el -->
     <div class="ax-bg-container position-relative p-0">
+        <!-- cosmetic background divs -->
         <div class="my-top-bg"></div>
         <div class="my-bot-bg"></div>
+        <!-- main element where all happens with vuejs -->
         <main id="app" class="position-absolute">
             <div class="container-fluid">
                 <div class="row p-0">
@@ -38,10 +41,11 @@
                                 <i class="fa-solid fa-ellipsis-vertical px-1"></i>
                             </div>
                         </header>
-                        <div class="p-3 bg-primary">
+                        <div id="notifier" class="p-3 bg-primary d-flex">
+                            <div class="rounded-circle bg-white text-primary"><i class="fa-solid fa-bell-slash"></i></div>
                             <div>
-                                <img src="img/avatar_1.jpg" alt="profile pic" class="rounded-circle ax-pro-pic">
-                                <span>Pierpaola</span>
+                                <div>Ricevi notifiche di buovi messaggi</div>
+                                <div><a href="" class="text-secondary">Attiva notifiche desktop</a></div>
                             </div>
                         </div>
                         <div></div>
