@@ -58,7 +58,7 @@
                                     <img :src="`img/avatar${element.avatar}.jpg`" alt="profile pic" class="rounded-circle ax-contact-pic">
                                     <div class="d-inline-block ms-2">
                                         <div class="fs-6">{{element.name}}</div>
-                                        <div>Ultimo messaggio inviato</div>
+                                        <div class="text-secondary">Ultimo messaggio inviato</div>
                                     </div>
                                 </div>
                                 <span>12:00</span>
@@ -67,9 +67,12 @@
                     </section>
                     <section id="messages" class="col p-0 d-flex flex-column">
                         <header class="d-flex p-2 justify-content-between align-items-center">
-                            <div>
-                                <img src="img/avatar_1.jpg" alt="profile pic" class="rounded-circle ax-pro-pic">
-                                <span class="fs-6">Pierpaola</span>
+                            <div class="d-flex align-items-center">
+                                <img src="img/avatar_1.jpg" alt="profile pic" class="rounded-circle ax-pro-pic me-3">
+                                <div>
+                                    <div class="fs-6">Pierpaola</div>
+                                    <div class="text-secondary">Ultimo accesso oggi alle 12:00</div>
+                                </div>
                             </div>
                             <div class="fs-5">
                                 <i class="fa-solid fa-magnifying-glass px-2"></i>
@@ -77,11 +80,24 @@
                                 <i class="fa-solid fa-ellipsis-vertical px-2"></i>
                             </div>
                         </header>
-                        <div class="flex-grow-1"></div>
+                        <div class="ax-messages-container py-4 px-5 flex-grow-1">
+                            <div class="ax-message d-flex justify-content-end align-items-center ">
+                                <div class="rounded-2 bg-primary p-1">
+                                    testo
+                                    <div class="text-end w-100">12:00</div>
+                                </div>
+                            </div>
+                            <div class="ax-message d-flex justify-content-start align-items-center ">
+                                <div class="rounded-2 bg-white position-relative p-1">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi saepe autem nostrum dolorum voluptatem beatae rem libero deserunt error consectetur maxime maiores non dolore, magni nobis ipsa optio hic iure?
+                                    <div class="text-end w-100">12:00</div>
+                                </div>
+                            </div>
+                        </div>
                         <footer class="d-flex align-items-center p-2 text-secondary">
-                            <i class="fa-solid fa-face-smile fs-6 px-3"></i>
+                            <i class="fa-regular fa-face-smile fs-5 px-3"></i>
                             <input type="text" class="flex-grow-1" placeholder="Scrivi un messaggio">
-                            <i class="fa-solid fa-microphone fs-6 px-3"></i>
+                            <i class="fa-solid fa-microphone fs-5 px-3"></i>
                         </footer>
                     </section>
                 </div>

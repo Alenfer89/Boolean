@@ -29,14 +29,14 @@ section header{
     background-color: rgb(234, 234, 234);
 }
 section header i{
-    color: grey;
+    color: rgb(173, 173, 173);
 }
 img.ax-pro-pic{
     width: 50px;
     height: 50px;
 }
 section#contacts{
-    background-color: aqua;
+    background-color: white;
     border-right: 3px solid gray;
     height: 94vh;
 }
@@ -65,17 +65,35 @@ section#contacts div.ax-contacts-container{
 section#contacts div.ax-contacts-container div.ax-single-contact{
     border-top: 1px solid rgb(234, 234, 234);
 }
+section#contacts div.ax-contacts-container div.ax-single-contact:hover{
+    background-color: rgb(161, 161, 161);
+    cursor: pointer;
+}
 section#contacts div.ax-contacts-container div.ax-single-contact img.ax-contact-pic{
     width: 60px;
     height: 60px;
 }
 section#messages{
-    
-    
     background-color: firebrick;
 }
+section#messages div.ax-messages-container{
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+}
+section#messages div.ax-messages-container div.ax-message div{
+    width: 40%;
+}
+section#messages div.ax-messages-container div.ax-message div div{
+    font-size: .5rem;
+}
+
 section#messages footer{
     background-color: rgb(243, 238, 234);
+}
+section#messages footer input{
+    line-height: 50px;
+    border: 0px;
+    border-radius: 5px;
 }
 
 
