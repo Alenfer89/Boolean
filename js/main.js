@@ -201,8 +201,10 @@ const app = new Vue (
                 }, 1000)
             },
             dateRetriever: function(activeElement, index){
-                
-                return this.contacts[activeElement].messages[index].date.split(' ')[1];
+                let hour = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[0];
+                let minutes = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[1];
+                let time = hour +':'+ minutes;
+                return time
             },
             // contactSearch: function(string){
             //     let stringCheck = string;
