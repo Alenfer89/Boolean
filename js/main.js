@@ -201,10 +201,13 @@ const app = new Vue (
                 }, 1000)
             },
             contactSearch: function(string){
-                for (let i = 0; i < this.contacts.length; i++){
-                    this.contacts[i].name.search(string);
-                    console.log(this.contacts[i].name)
-                }
+                this.contacts.forEach(element => {
+                    if (element.name.includes(string)){
+                        console.log('ok')
+                    } else {
+                        element.visible = false;
+                    }
+                });
                 
             }
         }
