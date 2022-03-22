@@ -198,7 +198,6 @@ const app = new Vue (
                 newMessage.status = 'received';
                 this.contacts[this.activeContact].messages.push(newMessage);
                 }, 1000)
-                
             },
         }
     }
