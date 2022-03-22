@@ -66,9 +66,9 @@
                         </div>
                     </section>
                     <section id="messages" class="col p-0 d-flex flex-column">
-                        <header class="d-flex p-2 justify-content-between align-items-center">
-                            <div class="d-flex align-items-center" v-for="(element, index) in contacts" v-if="(index == activeContact)">
-                                <img :src="`img/avatar${element.avatar}.jpg`" alt="profile pic" class="rounded-circle ax-pro-pic me-3">
+                        <header class="d-flex p-2 align-items-center" :class="(activeContact == null) ? 'justify-content-end' : 'justify-content-between'">
+                            <div class="d-flex align-items-center"  v-for="(element, index) in contacts" v-if="(index == activeContact)">
+                                <img :src="`img/avatar${element.avatar}.jpg`" :alt="`profile pic of ${element.name}`" class="rounded-circle ax-pro-pic me-3">
                                 <div>
                                     <div class="fs-6">{{element.name}}</div>
                                     <div class="text-secondary">Ultimo accesso oggi alle 12:00</div>
