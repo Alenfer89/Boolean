@@ -93,7 +93,7 @@
                         </div>
                         <footer class="d-flex align-items-center p-2 text-secondary" v-if="(activeContact !== null)">
                             <i class="fa-regular fa-face-smile fs-5 px-3"></i>
-                            <input @keydown.enter="sendMessage(activeContact , actualMessage)" v-model="actualMessage" type="text" class="flex-grow-1" placeholder="Scrivi un messaggio">
+                            <input @keydown.enter="sendMessage(activeContact , actualMessage), receiveMessage()" v-model="actualMessage" type="text" class="flex-grow-1" placeholder="Scrivi un messaggio">
                             <i class="fa-solid fa-microphone fs-5 px-3"></i>
                         </footer>
                     </section>
