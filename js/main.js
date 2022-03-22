@@ -184,7 +184,10 @@ const app = new Vue (
                 newMessage.date = '';
                 newMessage.message = messageToSend;
                 newMessage.status = 'sent';
-                this.contacts[contact].messages.push(messageToSend);
+                this.contacts[contact].messages.push(newMessage);
+                console.log(messageToSend)
+                console.log(this.contacts[contact])
+                console.log(this.contacts[contact].messages)
                 this.actualMessage = '';
             }
         }
