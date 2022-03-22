@@ -2,6 +2,7 @@ const app = new Vue (
     {
         el: '#app',
         data:{
+            activeContact: null,
             contacts: [
                 {
                     name: 'Michele',
@@ -167,7 +168,12 @@ const app = new Vue (
             ]
         },
         methods:{
-
+            specificContact: function(elementIndex){
+                console.log(this.activeContact);
+                this.activeContact = elementIndex;
+                console.log(this.activeContact);
+                console.log(elementIndex)
+            }
         }
     }
 )

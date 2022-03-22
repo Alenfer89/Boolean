@@ -65,6 +65,9 @@ section#contacts div.ax-contacts-container{
 section#contacts div.ax-contacts-container div.ax-single-contact{
     border-top: 1px solid rgb(234, 234, 234);
 }
+section#contacts div.ax-contacts-container div.ax-single-contact.active{
+    background-color: rgb(194, 194, 194);
+}
 section#contacts div.ax-contacts-container div.ax-single-contact:hover{
     background-color: rgb(161, 161, 161);
     cursor: pointer;
