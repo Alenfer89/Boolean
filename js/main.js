@@ -4,6 +4,7 @@ const app = new Vue (
         data:{
             activeContact: null,
             actualMessage: '',
+            searchContact: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -199,6 +200,13 @@ const app = new Vue (
                     this.contacts[this.activeContact].messages.push(newMessage);
                 }, 1000)
             },
+            contactSearch: function(string){
+                for (let i = 0; i < this.contacts.length; i++){
+                    this.contacts[i].name.search(string);
+                    console.log(this.contacts[i].name)
+                }
+                
+            }
         }
     }
 )
