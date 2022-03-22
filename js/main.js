@@ -181,7 +181,7 @@ const app = new Vue (
             },
             sendMessage: function(activeElement, messageToSend){
                 const newMessage = {};
-                newMessage.date = '';
+                newMessage.date = '25/25/2525 24:00:00';
                 newMessage.message = messageToSend;
                 newMessage.status = 'sent';
                 this.contacts[activeElement].messages.push(newMessage);
@@ -193,20 +193,20 @@ const app = new Vue (
             receiveMessage: function(){
                 setTimeout(()=>{
                     const newMessage = {};
-                    newMessage.date = null;
+                    newMessage.date = '25/25/2525 24:00:00';
                     newMessage.message = 'Ok!';
                     newMessage.status = 'received';
                     this.contacts[this.activeContact].messages.push(newMessage);
                 }, 1000)
             },
-            //! da scommentare appena facciamo js time
-            //     dateRetriever: function(activeElement, index){
-            //     let hour = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[0];
-            //     let minutes = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[1];
-            //     let time = hour +':'+ minutes;
-            //     return (this.contacts[activeElement].messages[index].date == null)? 'okk' : time;
-            // },
-            //!fino a qui
+            
+                dateRetriever: function(activeElement, index){
+                let hour = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[0];
+                let minutes = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[1];
+                let time = hour +':'+ minutes;
+                return (this.contacts[activeElement].messages[index].date == null)? 'okk' : time;
+            },
+            
             // contactSearch: function(string){
             //     let stringCheck = string;
             //     console.log(string.value)

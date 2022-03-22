@@ -89,8 +89,8 @@
                                 <div class="rounded-2  p-1" :class="(contacts[activeContact].messages[index].status == 'sent')? 'ax-bg-green' : 'bg-white'">
                                     <p class="m-0 ms-2">{{contacts[activeContact].messages[index].message}}</p>
                                     <div class="text-end w-100">{{
-                                        <!-- dateRetriever(activeContact, index) -->
-                                        'orario'
+                                        dateRetriever(activeContact, index)
+                                        
                                     }}</div>
                                 </div>
                             </div>
