@@ -4,7 +4,7 @@ const app = new Vue (
         data:{
             activeContact: null,
             actualMessage: '',
-            searchContact: '',
+            searchContact: null,
             contacts: [
                 {
                     name: 'Michele',
@@ -171,24 +171,24 @@ const app = new Vue (
         },
         methods:{
             specificContact: function(elementIndex){
-                console.log(this.activeContact);
+                //console.log(this.activeContact);
                 this.activeContact = elementIndex;
-                console.log(this.activeContact);
-                console.log(elementIndex)
+                // console.log(this.activeContact);
+                // console.log(elementIndex)
                 // console.log(this.contacts)
                 // console.log(this.contacts[this.activeContact])
-                console.log(this.contacts[this.activeContact].messages[0].message)
+                //console.log(this.contacts[this.activeContact].messages[0].message)
                 
             },
-            sendMessage: function(contact, messageToSend){
+            sendMessage: function(activeElement, messageToSend){
                 const newMessage = {};
                 newMessage.date = '';
                 newMessage.message = messageToSend;
                 newMessage.status = 'sent';
-                this.contacts[contact].messages.push(newMessage);
+                this.contacts[activeElement].messages.push(newMessage);
                 // console.log(messageToSend)
-                // console.log(this.contacts[contact])
-                // console.log(this.contacts[contact].messages)
+                // console.log(this.contacts[activeElement])
+                // console.log(this.contacts[activeElement].messages)
                 this.actualMessage = '';
             },
             receiveMessage: function(){
@@ -200,16 +200,27 @@ const app = new Vue (
                     this.contacts[this.activeContact].messages.push(newMessage);
                 }, 1000)
             },
-            contactSearch: function(string){
-                this.contacts.forEach(element => {
-                    if (element.name.includes(string)){
-                        console.log('ok')
-                    } else {
-                        element.visible = false;
-                    }
-                });
+            dateRetriever: function(activeElement, index){
+                const timeArray = [];
+                this.contacts[activeElement].messages[index].date.split(' ');
+                console.log(this.contacts[activeElement].messages[index].date.split(' '))
+            },
+            // contactSearch: function(string){
+            //     let stringCheck = string;
+            //     console.log(string.value)
+            //     console.log(stringCheck.value)
+            //     this.contacts.forEach(element => {
+            //         if (element.name.includes(stringCheck)){
+            //             stringCheck += stringCheck;
+            //             console.log('ok')
+            //             console.log(string)
+            //             console.log(stringCheck)
+            //         } else {
+            //             element.visible = false;
+            //         }
+            //     });
                 
-            }
+            // }
         }
     }
 )
