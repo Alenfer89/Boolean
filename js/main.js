@@ -173,10 +173,17 @@ const app = new Vue (
                 this.activeContact = elementIndex;
                 console.log(this.activeContact);
                 console.log(elementIndex)
+                // console.log(this.contacts)
+                // console.log(this.contacts[this.activeContact])
+                console.log(this.contacts[this.activeContact].messages[0].message)
+                
             }
         }
     }
 )
+
+
+
 
 
 
