@@ -27,6 +27,7 @@ main{
 }
 section header{
     background-color: rgb(234, 234, 234);
+    height: 70px;
 }
 section header i{
     color: rgb(173, 173, 173);
