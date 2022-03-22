@@ -38,7 +38,7 @@ img.ax-pro-pic{
 }
 section#contacts{
     background-color: white;
-    border-right: 3px solid gray;
+    border-right: 2px solid rgb(190, 190, 190);
     height: 94vh;
 }
 section#contacts div#notifier{
@@ -79,6 +79,8 @@ section#contacts div.ax-contacts-container div.ax-single-contact img.ax-contact-
 }
 section#messages{
     background-color: firebrick;
+    height: 94vh;
+
 }
 section#messages div.ax-messages-container{
     background-image: url(../img/mine.jpg);

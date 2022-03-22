@@ -66,7 +66,10 @@
                         </div>
                     </section>
                     <section id="messages" class="col p-0 d-flex flex-column">
-                        <header class="d-flex p-2 align-items-center" :class="(activeContact == null) ? 'justify-content-end' : 'justify-content-between'">
+                        <div class="d-flex flex-grow-1 justify-content-center align-items-center" v-if="(activeContact == null)">
+                            <img class="w-25" src="https://c1.scryfall.com/file/scryfall-cards/large/front/b/0/b0faa7f2-b547-42c4-a810-839da50dadfe.jpg?1559591477" alt="">
+                        </div>
+                        <header class="d-flex p-2 align-items-center" :class="(activeContact == null) ? 'justify-content-end' : 'justify-content-between'" v-if="(activeContact !== null)">
                             <div class="d-flex align-items-center"  v-for="(element, index) in contacts" v-if="(index == activeContact)">
                                 <img :src="`img/avatar${element.avatar}.jpg`" :alt="`profile pic of ${element.name}`" class="rounded-circle ax-pro-pic me-3">
                                 <div>
@@ -80,14 +83,14 @@
                                 <i class="fa-solid fa-ellipsis-vertical px-2"></i>
                             </div>
                         </header>
-                        <div class="ax-messages-container py-4 px-5 flex-grow-1">
-                            <div class="ax-message d-flex justify-content-end align-items-center px-4 mb-3">
+                        <div class="ax-messages-container py-4 px-5 flex-grow-1" v-for="(element, index) in contacts" v-if="(activeContact !== null) && (index == activeContact)">
+                            <div class="ax-message d-flex justify-content-end align-items-center px-4 mb-3" v-if="(index == activeContact)">
                                 <div class="rounded-2 bg-primary p-1">
                                     testo
                                     <div class="text-end w-100">12:00</div>
                                 </div>
                             </div>
-                            <div class="ax-message d-flex justify-content-start align-items-center px-4 mb-3">
+                            <div class="ax-message d-flex justify-content-start align-items-center px-4 mb-3" v-if="(index == activeContact)">
                                 <div class="rounded-2 bg-white position-relative p-1">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi saepe autem nostrum dolorum voluptatem beatae rem libero deserunt error consectetur maxime maiores non dolore, magni nobis ipsa optio hic iure?
                                     <div class="text-end w-100">12:00</div>
