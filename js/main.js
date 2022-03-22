@@ -179,8 +179,12 @@ const app = new Vue (
                 console.log(this.contacts[this.activeContact].messages[0].message)
                 
             },
-            sendMessage: function(){
-                this.contacts[this.activeContact].messages.message.push(actualMessage);
+            sendMessage: function(contact, messageToSend){
+                const newMessage = {};
+                newMessage.date = '';
+                newMessage.message = messageToSend;
+                newMessage.status = 'sent';
+                this.contacts[contact].messages.push(messageToSend);
                 this.actualMessage = '';
             }
         }

@@ -86,14 +86,14 @@
                         <div class="ax-messages-container py-4 px-5 flex-grow-1" v-for="(element, index) in contacts" v-if="(activeContact !== null) && (index == activeContact)">
                             <div class="ax-message d-flex  align-items-center px-4 mb-3" v-for="(element, index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent')? 'justify-content-end' : 'justify-content-start'">
                                 <div class="rounded-2  p-1" :class="(contacts[activeContact].messages[index].status == 'sent')? 'ax-bg-green' : 'bg-white'">
-                                    <span class="ms-2">{{contacts[activeContact].messages[index].message}}</span>
+                                    <p class="m-0 ms-2">{{contacts[activeContact].messages[index].message}}</p>
                                     <div class="text-end w-100">12:00</div>
                                 </div>
                             </div>
                         </div>
                         <footer class="d-flex align-items-center p-2 text-secondary" v-if="(activeContact !== null)">
                             <i class="fa-regular fa-face-smile fs-5 px-3"></i>
-                            <input v-model="actualMessage" type="text" class="flex-grow-1" placeholder="Scrivi un messaggio">
+                            <input @keydown.enter="sendMessage(activeContact , actualMessage)" v-model="actualMessage" type="text" class="flex-grow-1" placeholder="Scrivi un messaggio">
                             <i class="fa-solid fa-microphone fs-5 px-3"></i>
                         </footer>
                     </section>
