@@ -189,7 +189,15 @@ const app = new Vue (
                 console.log(this.contacts[contact])
                 console.log(this.contacts[contact].messages)
                 this.actualMessage = '';
-            }
+                setTimeout(this.recieveMessage(contact), 3000)
+            },
+            recieveMessage: function(contact){
+                const newMessage = {};
+                newMessage.date = '';
+                newMessage.message = 'Ok!';
+                newMessage.status = 'received';
+                this.contacts[contact].messages.push(newMessage);
+            },
         }
     }
 )
