@@ -82,6 +82,12 @@ section#messages{
     height: 94vh;
 
 }
+section#messages div.ax-placeholder{
+    background-image: url(https://www.aranzulla.it/wp-content/contenuti/2021/03/post-it-1200x628.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 section#messages div.ax-messages-container{
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
@@ -92,6 +98,10 @@ section#messages div.ax-messages-container div.ax-message div{
 section#messages div.ax-messages-container div.ax-message div div{
     font-size: .5rem;
 }
+section#messages .ax-bg-green{
+    background-color: rgb(213, 249, 186);
+}
+
 
 section#messages footer{
     background-color: rgb(243, 238, 234);

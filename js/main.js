@@ -3,6 +3,7 @@ const app = new Vue (
         el: '#app',
         data:{
             activeContact: null,
+            actualMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -177,6 +178,10 @@ const app = new Vue (
                 // console.log(this.contacts[this.activeContact])
                 console.log(this.contacts[this.activeContact].messages[0].message)
                 
+            },
+            sendMessage: function(){
+                this.contacts[this.activeContact].messages.message.push(actualMessage);
+                this.actualMessage = '';
             }
         }
     }
