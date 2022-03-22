@@ -84,15 +84,9 @@
                             </div>
                         </header>
                         <div class="ax-messages-container py-4 px-5 flex-grow-1" v-for="(element, index) in contacts" v-if="(activeContact !== null) && (index == activeContact)">
-                            <div class="ax-message d-flex justify-content-end align-items-center px-4 mb-3" v-for="(element, index) in contacts[activeContact].messages">
-                                <div class="rounded-2 bg-primary p-1">
+                            <div class="ax-message d-flex  align-items-center px-4 mb-3" v-for="(element, index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent')? 'justify-content-end' : 'justify-content-start'">
+                                <div class="rounded-2  p-1" :class="(contacts[activeContact].messages[index].status == 'sent')? 'bg-primary' : 'bg-white'">
                                     {{contacts[activeContact].messages[index].message}}
-                                    <div class="text-end w-100">12:00</div>
-                                </div>
-                            </div>
-                            <div class="ax-message d-flex justify-content-start align-items-center px-4 mb-3">
-                                <div class="rounded-2 bg-white position-relative p-1">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi saepe autem nostrum dolorum voluptatem beatae rem libero deserunt error consectetur maxime maiores non dolore, magni nobis ipsa optio hic iure?
                                     <div class="text-end w-100">12:00</div>
                                 </div>
                             </div>
