@@ -201,9 +201,8 @@ const app = new Vue (
                 }, 1000)
             },
             dateRetriever: function(activeElement, index){
-                const timeArray = [];
-                this.contacts[activeElement].messages[index].date.split(' ');
-                console.log(this.contacts[activeElement].messages[index].date.split(' '))
+                
+                return this.contacts[activeElement].messages[index].date.split(' ')[1];
             },
             // contactSearch: function(string){
             //     let stringCheck = string;

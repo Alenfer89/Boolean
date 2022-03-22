@@ -88,7 +88,7 @@
                             <div class="ax-message d-flex  align-items-center px-4 mb-3" v-for="(element, index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent')? 'justify-content-end' : 'justify-content-start'">
                                 <div class="rounded-2  p-1" :class="(contacts[activeContact].messages[index].status == 'sent')? 'ax-bg-green' : 'bg-white'">
                                     <p class="m-0 ms-2" @click="dateRetriever(activeContact, index)">{{contacts[activeContact].messages[index].message}}</p>
-                                    <div class="text-end w-100">12:00</div>
+                                    <div class="text-end w-100">{{dateRetriever(activeContact, index)}}</div>
                                 </div>
                             </div>
                         </div>
