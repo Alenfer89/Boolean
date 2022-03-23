@@ -71,9 +71,9 @@
                     </section>
                     <!-- placeholder section with background, visible only before any contact gets selected -->
                     <section id="placeholder" class="col p-0" v-if="(activeContact == null)"></section>
-                    <!-- section where all the comments are shown, only visible after the first contact gets selected -->
+                    <!-- section where all the comments by contact are displayed, only visible after the first contact gets selected -->
                     <section id="messages" class="col p-0 d-flex flex-column" v-if="(activeContact !== null)">
-                        <header class="d-flex p-2 align-items-center" :class="(activeContact == null) ? 'justify-content-end' : 'justify-content-between'" >
+                        <header class="d-flex p-2 justify-content-between align-items-center">
                             <div class="d-flex align-items-center"  v-for="(element, index) in contacts" v-if="(index == activeContact)">
                                 <img :src="`img/avatar${element.avatar}.jpg`" :alt="`profile pic of ${element.name}`" class="rounded-circle ax-pro-pic me-3">
                                 <div>
@@ -97,7 +97,7 @@
                         </div>
                         <footer class="d-flex align-items-center p-2 text-secondary">
                             <i class="fa-regular fa-face-smile fs-5 px-3"></i>
-                            <input @keydown.enter="sendMessage(activeContact , actualMessage), receiveMessage()" v-model="actualMessage" type="text" class="flex-grow-1" placeholder="Scrivi un messaggio">
+                            <input @keydown.enter="sendMessage(activeContact , actualMessage)" v-model="actualMessage" type="text" class="flex-grow-1" placeholder="Scrivi un messaggio">
                             <i class="fa-solid fa-microphone fs-5 px-3"></i>
                         </footer>
                     </section>

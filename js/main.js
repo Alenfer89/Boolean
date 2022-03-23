@@ -176,14 +176,27 @@ const app = new Vue (
             },
             sendMessage: function(activeElement, messageToSend){
                 if((messageToSend !== ' ') && (messageToSend !== '')){
+                    //object creation
                     const newMessage = {};
                     newMessage.date = '25/25/2525 24:00:00';
                     newMessage.message = messageToSend.trim();
                     newMessage.status = 'sent';
                     this.contacts[activeElement].messages.push(newMessage);
+                    //flags settings
                     messageCheckPoint = false;
                     this.messageReset();
+                    //fake response added
+                    if(messageCheckPoint == false){
+                        setTimeout(()=>{
+                            const newMessage = {};
+                            newMessage.date = '25/25/2525 24:00:00';
+                            newMessage.message = 'Ok!';
+                            newMessage.status = 'received';
+                            this.contacts[this.activeContact].messages.push(newMessage);
+                        }, 1000)
+                    }
                 } else {
+                    //flag settings
                     messageCheckPoint = true;
                     console.log('messaggio vuoto')
                 }
@@ -191,17 +204,17 @@ const app = new Vue (
             messageReset: function(){
                 this.actualMessage = '';
             },
-            receiveMessage: function(){
-                if(messageCheckPoint == false){
-                    setTimeout(()=>{
-                        const newMessage = {};
-                        newMessage.date = '25/25/2525 24:00:00';
-                        newMessage.message = 'Ok!';
-                        newMessage.status = 'received';
-                        this.contacts[this.activeContact].messages.push(newMessage);
-                    }, 1000)
-                }
-            },
+            // receiveMessage: function(){
+            //     if(messageCheckPoint == false){
+            //         setTimeout(()=>{
+            //             const newMessage = {};
+            //             newMessage.date = '25/25/2525 24:00:00';
+            //             newMessage.message = 'Ok!';
+            //             newMessage.status = 'received';
+            //             this.contacts[this.activeContact].messages.push(newMessage);
+            //         }, 1000)
+            //     }
+            // },
             dateRetriever: function(activeElement, index){
             let hour = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[0];
             let minutes = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[1];
@@ -223,7 +236,6 @@ const app = new Vue (
             //             element.visible = false;
             //         }
             //     });
-                
             // }
         }
     }
