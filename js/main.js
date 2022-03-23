@@ -204,31 +204,15 @@ const app = new Vue (
             messageReset: function(){
                 this.actualMessage = '';
             },
-            // receiveMessage: function(){
-            //     if(messageCheckPoint == false){
-            //         setTimeout(()=>{
-            //             const newMessage = {};
-            //             newMessage.date = '25/25/2525 24:00:00';
-            //             newMessage.message = 'Ok!';
-            //             newMessage.status = 'received';
-            //             this.contacts[this.activeContact].messages.push(newMessage);
-            //         }, 1000)
-            //     }
-            // },
             dateRetriever: function(activeElement, index){
-            let hour = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[0];
-            let minutes = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[1];
-            let time = hour +':'+ minutes;
-            return time;
+                let hour = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[0];
+                let minutes = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[1];
+                let time = hour +':'+ minutes;
+                return time;
             },
-            
             contactSearch: function(string){
-                console.log(string)
                 this.contacts.forEach(element => {
                     if (element.name.toLowerCase().includes(string.toLowerCase())){
-                        console.log('ok')
-                        console.log(string)
-                        console.log(element.name)
                         element.visible = true;
                     } else {
                         element.visible = false;
