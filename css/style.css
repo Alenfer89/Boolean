@@ -80,20 +80,23 @@ section#contacts div.ax-contacts-container div.ax-single-contact img.ax-contact-
     width: 60px;
     height: 60px;
 }
-section#messages{
-    background-color: firebrick;
-    height: 94vh;
-
-}
 section#placeholder{
     background-image: url(https://www.aranzulla.it/wp-content/contenuti/2021/03/post-it-1200x628.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+section#messages{
+    background-color: firebrick;
+    height: 94vh;
+
+}
 section#messages div.ax-messages-container{
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
+}
+section#messages div.ax-messages-container div.ax-message{
+    max-width: 50%;
 }
 section#messages .ax-bg-green{
     background-color: rgb(213, 249, 186);
