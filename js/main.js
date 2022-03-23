@@ -6,6 +6,7 @@ const app = new Vue (
             actualMessage: '',
             searchContact: null,
             messageCheckPoint: false,
+            messageTime: dayjs(),
             contacts: [
                 {
                     name: 'Michele',
@@ -178,7 +179,7 @@ const app = new Vue (
                 if((messageToSend !== ' ') && (messageToSend !== '')){
                     //object creation
                     const newMessage = {};
-                    newMessage.date = '25/25/2525 24:00:00';
+                    newMessage.date = this.messageTime.format('DD/MM/YYYY' + ' ' + 'HH:mm:ss');
                     newMessage.message = messageToSend.trim();
                     newMessage.status = 'sent';
                     this.contacts[activeElement].messages.push(newMessage);
@@ -189,7 +190,7 @@ const app = new Vue (
                     if(messageCheckPoint == false){
                         setTimeout(()=>{
                             const newMessage = {};
-                            newMessage.date = '25/25/2525 24:00:00';
+                            newMessage.date = this.messageTime.format('DD/MM/YYYY' + ' ' + 'HH:mm:ss');
                             newMessage.message = 'Ok!';
                             newMessage.status = 'received';
                             this.contacts[this.activeContact].messages.push(newMessage);
@@ -243,6 +244,10 @@ const app = new Vue (
         }
     }
 )
+
+// const testdate = dayjs();
+// console.log(testdate.format('DD/MM/YYYY'))
+// console.log(testdate.format('HH:mm:ss'))
 
 
 
