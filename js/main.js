@@ -222,21 +222,22 @@ const app = new Vue (
             return time;
             },
             
-            // contactSearch: function(string){
-            //     let stringCheck = string;
-            //     console.log(string.value)
-            //     console.log(stringCheck.value)
-            //     this.contacts.forEach(element => {
-            //         if (element.name.includes(stringCheck)){
-            //             stringCheck += stringCheck;
-            //             console.log('ok')
-            //             console.log(string)
-            //             console.log(stringCheck)
-            //         } else {
-            //             element.visible = false;
-            //         }
-            //     });
-            // }
+            contactSearch: function(string){
+                // let stringCheck = string;
+                // console.log(string.value)
+                // console.log(stringCheck.value)
+                console.log(string)
+                this.contacts.forEach(element => {
+                    if (element.name.includes(string)){
+                        //stringCheck += stringCheck;
+                        console.log('ok')
+                        console.log(string)
+                        console.log(stringCheck)
+                    } else {
+                        element.visible = false;
+                    }
+                });
+            }
         }
     }
 )
