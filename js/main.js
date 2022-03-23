@@ -210,6 +210,27 @@ const app = new Vue (
                 let time = hour +':'+ minutes;
                 return time;
             },
+            // contactSearch: function(string){
+            //     this.contacts.forEach(element => {
+            //         const arrayOfName =[];
+            //         const arrayOfSearch =[];
+            //         element.name.toLowerCase().split('').forEach(letter =>{
+            //             arrayOfName.push(letter)
+            //         })
+            //         console.log(arrayOfName)
+            //         string.toLowerCase().split('').forEach(letter =>{
+            //             arrayOfSearch.push(letter)
+            //         })
+            //         console.log(arrayOfSearch)
+            //         for (let i = 0; i < arrayOfSearch; i++){
+            //             if (arrayOfName.includes(arrayOfSearch[i], 0 + i)){
+            //                 element.visible = true;
+            //             } else {
+            //                 element.visible = false;
+            //             }
+            //         }
+            //     });
+            // },
             contactSearch: function(string){
                 this.contacts.forEach(element => {
                     if (element.name.toLowerCase().includes(string.toLowerCase())){
@@ -218,7 +239,7 @@ const app = new Vue (
                         element.visible = false;
                     }
                 });
-            }
+            },
         }
     }
 )
