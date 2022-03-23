@@ -5,6 +5,9 @@ body{
 .ax-font{
     font-size: 0.7rem;
 }
+.ax-font-smaller{
+    font-size: 0.5rem;
+}
 div.ax-bg-container{
     width: 100%;
     height: 100vh;
@@ -92,17 +95,9 @@ section#messages div.ax-messages-container{
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 }
-section#messages div.ax-messages-container div.ax-message div{
-    width: 45%;
-}
-section#messages div.ax-messages-container div.ax-message div div{
-    font-size: .5rem;
-}
 section#messages .ax-bg-green{
     background-color: rgb(213, 249, 186);
 }
-
-
 section#messages footer{
     background-color: rgb(243, 238, 234);
 }

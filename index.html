@@ -29,6 +29,7 @@
         <main id="app" class="position-absolute">
             <div class="container-fluid">
                 <div class="row p-0">
+                    <!-- section where all the contacts are stored -->
                     <section id="contacts" class="col-5 p-0 d-flex flex-column">
                         <header class="d-flex p-2 justify-content-between align-items-center">
                             <div>
@@ -42,7 +43,9 @@
                             </div>
                         </header>
                         <div id="notifier" class="p-3 d-flex">
-                            <div class="rounded-circle bg-white me-2 fs-5"><i class="fa-solid fa-bell-slash"></i></div>
+                            <div class="rounded-circle bg-white me-2 fs-5">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
                             <div>
                                 <div>Ricevi notifiche di buovi messaggi</div>
                                 <div><a href="" class="text-secondary">Attiva notifiche desktop</a></div>
@@ -54,7 +57,7 @@
                             <!-- v-model="searchContact" @keydown="contactSearch(searchContact)" -->
                         </div>
                         <div class="ax-contacts-container flex-grow-1">
-                            <div class="ax-single-contact d-flex justify-content-between align-items-start px-3 py-2" v-if="(element.visible==true)" v-for="(element, index) in contacts" @click="specificContact(index)" :class="(index == activeContact)? 'active' : ''">
+                            <div class="ax-single-contact d-flex justify-content-between align-items-start px-3 py-2" v-if="(element.visible==true)" v-for="(element, index) in contacts" @click="specificContact(index)" :class="(index == activeContact) ? 'active' : '' ">
                                 <div>
                                     <img :src="`img/avatar${element.avatar}.jpg`" alt="profile pic" class="rounded-circle ax-contact-pic">
                                     <div class="d-inline-block ms-2">
@@ -66,9 +69,9 @@
                             </div>
                         </div>
                     </section>
-                    <section id="placeholder" class="col p-0" v-if="(activeContact == null)">
-                        <!-- <img class="w-25" src="https://static.whatsapp.net/rsrc.php/v3/yO/r/FsWUqRoOsPu.png" alt=""> -->
-                    </section>
+                    <!-- placeholder section with background, visible only before any contact gets selected -->
+                    <section id="placeholder" class="col p-0" v-if="(activeContact == null)"></section>
+                    <!-- section where all the comments are shown, only visible after the first contact gets selected -->
                     <section id="messages" class="col p-0 d-flex flex-column" v-if="(activeContact !== null)">
                         <header class="d-flex p-2 align-items-center" :class="(activeContact == null) ? 'justify-content-end' : 'justify-content-between'" >
                             <div class="d-flex align-items-center"  v-for="(element, index) in contacts" v-if="(index == activeContact)">
@@ -84,14 +87,11 @@
                                 <i class="fa-solid fa-ellipsis-vertical px-2"></i>
                             </div>
                         </header>
-                        <div class="ax-messages-container py-4 px-5 flex-grow-1" >
-                            <div class="ax-message d-flex  align-items-center px-4 mb-3" v-for="(element, index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent')? 'justify-content-end' : 'justify-content-start'">
-                                <div class="rounded-2  p-1" :class="(contacts[activeContact].messages[index].status == 'sent')? 'ax-bg-green' : 'bg-white'">
-                                    <p class="m-0 ms-2">{{contacts[activeContact].messages[index].message}}</p>
-                                    <div class="text-end w-100">{{
-                                        dateRetriever(activeContact, index)
-                                        
-                                    }}</div>
+                        <div class="ax-messages-container py-4 px-5 flex-grow-1 d-flex flex-column" >
+                            <div class="ax-message px-2 py-1 mb-2 rounded-2" v-for="(element, index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent')? 'align-self-end ax-bg-green' : 'align-self-start bg-white'">
+                                <p class="m-0">{{contacts[activeContact].messages[index].message}}</p>
+                                <div class="text-end ax-font-smaller">
+                                    {{dateRetriever(activeContact, index)}}
                                 </div>
                             </div>
                         </div>
