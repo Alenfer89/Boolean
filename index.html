@@ -84,7 +84,7 @@
                                 <i class="fa-solid fa-ellipsis-vertical px-2"></i>
                             </div>
                         </header>
-                        <div class="ax-messages-container py-4 px-5 flex-grow-1" v-for="(element, index) in contacts" v-if="(activeContact !== null) && (index == activeContact)">
+                        <div class="ax-messages-container py-4 px-5 flex-grow-1" v-if="(activeContact !== null)">
                             <div class="ax-message d-flex  align-items-center px-4 mb-3" v-for="(element, index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent')? 'justify-content-end' : 'justify-content-start'">
                                 <div class="rounded-2  p-1" :class="(contacts[activeContact].messages[index].status == 'sent')? 'ax-bg-green' : 'bg-white'">
                                     <p class="m-0 ms-2">{{contacts[activeContact].messages[index].message}}</p>
