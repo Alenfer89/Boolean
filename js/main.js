@@ -211,33 +211,6 @@ const app = new Vue (
                 let time = hour +':'+ minutes;
                 return time;
             },
-            lastMessage: function(index){
-                let hour = this.contacts[index].messages[this.contacts[index].messages.length -1].date.split(' ')[1].split(':')[0];
-                let minutes = this.contacts[index].messages[this.contacts[index].messages.length -1].date.split(' ')[1].split(':')[1];
-                let time = hour +':'+ minutes;
-                return time;
-            },
-            // contactSearch: function(string){
-            //     this.contacts.forEach(element => {
-            //         const arrayOfName =[];
-            //         const arrayOfSearch =[];
-            //         element.name.toLowerCase().split('').forEach(letter =>{
-            //             arrayOfName.push(letter)
-            //         })
-            //         console.log(arrayOfName)
-            //         string.toLowerCase().split('').forEach(letter =>{
-            //             arrayOfSearch.push(letter)
-            //         })
-            //         console.log(arrayOfSearch)
-            //         for (let i = 0; i < arrayOfSearch; i++){
-            //             if (arrayOfName.includes(arrayOfSearch[i], 0 + i)){
-            //                 element.visible = true;
-            //             } else {
-            //                 element.visible = false;
-            //             }
-            //         }
-            //     });
-            // },
             contactSearch: function(string){
                 this.contacts.forEach(element => {
                     if (element.name.toLowerCase().includes(string.toLowerCase())){
@@ -247,6 +220,7 @@ const app = new Vue (
                     }
                 });
             },
+            
         }
     }
 )
@@ -255,7 +229,35 @@ const app = new Vue (
 // console.log(testdate.format('DD/MM/YYYY'))
 // console.log(testdate.format('HH:mm:ss'))
 
+//!failed experiments
+// elegantLastMessage: function(index){
+//     const date = dayjs(this.contacts[index].messages[this.contacts[index].messages.length -1].date , 'DD/MM/YYYY HH:mm:ss');
+//     //return date.format('HH:mm')
+//     return console.log(date.format('HH:mm'))
+// }
 
+
+// contactSearch: function(string){
+//     this.contacts.forEach(element => {
+//         const arrayOfName =[];
+//         const arrayOfSearch =[];
+//         element.name.toLowerCase().split('').forEach(letter =>{
+//             arrayOfName.push(letter)
+//         })
+//         console.log(arrayOfName)
+//         string.toLowerCase().split('').forEach(letter =>{
+//             arrayOfSearch.push(letter)
+//         })
+//         console.log(arrayOfSearch)
+//         for (let i = 0; i < arrayOfSearch; i++){
+//             if (arrayOfName.includes(arrayOfSearch[i], 0 + i)){
+//                 element.visible = true;
+//             } else {
+//                 element.visible = false;
+//             }
+//         }
+//     });
+// }
 
 
 
