@@ -211,6 +211,12 @@ const app = new Vue (
                 let time = hour +':'+ minutes;
                 return time;
             },
+            lastMessage: function(index){
+                let hour = this.contacts[index].messages[this.contacts[index].messages.length -1].date.split(' ')[1].split(':')[0];
+                let minutes = this.contacts[index].messages[this.contacts[index].messages.length -1].date.split(' ')[1].split(':')[1];
+                let time = hour +':'+ minutes;
+                return time;
+            },
             // contactSearch: function(string){
             //     this.contacts.forEach(element => {
             //         const arrayOfName =[];
