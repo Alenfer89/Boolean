@@ -82,7 +82,7 @@ section#messages{
     height: 94vh;
 
 }
-section#messages div.ax-placeholder{
+section#placeholder{
     background-image: url(https://www.aranzulla.it/wp-content/contenuti/2021/03/post-it-1200x628.jpg);
     background-repeat: no-repeat;
     background-size: cover;

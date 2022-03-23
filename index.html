@@ -66,11 +66,11 @@
                             </div>
                         </div>
                     </section>
-                    <section id="messages" class="col p-0 d-flex flex-column">
-                        <div class="d-flex flex-grow-1 justify-content-center align-items-center ax-placeholder" v-if="(activeContact == null)">
-                            <!-- <img class="w-25" src="https://static.whatsapp.net/rsrc.php/v3/yO/r/FsWUqRoOsPu.png" alt=""> -->
-                        </div>
-                        <header class="d-flex p-2 align-items-center" :class="(activeContact == null) ? 'justify-content-end' : 'justify-content-between'" v-if="(activeContact !== null)">
+                    <section id="placeholder" class="col p-0" v-if="(activeContact == null)">
+                        <!-- <img class="w-25" src="https://static.whatsapp.net/rsrc.php/v3/yO/r/FsWUqRoOsPu.png" alt=""> -->
+                    </section>
+                    <section id="messages" class="col p-0 d-flex flex-column" v-if="(activeContact !== null)">
+                        <header class="d-flex p-2 align-items-center" :class="(activeContact == null) ? 'justify-content-end' : 'justify-content-between'" >
                             <div class="d-flex align-items-center"  v-for="(element, index) in contacts" v-if="(index == activeContact)">
                                 <img :src="`img/avatar${element.avatar}.jpg`" :alt="`profile pic of ${element.name}`" class="rounded-circle ax-pro-pic me-3">
                                 <div>
@@ -84,7 +84,7 @@
                                 <i class="fa-solid fa-ellipsis-vertical px-2"></i>
                             </div>
                         </header>
-                        <div class="ax-messages-container py-4 px-5 flex-grow-1" v-if="(activeContact !== null)">
+                        <div class="ax-messages-container py-4 px-5 flex-grow-1" >
                             <div class="ax-message d-flex  align-items-center px-4 mb-3" v-for="(element, index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent')? 'justify-content-end' : 'justify-content-start'">
                                 <div class="rounded-2  p-1" :class="(contacts[activeContact].messages[index].status == 'sent')? 'ax-bg-green' : 'bg-white'">
                                     <p class="m-0 ms-2">{{contacts[activeContact].messages[index].message}}</p>
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                        <footer class="d-flex align-items-center p-2 text-secondary" v-if="(activeContact !== null)">
+                        <footer class="d-flex align-items-center p-2 text-secondary">
                             <i class="fa-regular fa-face-smile fs-5 px-3"></i>
                             <input @keydown.enter="sendMessage(activeContact , actualMessage), receiveMessage()" v-model="actualMessage" type="text" class="flex-grow-1" placeholder="Scrivi un messaggio">
                             <i class="fa-solid fa-microphone fs-5 px-3"></i>
