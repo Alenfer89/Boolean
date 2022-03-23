@@ -5,6 +5,7 @@ const app = new Vue (
             activeContact: null,
             actualMessage: '',
             searchContact: null,
+            messageCheckPoint: false,
             contacts: [
                 {
                     name: 'Michele',
@@ -171,40 +172,41 @@ const app = new Vue (
         },
         methods:{
             specificContact: function(elementIndex){
-                //console.log(this.activeContact);
                 this.activeContact = elementIndex;
-                // console.log(this.activeContact);
-                // console.log(elementIndex)
-                // console.log(this.contacts)
-                // console.log(this.contacts[this.activeContact])
-                //console.log(this.contacts[this.activeContact].messages[0].message)
             },
             sendMessage: function(activeElement, messageToSend){
-                const newMessage = {};
-                newMessage.date = '25/25/2525 24:00:00';
-                newMessage.message = messageToSend;
-                newMessage.status = 'sent';
-                this.contacts[activeElement].messages.push(newMessage);
-                // console.log(messageToSend)
-                // console.log(this.contacts[activeElement])
-                // console.log(this.contacts[activeElement].messages)
+                if((messageToSend !== ' ') && (messageToSend !== '')){
+                    const newMessage = {};
+                    newMessage.date = '25/25/2525 24:00:00';
+                    newMessage.message = messageToSend.trim();
+                    newMessage.status = 'sent';
+                    this.contacts[activeElement].messages.push(newMessage);
+                    messageCheckPoint = false;
+                    this.messageReset();
+                } else {
+                    messageCheckPoint = true;
+                    console.log('messaggio vuoto')
+                }
+            },
+            messageReset: function(){
                 this.actualMessage = '';
             },
             receiveMessage: function(){
-                setTimeout(()=>{
-                    const newMessage = {};
-                    newMessage.date = '25/25/2525 24:00:00';
-                    newMessage.message = 'Ok!';
-                    newMessage.status = 'received';
-                    this.contacts[this.activeContact].messages.push(newMessage);
-                }, 1000)
+                if(messageCheckPoint == false){
+                    setTimeout(()=>{
+                        const newMessage = {};
+                        newMessage.date = '25/25/2525 24:00:00';
+                        newMessage.message = 'Ok!';
+                        newMessage.status = 'received';
+                        this.contacts[this.activeContact].messages.push(newMessage);
+                    }, 1000)
+                }
             },
-            
-                dateRetriever: function(activeElement, index){
-                let hour = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[0];
-                let minutes = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[1];
-                let time = hour +':'+ minutes;
-                return (this.contacts[activeElement].messages[index].date == null)? 'okk' : time;
+            dateRetriever: function(activeElement, index){
+            let hour = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[0];
+            let minutes = this.contacts[activeElement].messages[index].date.split(' ')[1].split(':')[1];
+            let time = hour +':'+ minutes;
+            return time;
             },
             
             // contactSearch: function(string){
