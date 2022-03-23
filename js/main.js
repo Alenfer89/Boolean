@@ -223,16 +223,13 @@ const app = new Vue (
             },
             
             contactSearch: function(string){
-                // let stringCheck = string;
-                // console.log(string.value)
-                // console.log(stringCheck.value)
                 console.log(string)
                 this.contacts.forEach(element => {
-                    if (element.name.includes(string)){
-                        //stringCheck += stringCheck;
+                    if (element.name.toLowerCase().includes(string.toLowerCase())){
                         console.log('ok')
                         console.log(string)
-                        console.log(stringCheck)
+                        console.log(element.name)
+                        element.visible = true;
                     } else {
                         element.visible = false;
                     }
