@@ -30,6 +30,16 @@
                         {{element}}
                     </li>
                 </ul>
+                <ul v-if="emailArray.length == 11">
+                    <li v-for="(element) in emailArray">
+                        {{element}}
+                    </li>
+                </ul>
+                <ul v-if="anotherEmailArray.length == 10">
+                    <li v-for="(element) in anotherEmailArray">
+                        {{element.response}}
+                    </li>
+                </ul>
             </div>
         </div>
     </main>
