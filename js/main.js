@@ -14,7 +14,7 @@ const app = new Vue(
                 .then(function(response){
                     console.log(response.data.response);
                     self.emailArray.push(response.data.response); 
-            })
+                })
             };
             console.log(self.emailArray);
             for (let i = 0; i < 10; i++){
@@ -22,7 +22,7 @@ const app = new Vue(
                 .then(function(response){
                     console.log(response.data.response);
                     self.anotherEmailArray.push(response.data); 
-            })
+                })
             };
         },
     }
