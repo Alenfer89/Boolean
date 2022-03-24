@@ -9,6 +9,9 @@ const app = new Vue(
         },
         mounted(){
             const self = this;
+            setTimeout(()=>{
+                console.log('lento')
+            }, 1000);
             for (let i = 0; i < 10; i++){
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then(function(response){
