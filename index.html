@@ -22,12 +22,12 @@
 
 </head>
 <body >
-    <main id="app" class="container-fluid">
+    <main id="app" class="container-fluid text-white">
         <div class="row">
             <div class="col">
-                <ul>
-                    <li>
-                        
+                <ul v-if="emailArray.length == 10">
+                    <li v-for="(element) in emailArray">
+                        {{element}}
                     </li>
                 </ul>
             </div>
