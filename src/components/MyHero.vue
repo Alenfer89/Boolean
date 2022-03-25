@@ -70,18 +70,53 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+/* buttons hover effects */
+.btn{
+    transition: transform 0.3s;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.btn:hover{
+    transform: scale(1.05);
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.btn.bg-danger:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgb(220, 53, 69);
 }
-a {
-  color: #42b983;
+.btn.btn-primary:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgb(11, 94, 215);
+}
+.btn.bg-dark:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgb(33, 37, 41);
+}
+section#play-plus a.btn:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+.btn.bg-white:hover{
+    outline-offset: 3px;
+    outline: 3px solid white;
+}
+/* jumbotron section */
+section#jumbotron{
+    margin-top: 6.4rem;
+}
+section#jumbotron .my-top-jumbo{
+    background-image: url(../assets/img/jumbo-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+section#jumbotron .my-top-jumbo .container-fluid{
+    z-index: 2;
+}
+section#jumbotron div.my-bot-jumbo img{
+    border-radius: 1rem;
+    bottom: 0;
+    transition: 0.5s;
+}
+section#jumbotron div.my-bot-jumbo img:hover{
+    border-color: #0d6efd !important;
+    bottom: 20px;
 }
 </style>
