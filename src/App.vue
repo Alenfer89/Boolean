@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <Header/>
+
+    <Header />
+
     <main>
-      <MainSection/>
+      <MainSection />
     </main>
-    <Footer/>
+
+    <Footer />
+    
   </div>
 </template>
 
