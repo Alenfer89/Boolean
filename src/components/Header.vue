@@ -70,7 +70,6 @@ export default {
             li{
             display: inline-block;
             padding: 0 0.5rem;
-            height: calc(15vh - 4px);
             line-height: calc(15vh - 4px);
             text-align: center;
             border-bottom: 4px solid transparent;
