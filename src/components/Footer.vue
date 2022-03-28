@@ -51,7 +51,28 @@
 
         <div class="bop-footer-container">
             <div class="bot-footer">
-
+                <div>
+                    <button>SIGN-UP NOW</button>
+                </div>
+                <div class="socials-container">
+                    <div>FOLLOW US</div>
+                    <div>
+                        <img src="../assets/img/footer-facebook.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/img/footer-periscope.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/img/footer-pinterest.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/img/footer-twitter.png" alt="">
+                    </div>
+                    <div>
+                        <img src="../assets/img/footer-youtube.png" alt="">
+                    </div>
+                    
+                </div>
             </div>
         </div>
 
@@ -91,6 +112,32 @@ export default {
                     list-style-type: none;
                     li{
                         font-size: .7rem;
+                    }
+                }
+            }
+        }
+        div.bop-footer-container{
+            background-color: rgb(48, 48, 48);
+            div.bot-footer{
+                width: 80%;
+                margin: 0 auto;
+                padding: 2rem 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                button{
+                    background-color: transparent;
+                    color: white;
+                    padding: 0.8rem;
+                    border: 2px solid $productMainColor;
+                }
+                div.socials-container{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    img{
+                        margin: 0 1rem;
                     }
                 }
             }
