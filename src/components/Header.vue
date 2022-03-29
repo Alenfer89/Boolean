@@ -5,7 +5,7 @@
         </div>
         <nav>
             <ul>
-                <li v-for="(element, index) in navItems" :key="index" :class="{'active' : element.active}" @click="linkSelection(index)">
+                <li v-for="(element, index) in navItems" :key="index" :class="{'active' : element.active}" @click="linkSelection(index , navItems)">
                     <a href="#">{{ element.text }}</a>
                 </li>
             </ul>
@@ -63,8 +63,8 @@ export default {
         }
     },
     methods: {
-        linkSelection: function (activeIndex){
-            this.navItems.forEach((element, index) => {
+        linkSelection: function (activeIndex , arrayOfObjects){
+            arrayOfObjects.forEach((element, index) => {
                 if(index === activeIndex){
                     element.active = true
                 } else {
