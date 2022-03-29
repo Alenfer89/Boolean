@@ -5,7 +5,10 @@
             <div class="my-container">
                 <span>current series</span>
                 <div class="product-container">
-                    <Product v-for='(element, index) in comicsList' :key='index' :details='element' />
+                    <Product 
+                    v-for='(element, index) in comicsList' 
+                    :key='index' 
+                    :comicDetails='element' />
                 </div>
                 <button>Load More</button>
             </div>

@@ -1,16 +1,16 @@
 <template>
     <div class="comic-card">
         <div class="img-thumb-container">
-            <img :src="details['thumb']" :alt="details['series']">
+            <img :src="comicDetails['thumb']" :alt="comicDetails['series']">
         </div>
-        <h5>{{ details['series'] }}</h5>
+        <h5>{{ comicDetails['series'] }}</h5>
     </div>
 </template>
 
 <script>
 export default {
     name: 'ProductCard',
-    props: ['details']
+    props: ['comicDetails']
 }
 </script>
 
