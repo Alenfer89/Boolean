@@ -2,7 +2,7 @@
     <div id="index-footer">
 
         <div class="top-footer-container">
-            <div class="top-footer">
+            <div class="top-footer my-container">
                 <div class="lists-container">
                     <div class="list-wrapper">
                         <h4>TITLE</h4>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="bot-footer-container">
-            <div class="bot-footer">
+            <div class="bot-footer my-container">
                 <div>
                     <button>SIGN-UP NOW!</button>
                 </div>
@@ -105,8 +105,6 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
             div.top-footer{
-                width: 80%;
-                margin: 0 auto;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
@@ -144,8 +142,6 @@ export default {
         div.bot-footer-container{
             background-color: rgb(48, 48, 48);
             div.bot-footer{
-                width: 80%;
-                margin: 0 auto;
                 padding: 2rem 0;
                 display: flex;
                 flex-direction: row;

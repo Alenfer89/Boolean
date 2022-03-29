@@ -1,5 +1,5 @@
 <template>
-    <div id='index-header'>
+    <div id='index-header' class="my-container">
         <div class="img-wrapper">
         <img src="../assets/img/dc-logo.png" alt="DC comics logo">
         </div>
@@ -80,9 +80,7 @@ export default {
 @import '../assets/scss/style.scss';
 
     div#index-header{
-        width: 80%;
         height: 15vh;
-        margin: 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
