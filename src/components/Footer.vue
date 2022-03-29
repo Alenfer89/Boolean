@@ -5,46 +5,33 @@
             <div class="top-footer my-container">
                 <div class="lists-container">
                     <div class="list-wrapper">
-                        <h4>TITLE</h4>
+                        <h4>DC COMICS</h4>
                         <ul>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
+                            <li v-for='(element, index) in dcComics' :key='index'>
+                                <a :href="element.url"> {{ element.link }} </a>
+                            </li>
                         </ul>
-                        <h4>TITLE</h4>
+                        <h4>SHOP</h4>
                         <ul>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
+                            <li v-for='(element, index) in shop' :key='index'>
+                                <a :href="element.url"> {{ element.link }} </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="list-wrapper">
-                        <h4>TITLE</h4>
+                        <h4>DC</h4>
                         <ul>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
+                            <li v-for='(element, index) in dc' :key='index'>
+                                <a :href="element.url"> {{ element.link }} </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="list-wrapper">
-                        <h4>TITLE</h4>
+                        <h4>SITES</h4>
                         <ul>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
-                            <li>ITEM</li>
+                            <li v-for='(element, index) in dc' :key='index'>
+                                <a :href="element.url"> {{ element.link }} </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -76,6 +63,118 @@ export default {
     name: 'ProjectFooter',
     data: function() {
         return {
+            dcComics: [
+                {
+                    link: 'Characters',
+                    url:'#'
+                },
+                {
+                    link: 'Comics',
+                    url:'#'
+                },
+                {
+                    link: 'Movies',
+                    url:'#'
+                },
+                {
+                    link: 'TV',
+                    url:'#'
+                },
+                {
+                    link: 'Games',
+                    url:'#'
+                },
+                {
+                    link: 'Videos',
+                    url:'#'
+                },
+                {
+                    link: 'News',
+                    url:'#'
+                },
+            ],
+            shop: [
+                {
+                    link: 'Shop',
+                    url:'#'
+                },
+                {
+                    link: 'Shop DC Collectibles',
+                    url:'#'
+                },
+            ],
+            dc: [
+                {
+                    link: 'Terms of use',
+                    url:'#'
+                },
+                {
+                    link: 'Privacy of policy (News)',
+                    url:'#' 
+                },
+                {
+                    link: 'Ad Choising',
+                    url:'#'
+                },
+                {
+                    link: 'Advertising',
+                    url:'#'
+                },
+                {
+                    link: 'Jobs',
+                    url:'#'
+                },
+                {
+                    link: 'Subscription',
+                    url:'#'
+                },
+                {
+                    link: 'Talent Workshop',
+                    url:'#'
+                },
+                {
+                    link: 'CPSP Certificates',
+                    url:'#'
+                },
+                {
+                    link: 'Rating',
+                    url:'#'
+                },
+                {
+                    link: 'Shop Help',
+                    url:'#'
+                },
+                {
+                    link: 'Contact us',
+                    url:'#'
+                },
+            ],
+            sites: [
+                {
+                    link: 'DC',
+                    url:'#'
+                },
+                {
+                    link: 'MAD',
+                    url:'#'
+                },
+                {
+                    link: 'Magazine',
+                    url:'#'
+                },
+                {
+                    link: 'DC Kids',
+                    url:'#'
+                },
+                {
+                    link: 'DC Universe',
+                    url:'#'
+                },
+                {
+                    link: 'DC Power Visa',
+                    url:'#'
+                },
+            ],
             socialsLinks: [
                 {
                     text: "Facebook",
@@ -143,6 +242,11 @@ export default {
                     list-style-type: none;
                     li{
                         font-size: .7rem;
+
+                        a{
+                            text-decoration: none;
+                            color: rgba(255, 255, 255, 0.5);
+                        }
                     }
                 }
                 div#logo-background{
