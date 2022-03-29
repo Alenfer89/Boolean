@@ -88,7 +88,7 @@ export default {
 
         .img-wrapper{
             height: 100%;
-            padding: .5rem;
+            padding: 1rem;
             img{
                 height: 100%;
             }

@@ -12,7 +12,7 @@
         </div>
         <div id="products-links">
             <div class="my-container">
-                
+                <NavLinks />
             </div>
         </div>
     </div>
@@ -20,10 +20,12 @@
 
 <script>
 import Product from './ProductCard.vue';
+import NavLinks from './MainNavLinks.vue';
 export default {
     name: 'ProjectMain',
     components: {
     Product,
+    NavLinks
     },
     data: function(){
         return {
