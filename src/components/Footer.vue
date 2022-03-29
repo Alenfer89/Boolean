@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <div class="bop-footer-container">
+        <div class="bot-footer-container">
             <div class="bot-footer">
                 <div>
                     <button>SIGN-UP NOW!</button>
@@ -87,6 +87,11 @@
 <script>
 export default {
     name: 'ProjectFooter',
+    data: function() {
+        return {
+            
+        }
+    }
 }
 </script>
 
@@ -136,7 +141,7 @@ export default {
                 }
             }
         }
-        div.bop-footer-container{
+        div.bot-footer-container{
             background-color: rgb(48, 48, 48);
             div.bot-footer{
                 width: 80%;
