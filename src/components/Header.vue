@@ -5,35 +5,8 @@
         </div>
         <nav>
             <ul>
-                <li>
-                    <a href="#">ITEM</a>
-                </li>
-                <li class="active">
-                    <a href="#">ITEM</a>
-                </li>
-                <li>
-                    <a href="#">ITEM</a>
-                </li>
-                <li>
-                    <a href="#">ITEM</a>
-                </li>
-                <li>
-                    <a href="#">ITEM</a>
-                </li>
-                <li>
-                    <a href="#">ITEM</a>
-                </li>
-                <li>
-                    <a href="#">ITEM</a>
-                </li>
-                <li>
-                    <a href="#">ITEM</a>
-                </li>
-                <li>
-                    <a href="#">ITEM</a>
-                </li>
-                <li>
-                    <a href="#">ITEM</a>
+                <li v-for="(element, index) in navItems" :key="index" :class="{'active' : element.active}" @click="linkSelection(index)">
+                    <a href="#">{{ element.text }}</a>
                 </li>
             </ul>
         </nav>
@@ -43,6 +16,63 @@
 <script>
 export default {
     name: 'ProjectHeader',
+    data: function(){
+        return{
+            navItems:[
+                {
+                    text : 'characters',
+                    active: false
+                },
+                {
+                    text : 'comics',
+                    active: true
+                },
+                {
+                    text : 'movies',
+                    active: false
+                },
+                {
+                    text : 'tv',
+                    active: false
+                },
+                {
+                    text : 'games',
+                    active: false
+                },
+                {
+                    text : 'collectibles',
+                    active: false
+                },
+                {
+                    text : 'videos',
+                    active: false
+                },
+                {
+                    text : 'fans',
+                    active: false
+                },
+                {
+                    text : 'news',
+                    active: false
+                },
+                {
+                    text : 'shop',
+                    active: false
+                }
+            ]
+        }
+    },
+    methods: {
+        linkSelection: function (activeIndex){
+            this.navItems.forEach((element, index) => {
+                if(index === activeIndex){
+                    element.active = true
+                } else {
+                    element.active = false
+                }
+            });
+        }
+    }
 }
 </script>
 
@@ -68,6 +98,7 @@ export default {
         ul{
             list-style-type: none;
             li{
+            text-transform: uppercase;
             display: inline-block;
             padding: 0 0.5rem;
             line-height: calc(15vh - 4px);
