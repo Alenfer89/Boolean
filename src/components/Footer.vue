@@ -62,21 +62,20 @@
                 <div class="socials-container">
                     <h4>FOLLOW US</h4>
                     <div>
-                        <img src="../assets/img/footer-facebook.png" alt="">
+                        <a href=""><img src="../assets/img/footer-facebook.png" alt=""></a>
                     </div>
                     <div>
-                        <img src="../assets/img/footer-periscope.png" alt="">
+                        <a href=""><img src="../assets/img/footer-periscope.png" alt=""></a>
                     </div>
                     <div>
-                        <img src="../assets/img/footer-pinterest.png" alt="">
+                        <a href=""><img src="../assets/img/footer-pinterest.png" alt=""></a>
                     </div>
                     <div>
-                        <img src="../assets/img/footer-twitter.png" alt="">
+                        <a href=""><img src="../assets/img/footer-twitter.png" alt=""></a>
                     </div>
                     <div>
-                        <img src="../assets/img/footer-youtube.png" alt="">
+                        <a href=""><img src="../assets/img/footer-youtube.png" alt=""></a>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -100,15 +99,18 @@ export default {
 
     div#index-footer{
         color: rgba(255, 255, 255, 0.5);
+
         div.top-footer-container{
-        background-image: url('../assets/img/footer-bg.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+            background-image: url('../assets/img/footer-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
             div.top-footer{
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
                 justify-content: space-between;
+
                 div.lists-container{    
                     padding: 2rem 0;
                     display: flex;
@@ -131,6 +133,7 @@ export default {
                 }
                 div#logo-background{
                     width: 40%;
+                    min-width: 500px;
                     background-image: url('../assets/img/dc-logo-bg.png');
                     background-position: -50%;
                     background-size: 100%;
@@ -141,12 +144,14 @@ export default {
         }
         div.bot-footer-container{
             background-color: rgb(48, 48, 48);
+
             div.bot-footer{
                 padding: 2rem 0;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+
                 button{
                     background-color: transparent;
                     font-weight: 700;
