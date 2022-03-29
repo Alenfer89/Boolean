@@ -5,9 +5,9 @@
                 
             </div>
         </div>
-        <div id="product-container">
-            <div class="my-container">
-                <Product />
+        <div id="product-background">
+            <div class="product-container my-container">
+                <Product v-for='(element, index) in comicsList' :key='index' :details='element' />
             </div>
         </div>
         <div id="products-links">
@@ -116,9 +116,15 @@ export default {
             background-repeat: no-repeat;
             background-size: cover;
         }
-        div#product-container{
+        div#product-background{
             background-color: rgb(28, 28, 28);
-            color: white;
+
+            div.product-container{
+                color: white;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
         }
         div#products-links{
             background-color: $productMainColor;
