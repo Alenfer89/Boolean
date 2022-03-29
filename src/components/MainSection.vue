@@ -163,7 +163,6 @@ export default {
         }
         div#products-links{
             background-color: $productMainColor;
-            padding: 3rem;
         }
     }
 </style>
