@@ -6,9 +6,10 @@
                 <span>current series</span>
                 <div class="product-container">
                     <Product 
-                    v-for='(element, index) in comicsList' 
+                    v-for='(comic, index) in comicsList' 
                     :key='index' 
-                    :comicDetails='element' />
+                    :comicDetails='comic'
+                    />
                 </div>
                 <button>Load More</button>
             </div>

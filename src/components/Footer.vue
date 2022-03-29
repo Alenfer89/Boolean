@@ -61,20 +61,8 @@
                 </div>
                 <div class="socials-container">
                     <h4>FOLLOW US</h4>
-                    <div>
-                        <a href=""><img src="../assets/img/footer-facebook.png" alt=""></a>
-                    </div>
-                    <div>
-                        <a href=""><img src="../assets/img/footer-periscope.png" alt=""></a>
-                    </div>
-                    <div>
-                        <a href=""><img src="../assets/img/footer-pinterest.png" alt=""></a>
-                    </div>
-                    <div>
-                        <a href=""><img src="../assets/img/footer-twitter.png" alt=""></a>
-                    </div>
-                    <div>
-                        <a href=""><img src="../assets/img/footer-youtube.png" alt=""></a>
+                    <div v-for='(social, index) in socialsLinks' :key='index'>
+                        <a :href="social.url"><img :src="require(`../assets/img/${social.img}`)" :alt="social.text"></a>
                     </div>
                 </div>
             </div>
@@ -88,7 +76,33 @@ export default {
     name: 'ProjectFooter',
     data: function() {
         return {
-            
+            socialsLinks: [
+                {
+                    text: "Facebook",
+                    img: "footer-facebook.png",
+                    url: "#",
+                },
+                {
+                    text: "Twitter",
+                    img: "footer-twitter.png",
+                    url: "#",
+                },
+                {
+                    text: "Youtube",
+                    img: "footer-youtube.png",
+                    url: "#",
+                },
+                {
+                    text: "Pinterest",
+                    img: "footer-pinterest.png",
+                    url: "#",
+                },
+                {
+                    text: "Periscope",
+                    img: "footer-periscope.png",
+                    url: "#",
+                },
+            ]
         }
     }
 }
