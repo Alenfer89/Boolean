@@ -1,13 +1,13 @@
 <template>
     <div id="index-main">
-        <div id="jumbotron">
-            <div class="my-container">
-                
-            </div>
-        </div>
+        <div id="jumbotron"></div>
         <div id="product-background">
-            <div class="product-container my-container">
-                <Product v-for='(element, index) in comicsList' :key='index' :details='element' />
+            <div class="my-container">
+                <span>current series</span>
+                <div class="product-container">
+                    <Product v-for='(element, index) in comicsList' :key='index' :details='element' />
+                </div>
+                <button>Load More</button>
             </div>
         </div>
         <div id="products-links">
@@ -119,12 +119,45 @@ export default {
         div#product-background{
             background-color: rgb(28, 28, 28);
 
-            div.product-container{
+            div.my-container{
+                position: relative;
                 color: white;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
+                padding-bottom: 1rem;
+
+                span{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    padding: .4rem 2rem;
+                    background-color: $productMainColor;
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translate(0, -50%);
+                }
+                div.product-container{
+                    padding: 2.5rem 0 0 0;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                button{
+                    border: none;
+                    display: block;
+                    margin: 0 auto;
+                    background-color: $productMainColor;
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: .8rem;
+                    font-weight: 700;
+                    padding: .5rem 1.5rem;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
             }
+            
         }
         div#products-links{
             background-color: $productMainColor;
