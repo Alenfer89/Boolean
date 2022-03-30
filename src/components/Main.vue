@@ -1,15 +1,21 @@
 <template>
     <main>
         <h2>maain</h2>
+        <MusicCard />
     </main>
 </template>
 
 <script>
+import MusicCard from '@/components/MusicCard.vue';
+
 export default {
-    name: 'IndexMain'
+    name: 'IndexMain',
+    components: {
+        MusicCard
+    }
 }
 </script>
 
-<style>
+<style lang='scss' scoped>
 
 </style>
