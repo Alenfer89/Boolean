@@ -21,6 +21,11 @@ export default {
     components: {
         MusicCard
     },
+    data: function(){
+        return{
+            albumList:[],
+        }
+    },
     created: function(){
         this.getAPI();
     },
@@ -29,7 +34,10 @@ export default {
             axios
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((result) =>{
-                console.log(result)
+                console.log(result.data.response);
+                console.log(this.albumList);
+                this.albumList = result.data.response;
+                console.log(this.albumList);
             })
             .catch((error) =>{
                 console.log(error)
