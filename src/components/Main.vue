@@ -1,6 +1,11 @@
 <template>
     <main>
-        <div class="container-fluid px-5">
+        <div class="ax-loading-placeholder text-white d-flex justify-content-center align-items-center" v-if='albumList.length == 0'>
+            <h1>
+                LOADING . . .
+            </h1>
+        </div>
+        <div class="container-fluid px-5" v-else>
             <div class="row px-5">
                 <div class="col-12 px-5">
                     <div class="ax-cards-container text-white p-5 d-flex flex-wrap">
@@ -57,7 +62,10 @@ export default {
 
 main{
     background-color: $productSecondaryColor;
-    
+
+    div.ax-loading-placeholder{
+        height: 90vh;
+    }
 }
 
 </style>
