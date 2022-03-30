@@ -1,9 +1,9 @@
 <template>
     <main class="p-5">
-        <div class="container-fluid p-5">
-            <div class="row p-5">
-                <div class="col-12 p-5">
-                    <div class="cards-container text-white p-5 d-flex flex-wrap">
+        <div class="container-fluid px-5">
+            <div class="row px-5">
+                <div class="col-12 px-5">
+                    <div class="cards-container text-white px-5 d-flex flex-wrap">
                         <MusicCard />
                     </div>
                 </div>
