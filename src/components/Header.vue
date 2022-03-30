@@ -15,8 +15,10 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+@import '../style/main-style.scss';
+
 header{
-    background-color: rgb(46, 58, 70);
+    background-color: $productMainColor;
 
     .img-wrapper{
         width: 100px;
