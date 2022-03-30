@@ -1,9 +1,11 @@
 <template>
     <main>
-        <div class="ax-loading-placeholder text-white d-flex justify-content-center align-items-center" v-if='albumList.length == 0'>
-            <h1>
+        <div class="ax-loading-placeholder d-flex align-items-center justify-content-center" v-if='albumList.length == 0'>
+            <div class="ax-animation">
+                <h1>
                 LOADING . . .
-            </h1>
+                </h1>
+            </div>
         </div>
         <div class="container-fluid px-5" v-else>
             <div class="row px-5">
@@ -61,10 +63,46 @@ export default {
 @import '../style/main-style.scss';
 
 main{
-    background-color: $productSecondaryColor;
-
+background-color: $productSecondaryColor;
     div.ax-loading-placeholder{
-        height: 90vh;
+    height: 90vh;
+        div.ax-animation{
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        animation-duration: 2s;
+        animation-name: spinneroo;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        position: relative;
+            h1{
+            color: rgba(255, 255, 255, 1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            animation-name: spinneroo;
+            }
+        }
+        @keyframes spinneroo {
+            0%{
+                transform: rotate(360deg);
+            }
+            25%{
+                transform: rotate(270deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            75%{
+                transform: rotate(90deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
     }
 }
 
