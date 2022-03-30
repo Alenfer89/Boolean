@@ -4,7 +4,11 @@
             <div class="row px-5">
                 <div class="col-12 px-5">
                     <div class="cards-container text-white px-5 d-flex flex-wrap">
-                        <MusicCard />
+                        <MusicCard 
+                        v-for='(element, index) in albumList'
+                        :key="index"
+                        :album='element'
+                        />
                     </div>
                 </div>
             </div>
