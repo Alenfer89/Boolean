@@ -83,24 +83,23 @@ background-color: $productSecondaryColor;
             top: 50%;
             left: 50%;
             transform: translate(-50% , -50%);
-            animation-name: spinneroo;
             }
         }
         @keyframes spinneroo {
             0%{
-                transform: rotate(360deg);
+                transform: rotate(0deg);
             }
             25%{
-                transform: rotate(270deg);
+                transform: rotate(90deg);
             }
             50%{
                 transform: rotate(180deg);
             }
             75%{
-                transform: rotate(90deg);
+                transform: rotate(270deg);
             }
             100%{
-                transform: rotate(0deg);
+                transform: rotate(360deg);
             }
         }
     }
