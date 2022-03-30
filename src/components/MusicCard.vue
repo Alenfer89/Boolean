@@ -3,7 +3,7 @@
         <div class="ax-img-wrapper w-100 mb-4">
             <img :src="album.poster" class="img-fluid" alt="">
         </div>
-        <h4 class="text-uppercase fw-bold m-0 mb-2">{{ album.title }}</h4>
+        <h4 class="text-uppercase fw-bold m-0 mb-4">{{ album.title }}</h4>
         <div>
             <p class="m-0">{{ album.author }}</p>
             <p>{{ album.year }}</p>
@@ -24,7 +24,6 @@ div.ax-card{
     width: calc(100% / 5 - 2rem);
     margin-left: 1rem;
     margin-right: 1rem;
-    height: 420px;
     background-color: $productMainColor;
 
     p{

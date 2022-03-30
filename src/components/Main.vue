@@ -1,9 +1,9 @@
 <template>
-    <main class="p-5">
+    <main>
         <div class="container-fluid px-5">
             <div class="row px-5">
                 <div class="col-12 px-5">
-                    <div class="cards-container text-white px-5 d-flex flex-wrap">
+                    <div class="ax-cards-container text-white p-5 d-flex flex-wrap">
                         <MusicCard 
                         v-for='(element, index) in albumList'
                         :key="index"
@@ -31,7 +31,8 @@ export default {
         }
     },
     created: function(){
-        this.getAPI();
+        //this.getAPI();
+        setTimeout(this.getAPI, 3000)
     },
     methods: {
         getAPI: function (){
@@ -56,6 +57,7 @@ export default {
 
 main{
     background-color: $productSecondaryColor;
+    
 }
 
 </style>

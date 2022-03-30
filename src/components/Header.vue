@@ -1,8 +1,8 @@
 <template>
     <header>
-        <div class="img-wrapper p-3 ms-3">
+        <div class="img-wrapper p-2 ms-3">
             <a href="https://www.spotify.com/it/">
-                <img src="../assets/img/Spotify.png" alt="Spotify Logo" class="img-fluid">
+                <img src="../assets/img/Spotify.png" alt="Spotify Logo">
             </a>
         </div>
     </header>
@@ -19,9 +19,12 @@ export default {
 
 header{
     background-color: $productMainColor;
-
+    height: 10vh;
     .img-wrapper{
-        width: 100px;
+        height: 10vh;
+        img{
+            height: 100%;
+        }
     }
 }
 
