@@ -1,15 +1,12 @@
 <template>
-    <div>
-        <div class="ax-card p-4 mb-2 mx-3 d-flex flex-column justify-content-start align-items-center text-center">
-            <div class="ax-img-wrapper w-100">
-                <img :src="album.poster" class="img-fluid mb-2" alt="">
-            </div>
-            <h3 class="text-uppercase fw-bold m-0">{{ album.title }}</h3>
-            <div>
-                <p class="m-0">{{ album.author }}</p>
-                <p>{{ album.year }}</p>
-            </div>
-            
+    <div class="ax-card p-4 mb-2 mx-3 d-flex flex-column justify-content-start align-items-center text-center">
+        <div class="ax-img-wrapper w-100">
+            <img :src="album.poster" class="img-fluid mb-2" alt="">
+        </div>
+        <h3 class="text-uppercase fw-bold m-0">{{ album.title }}</h3>
+        <div>
+            <p class="m-0">{{ album.author }}</p>
+            <p>{{ album.year }}</p>
         </div>
     </div>
 </template>
