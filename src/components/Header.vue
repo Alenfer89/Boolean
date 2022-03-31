@@ -6,8 +6,8 @@
             </a>
         </div>
         <div>
-            <select class="form-select" @click='genreSelector()'>
-                <option selected value='null'>Select By Genre</option>
+            <select class="form-select" >
+                <option selected :value='null' @click="genreReset()">Select By Genre</option>
                 <option v-for='(element, index) in musicGenre' :key='index' :value="element.id" @click='genreSelector(element)'>
                     {{ element.genre }}
                 </option>
@@ -46,7 +46,13 @@ export default {
     methods:{
         genreSelector(objectElement){
             console.log(this.genreCheck);
+            console.log(objectElement);
             this.genreCheck = objectElement.genre;
+            console.log(this.genreCheck);
+        },
+        genreReset(){
+            console.log(this.genreCheck);
+            this.genreCheck = null;
             console.log(this.genreCheck);
         }
     }
