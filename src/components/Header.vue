@@ -45,15 +45,17 @@ export default {
     },
     methods:{
         genreSelector(objectElement){
-            console.log(this.genreCheck);
-            console.log(objectElement);
+            //console.log(this.genreCheck);
+            //console.table(objectElement);
             this.genreCheck = objectElement.genre;
-            console.log(this.genreCheck);
+            //if(this.genreCheck !== null) console.table(objectElement);
+            if(this.genreCheck !== null) this.$emit('genreSearchRequest', this.genreCheck);
+            //console.log(this.genreCheck);
         },
         genreReset(){
-            console.log(this.genreCheck);
+            //console.log(this.genreCheck);
             this.genreCheck = null;
-            console.log(this.genreCheck);
+            //console.log(this.genreCheck);
         }
     }
 }

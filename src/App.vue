@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <Header />
+    <Header @genreSearchRequest='newSearch'/>
 
     <Main />
     
@@ -18,6 +18,19 @@ export default {
   components: {
     Header,
     Main
+  },
+  data: function(){
+    return{
+      stringToSearch: '',
+    }
+  },
+  methods:{
+    newSearch(userSelectString){
+      this.stringToSearch = userSelectString;
+      //console.warn(userSelectString + ' user selection')
+      //console.warn(this.stringToSearch)
+      //console.error(this.genreSearchRequest)
+    }
   }
 }
 </script>
