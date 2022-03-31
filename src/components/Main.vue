@@ -12,7 +12,7 @@
                 <div class="col-12 px-5">
                     <div class="ax-cards-container text-white p-5 d-flex flex-wrap">
                         <MusicCard 
-                        v-for='(element, index) in albumList'
+                        v-for='(element, index) in albumsToShow(genreString)'
                         :key="index"
                         :album='element'
                         />
@@ -32,6 +32,9 @@ export default {
     components: {
         MusicCard
     },
+    props: {
+        'genreString': String
+    },
     data: function(){
         return{
             albumList:[],
@@ -39,7 +42,7 @@ export default {
     },
     created: function(){
         //this.getAPI();
-        setTimeout(this.getAPI, 3000)
+        setTimeout(this.getAPI, 300)
     },
     methods: {
         getAPI: function (){
@@ -54,6 +57,13 @@ export default {
             .catch((error) =>{
                 console.log(error)
             })
+        },
+        albumsToShow(genreString){
+            if(genreString !== null){
+                return this.albumList.filter((element)=> element.genre.toLowerCase().includes(genreString.toLowerCase()))
+            } else{
+                return this.albumList;
+            }
         }
     }
 }

@@ -1,9 +1,13 @@
 <template>
   <div id="app">
 
-    <Header @genreSearchRequest='newSearch'/>
+    <Header
+    @genreSearchRequest='newSearch'
+    />
 
-    <Main />
+    <Main
+    :genreString='stringToSearch'
+    />
     
   </div>
 </template>
@@ -21,7 +25,7 @@ export default {
   },
   data: function(){
     return{
-      stringToSearch: '',
+      stringToSearch: null,
     }
   },
   methods:{
