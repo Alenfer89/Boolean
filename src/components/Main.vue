@@ -49,10 +49,10 @@ export default {
             axios
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((result) =>{
-                console.log(result.data.response);
-                console.log(this.albumList);
+                //console.log(result.data.response);
+                //console.log(this.albumList);
                 this.albumList = result.data.response;
-                console.log(this.albumList);
+                //console.log(this.albumList);
             })
             .catch((error) =>{
                 console.log(error)
@@ -60,10 +60,15 @@ export default {
         },
         albumsToShow(genreString){
             if(genreString !== null){
+                console.warn(genreString)
+                console.warn(this.albumList)
                 return this.albumList.filter((element)=> element.genre.toLowerCase().includes(genreString.toLowerCase()))
-            } else{
+            } else if (genreString == null){
+                console.warn(genreString)
+                console.warn(this.albumList)
                 return this.albumList;
             }
+            
         }
     }
 }

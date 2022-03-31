@@ -7,7 +7,7 @@
         </div>
         <div>
             <select class="form-select" >
-                <option selected :value='null' @click="genreReset()">Select By Genre</option>
+                <option selected @click="genreReset()">Select By Genre</option>
                 <option v-for='(element, index) in musicGenre' :key='index' :value="element.id" @click='genreSelector(element)'>
                     {{ element.genre }}
                 </option>
@@ -55,6 +55,7 @@ export default {
         genreReset(){
             //console.log(this.genreCheck);
             this.genreCheck = null;
+            this.$emit('genreSearchRequest', this.genreCheck);
             //console.log(this.genreCheck);
         }
     }
