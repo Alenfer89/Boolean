@@ -79,6 +79,7 @@ export default {
 
 main{
 background-color: $productSecondaryColor;
+min-height: 90vh;
     div.ax-loading-placeholder{
     height: 90vh;
         div.ax-animation{
