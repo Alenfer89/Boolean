@@ -42,7 +42,7 @@ export default {
     },
     created: function(){
         //this.getAPI();
-        setTimeout(this.getAPI, 300)
+        setTimeout(this.getAPI, 3000)
     },
     methods: {
         getAPI: function (){
