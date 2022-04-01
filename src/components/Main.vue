@@ -5,7 +5,7 @@
         </div>
         <div class="ax-movies-wrapper d-flex flex-wrap justify-content-between align-items-center">
             <Movie
-            v-for='(movie, index) in moviesList'
+            v-for='(movie, index) in startNewSearch(searchParameters)'
             :key='index'
             :movieTitle='movie.title'
             :movieUrTitle='movie["original_title"]'
@@ -37,10 +37,15 @@ export default {
         }
     },
     methods:{
-
+        startNewSearch(searchParameters){
+            if(searchParameters.trim()===''){
+                console.log('ricerca non valida');
+                return this.moviesList;
+            }
+            return this.moviesList.filter((element) =>element.title.toLowerCase().includes(searchParameters.toLowerCase()));
+        }
     },
     computed:{
-
     },
     created: function(){
         axios
