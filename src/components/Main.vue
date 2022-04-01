@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+//import axios from 'axios';
 import Movie from './Movie.vue'
 
 export default {
@@ -52,15 +52,15 @@ export default {
         
     },
     created: function(){
-        axios
-            .get(`https://api.themoviedb.org/3/search/movie?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=${this.userQuerySearch}`)
-            .then((result) =>{
-                console.log(result.data.results)
-                this.moviesList = result.data.results;
-            })
-            .catch((error) =>{
-                console.warn(error)
-            });
+        // axios
+        //     .get(`https://api.themoviedb.org/3/search/movie?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=${this.userQuerySearch}`)
+        //     .then((result) =>{
+        //         console.log(result.data.results)
+        //         this.moviesList = result.data.results;
+        //     })
+        //     .catch((error) =>{
+        //         console.warn(error)
+        //     });
     }
 }
 </script>
