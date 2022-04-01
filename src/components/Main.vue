@@ -38,7 +38,7 @@ export default {
     },
     methods:{
         startNewSearch(searchParameters){
-            if(searchParameters.trim()===''){
+            if(searchParameters.trim().length == 0){
                 console.log('ricerca non valida');
                 return this.moviesList;
             }
