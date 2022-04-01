@@ -31,6 +31,9 @@ export default {
     data: function (){
         return{
             moviesList:[],
+            moviesApiSearch: "movie?",
+            userLang: "it-IT",
+            userQuerySearch: "the lord"
         }
     },
     methods:{
@@ -41,7 +44,7 @@ export default {
     },
     created: function(){
         axios
-            .get('https://api.themoviedb.org/3/search/movie?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=the+lord')
+            .get(`https://api.themoviedb.org/3/search/movie?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=${this.userQuerySearch}`)
             .then((result) =>{
                 console.log(result.data.results)
                 this.moviesList = result.data.results;
