@@ -3,7 +3,7 @@
 
     <Header @newMoviesSearch="newSearch" />
     
-    <Main />
+    <Main :searchParameters='stringToSearch' />
 
   </div>
 </template>
@@ -20,12 +20,14 @@ export default {
   },
   data: function (){
     return{
-
+      stringToSearch:'',
     }
   },
   methods:{
     newSearch(string){
       console.warn(string)
+      this.stringToSearch = string;
+      console.error(this.stringToSearch)
     }
   }
 }

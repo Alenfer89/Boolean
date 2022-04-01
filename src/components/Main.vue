@@ -1,5 +1,8 @@
 <template>
     <main class="text-center">
+        <div>
+            {{ searchParameters }}
+        </div>
         <div class="ax-movies-wrapper d-flex flex-wrap justify-content-between align-items-center">
             <Movie
             v-for='(movie, index) in moviesList'
@@ -21,6 +24,9 @@ export default {
     name: 'IndexMainContainer',
     components: {
         Movie,
+    },
+    props:{
+        searchParameters: String,
     },
     data: function (){
         return{

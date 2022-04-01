@@ -6,7 +6,6 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model='stringToSearch'>
                 <button class="btn btn-outline-success" @click="$emit('newMoviesSearch', stringToSearch)">Search</button>
             </div>
-            <p>{{stringToSearch}}</p>
             <select class="form-select" aria-label="Default select example">
                 <option selected value='eng'>EN</option>
                 <option value="ita">IT</option>
@@ -24,7 +23,7 @@ export default {
         }
     },
     methods: {
-        
+
     }
 }
 </script>
