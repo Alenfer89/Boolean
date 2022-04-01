@@ -1,9 +1,9 @@
 <template>
     <div class="ax-movie-card">
-        <h1> {{ movieTitle }} </h1>
-        <h2> {{ movieUrTitle }} </h2>
-        <h3> {{ movieVote }} </h3>
-        <h4> {{ movieLang }} </h4>
+        <p> {{ movieTitle }} </p>
+        <p> {{ movieUrTitle }} </p>
+        <p> {{ movieVote }} </p>
+        <p> {{ movieLang }} </p>
     </div>
 </template>
 
@@ -21,4 +21,7 @@ export default {
 
 <style lang='scss' scoped>
 
+div.ax-movie-card{
+    width: calc(100% / 8);
+}
 </style>

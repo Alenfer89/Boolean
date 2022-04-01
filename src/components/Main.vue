@@ -1,6 +1,6 @@
 <template>
     <main class="text-center">
-        <div class="ax-movies-wrapper">
+        <div class="ax-movies-wrapper d-flex flex-wrap justify-content-between align-items-center">
             <Movie
             v-for='(movie, index) in moviesList'
             :key='index'
@@ -35,7 +35,7 @@ export default {
     },
     created: function(){
         axios
-            .get('https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=ritorno+al+futuro')
+            .get('https://api.themoviedb.org/3/search/movie?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=the+lord')
             .then((result) =>{
                 console.log(result.data.results)
                 this.moviesList = result.data.results;

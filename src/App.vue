@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <Header />
+    <Header @newMoviesSearch="newSearch" />
     
     <Main />
 
@@ -17,6 +17,16 @@ export default {
   components: {
     Header,
     Main
+  },
+  data: function (){
+    return{
+
+    }
+  },
+  methods:{
+    newSearch(string){
+      console.warn(string)
+    }
   }
 }
 </script>
