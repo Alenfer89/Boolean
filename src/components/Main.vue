@@ -2,9 +2,13 @@
     <main class="text-center">
         <div class="ax-movies-wrapper">
             <Movie
-            v-for='(element, index) in moviesList'
+            v-for='(movie, index) in moviesList'
             :key='index'
-            :movie='element' />
+            :movieTitle='movie.title'
+            :movieUrTitle='movie["original_title"]'
+            :movieVote='movie["vote_average"]'
+            :movieLang='movie["original_language"]'
+            />
         </div>
     </main>
 </template>
