@@ -43,9 +43,13 @@ export default {
                 return this.moviesList;
             }
             return this.moviesList.filter((element) =>element.title.toLowerCase().includes(searchParameters.toLowerCase()));
-        }
+        },
+        // getAPICustomList(){
+            
+        // }
     },
     computed:{
+        
     },
     created: function(){
         axios
