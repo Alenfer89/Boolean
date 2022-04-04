@@ -2,10 +2,10 @@
     <div class="ax-product-card">
         <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="img-fluid" >
         <p class="bg-primary"> {{ productTitle }} </p>
-        <!-- <p class="bg-black text-white"> {{ movieName }} </p> -->
         <p class="bg-success"> {{ productUrTitle }} </p>
         <p class="bg-danger"> {{ productVote }} </p>
         <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
+        <p> {{voteConversion(productVote)}} </p>
     </div>
 </template>
 
@@ -23,7 +23,6 @@ export default {
     },
     data: function(){
         return{
-            //flagPlaceholder: `https://ak.picdn.net/shutterstock/videos/1012757690/thumb/1.jpg`,
         }
     },
     methods: {
@@ -46,6 +45,9 @@ export default {
             console.log(finalPoster)
             if(posterString==null) return 'https://i0.wp.com/capri.org.au/wp-content/uploads/2017/10/poster-placeholder.jpg?ssl=1';
             return finalPoster;
+        },
+        voteConversion(number){
+            return Math.ceil(number / 2)
         }
     }
 }
