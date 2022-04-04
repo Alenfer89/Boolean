@@ -6,7 +6,7 @@
       {{ moviesList[0] }}
     </div>
     <!-- <Main :searchParameters='stringToSearch' /> -->
-    <Main />
+    <Main :userMoviesListSearch = 'moviesList'/>
   </div>
 </template>
 
@@ -25,7 +25,6 @@ export default {
   },
   data: function (){
     return{
-      //stringToSearch:'',
       moviesList: [],
     }
   },
@@ -41,10 +40,6 @@ export default {
           console.warn(error)
       });
     }
-  },
-  computed: {
-    
-    
   }
 }
 </script>
