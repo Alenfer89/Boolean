@@ -6,6 +6,8 @@
         <p class="bg-danger"> {{ productVote }} </p>
         <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
         <p> {{voteConversion(productVote)}} </p>
+        <p><i class="fa-solid fa-star"></i></p>
+        <font-awesome-icon icon="fa-solid fa-star" />
     </div>
 </template>
 
