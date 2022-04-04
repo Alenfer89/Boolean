@@ -44,6 +44,7 @@ export default {
             const posterString = string;
             const finalPoster = dbUrl+posterSize+posterString;
             console.log(finalPoster)
+            if(posterString==null) return 'https://i0.wp.com/capri.org.au/wp-content/uploads/2017/10/poster-placeholder.jpg?ssl=1';
             return finalPoster;
         }
     }
