@@ -1,29 +1,30 @@
 <template>
     <main class="text-center">
         <section></section>
-        <section></section>
-        <div class="ax-cards-wrapper d-flex flex-wrap justify-content-between align-items-center">
-            <Card
-            v-for='(movie, index) in userSearchMoviesList'
-            :key='index'
-            :productTitle='movie.title'
-            :productUrTitle='movie["original_title"]'
-            :productVote='movie["vote_average"]'
-            :productLang='movie["original_language"]'
-            :productPoster='movie["poster_path"]'
-            />
-        </div>
-        <div class="ax-cards-wrapper d-flex flex-wrap justify-content-between align-items-center">
-            <Card
-            v-for='(show, index) in userSearchTvShowsList'
-            :key='index'
-            :productTitle='show.name'
-            :productUrTitle='show["original_name"]'
-            :productVote='show["vote_average"]'
-            :productLang='show["original_language"]'
-            :productPoster='show["poster_path"]'
-            />
-        </div>
+        <section>
+            <div class="ax-cards-wrapper d-flex flex-wrap justify-content-between align-items-center">
+                <Card
+                v-for='(movie, index) in userSearchMoviesList'
+                :key='index'
+                :productTitle='movie.title'
+                :productUrTitle='movie["original_title"]'
+                :productVote='movie["vote_average"]'
+                :productLang='movie["original_language"]'
+                :productPoster='movie["poster_path"]'
+                />
+            </div>
+            <div class="ax-cards-wrapper d-flex flex-wrap justify-content-between align-items-center">
+                <Card
+                v-for='(show, index) in userSearchTvShowsList'
+                :key='index'
+                :productTitle='show.name'
+                :productUrTitle='show["original_name"]'
+                :productVote='show["vote_average"]'
+                :productLang='show["original_language"]'
+                :productPoster='show["poster_path"]'
+                />
+            </div>
+        </section>
     </main>
 </template>
 
