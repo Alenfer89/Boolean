@@ -26,6 +26,9 @@ export default {
             }
             const flagUrl = findFlagUrlByIso2Code(string.toUpperCase())
             console.log(findFlagUrlByIso2Code(string.toUpperCase()))
+            if(flagUrl === ''){
+                return 'https://it.wikipedia.org/wiki/Bandiera_arcobaleno#/media/File:Gay_Pride_Flag.svg'
+            } 
             return flagUrl
         }
     }
