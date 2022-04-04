@@ -1,8 +1,9 @@
 <template>
     <div class="ax-movie-card">
-        <p> {{ movieTitle }} </p>
-        <p> {{ movieUrTitle }} </p>
-        <p> {{ movieVote }} </p>
+        <p class="bg-primary"> {{ movieTitle }} </p>
+        <!-- <p class="bg-black text-white"> {{ movieName }} </p> -->
+        <p class="bg-success"> {{ movieUrTitle }} </p>
+        <p class="bg-danger"> {{ movieVote }} </p>
         <img :src="flagGenerator(movieLang)" :alt="movieLang">
     </div>
 </template>

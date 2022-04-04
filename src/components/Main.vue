@@ -2,9 +2,10 @@
     <main class="text-center">
         <div class="ax-movies-wrapper d-flex flex-wrap justify-content-between align-items-center">
             <Movie
-            v-for='(movie, index) in userSearchMoviesList && userSearchTvShowsList'
+            v-for='(movie, index) in userSearchMoviesList'
             :key='index'
-            :movieTitle='movie.title || movie.name'
+            :movieTitle='movie.title'
+            :movieName='movie.name'
             :movieUrTitle='movie["original_title"] ||movie["original_name"]'
             :movieVote='movie["vote_average"]'
             :movieLang='movie["original_language"]'
