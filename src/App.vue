@@ -2,11 +2,9 @@
   <div id="app">
 
     <Header @stringSearchByUserInput="newSearchAPICall" />
-    <div>
-      {{ moviesList[0] }}
-    </div>
-    <!-- <Main :searchParameters='stringToSearch' /> -->
+    
     <Main :userMoviesListSearch = 'moviesList'/>
+
   </div>
 </template>
 
