@@ -1,16 +1,21 @@
 <template>
   <div id="app">
 
-    <Header @newMoviesSearch="newSearch" />
-    
-    <Main :searchParameters='stringToSearch' />
-
+    <Header @stringSearchByUserInput="newSearchAPICall" />
+    <div>
+      {{ moviesList[0] }}
+    </div>
+    <!-- <Main :searchParameters='stringToSearch' /> -->
+    <Main />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Main from './components/Main.vue'
+import Header from './components/Header.vue';
+import Main from './components/Main.vue';
+import axios from 'axios';
+
+
 
 export default {
   name: 'App',
@@ -20,15 +25,26 @@ export default {
   },
   data: function (){
     return{
-      stringToSearch:'',
+      //stringToSearch:'',
+      moviesList: [],
     }
   },
   methods:{
-    newSearch(string){
-      console.warn(string)
-      this.stringToSearch = string;
-      console.error(this.stringToSearch)
+    newSearchAPICall(string){
+      axios
+      .get(`https://api.themoviedb.org/3/search/movie?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=${string}`)
+      .then((result) =>{
+      console.log(result.data.results)
+      return this.moviesList = result.data.results;
+      })
+      .catch((error) =>{
+          console.warn(error)
+      });
     }
+  },
+  computed: {
+    
+    
   }
 }
 </script>
