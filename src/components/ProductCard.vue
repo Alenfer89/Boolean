@@ -1,5 +1,5 @@
 <template>
-    <div class="ax-product-card">
+    <div class="ax-product-card mx-3">
         <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="img-fluid" >
         <p class="bg-primary"> {{ productTitle }} </p>
         <p class="bg-success"> {{ productUrTitle }} </p>
