@@ -5,7 +5,6 @@
             v-for='(movie, index) in userSearchMoviesList'
             :key='index'
             :movieTitle='movie.title'
-            :movieName='movie.name'
             :movieUrTitle='movie["original_title"] ||movie["original_name"]'
             :movieVote='movie["vote_average"]'
             :movieLang='movie["original_language"]'

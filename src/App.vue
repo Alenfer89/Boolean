@@ -48,7 +48,7 @@ export default {
       .get(`https://api.themoviedb.org/3/search/tv?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=${string}`)
       .then((result) =>{
       console.error(result.data.results)
-      return this.moviesList = result.data.results;
+      return this.tvShowsList = result.data.results;
       })
       .catch((error) =>{
           console.warn(error)
