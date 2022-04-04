@@ -3,7 +3,10 @@
 
     <Header @stringSearchByUserInput="newSearchAPICall" />
     
-    <Main :userSearchMoviesList = 'moviesList'/>
+    <Main
+    :userSearchMoviesList = 'moviesList'
+    :userSearchTvShowsList= 'tvShowsList'
+    />
 
   </div>
 </template>
@@ -24,15 +27,28 @@ export default {
   data: function (){
     return{
       moviesList: [],
+      tvShowsList: [],
+
     }
   },
   methods:{
     newSearchAPICall(string){
+      //mvoies
       axios
       .get(`https://api.themoviedb.org/3/search/movie?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=${string}`)
       .then((result) =>{
       console.warn(result.data.results)
       return this.moviesList = result.data.results;
+      })
+      .catch((error) =>{
+          console.warn(error)
+      });
+      //tvshows
+      axios
+      .get(`https://api.themoviedb.org/3/search/tv?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=${string}`)
+      .then((result) =>{
+      console.error(result.data.results)
+      return this.tvShowsList = result.data.results;
       })
       .catch((error) =>{
           console.warn(error)

@@ -2,10 +2,10 @@
     <main class="text-center">
         <div class="ax-movies-wrapper d-flex flex-wrap justify-content-between align-items-center">
             <Movie
-            v-for='(movie, index) in userSearchMoviesList'
+            v-for='(movie, index) in userSearchMoviesList && userSearchTvShowsList'
             :key='index'
-            :movieTitle='movie.title'
-            :movieUrTitle='movie["original_title"]'
+            :movieTitle='movie.title || movie.name'
+            :movieUrTitle='movie["original_title"] ||movie["original_name"]'
             :movieVote='movie["vote_average"]'
             :movieLang='movie["original_language"]'
             />
@@ -23,13 +23,7 @@ export default {
     },
     props:{
         userSearchMoviesList: Array,
-    },
-    data: function (){
-        return{
-        }
-    },
-    methods:{
-
+        userSearchTvShowsList: Array
     }
 }
 </script>

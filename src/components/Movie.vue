@@ -18,6 +18,11 @@ export default {
         movieVote: Number,
         movieLang: String,
     },
+    data: function(){
+        return{
+            //flagPlaceholder: `https://ak.picdn.net/shutterstock/videos/1012757690/thumb/1.jpg`,
+        }
+    },
     methods: {
         flagGenerator(string){
             if(string.toLowerCase() == 'en'){
@@ -26,7 +31,7 @@ export default {
             const flagUrl = findFlagUrlByIso2Code(string.toUpperCase())
             //console.log(findFlagUrlByIso2Code(string.toUpperCase()))
             if(flagUrl === ''){
-                return 'https://it.wikipedia.org/wiki/Bandiera_arcobaleno#/media/File:Gay_Pride_Flag.svg'
+                return 'https://ak.picdn.net/shutterstock/videos/1012757690/thumb/1.jpg'
             } 
             return flagUrl
         }
