@@ -2,7 +2,7 @@
     <main class="text-center">
         <div class="ax-movies-wrapper d-flex flex-wrap justify-content-between align-items-center">
             <Movie
-            v-for='(movie, index) in userMoviesListSearch'
+            v-for='(movie, index) in userSearchMoviesList'
             :key='index'
             :movieTitle='movie.title'
             :movieUrTitle='movie["original_title"]'
@@ -22,7 +22,7 @@ export default {
         Movie,
     },
     props:{
-        userMoviesListSearch: Array,
+        userSearchMoviesList: Array,
     },
     data: function (){
         return{

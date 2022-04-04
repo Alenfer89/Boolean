@@ -3,7 +3,7 @@
 
     <Header @stringSearchByUserInput="newSearchAPICall" />
     
-    <Main :userMoviesListSearch = 'moviesList'/>
+    <Main :userSearchMoviesList = 'moviesList'/>
 
   </div>
 </template>
