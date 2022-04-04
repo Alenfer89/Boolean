@@ -1,10 +1,11 @@
 <template>
     <div class="ax-product-card">
+        <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="img-fluid" >
         <p class="bg-primary"> {{ productTitle }} </p>
         <!-- <p class="bg-black text-white"> {{ movieName }} </p> -->
         <p class="bg-success"> {{ productUrTitle }} </p>
         <p class="bg-danger"> {{ productVote }} </p>
-        <img :src="flagGenerator(productLang)" :alt="productLang">
+        <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
     </div>
 </template>
 
@@ -18,6 +19,7 @@ export default {
         productUrTitle: String,
         productVote: Number,
         productLang: String,
+        productPoster: String
     },
     data: function(){
         return{
@@ -35,6 +37,14 @@ export default {
                 return 'https://ak.picdn.net/shutterstock/videos/1012757690/thumb/1.jpg'
             } 
             return flagUrl
+        },
+        posterGenerator(string){
+            const dbUrl = 'https://image.tmdb.org/t/p/';
+            const posterSize = 'original';
+            const posterString = string;
+            const finalPoster = dbUrl+posterSize+posterString;
+            console.log(finalPoster)
+            return finalPoster;
         }
     }
 }
@@ -45,7 +55,7 @@ export default {
 div.ax-product-card{
     width: calc(100% / 8);
 
-    img{
+    img.ax-flags{
         height: 20px;
         width: 30px;
     }
