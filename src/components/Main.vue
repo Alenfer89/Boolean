@@ -1,5 +1,7 @@
 <template>
     <main class="text-center">
+        <section></section>
+        <section></section>
         <div class="ax-cards-wrapper d-flex flex-wrap justify-content-between align-items-center">
             <Card
             v-for='(movie, index) in userSearchMoviesList'

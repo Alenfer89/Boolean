@@ -27,13 +27,12 @@ export default {
   data: function (){
     return{
       moviesList: [],
-      tvShowsList: [],
-
+      tvShowsList: []
     }
   },
   methods:{
     newSearchAPICall(string){
-      //mvoies
+      //movies
       axios
       .get(`https://api.themoviedb.org/3/search/movie?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=${string}`)
       .then((result) =>{
