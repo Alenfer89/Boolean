@@ -26,6 +26,7 @@ export default {
     methods: {
         stringTitleSearch(string){
             this.$emit('stringSearchByUserInput', string)
+            this.stringToSearch = '';
         }
     }
 }
