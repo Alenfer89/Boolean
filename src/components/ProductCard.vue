@@ -1,10 +1,10 @@
 <template>
-    <div class="ax-movie-card">
-        <p class="bg-primary"> {{ movieTitle }} </p>
+    <div class="ax-product-card">
+        <p class="bg-primary"> {{ productTitle }} </p>
         <!-- <p class="bg-black text-white"> {{ movieName }} </p> -->
-        <p class="bg-success"> {{ movieUrTitle }} </p>
-        <p class="bg-danger"> {{ movieVote }} </p>
-        <img :src="flagGenerator(movieLang)" :alt="movieLang">
+        <p class="bg-success"> {{ productUrTitle }} </p>
+        <p class="bg-danger"> {{ productVote }} </p>
+        <img :src="flagGenerator(productLang)" :alt="productLang">
     </div>
 </template>
 
@@ -12,12 +12,12 @@
 import { findFlagUrlByIso2Code } from "country-flags-svg";
 
 export default {
-    name: 'singleMovieCard',
+    name: 'singleProductCard',
     props:{
-        movieTitle : String,
-        movieUrTitle: String,
-        movieVote: Number,
-        movieLang: String,
+        productTitle : String,
+        productUrTitle: String,
+        productVote: Number,
+        productLang: String,
     },
     data: function(){
         return{
@@ -42,7 +42,7 @@ export default {
 
 <style lang='scss' scoped>
 
-div.ax-movie-card{
+div.ax-product-card{
     width: calc(100% / 8);
 
     img{

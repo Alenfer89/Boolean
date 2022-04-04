@@ -1,35 +1,35 @@
 <template>
     <main class="text-center">
-        <div class="ax-movies-wrapper d-flex flex-wrap justify-content-between align-items-center">
-            <Movie
+        <div class="ax-cards-wrapper d-flex flex-wrap justify-content-between align-items-center">
+            <Card
             v-for='(movie, index) in userSearchMoviesList'
             :key='index'
-            :movieTitle='movie.title'
-            :movieUrTitle='movie["original_title"] ||movie["original_name"]'
-            :movieVote='movie["vote_average"]'
-            :movieLang='movie["original_language"]'
+            :productTitle='movie.title'
+            :productUrTitle='movie["original_title"]'
+            :productVote='movie["vote_average"]'
+            :productLang='movie["original_language"]'
             />
         </div>
-        <div class="ax-movies-wrapper d-flex flex-wrap justify-content-between align-items-center">
-            <Movie
-            v-for='(movie, index) in userSearchMoviesList'
+        <div class="ax-cards-wrapper d-flex flex-wrap justify-content-between align-items-center">
+            <Card
+            v-for='(show, index) in userSearchTvShowsList'
             :key='index'
-            :movieTitle='movie.title'
-            :movieUrTitle='movie["original_title"] ||movie["original_name"]'
-            :movieVote='movie["vote_average"]'
-            :movieLang='movie["original_language"]'
+            :productTitle='show.name'
+            :productUrTitle='show["original_name"]'
+            :productVote='show["vote_average"]'
+            :productLang='show["original_language"]'
             />
         </div>
     </main>
 </template>
 
 <script>
-import Movie from './Movie.vue'
+import Card from './ProductCard.vue'
 
 export default {
     name: 'IndexMainContainer',
     components: {
-        Movie,
+        Card,
     },
     props:{
         userSearchMoviesList: Array,
