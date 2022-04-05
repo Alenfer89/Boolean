@@ -23,13 +23,13 @@
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 flex-wrap px-3 px-sm-4 px-lg-5">
             <Card
-                v-for='(movie, index) in basicOfferTv'
+                v-for='(show, index) in basicOfferTv'
                 :key='index'
-                :productTitle='movie.title'
-                :productUrTitle='movie["original_title"]'
-                :productVote='movie["vote_average"]'
-                :productLang='movie["original_language"]'
-                :productPoster='movie["poster_path"]'
+                :productTitle='show.title'
+                :productUrTitle='show["original_title"]'
+                :productVote='show["vote_average"]'
+                :productLang='show["original_language"]'
+                :productPoster='show["poster_path"]'
             />
         </div>
     </div>

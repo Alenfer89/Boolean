@@ -9,11 +9,11 @@
         </section>
         <section id="by-user-request" v-if='isUserSearching'>
             <div class="container-fluid">
-                <!-- <div class="row" v-if='userSearchMoviesList.length == 0 && userSearchTvShowsList.length == 0'>
+                <div class="row" v-if='userSearchMoviesList.length == 0 && userSearchTvShowsList.length == 0'>
                     <div class="col-12">
                         <h3 class="text-uppercase fw-bold">sorry! there are no results for your entry</h3>
                     </div>
-                </div> -->
+                </div>
                 <div class="row" v-if='userSearchMoviesList.length > 0'>
                     <div class="col-12">
                         <h3 class="text-uppercase fw-bold">movies based on your research</h3>
