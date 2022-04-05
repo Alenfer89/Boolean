@@ -1,17 +1,18 @@
 <template>
-    <div class="ax-product-card col position-relative mb-4"
-    
-    >
+    <div class="ax-product-card col position-relative mb-4">
         
-        <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="rounded" @mouseover="hoverEffectChager()">
-        
-        <div class="ax-card-text-wrapper p-2 d-flex flex-column justify-content-start align-items-center position-absolute" v-if='this.hoverEffect === true' @mouseleave="hoverEffectChager()">
-            <p class="bg-primary"> {{ productTitle }} </p>
-            <p class="bg-success"> {{ productUrTitle }} </p>
-            <p class="bg-danger"> {{ productVote }} </p>
-            <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
-            <p> {{voteConversion(productVote)}} </p>
-            <div>
+        <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="rounded" @mouseover="hoverEffectChanger()">
+
+        <div class="ax-card-text-wrapper p-3 rounded d-flex flex-column justify-content-between align-items-center position-absolute" v-if='this.hoverEffect === true'
+        @mouseleave="hoverEffectChanger()">
+            <div class="ax-top-card-text">
+                <p>Title: {{ productTitle }} </p>
+                <p>Original title: {{ productUrTitle }} </p>
+                <p>Users votes: {{ productVote }} </p>
+                <p class="d-flex justify-content-evenly align-items-center">Country: <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags"></p>
+            </div>
+            
+            <div class="ax-bot-card-text">
                 <font-awesome-icon icon="fa-solid fa-star"
                     v-for='(element, index) in voteConversion(productVote)'
                     :key='index + "fullStar"'
@@ -66,7 +67,7 @@ export default {
         voteConversion(number){
             return Math.ceil(number / 2)
         },
-        hoverEffectChager(){
+        hoverEffectChanger(){
             console.log(this.hoverEffect)
             this.hoverEffect = !this.hoverEffect;
             console.log(this.hoverEffect)
@@ -98,8 +99,12 @@ div.ax-product-card{
         left: 0;
         bottom: 0;
         z-index: 1;
-        background-color: rgba(0, 0, 0, 0.69);
-
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        background-color: rgba(0, 0, 0, 0.929);
+        div.ax-top-card-text{
+            font-size: 0.7rem;
+        }
         svg{
             color: rgb(255, 174, 0);
         }
