@@ -1,23 +1,25 @@
 <template>
-    <div class="ax-product-card col-6 col-md-4 col-lg-2">
+    <div class="ax-product-card col-6 col-md-4 col-lg-2 position-relative mb-4">
         <div class="ax-card-img-wrapper">
                     <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="img-fluid" >
         </div>
-        <div class="ax-card-text-wrapper">
+        <div class="ax-card-text-wrapper p-2 d-flex flex-column justify-content-center align-items-center position-absolute">
             <p class="bg-primary"> {{ productTitle }} </p>
             <p class="bg-success"> {{ productUrTitle }} </p>
             <p class="bg-danger"> {{ productVote }} </p>
             <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
             <p> {{voteConversion(productVote)}} </p>
             <p><i class="fa-solid fa-star"></i></p>
-            <font-awesome-icon icon="fa-solid fa-star"
-                v-for='(element, index) in voteConversion(productVote)'
-                :key='index + "fullStar"'
-            />
-            <font-awesome-icon icon="fa-regular fa-star"
-                v-for='(element, index) in 5-voteConversion(productVote)'
-                :key='index + "emptyStar"'
-            />
+            <div>
+                <font-awesome-icon icon="fa-solid fa-star"
+                    v-for='(element, index) in voteConversion(productVote)'
+                    :key='index + "fullStar"'
+                />
+                <font-awesome-icon icon="fa-regular fa-star"
+                    v-for='(element, index) in (5-voteConversion(productVote))'
+                    :key='index + "emptyStar"'
+                />
+            </div>
         </div>
     </div>
 </template>
@@ -73,8 +75,17 @@ div.ax-product-card{
         height: 20px;
         width: 30px;
     }
-    svg{
-        color: rgb(255, 174, 0);
+    div.ax-card-text-wrapper{
+        //width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        svg{
+            color: rgb(255, 174, 0);
+        }
     }
+    
 }
 </style>
