@@ -1,7 +1,13 @@
 <template>
     <main class="text-center">
-        <section id="overview"></section>
-        <section id="by-user-request">
+        <section id="overview">
+            <ProductOffers
+            v-if='!isUserSearching'
+            :basicOfferMovies='basicOfferMovies'
+            :basicOfferTv='basicOfferTv'
+            />
+        </section>
+        <section id="by-user-request" v-if='isUserSearching'>
             <div class="container-fluid">
                 <!-- <div class="row" v-if='userSearchMoviesList.length == 0 && userSearchTvShowsList.length == 0'>
                     <div class="col-12">
@@ -46,16 +52,21 @@
 </template>
 
 <script>
-import Card from './ProductCard.vue'
+import Card from './ProductCard.vue';
+import ProductOffers from './ProductOffers.vue'
 
 export default {
     name: 'IndexMainContainer',
     components: {
         Card,
+        ProductOffers
     },
     props:{
         userSearchMoviesList: Array,
-        userSearchTvShowsList: Array
+        userSearchTvShowsList: Array,
+        isUserSearching: Boolean,
+        basicOfferMovies: Array,
+        basicOfferTv: Array
     }
 }
 </script>

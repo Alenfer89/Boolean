@@ -8,7 +8,7 @@
             <div class="ax-top-card-text">
                 <p>Title: {{ productTitle }} </p>
                 <p>Original title: {{ productUrTitle }} </p>
-                <p>Users votes: {{ productVote }} </p>
+                <p>Users votes: {{ productVote }}/10 </p>
                 <p class="d-flex justify-content-evenly align-items-center">Country: <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags"></p>
             </div>
             
@@ -68,9 +68,9 @@ export default {
             return Math.ceil(number / 2)
         },
         hoverEffectChanger(){
-            console.log(this.hoverEffect)
+            //console.log(this.hoverEffect)
             this.hoverEffect = !this.hoverEffect;
-            console.log(this.hoverEffect)
+            //console.log(this.hoverEffect)
         }
     }
 }

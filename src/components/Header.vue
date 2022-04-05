@@ -21,12 +21,16 @@ export default {
     data: function (){
         return{
             stringToSearch: '',
+            hasSearchStarted: false
         }
     },
     methods: {
         stringTitleSearch(string){
+            this.hasSearchStarted = true;
+            this.$emit('newSearchStarted', this.hasSearchStarted)
             this.$emit('stringSearchByUserInput', string)
             this.stringToSearch = '';
+            this.hasSearchStarted = false;
         }
     }
 }
