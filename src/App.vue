@@ -7,7 +7,6 @@
     :userSearchMoviesList = 'moviesList'
     :userSearchTvShowsList= 'tvShowsList'
     />
-
   </div>
 </template>
 

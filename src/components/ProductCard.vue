@@ -1,18 +1,24 @@
 <template>
-    <div class="ax-product-card col-6 col-md-4 col-lg-2 ">
-        <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="img-fluid" >
-        <p class="bg-primary"> {{ productTitle }} </p>
-        <p class="bg-success"> {{ productUrTitle }} </p>
-        <p class="bg-danger"> {{ productVote }} </p>
-        <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
-        <p> {{voteConversion(productVote)}} </p>
-        <p><i class="fa-solid fa-star"></i></p>
-        <font-awesome-icon icon="fa-solid fa-star"
-        v-for='(element, index) in voteConversion(productVote)'
-        :key='index + "fullStar"'/>
-        <font-awesome-icon icon="fa-regular fa-star"
-        v-for='(element, index) in 5-voteConversion(productVote)'
-        :key='index + "emptyStar"'/>
+    <div class="ax-product-card col-6 col-md-4 col-lg-2">
+        <div class="ax-card-img-wrapper">
+                    <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="img-fluid" >
+        </div>
+        <div class="ax-card-text-wrapper">
+            <p class="bg-primary"> {{ productTitle }} </p>
+            <p class="bg-success"> {{ productUrTitle }} </p>
+            <p class="bg-danger"> {{ productVote }} </p>
+            <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
+            <p> {{voteConversion(productVote)}} </p>
+            <p><i class="fa-solid fa-star"></i></p>
+            <font-awesome-icon icon="fa-solid fa-star"
+                v-for='(element, index) in voteConversion(productVote)'
+                :key='index + "fullStar"'
+            />
+            <font-awesome-icon icon="fa-regular fa-star"
+                v-for='(element, index) in 5-voteConversion(productVote)'
+                :key='index + "emptyStar"'
+            />
+        </div>
     </div>
 </template>
 
