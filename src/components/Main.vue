@@ -3,12 +3,11 @@
         <section id="overview"></section>
         <section id="by-user-request">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row flex-wrap px-3 px-sm-4 px-lg-5" v-if='userSearchMoviesList.length > 0'>
                     <div class="col-12">
-                        <h3 class="text-uppercase fw-bold">Film in base alla tua ricerca</h3>
+                        <h3 class="text-uppercase fw-bold">movies based on your research</h3>
                     </div>
-                    <div class="col-12 ax-cards-wrapper d-flex flex-wrap justify-content-start align-items-center">
-                        <Card
+                    <Card
                         v-for='(movie, index) in userSearchMoviesList'
                         :key='index'
                         :productTitle='movie.title'
@@ -16,30 +15,23 @@
                         :productVote='movie["vote_average"]'
                         :productLang='movie["original_language"]'
                         :productPoster='movie["poster_path"]'
-                        />
-                    </div>
+                    />
                 </div>
-            </div>
-            
-            <div class="container-fluid">
-                <div class="row">
+                <div class="row flex-wrap px-3 px-sm-4 px-lg-5" v-if='userSearchTvShowsList.length > 0'>
                     <div class="col-12">
-                        <h3 class="text-uppercase fw-bold">Serie TV in base alla tua ricerca</h3>
+                        <h3 class="text-uppercase fw-bold">tv series based on your research</h3>
                     </div>
-                    <div class="col-12 ax-cards-wrapper d-flex flex-wrap justify-content-between align-items-center">
-                        <Card
-                            v-for='(show, index) in userSearchTvShowsList'
-                            :key='index'
-                            :productTitle='show.name'
-                            :productUrTitle='show["original_name"]'
-                            :productVote='show["vote_average"]'
-                            :productLang='show["original_language"]'
-                            :productPoster='show["poster_path"]'
-                            />
-                    </div>
+                    <Card
+                        v-for='(show, index) in userSearchTvShowsList'
+                        :key='index'
+                        :productTitle='show.name'
+                        :productUrTitle='show["original_name"]'
+                        :productVote='show["vote_average"]'
+                        :productLang='show["original_language"]'
+                        :productPoster='show["poster_path"]'
+                    />
                 </div>
-            </div>
-            
+            </div>            
         </section>
     </main>
 </template>
@@ -61,6 +53,7 @@ export default {
 
 <style lang='scss' scoped>
 main{
-    background-color: rgb(54, 0, 2);
+    background-color: rgb(40, 34, 34);
+    min-height: 90vh;
 }
 </style>

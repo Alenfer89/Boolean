@@ -3,7 +3,7 @@
         <h1 class="text-danger text-uppercase fw-bold">boolflix</h1>
         <nav>
             <div class="d-flex">
-                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search" v-model='stringToSearch' @keyup.enter="stringTitleSearch(stringToSearch)">
+                <input class="form-control me-3" type="search" placeholder="Start a new research" aria-label="Search" v-model='stringToSearch' @keyup.enter="stringTitleSearch(stringToSearch)">
                 <button class="btn btn-outline-danger"
                 @click="stringTitleSearch(stringToSearch)">
                     Search
@@ -34,7 +34,8 @@ export default {
 
 <style lang='scss' scoped>
 header{
-    background-color: rgb(33, 13, 50);
+    background-color: rgb(18, 14, 14);
+    height: 10vh;
     nav{
         input.form-control:focus{
             box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.25);

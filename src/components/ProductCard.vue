@@ -1,5 +1,5 @@
 <template>
-    <div class="ax-product-card mx-3">
+    <div class="ax-product-card col-6 col-md-4 col-lg-2 ">
         <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="img-fluid" >
         <p class="bg-primary"> {{ productTitle }} </p>
         <p class="bg-success"> {{ productUrTitle }} </p>
@@ -7,8 +7,12 @@
         <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
         <p> {{voteConversion(productVote)}} </p>
         <p><i class="fa-solid fa-star"></i></p>
-        <font-awesome-icon icon="fa-solid fa-star" v-for='(element, index) in voteConversion(productVote)' :key='index + "fullStar"'/>
-        <font-awesome-icon icon="fa-regular fa-star" v-for='(element, index) in 5-voteConversion(productVote)' :key='index + "emptyStar"'/>
+        <font-awesome-icon icon="fa-solid fa-star"
+        v-for='(element, index) in voteConversion(productVote)'
+        :key='index + "fullStar"'/>
+        <font-awesome-icon icon="fa-regular fa-star"
+        v-for='(element, index) in 5-voteConversion(productVote)'
+        :key='index + "emptyStar"'/>
     </div>
 </template>
 
@@ -57,11 +61,14 @@ export default {
 <style lang='scss' scoped>
 
 div.ax-product-card{
-    width: calc(100% / 8);
+    
 
     img.ax-flags{
         height: 20px;
         width: 30px;
+    }
+    svg{
+        color: rgb(255, 174, 0);
     }
 }
 </style>
