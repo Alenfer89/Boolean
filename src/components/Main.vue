@@ -3,10 +3,17 @@
         <section id="overview"></section>
         <section id="by-user-request">
             <div class="container-fluid">
-                <div class="row flex-wrap px-3 px-sm-4 px-lg-5" v-if='userSearchMoviesList.length > 0'>
+                <!-- <div class="row" v-if='userSearchMoviesList.length == 0 && userSearchTvShowsList.length == 0'>
+                    <div class="col-12">
+                        <h3 class="text-uppercase fw-bold">sorry! there are no results for your entry</h3>
+                    </div>
+                </div> -->
+                <div class="row" v-if='userSearchMoviesList.length > 0'>
                     <div class="col-12">
                         <h3 class="text-uppercase fw-bold">movies based on your research</h3>
                     </div>
+                </div>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 flex-wrap px-3 px-sm-4 px-lg-5" v-if='userSearchMoviesList.length > 0'>
                     <Card
                         v-for='(movie, index) in userSearchMoviesList'
                         :key='index'
@@ -17,10 +24,12 @@
                         :productPoster='movie["poster_path"]'
                     />
                 </div>
-                <div class="row flex-wrap px-3 px-sm-4 px-lg-5" v-if='userSearchTvShowsList.length > 0'>
+                <div class="row" v-if='userSearchTvShowsList.length > 0'>
                     <div class="col-12">
                         <h3 class="text-uppercase fw-bold">tv series based on your research</h3>
                     </div>
+                </div>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 flex-wrap px-3 px-sm-4 px-lg-5" v-if='userSearchTvShowsList.length > 0'>
                     <Card
                         v-for='(show, index) in userSearchTvShowsList'
                         :key='index'
@@ -55,5 +64,10 @@ export default {
 main{
     background-color: rgb(40, 34, 34);
     min-height: 90vh;
+    div.row > div.ax-product-card{
+        //padding-left: 0px;
+        //padding-right: 0px;
+        //margin-right: auto;
+    }
 }
 </style>

@@ -1,15 +1,14 @@
 <template>
-    <div class="ax-product-card col-6 col-md-4 col-lg-2 position-relative mb-4">
-        <div class="ax-card-img-wrapper">
-                    <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="img-fluid" >
-        </div>
-        <div class="ax-card-text-wrapper p-2 d-flex flex-column justify-content-center align-items-center position-absolute">
+    <div class="ax-product-card col position-relative mb-4">
+        
+        <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="rounded" >
+        
+        <div class="ax-card-text-wrapper p-2 d-flex flex-column justify-content-start align-items-center position-absolute">
             <p class="bg-primary"> {{ productTitle }} </p>
             <p class="bg-success"> {{ productUrTitle }} </p>
             <p class="bg-danger"> {{ productVote }} </p>
             <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
             <p> {{voteConversion(productVote)}} </p>
-            <p><i class="fa-solid fa-star"></i></p>
             <div>
                 <font-awesome-icon icon="fa-solid fa-star"
                     v-for='(element, index) in voteConversion(productVote)'
@@ -44,6 +43,8 @@ export default {
         flagGenerator(string){
             if(string.toLowerCase() == 'en'){
                 string = 'gb'
+            } else if (string.toLowerCase() == 'ja'){
+                string = 'jp'
             }
             const flagUrl = findFlagUrlByIso2Code(string.toUpperCase())
             if(flagUrl === ''){
@@ -53,7 +54,7 @@ export default {
         },
         posterGenerator(string){
             const dbUrl = 'https://image.tmdb.org/t/p/';
-            const posterSize = 'original';
+            const posterSize = 'w342';
             const posterString = string;
             const finalPoster = dbUrl+posterSize+posterString;
             if(posterString==null) return 'https://i0.wp.com/capri.org.au/wp-content/uploads/2017/10/poster-placeholder.jpg?ssl=1';
@@ -69,14 +70,21 @@ export default {
 <style lang='scss' scoped>
 
 div.ax-product-card{
-    
-
+    min-height: 300px;
+    //border: 2px solid rgb(40, 34, 34);
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.747);
+    }
     img.ax-flags{
         height: 20px;
         width: 30px;
     }
     div.ax-card-text-wrapper{
         //width: 100%;
+        height: 100%;
         top: 0;
         right: 0;
         left: 0;
@@ -86,6 +94,5 @@ div.ax-product-card{
             color: rgb(255, 174, 0);
         }
     }
-    
 }
 </style>
