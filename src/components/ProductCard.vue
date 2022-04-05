@@ -7,7 +7,8 @@
         <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
         <p> {{voteConversion(productVote)}} </p>
         <p><i class="fa-solid fa-star"></i></p>
-        <font-awesome-icon icon="fa-solid fa-star" v-for='(element, index) in voteConversion(productVote)' :key='index'/>
+        <font-awesome-icon icon="fa-solid fa-star" v-for='(element, index) in voteConversion(productVote)' :key='index + "fullStar"'/>
+        <font-awesome-icon icon="fa-regular fa-star" v-for='(element, index) in 5-voteConversion(productVote)' :key='index + "emptyStar"'/>
     </div>
 </template>
 
