@@ -1,9 +1,11 @@
 <template>
-    <div class="ax-product-card col position-relative mb-4">
+    <div class="ax-product-card col position-relative mb-4"
+    
+    >
         
-        <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="rounded" >
+        <img :src="posterGenerator(productPoster)" :alt="`original poster of `+productTitle" class="rounded" @mouseover="hoverEffectChager()">
         
-        <div class="ax-card-text-wrapper p-2 d-flex flex-column justify-content-start align-items-center position-absolute">
+        <div class="ax-card-text-wrapper p-2 d-flex flex-column justify-content-start align-items-center position-absolute" v-if='this.hoverEffect === true' @mouseleave="hoverEffectChager()">
             <p class="bg-primary"> {{ productTitle }} </p>
             <p class="bg-success"> {{ productUrTitle }} </p>
             <p class="bg-danger"> {{ productVote }} </p>
@@ -37,6 +39,7 @@ export default {
     },
     data: function(){
         return{
+            hoverEffect: false,
         }
     },
     methods: {
@@ -62,6 +65,11 @@ export default {
         },
         voteConversion(number){
             return Math.ceil(number / 2)
+        },
+        hoverEffectChager(){
+            console.log(this.hoverEffect)
+            this.hoverEffect = !this.hoverEffect;
+            console.log(this.hoverEffect)
         }
     }
 }
@@ -89,6 +97,8 @@ div.ax-product-card{
         right: 0;
         left: 0;
         bottom: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.69);
 
         svg{
             color: rgb(255, 174, 0);

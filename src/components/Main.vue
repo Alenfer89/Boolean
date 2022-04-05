@@ -64,10 +64,10 @@ export default {
 main{
     background-color: rgb(40, 34, 34);
     min-height: 90vh;
-    div.row > div.ax-product-card{
+    //div.row > div.ax-product-card{
         //padding-left: 0px;
         //padding-right: 0px;
         //margin-right: auto;
-    }
+    //}
 }
 </style>
