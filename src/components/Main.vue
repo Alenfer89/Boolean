@@ -2,12 +2,12 @@
     <main class="text-center">
         <section id="overview">
             <ProductOffers
-            v-if='!isUserSearching'
+            v-if='!isUserSearching || isResetRequested'
             :basicOfferMovies='basicOfferMovies'
             :basicOfferTv='basicOfferTv'
             />
         </section>
-        <section id="by-user-request" v-if='isUserSearching'>
+        <section id="by-user-request" v-if='isUserSearching && !isResetRequested'>
             <div class="container-fluid">
                 <div class="row" v-if='userSearchMoviesList.length == 0 && userSearchTvShowsList.length == 0'>
                     <div class="col-12">
@@ -65,6 +65,7 @@ export default {
         userSearchMoviesList: Array,
         userSearchTvShowsList: Array,
         isUserSearching: Boolean,
+        isResetRequested: Boolean,
         basicOfferMovies: Array,
         basicOfferTv: Array
     }

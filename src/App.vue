@@ -3,13 +3,15 @@
 
     <Header 
     @stringSearchByUserInput="newSearchAPICall"
-    @newSearchStarted="userIsSearching" />
+    @newSearchStarted="userIsSearching" 
+    @toHomeReset="toHomeReset"/>
     
     <Main
     class="py-3"
     :userSearchMoviesList = 'moviesList'
     :userSearchTvShowsList= 'tvShowsList'
     :isUserSearching= 'isUserSearching'
+    :isResetRequested='isResetRequested'
     :basicOfferMovies='basicMoviesList'
     :basicOfferTv='basicTvShowsList'
     />
@@ -36,6 +38,7 @@ export default {
       tvShowsList: [],
       basicTvShowsList: [],
       isUserSearching: false,
+      isResetRequested: false
     }
   },
   methods:{
@@ -64,6 +67,10 @@ export default {
     userIsSearching(boolean){
       console.log(boolean)
       this.isUserSearching = boolean;
+    },
+    toHomeReset(boolean){
+      console.log(boolean)
+      this.isResetRequested = boolean;
     }
   },
   mounted(){
