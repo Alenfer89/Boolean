@@ -1,7 +1,7 @@
 <template>
     <header class="d-flex justify-content-between align-items-center p-4">
         <h1 class="text-uppercase fw-bold text-danger" 
-        @click="$emit('toHomeReset', true)">
+        @click="$emit('newSearchStarted', hasSearchStarted)">
             boolflix
         </h1>
         <nav>
