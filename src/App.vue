@@ -70,7 +70,7 @@ export default {
       axios
       .get(`https://api.themoviedb.org/3/search/movie?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=lord+of+the`)
       .then((result) =>{
-      //console.warn(result.data.results)
+      console.warn(result.data.results)
       return this.basicMoviesList = result.data.results;
       })
       .catch((error) =>{
@@ -79,7 +79,7 @@ export default {
       axios
       .get(`https://api.themoviedb.org/3/search/tv?api_key=1f44e6c8774af333d13f09b5e0b33019&language=it-IT&query=lol`)
       .then((result) =>{
-      //console.error(result.data.results)
+      console.error(result.data.results)
       return this.basicTvShowsList = result.data.results;
       })
       .catch((error) =>{

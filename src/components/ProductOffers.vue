@@ -14,6 +14,7 @@
                 :productVote='movie["vote_average"]'
                 :productLang='movie["original_language"]'
                 :productPoster='movie["poster_path"]'
+                :productPlot='movie.overview'
             />
         </div>
         <div class="row">
@@ -30,6 +31,7 @@
                 :productVote='show["vote_average"]'
                 :productLang='show["original_language"]'
                 :productPoster='show["poster_path"]'
+                :productPlot='show.overview'
             />
         </div>
     </div>

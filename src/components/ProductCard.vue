@@ -6,10 +6,16 @@
         <div class="ax-card-text-wrapper p-3 rounded d-flex flex-column justify-content-between align-items-center position-absolute" v-if='this.hoverEffect === true'
         @mouseleave="hoverEffectChanger()">
             <div class="ax-top-card-text">
-                <p>Title: {{ productTitle }} </p>
-                <p>Original title: {{ productUrTitle }} </p>
-                <p>Users votes: {{ productVote }}/10 </p>
-                <p class="d-flex justify-content-evenly align-items-center">Country: <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags"></p>
+                <p><span class="fw-bold">Title</span>: {{ productTitle }} </p>
+                <p><span class="fw-bold">Original title</span>: {{ productUrTitle }} </p>
+                <p><span class="fw-bold">Users votes</span>: {{ productVote }}/10 </p>
+                <p class="d-flex justify-content-evenly align-items-center">
+                    <span><span class="fw-bold">Country</span>:</span>
+                    <img :src="flagGenerator(productLang)" :alt="productLang" class="ax-flags">
+                </p>
+                <p class="ax-card-plot-text">
+                    <span class="fw-bold ">Overview</span>:
+                    {{ (productPlot === '')? 'N/A' : productPlot }}</p>
             </div>
             
             <div class="ax-bot-card-text">
@@ -36,7 +42,8 @@ export default {
         productUrTitle: String,
         productVote: Number,
         productLang: String,
-        productPoster: String
+        productPoster: String,
+        productPlot: String
     },
     data: function(){
         return{
@@ -104,6 +111,10 @@ div.ax-product-card{
         background-color: rgba(0, 0, 0, 0.929);
         div.ax-top-card-text{
             font-size: 0.7rem;
+            p.ax-card-plot-text{
+                max-height: 100px;
+                overflow-y: auto;
+            }
         }
         svg{
             color: rgb(255, 174, 0);
