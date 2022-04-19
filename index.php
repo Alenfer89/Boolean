@@ -40,7 +40,7 @@
 </p>
 <p>
     <?php 
-    $theVatican = implode(' ', str_replace($spanishInquisition, '***', explode(' ', $LatinText )) );
+    $theVatican = str_replace($spanishInquisition, '***', $LatinText);
     echo $theVatican  ?>
 </p>
 
@@ -53,23 +53,15 @@
 </p>
 <p>
     <?php 
-    $nobodyExpects = implode(' ', str_replace(strtolower($spanishInquisition), '***', explode(' ', strtolower($LatinText) )) );
+    $nobodyExpects = str_replace(strtolower($spanishInquisition), '***', strtolower($LatinText));
     echo $nobodyExpects  ?>
 </p>
 
 <p>
 <?php echo strlen($nobodyExpects); ?>
 </p>
+
 <h1>consegna 2 mantenendo inalterato il testo</h1>
-<p>
-    <?php 
-    $censorship = implode(' ', str_replace([$spanishInquisition,ucfirst($spanishInquisition),lcfirst($spanishInquisition), strtolower($spanishInquisition), strtoupper($spanishInquisition)], '***', explode(' ', $LatinText )) );
-    echo $censorship  ?>
-</p>
-<p>
-<?php echo strlen($censorship); ?>
-</p>
-<h1>consegna 2 mantenendo inalterato il testo con meno passaggi</h1>
 <p>
     <?php 
     $censorship = str_replace([$spanishInquisition,ucfirst($spanishInquisition),lcfirst($spanishInquisition), strtolower($spanishInquisition), strtoupper($spanishInquisition)], '***', $LatinText ) ;
@@ -78,3 +70,15 @@
 <p>
 <?php echo strlen($censorship); ?>
 </p>
+
+
+<!-- unnecessary implode/explode -->
+<!-- <h1>consegna 2 mantenendo inalterato il testo</h1>
+<p>
+<?php 
+    $censorship = implode(' ', str_replace([$spanishInquisition,ucfirst($spanishInquisition),lcfirst($spanishInquisition), strtolower($spanishInquisition), strtoupper($spanishInquisition)], '***', explode(' ', $LatinText )) );
+    echo $censorship  ?>
+</p>
+<p>
+<?php echo strlen($censorship); ?>
+</p> -->
