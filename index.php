@@ -69,3 +69,12 @@
 <p>
 <?php echo strlen($censorship); ?>
 </p>
+<h1>consegna 2 mantenendo inalterato il testo con meno passaggi</h1>
+<p>
+    <?php 
+    $censorship = str_replace([$spanishInquisition,ucfirst($spanishInquisition),lcfirst($spanishInquisition), strtolower($spanishInquisition), strtoupper($spanishInquisition)], '***', $LatinText ) ;
+    echo $censorship  ?>
+</p>
+<p>
+<?php echo strlen($censorship); ?>
+</p>
