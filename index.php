@@ -34,14 +34,38 @@
 <p>
     <?php echo strlen($LatinText); ?>
 </p>
-<h1>consegna 2</h1>
+<h1>consegna 2 non case-sensitive</h1>
 <p>
     <?php  echo 'La tua parola è ' . $spanishInquisition; ?>
 </p>
 <p>
-    <?php $nobodyExpects = implode(' ', str_replace(strtolower($spanishInquisition), '***', explode(' ', strtolower($LatinText) )) );
-    echo $nobodyExpects  ?>
+    <?php 
+    $theVatican = implode(' ', str_replace($spanishInquisition, '***', explode(' ', $LatinText )) );
+    echo $theVatican  ?>
+</p>
+
+<p>
+<?php echo strlen($theVatican); ?>
+</p>
+<h1>consegna 2 che altera il testo</h1>
+<p>
+    <?php  echo 'La tua parola è ' . $spanishInquisition; ?>
 </p>
 <p>
+    <?php 
+    $nobodyExpects = implode(' ', str_replace(strtolower($spanishInquisition), '***', explode(' ', strtolower($LatinText) )) );
+    echo $nobodyExpects  ?>
+</p>
+
+<p>
 <?php echo strlen($nobodyExpects); ?>
+</p>
+<h1>consegna 2 mantenendo inalterato il testo</h1>
+<p>
+    <?php 
+    $censorship = implode(' ', str_replace([$spanishInquisition,ucfirst($spanishInquisition),lcfirst($spanishInquisition), strtolower($spanishInquisition), strtoupper($spanishInquisition)], '***', explode(' ', $LatinText )) );
+    echo $censorship  ?>
+</p>
+<p>
+<?php echo strlen($censorship); ?>
 </p>
