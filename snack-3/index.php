@@ -41,6 +41,9 @@ $posts = [
         ]
     ],
 ];
+$postsValues = array_values($posts);
+$postsKeys = array_keys($posts);
+
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +59,8 @@ $posts = [
     <pre>
         <?php 
         var_dump($posts);
+        var_dump($postsValues);
+        var_dump($postsKeys);
         for($i=0; $i < count($posts); $i++){
             
         }
