@@ -1,5 +1,13 @@
 <?php 
     // Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà contenere lo stesso numero più di una volta
+    $arrayOfNumbers = [];
+
+    while (count($arrayOfNumbers) < 15){
+        $randomInt = rand(1 , 100);
+        if(!in_array($randomInt, $arrayOfNumbers)){
+            $arrayOfNumbers[] = $randomInt;
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +21,9 @@
 <body>
     <h1>Result</h1>
     <pre>
-        <?php
-        ; ?>
+        <?php 
+        var_dump($arrayOfNumbers);
+        ?>
     </pre>
 </body>
 </html>
