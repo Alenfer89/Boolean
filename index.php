@@ -27,6 +27,18 @@
         [
             'squadre'=> 'Cagliari - Casteddu',
             'risultato' => rand(1 , 100).'-' . rand(1 , 100)
+        ],
+        [
+            'squadre'=> 'Ancona - Parma Parmalat',
+            'risultato' => rand(1 , 100).'-' . rand(1 , 100)
+        ],
+        [
+            'squadre'=> 'Bergamo - Udinese',
+            'risultato' => rand(1 , 100).'-' . rand(1 , 100)
+        ],
+        [
+            'squadre'=> 'Lakers - Clippers',
+            'risultato' => rand(1 , 100).'-' . rand(1 , 100)
         ]
     ]
 ?>
