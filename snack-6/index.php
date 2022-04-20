@@ -41,7 +41,6 @@ $db_values = array_values($db);
 </head>
 <body>
     <h1>Result</h1>
-    <?php echo $db_keys[0] ; ?>
     <?php for($i = 0; $i < count($db); $i++){ ; ?>
     <div <?php if($db_keys[$i] == 'teachers'){
         echo $bgGreen;}
@@ -49,6 +48,11 @@ $db_values = array_values($db);
             echo $bgGray;
         } ?>>
         <h3>Our <?php echo $db_keys[$i] ; ?></h3>
+        <?php for($index=0; $index < count($db_values[$i]); $index++){ ; ?>
+            <p>
+                <?php echo $db_values[$i][$index]['name'].' '.$db_values[$i][$index]['lastname']; ?>
+            </p>
+        <?php } ; ?>
 
     </div>
     <?php } ; ?>
