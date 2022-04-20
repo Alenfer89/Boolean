@@ -28,7 +28,7 @@
     <h1>Result</h1>
     <p>
         <?php 
-        if(strlen($name)>3 && strpos('.' , $mail) && strpos('@' , $mail) && is_numeric($age) ){
+        if(strlen($name)>3 && strpos($mail , '.') && strpos($mail , '@') && is_numeric($age) ){
             echo 'Accesso Riuscito';
         } else {
             echo 'Accesso Negato';
