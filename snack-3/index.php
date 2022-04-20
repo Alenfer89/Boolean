@@ -56,15 +56,20 @@ $postsKeys = array_keys($posts);
 </head>
 <body>
     <h1>Result</h1>
-    <pre>
+    <div>
         <?php 
-        var_dump($posts);
-        var_dump($postsValues);
-        var_dump($postsKeys);
-        for($i=0; $i < count($posts); $i++){
-            
-        }
-        ; ?>
-    </pre>
+        // var_dump($posts);
+        // var_dump($postsValues);
+        // var_dump($postsKeys);
+        for($i=0; $i < count($posts); $i++){ ?>
+            <h3>Post date: <?php  echo $postsKeys[$i]; ?></h3>
+
+            <?php for( $x=0; $x < count($postsValues[$i]); $x++){ ?>
+                <h5><?php  echo $postsValues[$i][$x]['title']; ?></h5>
+                <h6><?php  echo $postsValues[$i][$x]['author']; ?></h6>
+                <p><?php  echo $postsValues[$i][$x]['text']; ?></p>
+            <?php  } ; ?>
+        <?php } ?>
+    </div>
 </body>
 </html>
