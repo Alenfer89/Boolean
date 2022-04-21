@@ -46,13 +46,22 @@
         <?php foreach($students as $student){ ?>
         <div>Studente :
             <?php echo $student['name']. ' '. $student['lastname']  ; ?>
+            <em>. Media Migliorata:
+            <?php  echo array_sum($student['votes']) / count($student['votes']); ?>
+            </em>
             . Media Voti:
-            <?php for($i = 0; $i < count($student['votes']); $i++){ ?>
-                    <?php 
-                        $voteSum = $student['votes'][$i]++;
+            <?php $voteSum = 0;
+                    for($i = 0; $i < count($student['votes']); $i++){
+                        $vote = $student['votes'][$i];
+                        //echo $vote;
+                        //var_dump($vote);
+                        $voteSum += $vote;
+                        //echo $voteSum;
+                    }
                         echo $voteSum/count($student['votes']);
                     ?>
-            <?php } ; ?>
+            
+            
         </div>
         <?php  }; ?>
     
