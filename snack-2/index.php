@@ -31,8 +31,16 @@ $ads = [
         'link' => 'https://www.php.net',
         'is_active' => true,
     ],
-
 ];
+
+$activeAds = [];
+foreach($ads as $singleAd){
+    if($singleAd['is_active']){ 
+        $activeAds[] = $singleAd;
+    }
+};
+$random = rand(0, count($activeAds) - 1);
+var_dump($activeAds);
 ?>
 
 <!DOCTYPE html>
@@ -47,18 +55,12 @@ $ads = [
     <h1>ads</h1>
     <div>
         <img 
-        <?php 
-            $random = rand(0, count($ads) - 1);
-            foreach($ads as $singleAd){ ; 
-            
-                if($singleAd['is_active']){ ; ?>
-                    src="<?php  echo $ads[$random]['image_path']; ?>"
-                    <?php 
-                }
-            } ;
-        ?>
+        
+        src="<?php  echo $activeAds[$random]['image_path']; ?>" 
+        
         alt="">
     </div>
+    
     
     
 </body>
