@@ -79,7 +79,9 @@ $faqs=[
     <div class="container">
         <?php foreach($faqs as $module){ ; ?>
         <h3><?php echo $module['question'] ; ?></h3>
-        <p><?php echo $module['answer'] ; ?></p>
+                <?php foreach(explode('||', $module['answer']) as $paragraph){ ; ?>
+                    <p><?php echo $paragraph ; ?></p>
+                <?php } ; ?>
         <?php } ; ?>
     </div>
 </body>
