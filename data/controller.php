@@ -2,9 +2,9 @@
     include __DIR__ . '/data.php';
 
     header('Content-Type: application/json');
-    if (isset($_GET['genre'])){
+    if (isset($_GET["genre"])){
         foreach($disks as $disk){
-            if($disk['genre'] == $_GET['genre']){
+            if($disk['genre'] == $_GET["genre"]){
                 $filteredDisks[] = $disk;
             }
         }
