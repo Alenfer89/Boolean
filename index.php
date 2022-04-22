@@ -29,7 +29,7 @@ include_once __DIR__ . '/data/data.php';
         <?php include __DIR__ . '/partials/header.php' ; ?>
     
     <main>
-        <h1>
+        <h1 class="text-primary">
             main 2
         </h1>
         <div>
