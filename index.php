@@ -1,5 +1,5 @@
 <?php  
-include_once __DIR__ . '/data/data.php';
+//include_once __DIR__ . '/data/data.php';
 ?>
 
 
@@ -41,22 +41,22 @@ include_once __DIR__ . '/data/data.php';
             </div>
             <div class="row py-5 px-3">
                 <div class="col-12 py-5 px-3 d-flex flex-wrap justify-content-between">
-                    <?php foreach($disks as $disk){ ; ?>
-                    <div class="card mb-2">
-                        <img src="<?= $disk['cover']; ?>" class="card-img-top" alt="<?= $disk['title']; ?> album cover">
+                    
+                    <div class="card mb-2" v-for='(disk, index) in disksList'>
+                        <img :src="disk.cover" class="card-img-top" :alt="disk.title">
                         <div class="card-body">
-                            <h5 class="card-title"><?= $disk['title']; ?></h5>
-                            <p class="card-text"><?= $disk['author']; ?></p>
-                            <p class="card-text"><?= $disk['year']; ?></p>
+                            <h5 class="card-title">{{disk.title}}</h5>
+                            <p class="card-text">{{disk.author}}</p>
+                            <p class="card-text">{{disk.year}}</p>
                         </div>
                     </div>
-                    <?php } ; ?>
+                    
                 </div>
             </div>
         </div>
         
         <div>
-            <?= $test; ?>
+            <?php //$test; ?>
         </div>
     </main>
 
