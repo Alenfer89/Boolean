@@ -15,6 +15,14 @@ const app = new Vue(
                     .catch((error) => {
                         console.log(error);
                     })
+                } else {
+                    axios.get('http://localhost/51%20php-ajax-dischi/php-ajax-dischi/data/controller.php')
+                    .then((result) => {
+                        this.disksList = result.data.results;
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    })
                 }
             } 
         },
