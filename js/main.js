@@ -8,9 +8,10 @@ const app = new Vue(
         methods:{
             filter: function(){
                 if(this.genre !== ''){
-                    axios.get('http://localhost/51%20php-ajax-dischi/php-ajax-dischi/data/controller.php?genre=' + this.genre)
+                    axios.get('http://localhost/51%20php-ajax-dischi/php-ajax-dischi/data/controller.php?genre=' + this.genre.toLowerCase())
                     .then((result) => {
                         this.disksList = result.data.results;
+                        //this.genre = '';
                     })
                     .catch((error) => {
                         console.log(error);

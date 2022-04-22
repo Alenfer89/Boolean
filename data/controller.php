@@ -4,7 +4,7 @@
     header('Content-Type: application/json');
     if (isset($_GET["genre"])){
         foreach($disks as $disk){
-            if($disk['genre'] == $_GET["genre"]){
+            if(strtolower($disk['genre']) == strtolower($_GET["genre"])){
                 $filteredDisks[] = $disk;
             }
         }
