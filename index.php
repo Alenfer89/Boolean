@@ -26,12 +26,33 @@ include_once __DIR__ . '/data/data.php';
 </head>
 <body>
 
-        <?php include __DIR__ . '/partials/header.php' ; ?>
+    <?php include __DIR__ . '/partials/header.php' ; ?>
     
-    <main>
-        <h1 class="text-primary">
-            main 2
-        </h1>
+    <main id="app">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-12 ">
+                    <h1 class="text-primary text-center">
+                        Today's Choice
+                    </h1>
+                </div>
+            </div>
+            <div class="row py-5 px-3">
+                <div class="col-12 py-5 px-3 d-flex flex-wrap justify-content-between">
+                    <?php foreach($disks as $disk){ ; ?>
+                    <div class="card mb-2">
+                        <img src="<?= $disk['cover']; ?>" class="card-img-top" alt="<?= $disk['title']; ?> album cover">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $disk['title']; ?></h5>
+                            <p class="card-text"><?= $disk['author']; ?></p>
+                            <p class="card-text"><?= $disk['year']; ?></p>
+                        </div>
+                    </div>
+                    <?php } ; ?>
+                </div>
+            </div>
+        </div>
+        
         <div>
             <?= $test; ?>
         </div>
