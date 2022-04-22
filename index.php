@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Disks</title>
 
     
     <!-- Montserrat google font -->
@@ -34,7 +34,7 @@
         <div class="container-fluid">
             <div class="row ">
                 <div class="col-12 ">
-                    <h1 class="text-primary text-center">
+                    <h1 class="text-white text-center">
                         Today's Choice
                     </h1>
                 </div>
