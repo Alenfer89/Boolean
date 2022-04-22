@@ -37,6 +37,7 @@
                     <h1 class="text-white text-center">
                         Today's Choice
                     </h1>
+                    <input type="text" v-model='genre' @keydown.enter='filter()'>
                 </div>
             </div>
             <div class="row py-5 px-3">
