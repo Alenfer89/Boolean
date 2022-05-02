@@ -43,7 +43,7 @@ WHERE `departments`.`name` = 'Dipartimento di Matematica'
 ORDER BY `teachers`.`surname` ASC, `teachers`.`name` ASC
 
 7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami:
-SELECT COUNT(`courses`.`id`) AS `tentatives_per_course`, CONCAT(`students`.`name`, ' ', `students`.`surname`) AS `student`, `students`.`id`, `courses`.`name` AS `failed_course_name`
+SELECT COUNT(`exam_student`.`vote`) AS `tentatives_per_course`, CONCAT(`students`.`name`, ' ', `students`.`surname`) AS `student`, `students`.`id`, `courses`.`name` AS `failed_course_name`
 FROM `courses`
 JOIN `exams` ON `courses`.`id` = `exams`.`course_id`
 JOIN `exam_student` ON `exams`.`id` = `exam_student`.`exam_id`
