@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 })->name('axHome');
+
+Route::get('/photos', function () {
+    return view('photos');
+})->name('axPhotos');

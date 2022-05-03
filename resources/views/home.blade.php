@@ -8,7 +8,13 @@
 </head>
 <body>
     <header>
-
+        <nav>
+            <ul>
+                <li><a href="{{ route('axPhotos') }}">photos</a></li>
+                <li><a href="">contacts</a></li>
+                <li><a href="">about us</a></li>
+            </ul>
+        </nav>
     </header>
     <main>  
         <h1>HELLO WORLD</h1>
