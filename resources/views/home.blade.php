@@ -11,6 +11,7 @@
         <nav>
             <ul>
                 <li><a href="{{ route('axPhotos') }}">photos</a></li>
+                <li><a href="{{ route('axPhotosTest') }}">photos test</a></li>
                 <li><a href="">contacts</a></li>
                 <li><a href="">about us</a></li>
             </ul>
