@@ -9,8 +9,9 @@ $croccoGourmet;
 
 $ossoBalosso = new Toy('brownish', 'titanio', 'Osso Balosso', 200, 'rifatti i denti alla Stannis Baratheon!', 'King\'s Landing', false);
 
-$quaLaZampa = new Toy('giallo, nero, blu rosa verde e ?tu? i colori poooower raaaaangers', 'eternio indurito a freddo', 'Qua La Zampa!', 199.99, 'Da il cinque automatico al tuo amichevole anatrone di quartiere', 'Wakanda Foh Evah', true);
+$quaLaZampa = new Toy('giallo, nero, blu rosa verde e ?tu? i colori poooower raaaaangers', 'eternio indurito a freddo', 'Qua La Zampa!', 199.99, 'Da il cinque automatico in al tuo amichevole anatrone di compagnia', 'Wakanda Foh Evah', true);
 
 var_dump($parmigiana);
 var_dump($ossoBalosso);
+var_dump($quaLaZampa);
 ; ?>
