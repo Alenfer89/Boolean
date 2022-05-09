@@ -5,30 +5,30 @@
 class Product {
     /**
      * the name of the added product
-     * @var [string] 'protected'
+     * @var [string] 'public'
      */
-    protected $name;
+    public $name;
     /**
      * the price of the added product
-     * @var [float] 'protected'
+     * @var [float] 'public'
      */
-    protected $price;
+    public $price;
     /**
      * small description of the added product
      * @var [string]
      */
-    protected $description;
+    public $description;
     /**
      * The country where the item was produced
      *
      * @var [string]
      */
-    protected $countryOfOrigin;
+    public $countryOfOrigin;
     /**
      * boolean of the possibility to discount the given product, default FALSE
      * @var [boolean]
      */
-    protected $isDiscountable;
+    public $isDiscountable;
 
 
     /**
