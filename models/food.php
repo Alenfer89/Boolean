@@ -22,6 +22,19 @@ class Food extends Product {
         $this->targetAnimal = $targetAnimal;
         $this->ingredients = $ingredients;
     }
+
+    public function setTargetAnimal($targetAnimal){
+        $this->targetAnimal = $targetAnimal;
+    }
+    public function setIngredients($ingredients){
+        $this->ingredients = $ingredients;
+    }
+    public function getTargetAnimal(){
+        return $this->targetAnimal;
+    }
+    public function getIngredients(){
+        return $this->ingredients;
+    }
 }
 
 
