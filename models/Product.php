@@ -19,23 +19,33 @@ class Product {
      */
     protected $description;
     /**
+     * The country where the item was produced
+     *
+     * @var [string]
+     */
+    protected $countryOfOrigin;
+    /**
      * boolean of the possibility to discount the given product, default FALSE
      * @var [boolean]
      */
     protected $isDiscountable;
+
+
     /**
      * Function to add a new product to the list
      *
      * @param [string] $name : the given product name
      * @param [float] $price : the given product price
      * @param [string] $description : a small description of the product
+     * @param [string] $countryOforigin . the country where the item was produced
      * @param boolean $isDiscountable : return the ability of the item to be discounted, default FALSE
      */
-    public function __construct($name, $price, $description, $isDiscountable = false)
+    public function __construct($name, $price, $description, $countryOfOrigin , $isDiscountable = false)
     {
         $this->name = $name;
         $this->price = $price;
         $this->description = $description;
+        $this->countryOfOrigin= $countryOfOrigin;
         $this->isDiscountable = $isDiscountable;
 
     }
