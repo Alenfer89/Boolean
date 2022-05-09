@@ -38,7 +38,7 @@ class Product {
      * @param [float] $price : the given product price
      * @param [string] $description : a small description of the product
      * @param [string] $countryOforigin . the country where the item was produced
-     * @param boolean $isDiscountable : return the ability of the item to be discounted, default FALSE
+     * @param boolean $isDiscountable : returning the possibility for the item to be discounted, default FALSE
      */
     public function __construct($name, $price, $description, $countryOfOrigin , $isDiscountable = false)
     {
@@ -77,6 +77,17 @@ class Product {
         $this->description = $description;
     }
     /**
+     * Product country changer
+     *
+     * @param [string] $description : the new country of the product
+     * @return a string with the country of origin of the product in the object
+     */
+    public function setCountry($countryOfOrigin){
+        $this->countryOfOrigin = $countryOfOrigin;
+    }
+
+
+    /**
      * retriever of the product name
      *
      * @return string
@@ -99,6 +110,14 @@ class Product {
      */
     public function getDescription(){
         return $this->description;
+    }
+    /**
+     * retriever of the country where the product was made
+     *
+     * @return string
+     */
+    public function getCountry(){
+        return $this->countryOfOrigin;
     }
 }
 

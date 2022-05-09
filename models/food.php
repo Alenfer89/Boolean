@@ -16,7 +16,7 @@ class Food extends Product {
      */
     protected $ingredients;
 
-    public function __construct($targetAnimal, $ingredients, $name, $price, $description, $countryOfOrigin, $isDiscountable)
+    public function __construct($targetAnimal, $ingredients, $name, $price, $description, $countryOfOrigin, $isDiscountable = false)
     {
         parent::__construct($name, $price, $description, $countryOfOrigin , $isDiscountable);
         $this->targetAnimal = $targetAnimal;
