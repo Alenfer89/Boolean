@@ -8,25 +8,25 @@ class Food extends Product {
     /**
      * target animal for which the item was made
      *
-     * @var [string]
+     * @var string
      */
     protected $targetAnimal;
     /**
      * a list of the ingredients
      *
-     * @var [string]
+     * @var string
      */
     protected $ingredients;
 
     /**
      * Food product creator
      *
-     * @param [string] $targetAnimal: the animal the food is for
-     * @param [string] $ingredients : main ingredients (reasonably) short list
-     * @param [string] $name : the given product name
-     * @param [float] $price : the given product price
-     * @param [string] $description : a small description of the product
-     * @param [string] $countryOforigin . the country where the item was produced
+     * @param string $targetAnimal: the animal the food is for
+     * @param string $ingredients : main ingredients (reasonably) short list
+     * @param string $name : the given product name
+     * @param float $price : the given product price
+     * @param string $description : a small description of the product
+     * @param string $countryOforigin . the country where the item was produced
      * @param boolean $isDiscountable : returning the possibility for the item to be discounted, default FALSE
      */
     public function __construct($targetAnimal, $ingredients, $name, $price, $description, $countryOfOrigin, $isDiscountable = false)

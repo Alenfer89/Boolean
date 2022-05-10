@@ -36,7 +36,7 @@ var_dump($paperipo);
     <p>
         <?php 
             echo $paperipo->buyThings($quaLaZampa);
-            echo '<br>'.'Credito rimanente: ' . $paperipo->creditCard->balance;
+            echo '<br>'.'Credito rimanente: ' . $paperipo->getCreditCard()->balance;
         ?>
     </p>
     <p>
@@ -54,9 +54,9 @@ var_dump($paperipo);
     <p>
         <?php 
             $paperipo->setCreditCard($bancomat);
-            //echo '<pre>' . $paperipo->isRegistered . '</pre>';
+            //echo '<pre>' . $paperipo->getRegistration() . '</pre>';
             $paperipo->setRegistration(true);
-            echo '<pre>' . $paperipo->isRegistered . '</pre>';
+            //echo '<pre>' . $paperipo->getRegistration() . '</pre>';
             echo $paperipo->buyThings($ossoBalosso);
         ?>
     </p>
