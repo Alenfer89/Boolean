@@ -36,7 +36,7 @@ var_dump($paperipo);
     <p>
         <?php 
             echo $paperipo->buyThings($quaLaZampa);
-            echo '<br>'.'Credito rimanente: ' . $paperipo->getCreditCard()->balance;
+            echo '<br>'.'Credito rimanente: ' . $paperipo->getCreditCard()->getBalance();
         ?>
     </p>
     <p>

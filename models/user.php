@@ -113,11 +113,11 @@ class User {
         
         if ($this->isRegistered) {
             $price = $thing->price - $thing->price / 100 * $this->discount;
-            $this->creditCard->balance -= $price;
+            $this->creditCard->setBalance($this->creditCard->getBalance() - $price);
 
             return "Perfetto! Hai avuto uno sconto del $this->discount% e hai pagato " . round($price, 2) . "€, per il tuo " . $thing->name;
         } else {
-            $this->creditCard->balance -= $thing->price;
+            $this->creditCard->setBalance($this->creditCard->getBalance() - $thing->price);
 
             return "Hai pagato " . round($thing->price, 2) . "€, per il tuo " . $thing->name;
         }

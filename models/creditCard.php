@@ -2,7 +2,7 @@
 class Card {
     protected $number;
     protected $expiry;
-    public $balance;
+    protected $balance;
 
     public function __construct($number, $expiry, $balance)
     {
@@ -29,7 +29,7 @@ class Card {
     /**
      * Undocumented function
      *
-     * @return integer
+     * @return float
      */
     public function getBalance(){
         return $this->balance;
