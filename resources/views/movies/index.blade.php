@@ -4,14 +4,14 @@
 @section('main-content')
 
     <main>
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid p-5">
+            <div class="row px-5">
                 <div class="col-12">
                     <h1>Our Movies</h1>
                 </div>
                 @foreach ($movies as $movie)
-                    <div class="col-4">
-                        <div class="card" style="width: 18rem;">
+                    <div class="col-4 p-3">
+                        <div class="card border-danger" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title"> {{ $movie['title'] }} </h5>
                                 <h6 class="card-subtitle mb-2 text-muted"> {{ $movie['original_title'] }} </h6>
