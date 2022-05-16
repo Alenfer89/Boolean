@@ -10,4 +10,7 @@ class TrainController extends Controller
         return view('trains.index');
     }
 
+    public function show(){
+        return view('trains.index');
+    }
 }
