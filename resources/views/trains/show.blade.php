@@ -1,6 +1,6 @@
 @extends('layouts.main')
-
-@section('title', "Train $train->train_code")
+<?php $titleDay = substr($train->day, -5); ?>
+@section('title', "Train $train->train_code, $titleDay")
 
 
 @section('main-content')

@@ -22,11 +22,17 @@
                         </p>
                         <p>
                             @if ($train->is_canceled == 1)
-                                {{ 'E\' stato cancellato' }}
+                                <span class="text-danger">
+                                    {{ 'E\' stato cancellato' }}
+                                </span>
                             @elseif($train->is_delayed == 1 )
-                                {{ 'Subirà un leggero ritardo' }}
+                                <span class="text-warning">
+                                    {{ 'Subirà un leggero ritardo' }}
+                                </span>
                             @elseif($train->is_delayed == 0 )
-                                {{ 'E\' in arrivo regolarmente su un binario a caso' }}
+                                <span class="text-success">
+                                    {{ 'E\' in arrivo regolarmente su un binario a caso' }}
+                                </span>
                             @endif
                         </p>
                     </div>
