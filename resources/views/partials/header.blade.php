@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li>
-                <a href="#">sono un header link</a>
+                <a href="{{ route('home') }}">sono un header link alla home (atm train.index)</a>
             </li>
         </ul>
     </nav>

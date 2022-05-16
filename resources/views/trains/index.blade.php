@@ -13,7 +13,7 @@
 
                 @foreach ($trains as $train)
                     <div class="col-3 mb-4 p-5">
-                        <p>Treno delle {{ substr($train->departure_at, 0, 5)  }}</p>
+                        <p><a href='{{url("/$train->id")}}'>Treno</a> delle {{ substr($train->departure_at, 0, 5)  }} del {{ $train->day }}</p>
                         <p>
                             In partenza da {{ $train->dep_station }} per {{ $train->arr_station }}
                         </p>
@@ -32,6 +32,9 @@
                     </div>
                 @endforeach
                 
+                <div class="col-12">
+                    {{ $trains->links() }}
+                </div>
             </div>
         </div>
     </main>
