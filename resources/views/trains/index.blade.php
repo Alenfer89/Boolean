@@ -15,7 +15,7 @@
                     <div class="col-3 mb-4 p-5">
                         <p><a href='{{url("/$train->id")}}'>Treno</a> delle {{ substr($train->departure_at, 0, 5)  }} del {{ $train->day }}</p>
                         <p>
-                            In partenza da {{ $train->dep_station }} per {{ $train->arr_station }}
+                            In <a href="{{ route('trains.show', $train->id) }}">partenza</a> da {{ $train->dep_station }} per {{ $train->arr_station }}
                         </p>
                         <p>
                             Operato da {{ $train->carrier }}
