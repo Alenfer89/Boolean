@@ -24,6 +24,7 @@ class TrainsSeeder extends Seeder
             $newTrain->pax_carriage_nr = $faker->numberBetween(5, 10);
             $newTrain->is_delayed = $faker->boolean();
             $newTrain->is_canceled = $faker->boolean();
+            $newTrain->save();
         }
     }
 }
