@@ -10,7 +10,7 @@
         </h1>
         @foreach ($comics as $comic)
         <pre>
-            {{var_dump($comic)}}
+            
             {{$comic['title']}}
         </pre>
         @endforeach
