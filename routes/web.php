@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::prefix('comics')
+->name('comics.')
+->group(function(){
+    Route::get('', "ComicController@index")->name('index');
+    Route::get('/comic', "ComicController@show")->name('show');
+});
 
-Route::get('/', "ComicController@index")->name('comics.index');
-Route::get('/comic', "ComicController@show")->name('comics.show');
+
+Route::get('/', "HomeController@index")->name('home');
+
