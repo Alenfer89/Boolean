@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comic;
+use DateTime;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -56,7 +57,7 @@ class ComicController extends Controller
         $newComic->thumb = $data['thumb'];
         $newComic->price = floatval($data['price']);
         $newComic->series = $data['series'];
-        $newComic->sale_date = date_format($data['sale_date'], 'Y-m-d');
+        $newComic->sale_date = DateTime::createFromFormat('Y-m-d', $data['sale_date']);
         $newComic->type = $data['type'];
         $newComic->save();
 
