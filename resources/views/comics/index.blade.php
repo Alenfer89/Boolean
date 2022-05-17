@@ -8,9 +8,13 @@
         <h1>
             index
         </h1>
+        @foreach ($comics as $comic)
         <pre>
-            {{var_dump($comics)}}
+            {{var_dump($comic)}}
+            {{$comic['title']}}
         </pre>
+        @endforeach
+        
         <div>
             <a href="{{route('comics.show')}}">
                 <button>
