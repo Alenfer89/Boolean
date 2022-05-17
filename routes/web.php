@@ -18,6 +18,7 @@ Route::prefix('comics')
     Route::get('', "ComicController@index")->name('index');
     Route::get('/comic{id}', "ComicController@show")->name('show');
     Route::get('/add', "ComicController@create")->name('create');
+    Route::post('/request', "ComicController@store")->name('store');
 });
 
 
