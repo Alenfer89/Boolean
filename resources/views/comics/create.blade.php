@@ -22,7 +22,7 @@
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text" id="price-add">Price</span>
-            <input type="number" class="form-control" name='price' placeholder="price">
+            <input type="number" step="0.01" class="form-control" name='price' placeholder="price">
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text" id="series-add">Series</span>
@@ -30,7 +30,7 @@
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text" id="sale-date-add">Sale date</span>
-            <input type="text" class="form-control" name='sale_date' placeholder="sale date">
+            <input type="date" class="form-control" name='sale_date' placeholder="sale date">
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text" id="type-add">Type</span>
@@ -39,7 +39,6 @@
         <div class="mb-3">
             <input type="submit" class="form-control" value="invia">
         </div>
-        
         
     </form>
     
