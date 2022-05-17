@@ -13,8 +13,9 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('comics.index');
+    {   
+        $comics = config('comics');
+        return view('comics.index', ['comics'=> $comics]);
     }
 
     /**

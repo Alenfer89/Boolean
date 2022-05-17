@@ -8,6 +8,9 @@
         <h1>
             index
         </h1>
+        <pre>
+            {{var_dump($comics)}}
+        </pre>
         <div>
             <a href="{{route('comics.show')}}">
                 <button>
