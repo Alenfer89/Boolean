@@ -56,7 +56,7 @@ class ComicController extends Controller
         $newComic->thumb = $data['thumb'];
         $newComic->price = floatval($data['price']);
         $newComic->series = $data['series'];
-        $newComic->sale_date = $data['sale_date'];
+        $newComic->sale_date = date_format($data['sale_date'], 'Y-m-d');
         $newComic->type = $data['type'];
         $newComic->save();
 
