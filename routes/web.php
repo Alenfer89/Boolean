@@ -17,6 +17,7 @@ Route::prefix('comics')
 ->group(function(){
     Route::get('', "ComicController@index")->name('index');
     Route::get('/{id}', "ComicController@show")->name('show');
+    Route::get('/add', "ComicController@create")->name('create');
 });
 
 

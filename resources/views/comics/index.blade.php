@@ -48,7 +48,7 @@
         
         
         <div>
-            <a href="">
+            <a href="{{route('comics.create')}}">
                 <button>
                     create
                 </button>
