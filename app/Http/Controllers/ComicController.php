@@ -14,7 +14,18 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        return view('comics.index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Comic  $comic
+     * @return \Illuminate\Http\Response
+     */
+    public function show()
+    {
+        return view('comics.show');
     }
 
     /**
@@ -38,16 +49,7 @@ class ComicController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Comic  $comic
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Comic $comic)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

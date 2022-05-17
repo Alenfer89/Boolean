@@ -9,7 +9,7 @@
             index
         </h1>
         <div>
-            <a href="{{url("comics.show")}}">
+            <a href="{{route('comics.show')}}">
                 <button>
                     show
                 </button>
