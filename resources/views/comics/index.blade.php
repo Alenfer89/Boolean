@@ -16,7 +16,7 @@
         @endforeach
         
         <div>
-            <a href="{{route('comics.show')}}">
+            <a href="{{route('comics.show' , $comic->id)}}">
                 <button>
                     show
                 </button>

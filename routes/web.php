@@ -16,7 +16,7 @@ Route::prefix('comics')
 ->name('comics.')
 ->group(function(){
     Route::get('', "ComicController@index")->name('index');
-    Route::get('/comic', "ComicController@show")->name('show');
+    Route::get('/{id}', "ComicController@show")->name('show');
 });
 
 
