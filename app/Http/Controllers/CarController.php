@@ -36,18 +36,29 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {   
-        $data = $request->all();
-        $car = new Car();
-            $car->numero_telaio= $data["numero_telaio"];
-            $car->model=$data["model"]; 
-            $car->porte=$data["porte"];
-            $car->data_immatricolazione=$data["data_immatricolazione"];
-            $car->marca=$data["marca"];
-            $car->alimentazione=$data["alimentazione"];
-            $car->prezzo=$data["prezzo"];
-            $car->save();
 
-            return redirect()->route("cars.show", $car->id);
+        $request->validate([
+            "numero_telaio" => "required|min:8",
+            "model"=> "required",
+            "porte"=> "required",
+            "data_immatricolazione"=> "required",
+            "marca" => "required",
+            "alimentazione" => "required",
+            "prezzo"=> "required|numeric",
+            "descrizione"=> "required|min:10",
+            ],
+            [
+                'required' => 'Campo richiesto.',
+                'numeric' => 'Il valore inserito deve essere un numero'
+            ]
+        );
+        $data = $request->all();
+
+        $car = new Car();
+        $car->fill($data);
+        $car->save();
+
+        return redirect()->route("cars.show", $car->id)->with("msg", "$car->model $car->marca è stato aggiunto con successo");
     }
 
     /**
