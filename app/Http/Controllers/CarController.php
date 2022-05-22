@@ -45,7 +45,6 @@ class CarController extends Controller
             "marca" => "required",
             "alimentazione" => "required",
             "prezzo"=> "required|numeric",
-            "descrizione"=> "required|min:10",
             ],
             [
                 'required' => 'Campo richiesto.',
@@ -79,9 +78,9 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Car $car)
     {
-        //
+        return view('cars.edit', compact('car'));
     }
 
     /**
@@ -101,7 +100,6 @@ class CarController extends Controller
             "marca" => "required",
             "alimentazione" => "required",
             "prezzo"=> "required|numeric",
-            "descrizione"=> "required|min:10",
             ],
             [
                 'required' => 'Campo richiesto.',
