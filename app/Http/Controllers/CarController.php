@@ -58,7 +58,7 @@ class CarController extends Controller
         $car->fill($data);
         $car->save();
 
-        return redirect()->route("cars.show", $car->id)->with("msg", "$car->model $car->marca è stato aggiunto con successo");
+        return redirect()->route("cars.show", $car->id)->with("msg", "$car->model $car->marca è stata aggiunta con successo");
     }
 
     /**
@@ -91,9 +91,29 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Car $car)
     {
-        //
+        $request->validate([
+            "numero_telaio" => "required|min:8",
+            "model"=> "required",
+            "porte"=> "required",
+            "data_immatricolazione"=> "required",
+            "marca" => "required",
+            "alimentazione" => "required",
+            "prezzo"=> "required|numeric",
+            "descrizione"=> "required|min:10",
+            ],
+            [
+                'required' => 'Campo richiesto.',
+                'numeric' => 'Il valore inserito deve essere un numero'
+            ]
+        );
+        $data = $request->all();
+
+        $car->update($data);
+        $car->save();
+
+        return redirect()->route("cars.show", $car->id)->with("msg", "$car->model $car->marca è stata modificata con successo");
     }
 
     /**
@@ -102,8 +122,9 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Car $car)
     {
-        //
+        $car->delete();
+        return redirect()->view('cars.index')->with('message', "$car->model $car->marca rimossa con successo");
     }
 }
