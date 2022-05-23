@@ -13,7 +13,9 @@ class UpdateCarsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('cars', function (Blueprint $table) {
+            $table->dropColumn('marca');
+        });
     }
 
     /**
@@ -23,6 +25,8 @@ class UpdateCarsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('cars', function (Blueprint $table) {
+            $table->string("marca", 20);
+        });
     }
 }
