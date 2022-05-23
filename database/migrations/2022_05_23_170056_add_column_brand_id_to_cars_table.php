@@ -14,11 +14,12 @@ class AddColumnBrandIdToCarsTable extends Migration
     public function up()
     {
         Schema::table('cars', function (Blueprint $table) {
-            $table->unsignedBigInteger('brands_id');
+            $table->unsignedBigInteger('brand_id');
 
-            $table->foreign('brands_id')
+            $table->foreign('brand_id')
                     ->references('id')
-                    ->on('brands');
+                    ->on('brands')
+                    ->constrained();
         });
     }
 
@@ -30,7 +31,10 @@ class AddColumnBrandIdToCarsTable extends Migration
     public function down()
     {
         Schema::table('cars', function (Blueprint $table) {
-            //
+            
+            $table->dropForeign(['brand_id']);
+            $table->dropcolumn('brand_id');
+            
         });
     }
 }
