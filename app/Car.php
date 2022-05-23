@@ -13,7 +13,10 @@ class Car extends Model
         "data_immatricolazione",
         "brand_id",
         "alimentazione",
-        "prezzo",
-        "descrizione"
+        "prezzo"
     ];
+
+    public function brand(){
+        return $this->belongsTo('App\Brand');
+    }
 }
