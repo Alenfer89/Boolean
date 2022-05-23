@@ -13,7 +13,11 @@ class BrandsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        $brand = new Brand();
-        $brand->name = ucfirst($faker->randomElement(['renault','citroen','ford','maserati','hummer']));
+        for ($i=0; $i < 5 ; $i++) { 
+            # code...
+            $brand = new Brand();
+            $brand->name = ucfirst($faker->unique()->randomElement(['renault','citroen','ford','maserati','hummer']));
+            $brand->save();
+        }
     }
 }
