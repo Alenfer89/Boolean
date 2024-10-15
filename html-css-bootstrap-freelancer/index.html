@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- custom -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Bootstrap</title>
+</head>
+<body>
+<!--! header starts here -->
+    <header>   
+        <!-- *my heading test -->
+        <!-- <div class="container-md text-white">
+            <div class="row justify-content-between ax-bg-red">
+                <div class="col-lg-3 col-md-4 col-5">
+                    <a class="navbar-brand text-uppercase" href="#">start bootstrap</a>
+                </div>
+                <div class="col-lg-3 col-md-4  col-2">
+                    <div class="ax-test ax-bg-blue"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- *bootstrap navbar text -->
+        <div class="container-md text-uppercase">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid  justify-content-between">
+                    
+                    <a class="navbar-brand " href="#">start bootstrap</a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">about</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">contact</a>
+                            </li>                    
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+<!-- !start of main content -->
+    <main>
+        <!-- start of section jumbotron -->
+        <section class="my-bg-green" id="jumbotron">
+            <div class="container-md py-5">
+                <div class="row text-uppercase text-white text-center">
+                    <div class="col-12 d-flex flex-column align-items-center">
+                        <div class="my-img-container">
+                            <img class="img-fluid" src="img/avatar.svg" alt="Image of this page avatar">
+                        </div>
+                        <h1>start bootstrap</h1>
+                        <div class="my-separator d-flex justify-content-center align-items-center py-2">
+                            <div class="my-line bg-white"></div>
+                            <div>
+                                <i class="fa-solid fa-star mx-2"></i>
+                            </div>
+                            <div class="my-line bg-white"></div>
+                        </div>
+                        <div>grafic artist - designer - illustrator</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- start of section portfolio -->
+        <section class="bg-white" id="portfolio">
+            <div class="container-md py-5">
+                <div class="row text-uppercase text-black text-center">
+                    <div class="col-12">
+                        <h1>portfolio</h1>
+                        <div class="my-separator d-flex justify-content-center align-items-center py-2">
+                            <div class="my-line bg-black"></div>
+                            <div>
+                                <i class="fa-solid fa-star mx-2"></i>
+                            </div>
+                            <div class="my-line bg-black"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-3">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <img class="img-fluid" src="img/cabin.png" alt="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <img class="img-fluid" src="img/cake.png" alt="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <img class="img-fluid" src="img/circus.png" alt="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <img class="img-fluid" src="img/game.png" alt="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <img class="img-fluid" src="img/safe.png" alt="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <img class="img-fluid" src="img/submarine.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- start of section about -->
+        <section class="my-bg-green text-white" id="about">
+            <div class="container-md py-5">
+                <div class="row text-uppercase text-center">
+                    <div class="col-12">
+                        <h1>about</h1>
+                        <div class="my-separator d-flex justify-content-center align-items-center py-2">
+                            <div class="my-line bg-white"></div>
+                            <div>
+                                <i class="fa-solid fa-star mx-2"></i>
+                            </div>
+                            <div class="my-line bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center gy-4">
+                    <div class="col-10 col-md-5">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quo. Cupiditate consectetur maiores modi eligendi laboriosam rerum, quod iure neque a velit deserunt, dignissimos, assumenda expedita. Blanditiis eligendi mollitia magni!
+                        </p>
+                    </div>
+                    <div class="col-10 col-md-5">
+                        <p> 
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur reiciendis officiis non quae nihil? Asperiores fugiat velit commodi nemo, quasi, porro hic tempore odit corporis, amet sit voluptatem nobis possimus!
+                        </p>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a class="btn btn-outline-light" role="button"><i class="fas fa-download"></i> Dowload</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- start of contact section -->
+        <section class="bg-white" id="contact">
+            <div class="container-md my-5">
+                <div class="row text-uppercase text-black text-center">
+                    <div class="col-12">
+                        <h1>contact me</h1>
+                        <div class="my-separator d-flex justify-content-center align-items-center py-2">
+                            <div class="my-line bg-black"></div>
+                            <div>
+                                <i class="fa-solid fa-star mx-2"></i>
+                            </div>
+                            <div class="my-line bg-black"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="customername" placeholder="Name">
+                            <label for="customarname">Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="tel" class="form-control" id="customernumber" placeholder="Number">
+                            <label for="customarname">Number</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <textarea class="form-control" placeholder="Leave a message here" id="comment"></textarea>
+                            <label for="comment">Message</label>
+                        </div>
+                        <div class="pb-5">
+                            <button class="btn my-bg-green text-white" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- ! start of footer -->
+    <footer class="text-white text-center">
+<!-- top-footer -->
+        <div class="top-footer">
+            <div class="container-md">
+                <div class="row gy-5">
+                    <div class="col-12 col-md-4">
+                        <h5 class="text-uppercase">Location</h5>
+                        <p class="text-capitalize">2215 john daniel drive clark, MO 54243</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <h5 class="text-uppercase">around the web</h5>
+                        <div class="d-flex justify-content-center">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-google-plus-g"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <h5 class="text-uppercase">about freelance</h5>
+                        <p class="text-capitalize">Freelance is a free to use, open source Bootstrap theme created by <span class="my-txt-green">Start Bootstrap</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bottom footer -->
+        <div class="bot-footer text-white">
+            <div class="container-md">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="text-capitalize py-4">
+                            copyright <i class="far fa-copyright"></i> your website 2019
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

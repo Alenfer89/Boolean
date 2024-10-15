@@ -1,0 +1,77 @@
+header{
+    background-color: rgb(44, 62, 80);
+}
+.my-bg-green{
+    background-color: rgb(26, 188, 156);
+}
+.my-txt-green{
+    color: rgb(26, 188, 156);
+}
+.my-img-container{
+    width: 200px;
+}
+.my-line{
+    height: 3px;
+    width: 100px;
+}
+textarea#comment{
+    height: 8rem;
+}
+footer div.top-footer{
+    background-color: rgb(58, 84, 109);
+}
+footer div.top-footer i{
+    width: 2rem;
+    line-height: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 0 .2rem;
+}
+footer div.bot-footer{
+    background-color: rgb(44, 62, 80);
+}
+/* !temporary */
+.ax-test{
+    height: 40px;
+}
+.ax-md-test{
+    height: 80px;
+}
+.ax-bigger-test{
+    height: 120px;
+}
+.ax-bg-green{
+    background-color: green;
+    padding: 5px;
+    border: 2px solid white;
+}
+.ax-bg-red{
+    background-color: red;
+    padding: 5px;
+    border: 2px solid white;
+
+}
+.ax-bg-blue{
+    background-color: blue;
+    padding: 5px;
+    border: 2px solid white;
+
+}
+.ax-bg-magenta{
+    background-color: magenta;
+    padding: 5px;
+    border: 2px solid white;
+
+}
+.ax-bg-brown{
+    background-color: brown;
+    padding: 5px;
+    border: 2px solid white;
+
+}
+.ax-bg-yellow{
+    background-color: yellow;
+    padding: 5px;
+    border: 2px solid white;
+
+}
