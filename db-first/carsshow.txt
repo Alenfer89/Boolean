@@ -1,0 +1,18 @@
+ID // INT PRIMARY_KEY AUTO_INCREMENT
+vehicle_plate //VARCHART(10) NOTNULL UNIQUE
+model_nameplate //VARCHAR(20) NOTNULL
+color // VARCHAR(20) NOTNULL
+manufacturer // VARCHAR(20) NOTNULL
+segment_type // VARCHAR(20)
+retail_price // FLOAT(8,2) NOTNULL
+minimum_price // FLOAT(8,2) NOTNULL
+engine_power_source // VARCHAR(20) NOTNULL
+engine_power_kw // SMALLINT NOTNULL
+engine_displacement_cc // SMALLINT NOTNULL
+distance_km // INT NOTNULL
+tire_size // VARCHAR(13) NOTNULL
+alloy_wheels // TINYINT
+production_year // YEAR NOTNULL
+years_of_usage // TINYINT NOTNULL DEFAULT(1)
+in_stock // TINYINT NOTNULL
+out_of_production  // TINYINT DEFAULT(0)
