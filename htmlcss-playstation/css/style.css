@@ -1,0 +1,200 @@
+/*! global attributes */
+body{
+    font-size: 0.9rem;
+}
+
+/* overlay-like to ease reading */
+.my-read-helper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* buttons hover effects */
+.btn{
+    transition: transform 0.3s;
+}
+.btn:hover{
+    transform: scale(1.05);
+}
+.btn.bg-danger:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgb(220, 53, 69);
+}
+.btn.btn-primary:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgb(11, 94, 215);
+}
+.btn.bg-dark:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgb(33, 37, 41);
+}
+section#play-plus a.btn:hover{
+    outline-offset: 3px;
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+.btn.bg-white:hover{
+    outline-offset: 3px;
+    outline: 3px solid white;
+}
+
+/* some hover effects */
+.my-scale{
+    transition: 0.3s;
+}
+.my-scale:hover{
+    transform: scale(1.1);
+}
+
+/* ! header style */
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+header div.top-header{
+    height: 2rem;
+}
+header div.top-header .my-sony-logo{
+    width: 6rem;
+}
+header nav.navbar{
+    height: 4.4rem;
+}
+header .my-search-lens{
+    height: 1.5rem;
+}
+.dropdown-toggle::after{
+    color: darkgray;
+    transition: color .4s;
+}
+.dropdown-toggle:hover::after{
+    color: rgb(0, 136, 255);
+}
+/* ! main style */
+/* jumbotron section */
+section#jumbotron{
+    margin-top: 6.4rem;
+}
+section#jumbotron .my-top-jumbo{
+    background-image: url(../img/jumbo-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+section#jumbotron .my-top-jumbo .container-fluid{
+    z-index: 2;
+}
+section#jumbotron div.my-bot-jumbo img{
+    border-radius: 1rem;
+    bottom: 0;
+    transition: 0.5s;
+}
+section#jumbotron div.my-bot-jumbo img:hover{
+    border-color: #0d6efd !important;
+    bottom: 20px;
+}
+
+/* play 5 section */
+section#play-5 div.border-bottom:hover{
+    opacity: 1 !important;
+    border-color: #0d6efd !important;
+    cursor: pointer;
+}
+
+/* co-op section style */
+section#coop{
+    /* todo height: 100vh; */
+    background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+section#coop div.container-fluid{
+    z-index: 2;
+}
+
+/* new releases section */
+section#new-releases{
+    background-color: rgb(31, 31, 31);
+}
+section#new-releases .my-card img{
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+section#new-releases .my-card img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 1px white;
+}
+
+/* section playstation 4 */
+section#play-4 .my-trade-reg{
+    vertical-align: super;
+}
+
+/* section play plus */
+section#play-plus{
+    background-color: rgb(190, 188, 187);
+}
+section#play-plus a.btn{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* section playstation now */
+section#play-now{
+    background-color: rgb(22, 28, 59);
+}
+
+/* section social style */
+section#social a{
+    width: 22%;
+}
+
+/*! footer style */
+footer{
+    background-color: rgb(0, 67, 156);
+}
+.my-ps-footer-logo{
+    width: 6.5rem;
+}
+.my-globe{
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+.my-sony-footer-logo{
+    width: 9rem;
+}
+footer ul li{
+    padding-bottom: 1rem;
+}
+footer ul li a{
+    color: white;
+    text-decoration: none;
+}
+footer ul li a:hover{
+    color: rgba(255, 255, 255, 0.609);
+    text-decoration: none;
+}
+
+/* !!!!!!custom media */
+/* play-5 section */
+@media screen and (min-width:768px) and (max-width:810px) {
+    section#play-5 br.d-none{
+        display: block !important;
+    }
+}
+/* socvial section */
+@media screen and (max-width:575px) {
+    section#social a{
+        width: 47%;
+        padding-bottom: 2rem;
+    }
+}

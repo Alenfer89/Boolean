@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- custom -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Play Station</title>
+
+</head>
+<body>
+<!-- ! start of header -->
+    <header>
+        <!-- top banner -->
+        <div class="top-header bg-black text-white">
+            <div class="container-fluid d-flex justify-content-end align-items-center py-2">
+                <img class="my-sony-logo" src="img/sony_logo.svg" alt="Sony Logo">
+            </div>
+        </div>
+        <!-- main nav -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/play_logo.svg" alt="PlayStation Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- left-list -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="games" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Giochi
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="hardwaver" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hardware
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servizi
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="news" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Novit&aacute;
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="buy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fai Acquisti
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="support" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Supporto
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- right list -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="private-user-space" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            My PlayStation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn text-white bg-dark rounded-pill" href="#" role="button">Accedi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn text-black ms-4" href="#" role="button"><img class="my-search-lens ms-1" src="img/lens.svg" alt="Search Lens"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- ! start of main -->
+    <main>
+        <!-- jumbotron section -->
+        <section id="jumbotron">
+            <div class="my-top-jumbo position-relative px-sm-4 py-5">
+                <div class="my-read-helper d-lg-none">
+                    <!--* this is a div overlay-like in position absolute to help reading on light imgs -->
+                </div>
+                <div class="container-fluid position-relative">
+                    <div class="row align-items-end text-white pt-5 mt-5">
+                        <div class="col-12 col-lg-4 pt-5 mt-5">
+                            <img class="w-50 py-3" src="img/returnal-hero-banner-logo.png" alt="Returnal Game Logo">
+                            <h1 class="py-3">Rompi il cerchio</h1>
+                            <p class="py-3">Rialzati dopo ogni sconfitta e affronta una nuova sfida con ogni rinascita in questo esplosivo thriller fantascientifico, disponibile in esclusiva su PS5</p>
+                            <a href="#" class="btn rounded-pill text-white bg-danger">Aquista Ora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-bot-jumbo px-sm-4 py-5 bg-white">
+                <div class="container-fluid">
+                    <div class="row gy-4">
+                        <div class="col-6 col-sm-4 col-lg-2">
+                            <a class="" href="#">
+                                <img class="img-fluid img-thumbnail border-2 border-primary position-relative my-scale" src="img/returnal-listing-thumb-01-ps5.jpg" alt="Returnal Game Cover">
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg-2">
+                            <a class="" href="#">
+                                <img class="img-fluid img-thumbnail border-2 border-white position-relative my-scale" src="img/ratchet-and-clank-rift-apart-keyart.jpg" alt="Ratchet Game Cover">
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg-2">
+                            <a class="" href="#">
+                                <img class="img-fluid img-thumbnail border-2 border-white position-relative my-scale" src="img/returnal-listing-thumb-01-ps5.jpg" alt="Returnal Game Cover">
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg-2">
+                            <a class="" href="#">
+                                <img class="img-fluid img-thumbnail border-2 border-white position-relative my-scale" src="img/ratchet-and-clank-rift-apart-keyart.jpg" alt="Ratchet Game Cover">
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg-2">
+                            <a class="" href="#">
+                                <img class="img-fluid img-thumbnail border-2 border-white position-relative my-scale" src="img/returnal-listing-thumb-01-ps5.jpg" alt="Returnal Game Cover">
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg-2">
+                            <a class="" href="#">
+                                <img class="img-fluid img-thumbnail border-2 border-white position-relative my-scale" src="img/ratchet-and-clank-rift-apart-keyart.jpg" alt="Ratchet Game Cover">
+                            </a>
+                        </div>
+                    </div>               
+                </div>
+            </div>
+        </section>
+        <!-- start of new section: playstation 5 -->
+        <section class="px-sm-4 py-5" id="play-5">
+            <div class="container-fluid">
+                <div class="row text-center pb-3">
+                    <div class="col-12">
+                        <p class="text-uppercase text-primary mb-0">play has no limits</p>
+                        <h1 class="pb-3">Ecco la PlayStation 5</h1>
+                        <p class="text-secondary">Tuffati in nuove possibilità di gioco completamente insaspettate</p>
+                    </div>
+                </div>
+                <div class="row text-center text-md-start pt-5">
+                    <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start align-items-center">
+                        <div>
+                            <h1 class="pb-3">Console <br class="d-none"> PlayStation 5</h1>
+                            <p class="text-secondary pb-3">Sperimenta la nuova generazione di incredibili giochi PlayStation</p>
+                            <a href="#" class="btn rounded-pill btn-primary">Maggiori Informazioni</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img class="img-fluid" src="img/playstation-5-thumb.png" alt="">
+                    </div>
+                </div>
+                <div class="row row-cols-3 row-cols-md-6 justify-content-md-between gx-5">
+                    <div class="col text-center border-bottom border-3 border-primary">
+                        <img src="img/playstation-5-thumb.png" class="img-fluid" alt="PlayStation 5 Console">
+                        <p class="d-none d-md-inline-block">Console PS5</p>
+                    </div>
+                    <div class="col text-center border-bottom border-3 border-white opacity-75">
+                        <img src="img/joypad-thumb.png" class="img-fluid" alt="PlayStation 5 Console">
+                        <p class="d-none d-md-inline-block">Controller Wireless DualSense&trade;</p>
+                    </div>
+                    <div class="col text-center border-bottom border-3 border-white opacity-75">
+                        <img src="img/headset-thumb.png" class="img-fluid" alt="PlayStation 5 Console">
+                        <p class="d-none d-md-inline-block">Cuffie wireless con microfono PULSE 3&trade;</p>
+                    </div>
+                    <div class="col text-center border-bottom border-3 border-white opacity-75">
+                        <img src="img/remote-thumb.png" class="img-fluid" alt="PlayStation 5 Console">
+                        <p class="d-none d-md-inline-block">Telecomando Media</p>
+                    </div>
+                    <div class="col text-center border-bottom border-3 border-white opacity-75">
+                        <img src="img/camera-thumb.jpg" class="img-fluid" alt="PlayStation 5 Console">
+                        <p class="d-none d-md-inline-block">Telecamera HD</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start of new section: co-op -->
+        <section class="px-sm-4 py-5 position-relative" id="coop">
+            <div class="my-read-helper">
+                <!--* this is a div overlay-like in position absolute to help reading on light imgs -->
+            </div>
+            <div class="container-fluid position-relative">
+                <div class="row align-items-end text-white">
+                    <div class="col-12 col-lg-4">
+                        <img class="w-75 py-3" src="img/it-takes-two-logo.png" alt="It Takes Two co-op Game Banner">
+                        <h1 class="py-3">Un'Avventura coperativa selvaggia ti attende</h1>
+                        <p class="py-3">Trova un amico e partite insieme per l'avventura più folle delle vostre vite in It Takes two, un gioco d'avventura cooperativa a piattaforme che stravolge il suo genere.</p>
+                        <a href="#" class="btn rounded-pill text-white bg-danger">Aquista Ora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start of new section: new-releases -->
+        <section class="px-sm-4 py-5 text-white text-center text-md-start" id="new-releases">
+            <div class="container-fluid">
+                <h2>Nuove Uscite</h2>
+                <h3 class="py-3">Giochi incredibili per PS4 e PS5 disponibili ora</h3>
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 gy-5">
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/tony-hawks-pro-skater-1-2-store-art.jpg" class="img-fluid" alt="Tony Hawks Pro Skater game cover">
+                            <div class="my-card-text">
+                                Tony Hawks Pro Skater&trade; 1&#x2b;2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/crash-bandicoot-4-its-about-time-store-art.jpg" class="img-fluid" alt="Crush Bandicoot 4 game cover">
+                            <div class="my-card-text">
+                                Crash Bandicoot 4: It's About Time
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/tony-hawks-pro-skater-1-2-store-art.jpg" class="img-fluid" alt="Tony Hawks Pro Skater game cover">
+                            <div class="my-card-text">
+                                Tony Hawks Pro Skater&trade; 1&#x2b;2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/crash-bandicoot-4-its-about-time-store-art.jpg" class="img-fluid" alt="Crush Bandicoot 4 game cover">
+                            <div class="my-card-text">
+                                Crash Bandicoot 4: It's About Time
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/tony-hawks-pro-skater-1-2-store-art.jpg" class="img-fluid" alt="Tony Hawks Pro Skater game cover">
+                            <div class="my-card-text">
+                                Tony Hawks Pro Skater&trade; 1&#x2b;2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/crash-bandicoot-4-its-about-time-store-art.jpg" class="img-fluid" alt="Crush Bandicoot 4 game cover">
+                            <div class="my-card-text">
+                                Crash Bandicoot 4: It's About Time
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/tony-hawks-pro-skater-1-2-store-art.jpg" class="img-fluid" alt="Tony Hawks Pro Skater game cover">
+                            <div class="my-card-text">
+                                Tony Hawks Pro Skater&trade; 1&#x2b;2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/crash-bandicoot-4-its-about-time-store-art.jpg" class="img-fluid" alt="Crush Bandicoot 4 game cover">
+                            <div class="my-card-text">
+                                Crash Bandicoot 4: It's About Time
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/tony-hawks-pro-skater-1-2-store-art.jpg" class="img-fluid" alt="Tony Hawks Pro Skater game cover">
+                            <div class="my-card-text">
+                                Tony Hawks Pro Skater&trade; 1&#x2b;2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/crash-bandicoot-4-its-about-time-store-art.jpg" class="img-fluid" alt="Crush Bandicoot 4 game cover">
+                            <div class="my-card-text">
+                                Crash Bandicoot 4: It's About Time
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/tony-hawks-pro-skater-1-2-store-art.jpg" class="img-fluid" alt="Tony Hawks Pro Skater game cover">
+                            <div class="my-card-text">
+                                Tony Hawks Pro Skater&trade; 1&#x2b;2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="my-card">
+                            <img src="img/crash-bandicoot-4-its-about-time-store-art.jpg" class="img-fluid" alt="Crush Bandicoot 4 game cover">
+                            <div class="my-card-text">
+                                Crash Bandicoot 4: It's About Time
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start of new section: playstation 4 -->
+        <section class="px-sm-4 py-5" id="play-4">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h1 class="pb-3">Esplora PlayStation<span class="fs-6 my-trade-reg">&reg;</span> 4</h1>
+                        <p class="text-secondary">Giochi incredibili e intrattenimento senza fine. <br> Non c'è mai stato un momento migliore per giocare sulla tua PS4</p>
+                    </div>
+                </div>
+                <div class="row text-center text-md-start gy-5">
+                    <div class="col-12 col-md-4">
+                        <img src="img/ps4-slim-homepage-image-block.jpg" class="img-fluid" alt="PlayStation 4 console">
+                        <h1 class="pb-3">PlayStation 4</h1>
+                        <p class="text-secondary pb-3">Giochi incredibili live su PS4, con 1 Tb di spazio di archiviazione.</p>
+                        <a href="#" class="btn rounded-pill btn-primary">Scopri di pi&uacute;</a>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="img/double11-202010-tw-psvr.jpg" class="img-fluid" alt="PlayStation 4 virtual reality visor">
+                        <h1 class="pb-3">PlayStation VR</h1>
+                        <p class="text-secondary pb-3">Oltre 500 titoli ed esperienze di gioco. Scoprili tutti.</p>
+                        <a href="#" class="btn rounded-pill btn-primary">Scopri di pi&uacute;</a>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="img/dualshock-4-listing-thumb.jpg" class="img-fluid" alt="PlayStation 4 dualshock pad">
+                        <h1 class="pb-3">Accessori</h1>
+                        <p class="text-secondary pb-3">Migliora la tua esperienza PS4 con una gamma di accessori ufficiali.</p>
+                        <a href="#" class="btn rounded-pill btn-primary">Scopri di pi&uacute;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start of new section: playstation plus -->
+        <section class="px-sm-4" id="play-plus">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 py-5">
+                        <img class="w-75 py-3" src="img/ps-plus-logo.png" alt="PlayStation Plus logo">
+                        <p class="py-3">Migliora la tua esperienza PlayStation con l'accesso a multigiocatore online, giochi mensili, sconti esclusivi e altro ancora.</p>
+                        <a href="#" class="btn rounded-pill text-primary">Esplora PlayStation Plus</a>
+                    </div>
+                    <div class="col-md-6 d-none d-md-inline-block">
+                        <img src="img/ps-plus-april-monthly-games-featured-image-block.png" class="img-fluid" alt="Various PS plus offers">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start of new section: playstation store -->
+        <section class="px-sm-4 py-5" id="play-store">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h1 class="pb-3">Nuovi sconti sul PlayStation Store</h1>
+                        <p class="text-secondary">Sconti Pazzeschi, collezioni curate e saldi stagionali su PS5, PS4 e PS VR, tutti in un unico posto.</p>
+                    </div>
+                </div>
+                <div class="row py-4 gy-5">
+                    <div class="col-12 col-md-4">
+                        <img src="img/playstation-store-games-under-20-spotlight.jpg" alt="PS store games under 20$£ cover" class="img-fluid my-scale">
+                        
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="img/playstation-store-golden-week-sale-spotlight.jpg" class="img-fluid my-scale" alt="PS store golden week cover">
+                        
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="img/playstation-store-free-to-play-spotlight.png" alt="PS store free-to-play games cover" class="img-fluid my-scale">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start of new section: playstation now -->
+        <section class="px-sm-4 text-white" id="play-now">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 py-5">
+                        <img class="w-75 py-3" src="img/ps-now-logo-two-column.png" alt="PlayStation Now logo">
+                        <p class="py-3">Ottieni l'accesso immediato a una vastissima raccolta di oltre 800 giochi per PS4, PS3 e PS2 o PC Windows, con nuovi titoli aggiunti ogni mese.</p>
+                        <a href="#" class="btn rounded-pill text-black bg-white">Esplora PlayStation Now</a>
+                    </div>
+                    <div class="col-md-6 d-none d-md-inline-block">
+                        <img src="img/ps-now-april-featured-image-block.png" class="img-fluid" alt="Various PS now offers">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start of new section: social -->
+        <section class="px-sm-4 py-5 text-center" id="social">
+            <div class="container-fluid">
+                <h2 class="mb-0 pb-5">Seguici sui social media</h2>
+                <div class="row justify-content-md-center py-5">
+                    <div class="col-12 col-md-10 col-lg-6 d-flex flex-wrap justify-content-between">
+                        <a href="#"><img src="img/twitter.jpg" class="img-fluid my-scale" alt="Twitter App logo"></a>
+                        <a href="#"><img src="img/facebook.jpg" class="img-fluid my-scale" alt="Facebook App logo"></a>
+                        <a href="#"><img src="img/instagram.jpg" class="img-fluid my-scale" alt="Instagram App logo"></a>
+                        <a href="#"><img src="img/youtube.png" class="img-fluid my-scale" alt="Youtube App logo"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!--! footer here -->
+    <footer class="px-sm-4 py-5 text-white">
+        <div class="container-fluid">
+            <div class="row gy-5">
+                <div class="col-12 col-lg-6">
+                    <img class="my-ps-footer-logo mb-5" src="img/ps-footer.svg" alt="PlayStation Logo">
+                    <p class="d-flex align-items-center">
+                        <img class="my-globe" src="img/language-globe.svg" alt="Stylized Globe">
+                        <span>Country / Region: Italy.</span>
+                    </p>
+                </div>
+                <div class="col-12 col-lg-6 d-flex flex-column flex-md-row justify-content-around">
+                    <ul class="list-unstyled">
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                        <li><a href="#">link footer n</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-6 mt-2">
+                    <img class="my-sony-footer-logo mb-5" src="img/sie-logo.svg" alt="Sony Logo">
+                    <p>
+                        Website <i class="far fa-copyright"></i>2021 Sony Interactive Entertainment Erope Limited. Tutti i contenuti, nomi dei giochi, nomi commerciali e/o di abbigliamento, marchi registrati, grafica e immagini associati sono marchi registrati e/o materiale protetto da copyrught dei rispettivi proprietari. Tutti i diritti riservati. <a class="text-white" href="#">Maggiori info</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
