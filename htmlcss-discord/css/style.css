@@ -1,0 +1,194 @@
+/*! reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Whitney', sans-serif;
+    font-family: 'Whitney Semibold', sans-serif;
+    font-family: 'Whitney Book', sans-serif;
+    font-family: 'Whitney Light', sans-serif;
+}
+/*! global attributes */
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.centered{
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    /** background-color: salmon; */
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.generic-button{
+    padding: 12px 18px;
+    border-radius: 25px;
+    border: none;
+}
+.generic-button:hover{
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+.distancing{
+    padding: 150px 0px;
+}
+p{
+    line-height: 150%;
+}
+
+/*! header styling */
+header{
+    width: 100%;
+    /** background-color: rgb(49, 97, 224); */
+    text-align: center;
+    background-image:url(../img/jumbo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+/* header-nav style */
+.top-container{
+    height: 80px;
+    line-height: 80px;
+    font-size: .8rem;
+}
+div.logo img{
+    vertical-align: middle;
+}
+.top-nav{
+    display: inline-block;
+}
+header .top-nav li{
+    display: inline-block;
+    margin-right: 30px;
+}
+header .top-nav li a{
+    text-decoration: none;
+}
+header .top-nav li a:hover{
+    text-decoration: underline;
+}
+header .top-nav li a:active{
+    color: violet;
+}
+header .top-nav li a:visited{
+    color:white;
+}
+header div.top-container div.login button{
+    font-size: 0.8rem;
+}
+/* header-jumbotron style*/
+div.header-title{
+    width: 40%;
+    margin: 0 auto;
+}
+header div.header-title h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+header div.header-title p{
+    margin-bottom: 1rem;
+}
+div.top-buttons button{
+    margin: 0 20px;
+}
+
+/* !main style */
+/* similarsections */
+.properties-img{
+    width: 60%;
+}
+div.properties-img img{
+    width: 100%;
+}
+.properties-text{
+    width: 30%;
+}
+main h2{
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+}
+/* .macos::before{
+    content: "\f309";
+} */
+/* last different section */
+section#ready-to-go{
+    text-align: center;
+}
+.ready-img{
+    width: 100%;
+}
+.ready-img img{
+    width: 100%;
+}
+#ready-to-go h3{
+    width: 50%;
+    font-size: 1.8rem;
+    padding: 2rem;
+    margin: 0 auto;
+    background-image: url(../img/stars.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* !footer */
+footer{
+    padding-top: 100px;
+    background-color: #23272a;
+}
+footer .main-nav{
+    width: 30%;
+    padding-right: 100px;
+}
+footer .minor-nav{
+    width: calc(70% / 4);
+}
+footer h4{
+    font-size: 1.5rem;
+    padding-bottom: 0.8rem;
+    color: #8ea1e1;
+}
+footer h5{
+    font-size: 1.2rem;
+    padding-bottom: 0.4rem;
+    color: #8ea1e1;
+}
+footer .main-nav img{
+    height: 1rem;
+}
+footer .main-nav .social-ref{
+    padding-top: 0.8rem;
+}
+footer .minor-nav ul{
+    list-style-type: none;
+}
+footer .minor-nav ul li{
+    padding: 0.4rem 0;
+}
+footer .minor-nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+footer .minor-nav ul li a:hover{
+    text-decoration: underline;
+}
+footer .bot-footer{
+    border-top: 1px solid #8ea1e1;
+    padding: 3rem 0;
+}
+/* !colors */
+.bgdark{
+    background-color: rgb(32, 32, 32);
+}
+.txtwhite{
+    color: white;
+}
+main section:nth-child(even){
+    background-color: cornsilk;
+}
+
