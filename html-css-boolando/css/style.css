@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* global */
+.absolute{
+    position: absolute;
+}
+
+/* containers */
+main{
+    width: 80%;
+    margin: 15px auto;
+    text-align: center;
+}
+.row{
+    margin-bottom: 50px;
+}
+.card{
+    display: inline-block;
+    padding: 10px;   
+}
+
+/* images styling */
+.visual img{
+    height: 100%;
+}
+.buy-img{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.visual:hover .buy-img{
+    display: inline-block;
+    cursor: pointer;
+}
+.visual{
+    position: relative;
+    height: 700px;
+    margin-bottom: 10px;
+}
+.favs{
+    top: 20px;
+    right: 0px;
+    padding: 10px 20px;
+    font-size: 2em;
+    border: none;
+}
+.favs:hover{
+    cursor: pointer;
+}
+.favs:focus{
+    color:red;
+}
+.lower-popups{
+    bottom: 20px;
+    left: 0;
+}
+.lower-popups:hover{
+    cursor: default;
+}
+.z1{
+    z-index: 1;
+}
+.z2{
+    z-index: 2;
+}
+.bottommarks{
+    padding: 5px 5px;
+}
+
+/* prd-infos styling */
+.tags{
+    text-align: left;
+}
+.brand{
+    font-size: 0.7em;
+}
+.previous-price{
+    font-weight: normal;
+    text-decoration-line: line-through;
+}
+
+/* 90s colors */
+.txtwhite{
+    color: white;
+}
+.txtblack{
+    color: black;
+}
+.txtred{
+    color: red;
+}
+.bgwhite{
+    background-color: white;
+}
+.bgred{
+    background-color: red;
+}
+.bggreen{
+    background-color: seagreen;
+}
+
+/* text styles */
+.bold{
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
