@@ -1,0 +1,487 @@
+/*! reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', "Font Awesome 5 Free", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*! global attributes */
+section h2{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1.2rem;
+}
+h5{
+    font-size: 1rem;
+}
+p{
+    line-height: 150%;
+}
+ul{
+    list-style-type: none;
+}
+li a:not(.btn){
+    text-decoration: none;
+}
+/* li a:hover{
+    text-decoration: underline;
+} */
+/* li a:visited{
+    color: blueviolet;
+} */
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.centered{
+    width: 70%;
+    min-width: 1190px;
+    margin: 0 auto;
+}
+.two-column{
+    width: 70%;
+}
+.one-column{
+    width: 30%;
+}
+.width55{
+    width: 55%;
+}
+.width45{
+    width: 45%;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.smallfont{
+    font-size: 0.9rem;
+}
+.left-txt{
+    text-align: left;
+}
+
+/* global buttons style */
+.btn{
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.card-txt div span a.btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.blu-white{
+    background-color: #0061ff;
+    color: white;
+}
+.black-white{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+/* global cards style */
+.card-container{
+    width: 100%;
+}
+.row{
+    text-align: center;
+}
+.vert-card{
+    width: calc((100% / 3) - 40px);
+    min-width: 390px;
+    display: inline-block;
+}
+/* vertical fares-section set of cards */
+.card-title{
+    padding: 15px 0;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    text-align: center;
+}
+.card-txt{
+    padding: 0 40px 40px;
+    border: 1px solid lightgray;
+}
+.card h5{
+    padding: 20px 0 10px;
+}
+.card ul li{
+    padding: 20px 0;
+}
+.card ul li:last-child{
+    padding-bottom: 40px;
+}
+.card ul li span.bot-bordered{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 40px;
+}
+.card-txt span.subs-time{
+    color: grey;
+    display: block;
+    padding-bottom: 20px;
+}
+.card-txt div{
+    padding-top: 40px;
+}
+.card-txt ul li a.btn{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+}
+.card-bottom-list ul{
+    min-height: 600px;
+}
+.card-bottom-list li{
+    margin-left: 15px;
+}
+.card-bottom-list li::marker{
+    content: "\2713";
+    color: cornflowerblue;
+}
+/* horizontal fares-section card specifics */
+div.hori-card{
+    width: 100%;
+    margin: 60px 0 200px;
+}
+.hori-card .card-txt div{
+    display: inline-block;
+}
+/* client features section cards */
+section#features .row{
+    padding-bottom: 150px;
+}
+section#features .card img{
+    width: 100%;
+}
+section#features .card h3{
+    padding: 20px 0 30px;
+}
+/*! header style */
+/* top navs style */
+div.top-nav{
+    width: 100%;
+    height: 100px;
+    min-width: 1450px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: white;
+    box-shadow: 0px 0px 8px black;
+}
+.top-nav li:not(.nav-dropdown ul li){
+    display: inline-block;
+    margin: 0 30px;
+    font-size: 0.9rem;
+}
+.top-nav li a:not(.btn):not(.nav-dropdown ul li a){
+    color: black;
+    line-height: 98px;
+    display: inline-block;
+}
+.top-nav li a:not(.btn):not(.nav-dropdown ul li a):hover{
+    border-bottom: 2px solid black;
+    
+    background-color: rgb(233, 233, 233);
+
+}
+/* .top-nav li a[class*=btn]{
+    background-color: #0061ff;
+    padding: 10px 20px;
+    color: white;
+} */
+.top-nav img{
+    vertical-align: text-bottom;
+}
+
+/* jumbotron style */
+#jumbotron{
+    width: 100%;
+    min-width: 1360px;
+    padding: 0 200px 50px;
+    background-color: #b4d0e7;
+    padding-top: 100px;
+}
+#jumbotron h1{
+    font-size: 4rem;
+    min-width: 1150px;
+    padding: 100px 0 40px;
+}
+aside.jumbotron-text{
+    width: 30%;
+    min-width: 400px;
+}
+.jumbotron-text p{
+    margin-bottom: 40px;
+}
+.jumbotron-text span{
+    display: block;
+}
+.jumbotron-text span.smallfont{
+    margin: 20px 0 40px 0;
+}
+.jumbotron-text .fas{
+    font-size: 2rem;
+}
+div.jumbotron-img{
+    width: 60%;
+    top: 0;
+    right: 0;
+}
+.jumbotron-img img{
+    width: 100%;
+    min-width: 800px;
+}
+/* !main style */
+/* fares section style */
+#fares{
+    padding-top: 200px;
+}
+section#fares form{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+section#fares form input{
+    width: 25px;
+    height: 25px;
+    vertical-align: bottom;
+    margin: 0 5px 0;
+}
+section#fares footer div img{
+    width: 100%;
+}
+section#fares footer div.partner-txt{
+    padding: 50px 0 0px 70px;
+}
+div.partner-txt p{
+    padding: 20px 0 40px;
+}
+
+/* features section style */
+section#features h2{
+    padding: 150px 0 100px;
+}
+
+/* clients section style */
+#clients{
+    padding-top: 100px;
+}
+section#clients h2{
+    padding-top: 50px;
+}
+section#clients div.centered a{
+    padding: 50px 0;
+    display: inline-block;
+}
+div.clients-info{
+    width: 100%;
+}
+.clients-group{
+    width: 30vw;
+    height: 30vw;
+}
+.clients-overview{
+    width: calc(100% - 60vw);
+    height: 30vw;
+    overflow: auto;
+    background-color: #f5f5f5;
+}
+.client-logo{
+    width: 50%;
+    height: 50%;
+}
+.client-logo img{
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    filter: invert(100%);
+    transform: translate(-50%, -50%);
+}
+.client-logo:hover{
+    box-shadow: inset 0 0 0 20px rgba(255,255,255, 0.3);
+}
+.clients-overview{
+    padding: 0 60px;
+}
+.clients-overview img{
+    width: calc((30vw / 2) / 2);
+    height: calc((30vw / 2) / 2);
+}
+.clients-overview p{
+    padding: 50px 0;
+}
+/* colors */
+.bgpeas{
+    background-color: #a2d39b;
+}
+.bgamaranth{
+    background-color: #61082b;
+}
+.bgsky{
+    background-color: #0093ce;
+}
+.bgorange{
+    background-color: #ff1c1c;
+}
+.bferrari{
+    background-color: #d5001f;
+}
+.bgcloudy{
+    background-color: #b4d0e7;
+}
+.bgblue{
+    background-color: #0d2481;
+}
+.bgmustard{
+    background-color: #ffd830;
+}
+.bgblack{
+    background-color: black;
+}
+.txtwhite{
+    color: white;
+}
+/* partnership section style */
+#partnership{
+    padding: 200px 0;
+    text-align: center;
+}
+#partnership h2{
+    color: #61082b;
+}
+/* FAQ section style */
+#faq{
+    padding: 200px 0;
+    max-height: 945px;
+}
+#faq h3{
+    padding-bottom: 70px;
+}
+#faq h3, #faq li{
+    
+    border-bottom: 1px solid lightgray;
+}
+#faq li{
+    padding: 40px 0;
+}
+#faq li a{
+    margin-right: 40px;
+}
+/* footer style */
+#botpage{
+    padding: 150px 0 0 150px;
+}
+#botpage h4{
+    padding-bottom: 30px;
+}
+#botpage li{
+    padding: 10px 0;
+}
+#botpage li a{
+    color: white;
+}
+section.top-footer{
+    min-width: 1580px;
+}
+.top-footer div{
+    padding-right: 120px;
+    min-height: 400px;
+}
+.bot-footer a{
+    border-top: 1px solid lightgray;
+    display: inline-block;
+    width: 10%;
+    padding: 50px 0;
+    color: white;
+    text-decoration: none;
+}
+/* nav dropdown menu test */
+#contact-details{
+    position: relative;
+}
+.nav-dropdown{
+    display: none;
+    position: absolute;
+    top: 100px;
+    z-index: 3;
+    width: 100%;
+    background-color: white;
+    box-shadow: 5px 10px 20px 1px rgb(66, 66, 66);
+}
+#contact-details:hover .nav-dropdown{
+    display: block;
+}
+.nav-dropdown ul{
+    list-style-type: none;
+}
+.nav-dropdown ul li{
+    text-transform: capitalize;
+    display: block;
+}
+.nav-dropdown ul li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    line-height: 60px;
+}
+.nav-dropdown ul li a:hover{
+    background-color: rgb(235, 235, 235);
+}
+/* faq dropdown menu */
+.faq-dropdown{
+    height: 0;
+    width: 75%;
+    /* position: absolute; */
+    display: block;
+    overflow: hidden;
+    /* background-color: seashell; */
+    transition-duration: 0.5s;
+}
+#faq ul li:hover .faq-dropdown{
+    height: 100px;
+    /* display: block; */
+}
+.test{
+    /* position: relative; */
+}
+#faq ul li:hover{
+    background-color: seashell;
+}
+#faq ul li:hover i.fa-chevron-down{
+    display: none;
+}
+.fa-chevron-left{
+    display: none;
+}
+#faq ul li:hover i.fa-chevron-left{
+    display: inline-block;
+}
+/* extra button style */
+.btn.blu-white:hover{
+    background-color: #00296b;
+    transition: 0.6s;
+}
+.btn.black-white:hover{
+    background-color: rgb(142, 151, 161);
+    border-color: transparent;
+    transition: 0.6s;
+}
