@@ -1,0 +1,72 @@
+body{
+    width: 1500px;
+}
+
+/* header */
+header {
+    background-image: url(../img/pattern.png);
+    background-repeat: repeat-x;
+    background-color: rgb(0, 140, 255);
+    display: flex;
+    align-content: flex-end;
+    height: 7em;
+}
+
+#logo {
+    width: 20%;
+    
+}
+
+/* section with title */
+h1 {
+    font-size: 2.5em;
+}
+
+#author {
+    color: rgb(0, 162, 255);
+}
+
+/* table style */
+thead{
+    color: azure;
+    background-color: rgb(0, 162, 255);
+}
+
+.uneventablerow {
+    background-color: cadetblue;
+}
+
+.column-with-text {
+    width: 60%;
+}
+
+/* footer */
+
+.otherarticles {
+    position: relative;
+}
+
+.otherarticlestitle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    font-weight: 600;
+
+}
+
+/* self-explaining changes */
+.notes {
+    color: rgb(178, 178, 178);
+}
+
+.photodescr {
+    font-size: 0.7em;
+    font-style: italic;
+}
+
+.highlight {
+    background-color: rgba(255, 241, 44, 0.993);
+}
+
