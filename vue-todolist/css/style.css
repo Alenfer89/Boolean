@@ -1,0 +1,23 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(31, 31, 31);
+}
+.ax-shadow{
+    box-shadow: 0 .5rem 1rem rgba(87, 87, 87, 0.3);
+}
+#app ul {
+    background-color: rgb(54, 54, 54);
+}
+#app ul li {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+#app ul li:hover {
+    border-left: 5px solid rgb(185, 185, 185);
+    border-right: 5px solid rgb(185, 185, 185);
+    color: rgba(255,255,255,.8)
+}
+#app ul li i.fa-circle-xmark:hover{
+    color: rgb(255, 97, 97);
+}
+
