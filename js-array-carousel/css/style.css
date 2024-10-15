@@ -1,0 +1,61 @@
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+    background-color: bisque;
+    padding: 3rem 0;
+}
+div.my-carousel,
+div.my-carousel-thumbnails{
+    height: 60vh;
+}
+div.my-carousel .my-carousel-window{
+    height: 100%;
+}
+div.my-carousel .my-carousel-window img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.thumbnail{
+    width: 100%;
+    height: calc(100% / 5);
+    filter: brightness(0.3);
+}
+div.thumbnail.active{
+    filter: brightness(1);
+    border: 2px solid aquamarine;
+}
+div.my-carousel-thumbnails img{
+    height: 100%;
+    object-fit: cover;
+}
+.my-skip{
+    position: absolute;
+    top: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    background-color: gray;
+    opacity: 0.5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.my-previous{
+    left: 1rem;
+    transform: translate(50%, -50%);
+}
+.my-next{
+    right: 1rem;
+    transform: translate(-50%, -50%);
+}
+.active{
+    display: inline-block;
+}
+
+/* .my-carousel-items{
+    display: none;
+} */
