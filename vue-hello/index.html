@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Montserrat google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <!-- Font-Awesome cdn v6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap 5.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Vue Js 2.6-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Vue Hello</title>
+
+</head>
+<body>
+
+    <main id="app" class="p-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="">{{title}}</h1>
+                    <h2>{{subtitle}}</h2>
+                </div>
+                <div class="col-6 p-2">
+                    <label for="">Dimmi a cosa pensi</label>
+                    <input v-model="message" type="text" placeholder="Scrivi qui in libertà">
+                </div>
+                <div class="col-6 p-2">
+                    <p class="text-capitalize text-center bg-info">{{message}}</p>
+                </div>
+                <div class="col-6 p-5">
+                    <label for="img-submit">Metti qui il link per vedere la tua immagine</label>
+                    <input id="img-submit" v-model="image" type="text" placeholder="URl dell'immagine">
+                    <br>
+                    <img :src="image" alt="La tua immagine" class="img-fluid">
+                </div>
+                <div class="col-6 p-5">
+                    <span>Clicca sul bottone per ottenere un'immagine casuale</span>
+                    <button @click="randomPic" class="btn btn-warning">Cliccami</button>
+                    <br>
+                    <img :src="randomImg" :alt="messageViewer()" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
