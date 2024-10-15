@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- font link -->
+    <link href="http://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+                
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Spotify</title>
+    
+</head>
+<body>
+    <main>
+        <div class="container flex">
+<!--! nav bar on left side of main -->
+            <!--/// extodo check font size / overlap / overflow -->
+            <section class="left-nav-bar flex">
+            <!-- top part of left navbar -->
+                <div class="top-left-bar flex">
+                    <div id="logo-img">
+                        <img src="img/logo.svg" alt="Spotify Logo">
+                    </div>
+                    <div class="top-list">
+                        <ul>
+                            <li><img src="img/home.svg" alt="">Home</li>
+                            <li><img src="img/search.svg" alt="">Cerca</li>
+                            <li><img src="img/libreria.svg" alt="">La tua libreria</li>
+                        </ul>
+                    </div>
+                    <div class="bot-list flex">
+                        <!--/// extodo font size -->
+                        <h5>playlist</h5>
+                        <!--/// EXtodo fontsize -->
+                        <div class="create-playlist flex"><i class="fas fa-plus-square"></i>Crea Playlist</div>
+                        <!--/// EXtodo overflow e min-width -->
+                        <ul>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- bottom part of left navbar -->
+                <!--/// extodo font-size adjust -->
+                <!--/// extodo overlap col footer -->
+                <div class="bot-left-bar">
+                    <div id="install" class="flex">
+                        <div class="image-container">
+                            <img src="img/download.svg" alt="">
+                        </div>
+                        <div>
+                            installa l'app
+                        </div> 
+                    </div>
+                    <div id="user-name" class="flex">
+                        <div class="image-container user-icon">
+                            <img src="img/profile.svg" alt="">
+                        </div>
+                        <div>
+                            Jane Smith
+                        </div> 
+                    </div>
+                </div>
+            </section>
+            <!-- hidden left bar for smartphones -->
+            <section class="left-nav-smart-menu">
+                <ul>
+                    <li><img src="img/logo-small.svg" alt=""></li>
+                    <li><img src="img/home.svg" alt=""></li>
+                    <li><img src="img/search.svg" alt=""></li>
+                    <li><img src="img/libreria.svg" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="img/download.svg" alt=""></li>
+                    <li class="user-icon"><img src="img/profile.svg" alt=""></li>
+                </ul>
+            </section>
+<!-- ! section with main content -->
+            <section class="main-content">
+    <!-- top overlapping bar -->
+                <div class="subscribe-bar flex">
+                    <a href="#" class="btn">effettua l'upgrade</a>
+                </div>
+    <!-- start of content -->
+                <div class="content">
+    <!-- top content nav-bar -->
+                    <nav class="main-nav">
+                        <ul>
+                            <li class="active">
+                                in evidenza
+                                <div class="tiny-active-left"></div>
+                                <div class="tiny-active-right"></div>
+                            </li>
+                            <li>podcast</li>
+                            <li>classifiche</li>
+                            <li>generi e mood</li>
+                            <li>nuove uscite</li>
+                            <li>scopri</li>
+                        </ul>
+                    </nav>
+    <!-- set of cards -->
+                    <div class="offers">
+                        <h2>Recently Played</h2>
+                        <div class="card-container flex">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/metal_lifting.jpg" alt="albums images">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>Heavy Metal</h5>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/stranger.jpeg" alt="albums images">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>SDtranger Things, Vol 1 (a Netflix Original Series Soundtrack)</h5>
+                                <p>Kyle Dixon & Michael Stein</p>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/aquietplace.jpeg" alt="albums images">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>A Quiet Place</h5>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/split.jpeg" alt="albums images">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>Split</h5>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/cure.jpeg" alt="albums images">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>A cure for wellness</h5>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/sinister.jpeg" alt="">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>Sinister</h5>
+                                <p>Subtitle</p>
+                            </div>
+                        </div>
+                    </div>
+    <!-- set of cards -->
+                    <div class="offers">
+                        <h2>Creato per Jane Smith</h2>
+                        <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                        <div class="card-container flex column">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/radar.jpeg" alt="albums images">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>Release Radar</h5>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/mixdaily.jpeg" alt="albums images">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>Daily Mix 1</h5>
+                            </div>
+                        </div>
+                    </div>
+    <!-- set of cards -->
+                    <div class="offers" id="popular">
+                        <h2>Artisti più popolari</h2>
+                        <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                        <div class="card-container flex column">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/youg.jpeg" alt="albums images">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>Lana del rey</h5>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/einaudi.jpeg" alt="albums images">
+                                    <div class="overlay">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+                                <h5>Ludovico Einaudi</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>    
+    </main>
+<!-- ! start of footer -->
+    <footer id="player" class="flex">
+        <div class="player-song flex">
+                <img src="img/sinister.jpeg" alt="Album cover of the song named 'SINISTER'">
+            <div class="song-title flex">
+                <h6>Sinister</h6>
+                <p>branonome</p>
+            </div>
+            <div class="favs">
+                <i class="far fa-heart"></i>
+                <i class="far fa-folder"></i>
+            </div>
+        </div>
+        <div class="player-per-se flex">
+            <div>
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <i class="far fa-play-circle"></i>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo-alt"></i>
+            </div>
+            <div class="song-bar-wrapper flex">
+                <div>0:20</div>
+                <div class="empty-bar">
+                    <div class="filling-bar flex">
+                        <div class="actual-value"></div>
+                    </div>
+                </div>
+                <div>4:11</div>
+            </div>
+        </div>
+        <div class="player-options flex">
+            <i class="fas fa-list"></i>
+            <i class="fas fa-desktop"></i>
+            <i class="fas fa-volume-up"></i>
+            <div class="empty-bar">
+                <div class="filling-bar flex">
+                    <div class="actual-value"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
