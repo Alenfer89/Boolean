@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Montserrat google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <!-- Font-Awesome cdn v6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Bootstrap 5.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Vue Js 2.6-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <title>Boolzapp</title>
+
+</head>
+<body class="ax-font">
+    <!-- anchor for the main el -->
+    <div class="ax-bg-container position-relative p-0">
+        <!-- cosmetic background divs -->
+        <div class="my-top-bg"></div>
+        <div class="my-bot-bg"></div>
+        <!-- main element where all happens with vuejs -->
+        <main id="app" class="position-absolute">
+            <div class="container-fluid">
+                <div class="row p-0">
+                    <!-- section where all the contacts are stored -->
+                    <section id="contacts" class="col-5 p-0 d-flex flex-column">
+                        <header class="d-flex p-2 justify-content-between align-items-center">
+                            <div>
+                                <img src="img/avatar_io.jpg" alt="profile pic" class="rounded-circle ax-pro-pic">
+                                <span class="fs-6">Pierpaola</span>
+                            </div>
+                            <div class="fs-5">
+                                <i class="fa-solid fa-circle-notch px-2"></i>
+                                <i class="fa-solid fa-message px-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical px-2"></i>
+                            </div>
+                        </header>
+                        <div id="notifier" class="p-3 d-flex">
+                            <div class="rounded-circle bg-white me-2 fs-5">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div>
+                                <div>Ricevi notifiche di buovi messaggi</div>
+                                <div><a href="" class="text-secondary">Attiva notifiche desktop</a></div>
+                            </div>
+                        </div>
+                        <div class="input-group p-1">
+                            <span class="input-group-text px-4 bg-white fs-5"><i class="fa-solid fa-magnifying-glass text-secondary"></i></span>
+                            <input type="text" class="form-control ax-font" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1" v-model="searchContact" @keyup="contactSearch(searchContact)">
+                            <!-- v-model="searchContact" @keydown="contactSearch(searchContact)" -->
+                        </div>
+                        <div class="ax-contacts-container flex-grow-1">
+                            <div class="ax-single-contact d-flex justify-content-between align-items-start px-3 py-2" v-if="(element.visible==true)" v-for="(element, index) in contacts" @click="specificContact(index)" :class="(index == activeContact) ? 'active' : '' ">
+                                <div>
+                                    <img :src="`img/avatar${element.avatar}.jpg`" alt="profile pic" class="rounded-circle ax-contact-pic">
+                                    <div class="d-inline-block ms-2">
+                                        <div class="fs-6">{{element.name}}</div>
+                                        <div class="text-secondary">Ultimo messaggio inviato</div>
+                                    </div>
+                                </div>
+                                <span>{{dateRetriever(index, contacts[index].messages.length -1)}}</span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- placeholder section with background, visible only before any contact gets selected -->
+                    <section id="placeholder" class="col p-0" v-if="(activeContact == null)"></section>
+                    <!-- section where all the comments by contact are displayed, only visible after the first contact gets selected -->
+                    <section id="messages" class="col p-0 d-flex flex-column" v-if="(activeContact !== null)">
+                        <header class="d-flex p-2 justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"  v-for="(element, index) in contacts" v-if="(index == activeContact)">
+                                <img :src="`img/avatar${element.avatar}.jpg`" :alt="`profile pic of ${element.name}`" class="rounded-circle ax-pro-pic me-3">
+                                <div>
+                                    <div class="fs-6">{{element.name}}</div>
+                                    <div class="text-secondary">Ultimo accesso oggi alle 12:00</div>
+                                </div>
+                            </div>
+                            <div class="fs-5">
+                                <i class="fa-solid fa-magnifying-glass px-2"></i>
+                                <i class="fa-solid fa-paperclip px-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical px-2"></i>
+                            </div>
+                        </header>
+                        <div class="ax-messages-container py-4 px-5 flex-grow-1 d-flex flex-column" >
+                            <div class="ax-message px-2 py-1 mb-2 rounded-2" v-for="(element, index) in contacts[activeContact].messages" :class="(contacts[activeContact].messages[index].status == 'sent') ? 'align-self-end ax-bg-green' : 'align-self-start bg-white' ">
+                                <p class="m-0 me-2">{{contacts[activeContact].messages[index].message}}</p>
+                                <div class="text-end ax-font-smaller">
+                                    {{dateRetriever(activeContact, index)}}
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="d-flex align-items-center p-2 text-secondary">
+                            <i class="fa-regular fa-face-smile fs-5 px-3"></i>
+                            <input @keydown.enter="sendMessage(activeContact , actualMessage)" v-model="actualMessage" type="text" class="flex-grow-1" placeholder="Scrivi un messaggio">
+                            <i class="fa-solid fa-microphone fs-5 px-3"></i>
+                        </footer>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- CDN example (unpkg) -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/plugin/customParseFormat.js"></script>
+    <!-- <script src="https://unpkg.com/dayjs@1.8.21/plugin/utc.js"></script> -->
+    <!-- custom js -->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
