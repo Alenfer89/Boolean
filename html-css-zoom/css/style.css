@@ -1,0 +1,102 @@
+/* reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*! global */
+.flex{
+    display: flex;
+}
+.overlay{
+    background-color: rgba(58, 58, 58, 0.781);
+    line-height: 1rem;
+    padding: 5px 4px;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+/* colors */
+.white-txt{
+    color: white;
+}
+/*! header styling */
+header{
+    width: 100%;
+    height: 8vh;
+    background-color: black;
+    justify-content: flex-end;
+}
+.top-menu{
+    align-items: flex-start;
+}
+.top-menu-options{
+    margin: 5px;
+    border-radius: 5px;
+}
+/*! main styling */
+main{
+    width: 100%;
+    height: 80vh;
+    overflow: auto;
+    background-color: black;
+}
+.container{
+    /* width: 90%;
+    margin: 0 auto; */
+    /** lasciato per semanticità */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.participant{
+    /* flex-basis: calc((100% - 30px) / 6); */
+    min-width: 288px;
+    max-width: 288px;
+    margin: 4px;
+}
+.participant img{
+    width: 100%;
+}
+.participant-name{
+    left: 0;
+    bottom: 7px;
+}
+/*! footer styling */
+footer{
+    width: 100%;
+    height: 12vh;
+    background-color: #222222;
+    font-size: 0.8rem;
+
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.bot-menu{
+    align-items: center;
+}
+.bot-menu i{
+    font-size: 1.5rem;
+    padding-bottom: 8px;
+}
+i.fa-angle-up{
+    font-size: 0.8rem;
+}
+.menu-block{
+    margin: 10px;
+}
+.fa-share-square{
+    color: #4bc800;
+}
+#close-call{
+    color: red;
+    padding: 20px;
+    background-color: #4a4a4a;
+    align-items: center;
+    align-self: stretch;
+}
